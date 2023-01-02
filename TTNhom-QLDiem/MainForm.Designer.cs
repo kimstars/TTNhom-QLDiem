@@ -53,7 +53,7 @@ namespace TTNhom_QLDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 490);
+            this.ClientSize = new System.Drawing.Size(774, 490);
             this.Controls.Add(this.checkButton1);
             this.Controls.Add(this.simpleButton1);
             this.Name = "MainForm";
