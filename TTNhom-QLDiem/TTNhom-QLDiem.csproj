@@ -42,6 +42,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
       <HintPath>E:\Năm 4 kì 1\Slide - Nguyễn Văn Giang\ttcsdl\bunifu\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>E:\Năm 4 kì 1\Slide - Nguyễn Văn Giang\ttcsdl\bunifu\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
