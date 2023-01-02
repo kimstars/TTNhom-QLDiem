@@ -1,7 +1,7 @@
 ﻿
 namespace TTNhom_QLDiem
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,19 @@ namespace TTNhom_QLDiem
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(696, 490);
+            this.Name = "MainForm";
+            this.Text = "MainForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
