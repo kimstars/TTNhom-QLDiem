@@ -29,8 +29,13 @@ namespace TTNhom_QLDiem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.checkButton1 = new DevExpress.XtraEditors.CheckButton();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -49,15 +54,27 @@ namespace TTNhom_QLDiem
             this.checkButton1.TabIndex = 1;
             this.checkButton1.Text = "checkButton1";
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Location = new System.Drawing.Point(214, 34);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(100, 96);
+            this.pictureEdit1.TabIndex = 2;
+            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 490);
+            this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.checkButton1);
             this.Controls.Add(this.simpleButton1);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -66,5 +83,7 @@ namespace TTNhom_QLDiem
 
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.CheckButton checkButton1;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }
