@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TTNhom_QLDiem.GUI;
 namespace TTNhom_QLDiem
 {
     static class Program
@@ -16,7 +16,7 @@ namespace TTNhom_QLDiem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.formchung());
+            Application.Run(new formchung());
         }
     }
 }
