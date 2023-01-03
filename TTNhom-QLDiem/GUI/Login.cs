@@ -17,5 +17,17 @@ namespace TTNhom_QLDiem.GUI
         {
             InitializeComponent();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            formchung frm = new formchung();
+            this.Hide();
+            frm.Show();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

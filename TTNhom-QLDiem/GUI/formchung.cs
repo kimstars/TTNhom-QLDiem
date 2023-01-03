@@ -17,5 +17,21 @@ namespace TTNhom_QLDiem.GUI
         {
             InitializeComponent();
         }
+
+        private void dangxuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void doimk_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DoiMK Dmk = new DoiMK();
+            panelchung.Controls.Clear();
+            panelchung.Dock = DockStyle.Fill;
+            panelchung.Controls.Add(Dmk);
+            Dmk.Dock = DockStyle.Fill;
+            Dmk.Show();
+
+        }
     }
 }

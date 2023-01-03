@@ -38,6 +38,9 @@ namespace TTNhom_QLDiem.GUI
             this.QuanLyGV = new DevExpress.XtraBars.BarButtonItem();
             this.HocPhan = new DevExpress.XtraBars.BarButtonItem();
             this.QuanLyLopHP = new DevExpress.XtraBars.BarButtonItem();
+            this.NhapDlan1 = new DevExpress.XtraBars.BarButtonItem();
+            this.DiemHocLai = new DevExpress.XtraBars.BarButtonItem();
+            this.DiemThiLai = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -45,13 +48,11 @@ namespace TTNhom_QLDiem.GUI
             this.HocVien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.GiangVien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.QlyDiem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.QlyDiem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.NhapDlan1 = new DevExpress.XtraBars.BarButtonItem();
-            this.DiemHocLai = new DevExpress.XtraBars.BarButtonItem();
-            this.DiemThiLai = new DevExpress.XtraBars.BarButtonItem();
+            this.panelchung = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +87,7 @@ namespace TTNhom_QLDiem.GUI
             this.dangxuat.Id = 2;
             this.dangxuat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("dangxuat.ImageOptions.SvgImage")));
             this.dangxuat.Name = "dangxuat";
+            this.dangxuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.dangxuat_ItemClick);
             // 
             // doimk
             // 
@@ -93,6 +95,7 @@ namespace TTNhom_QLDiem.GUI
             this.doimk.Id = 3;
             this.doimk.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("doimk.ImageOptions.SvgImage")));
             this.doimk.Name = "doimk";
+            this.doimk.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.doimk_ItemClick);
             // 
             // Themtk
             // 
@@ -128,6 +131,27 @@ namespace TTNhom_QLDiem.GUI
             this.QuanLyLopHP.Id = 9;
             this.QuanLyLopHP.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("QuanLyLopHP.ImageOptions.SvgImage")));
             this.QuanLyLopHP.Name = "QuanLyLopHP";
+            // 
+            // NhapDlan1
+            // 
+            this.NhapDlan1.Caption = "Điểm Thi Lần 1";
+            this.NhapDlan1.Id = 10;
+            this.NhapDlan1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("NhapDlan1.ImageOptions.SvgImage")));
+            this.NhapDlan1.Name = "NhapDlan1";
+            // 
+            // DiemHocLai
+            // 
+            this.DiemHocLai.Caption = "Điểm Học Lại";
+            this.DiemHocLai.Id = 11;
+            this.DiemHocLai.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DiemHocLai.ImageOptions.SvgImage")));
+            this.DiemHocLai.Name = "DiemHocLai";
+            // 
+            // DiemThiLai
+            // 
+            this.DiemThiLai.Caption = "Điểm Thi Lại";
+            this.DiemThiLai.Id = 12;
+            this.DiemThiLai.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DiemThiLai.ImageOptions.SvgImage")));
+            this.DiemThiLai.Name = "DiemThiLai";
             // 
             // ribbonPage1
             // 
@@ -179,6 +203,14 @@ namespace TTNhom_QLDiem.GUI
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Lớp và Học Phần";
             // 
+            // QlyDiem
+            // 
+            this.QlyDiem.ItemLinks.Add(this.NhapDlan1);
+            this.QlyDiem.ItemLinks.Add(this.DiemHocLai);
+            this.QlyDiem.ItemLinks.Add(this.DiemThiLai);
+            this.QlyDiem.Name = "QlyDiem";
+            this.QlyDiem.Text = "Quản Lý Điểm";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 886);
@@ -196,42 +228,22 @@ namespace TTNhom_QLDiem.GUI
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Hệ Thống";
             // 
-            // QlyDiem
+            // panelchung
             // 
-            this.QlyDiem.ItemLinks.Add(this.NhapDlan1);
-            this.QlyDiem.ItemLinks.Add(this.DiemHocLai);
-            this.QlyDiem.ItemLinks.Add(this.DiemThiLai);
-            this.QlyDiem.Name = "QlyDiem";
-            this.QlyDiem.Text = "Quản Lý Điểm";
-            // 
-            // NhapDlan1
-            // 
-            this.NhapDlan1.Caption = "Điểm Thi Lần 1";
-            this.NhapDlan1.Id = 10;
-            this.NhapDlan1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("NhapDlan1.ImageOptions.SvgImage")));
-            this.NhapDlan1.Name = "NhapDlan1";
-            // 
-            // DiemHocLai
-            // 
-            this.DiemHocLai.Caption = "Điểm Học Lại";
-            this.DiemHocLai.Id = 11;
-            this.DiemHocLai.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DiemHocLai.ImageOptions.SvgImage")));
-            this.DiemHocLai.Name = "DiemHocLai";
-            // 
-            // DiemThiLai
-            // 
-            this.DiemThiLai.Caption = "Điểm Thi Lại";
-            this.DiemThiLai.Id = 12;
-            this.DiemThiLai.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DiemThiLai.ImageOptions.SvgImage")));
-            this.DiemThiLai.Name = "DiemThiLai";
+            this.panelchung.Location = new System.Drawing.Point(0, 201);
+            this.panelchung.Name = "panelchung";
+            this.panelchung.Size = new System.Drawing.Size(1375, 679);
+            this.panelchung.TabIndex = 3;
             // 
             // formchung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1375, 916);
+            this.Controls.Add(this.panelchung);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IsMdiContainer = true;
             this.Name = "formchung";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
@@ -266,5 +278,6 @@ namespace TTNhom_QLDiem.GUI
         private DevExpress.XtraBars.BarButtonItem DiemHocLai;
         private DevExpress.XtraBars.BarButtonItem DiemThiLai;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup QlyDiem;
+        private System.Windows.Forms.Panel panelchung;
     }
 }

@@ -30,6 +30,7 @@ namespace TTNhom_QLDiem.GUI
         private void InitializeComponent()
         {
             this.grpCtrl1 = new DevExpress.XtraEditors.GroupControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.checkEditNhoMatKhau = new DevExpress.XtraEditors.CheckEdit();
@@ -38,14 +39,13 @@ namespace TTNhom_QLDiem.GUI
             this.lbPass = new DevExpress.XtraEditors.LabelControl();
             this.txtUser = new DevExpress.XtraEditors.TextEdit();
             this.lbUser = new DevExpress.XtraEditors.LabelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).BeginInit();
             this.grpCtrl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditNhoMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCtrl1
@@ -76,6 +76,17 @@ namespace TTNhom_QLDiem.GUI
             this.grpCtrl1.TabIndex = 2;
             this.grpCtrl1.Text = "Thông tin đăng nhập";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
+            this.pictureBox1.Image = global::TTNhom_QLDiem.Properties.Resources.japan_lofi;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(157, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnCancel
             // 
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,6 +98,7 @@ namespace TTNhom_QLDiem.GUI
             this.btnCancel.Size = new System.Drawing.Size(114, 30);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Hủy bỏ";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -99,6 +111,7 @@ namespace TTNhom_QLDiem.GUI
             this.btnOK.Size = new System.Drawing.Size(114, 30);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "Đăng nhập";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // checkEditNhoMatKhau
             // 
@@ -165,17 +178,6 @@ namespace TTNhom_QLDiem.GUI
             this.lbUser.TabIndex = 0;
             this.lbUser.Text = "Tên đăng nhập";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
-            this.pictureBox1.Image = global::TTNhom_QLDiem.Properties.Resources.japan_lofi;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -187,11 +189,11 @@ namespace TTNhom_QLDiem.GUI
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).EndInit();
             this.grpCtrl1.ResumeLayout(false);
             this.grpCtrl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditNhoMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
