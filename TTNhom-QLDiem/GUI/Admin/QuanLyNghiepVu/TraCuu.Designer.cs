@@ -30,6 +30,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
@@ -40,30 +42,47 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
             this.tb_ma_hoc_vien = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_monthi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_ten_hoc_vien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_ma_hoc_vien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gridControl1);
-            this.groupControl1.Location = new System.Drawing.Point(14, 183);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl1.Location = new System.Drawing.Point(0, 229);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1151, 609);
+            this.groupControl1.Size = new System.Drawing.Size(1375, 450);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Điểm Thi";
             // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(2, 28);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1371, 420);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
             // groupControl2
             // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.btn_search);
             this.groupControl2.Controls.Add(this.txt_monthi);
             this.groupControl2.Controls.Add(this.label3);
@@ -71,15 +90,15 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
             this.groupControl2.Controls.Add(this.label2);
             this.groupControl2.Controls.Add(this.tb_ma_hoc_vien);
             this.groupControl2.Controls.Add(this.label1);
-            this.groupControl2.Location = new System.Drawing.Point(16, 61);
+            this.groupControl2.Location = new System.Drawing.Point(0, 76);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1147, 116);
+            this.groupControl2.Size = new System.Drawing.Size(1373, 101);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Bộ lọc";
-            this.groupControl2.Visible = false;
             // 
             // btn_search
             // 
+            this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_search.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.Appearance.Options.UseFont = true;
             this.btn_search.Location = new System.Drawing.Point(1018, 47);
@@ -90,16 +109,17 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
             // 
             // txt_monthi
             // 
+            this.txt_monthi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_monthi.Location = new System.Drawing.Point(757, 49);
             this.txt_monthi.Name = "txt_monthi";
             this.txt_monthi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_monthi.Properties.Appearance.Options.UseFont = true;
             this.txt_monthi.Size = new System.Drawing.Size(148, 32);
             this.txt_monthi.TabIndex = 6;
-            this.txt_monthi.Visible = false;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(647, 57);
@@ -107,21 +127,21 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Môn Thi";
-            this.label3.Visible = false;
             // 
             // tb_ten_hoc_vien
             // 
+            this.tb_ten_hoc_vien.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_ten_hoc_vien.Location = new System.Drawing.Point(448, 49);
             this.tb_ten_hoc_vien.Name = "tb_ten_hoc_vien";
             this.tb_ten_hoc_vien.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_ten_hoc_vien.Properties.Appearance.Options.UseFont = true;
             this.tb_ten_hoc_vien.Size = new System.Drawing.Size(148, 32);
             this.tb_ten_hoc_vien.TabIndex = 4;
-            this.tb_ten_hoc_vien.Visible = false;
             this.tb_ten_hoc_vien.EditValueChanged += new System.EventHandler(this.tb_ten_hoc_vien_EditValueChanged);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(330, 57);
@@ -129,7 +149,6 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
             this.label2.Size = new System.Drawing.Size(95, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên học viên";
-            this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tb_ma_hoc_vien
@@ -153,50 +172,36 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
             // 
             // labelControl1
             // 
+            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(389, -7);
+            this.labelControl1.Location = new System.Drawing.Point(503, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(397, 37);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Tra Cứu Điểm Thi Học Viên";
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 28);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1147, 579);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
             // TraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 785);
+            this.ClientSize = new System.Drawing.Size(1375, 679);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TraCuu";
             this.Text = "TraCuu";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_monthi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_ten_hoc_vien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_ma_hoc_vien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

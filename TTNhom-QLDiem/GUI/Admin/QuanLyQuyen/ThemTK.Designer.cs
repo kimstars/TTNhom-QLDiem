@@ -47,6 +47,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControlThongtinchitiet = new DevExpress.XtraEditors.GroupControl();
+            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.MK = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TK = new System.Windows.Forms.TextBox();
@@ -56,8 +58,6 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             this.Quyen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.TextBox();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
@@ -66,8 +66,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThongtinchitiet)).BeginInit();
             this.groupControlThongtinchitiet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView1
@@ -224,6 +224,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             // 
             // sidePanel1
             // 
+            this.sidePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sidePanel1.Controls.Add(this.groupControl1);
             this.sidePanel1.Controls.Add(this.groupControlThongtinchitiet);
             this.sidePanel1.Location = new System.Drawing.Point(3, 2);
@@ -235,12 +237,13 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AppearanceCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseBackColor = true;
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.gridControl1);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 402);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
@@ -250,6 +253,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             // 
             // groupControlThongtinchitiet
             // 
+            this.groupControlThongtinchitiet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControlThongtinchitiet.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupControlThongtinchitiet.Appearance.Options.UseBackColor = true;
             this.groupControlThongtinchitiet.AppearanceCaption.BorderColor = System.Drawing.Color.Transparent;
@@ -278,7 +283,6 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             this.groupControlThongtinchitiet.Controls.Add(this.Quyen);
             this.groupControlThongtinchitiet.Controls.Add(this.label1);
             this.groupControlThongtinchitiet.Controls.Add(this.ID);
-            this.groupControlThongtinchitiet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControlThongtinchitiet.Location = new System.Drawing.Point(0, 0);
             this.groupControlThongtinchitiet.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.groupControlThongtinchitiet.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -287,6 +291,28 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1367, 402);
             this.groupControlThongtinchitiet.TabIndex = 0;
             this.groupControlThongtinchitiet.Text = "Thông tin chi tiết";
+            // 
+            // comboBoxEdit4
+            // 
+            this.comboBoxEdit4.Location = new System.Drawing.Point(766, 42);
+            this.comboBoxEdit4.Name = "comboBoxEdit4";
+            this.comboBoxEdit4.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEdit4.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit4.Size = new System.Drawing.Size(125, 28);
+            this.comboBoxEdit4.TabIndex = 60;
+            // 
+            // comboBoxEdit3
+            // 
+            this.comboBoxEdit3.Location = new System.Drawing.Point(209, 198);
+            this.comboBoxEdit3.Name = "comboBoxEdit3";
+            this.comboBoxEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEdit3.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit3.Size = new System.Drawing.Size(125, 28);
+            this.comboBoxEdit3.TabIndex = 59;
             // 
             // MK
             // 
@@ -378,28 +404,6 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             this.ID.Size = new System.Drawing.Size(238, 30);
             this.ID.TabIndex = 0;
             // 
-            // comboBoxEdit3
-            // 
-            this.comboBoxEdit3.Location = new System.Drawing.Point(209, 198);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit3.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Size = new System.Drawing.Size(125, 28);
-            this.comboBoxEdit3.TabIndex = 59;
-            // 
-            // comboBoxEdit4
-            // 
-            this.comboBoxEdit4.Location = new System.Drawing.Point(766, 42);
-            this.comboBoxEdit4.Name = "comboBoxEdit4";
-            this.comboBoxEdit4.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit4.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit4.Size = new System.Drawing.Size(125, 28);
-            this.comboBoxEdit4.TabIndex = 60;
-            // 
             // ThemTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -416,8 +420,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThongtinchitiet)).EndInit();
             this.groupControlThongtinchitiet.ResumeLayout(false);
             this.groupControlThongtinchitiet.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

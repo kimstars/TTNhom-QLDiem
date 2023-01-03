@@ -104,11 +104,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Controls.Add(this.bindingNavigator_thilai);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 263);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1175, 531);
@@ -258,9 +259,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // sidePanel1
             // 
+            this.sidePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sidePanel1.Controls.Add(this.groupControl1);
             this.sidePanel1.Controls.Add(this.groupControlThongtinchitiet);
-            this.sidePanel1.Location = new System.Drawing.Point(9, 29);
+            this.sidePanel1.Location = new System.Drawing.Point(3, 3);
             this.sidePanel1.Name = "sidePanel1";
             this.sidePanel1.Size = new System.Drawing.Size(1175, 794);
             this.sidePanel1.TabIndex = 68;
@@ -268,6 +271,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // groupControlThongtinchitiet
             // 
+            this.groupControlThongtinchitiet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControlThongtinchitiet.Appearance.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.groupControlThongtinchitiet.Appearance.Options.UseBackColor = true;
             this.groupControlThongtinchitiet.AppearanceCaption.BorderColor = System.Drawing.Color.Transparent;
@@ -292,7 +297,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControlThongtinchitiet.Controls.Add(this.tb_tenhocphan);
             this.groupControlThongtinchitiet.Controls.Add(this.label9);
             this.groupControlThongtinchitiet.Controls.Add(this.tb_sotc);
-            this.groupControlThongtinchitiet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControlThongtinchitiet.Location = new System.Drawing.Point(0, 0);
             this.groupControlThongtinchitiet.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.groupControlThongtinchitiet.LookAndFeel.UseDefaultLookAndFeel = false;

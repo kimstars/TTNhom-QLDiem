@@ -86,6 +86,7 @@ namespace TTNhom_QLDiem.GUI
             }
             else if (state == "Admin") {
                 Admin.QuanLyNghiepVu.QuanLyHV Dmk = new Admin.QuanLyNghiepVu.QuanLyHV();
+                Dmk.TopLevel = false;
                 panelchung.Controls.Clear();
                 panelchung.Dock = DockStyle.Fill;
                 panelchung.Controls.Add(Dmk);
@@ -108,6 +109,7 @@ namespace TTNhom_QLDiem.GUI
         {
             Admin.QuanLyNghiepVu.TraCuu Dmk = new Admin.QuanLyNghiepVu.TraCuu();
             panelchung.Controls.Clear();
+            Dmk.TopLevel = false;
             panelchung.Dock = DockStyle.Fill;
             panelchung.Controls.Add(Dmk);
             Dmk.Dock = DockStyle.Fill;
@@ -162,6 +164,32 @@ namespace TTNhom_QLDiem.GUI
             panelchung.Controls.Add(Dmk);
             Dmk.Dock = DockStyle.Fill;
             Dmk.Show();
+        }
+
+        private void QuanLyGV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (state == "Giảng Viên")
+            {
+                GiangVien.QLyGV Dmk = new GiangVien.QLyGV();
+                panelchung.Controls.Clear();
+                panelchung.Dock = DockStyle.Fill;
+                panelchung.Controls.Add(Dmk);
+                Dmk.Dock = DockStyle.Fill;
+                Dmk.Show();
+            }
+            else if (state == "Admin")
+            {
+                Admin.QuanLyNghiepVu.QlyGV.QLyGV Dmk = new Admin.QuanLyNghiepVu.QlyGV.QLyGV();
+                panelchung.Controls.Clear();
+                panelchung.Dock = DockStyle.Fill;
+                panelchung.Controls.Add(Dmk);
+                Dmk.Dock = DockStyle.Fill;
+                Dmk.Show();
+            }
+            else
+            {
+                panelchung.Controls.Clear();
+            }
         }
     }
 }

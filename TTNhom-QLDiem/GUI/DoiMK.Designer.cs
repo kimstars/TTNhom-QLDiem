@@ -47,6 +47,9 @@ namespace TTNhom_QLDiem.GUI
             // 
             // grpCtrl1
             // 
+            this.grpCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCtrl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
             this.grpCtrl1.Appearance.Options.UseBackColor = true;
             this.grpCtrl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,7 +62,6 @@ namespace TTNhom_QLDiem.GUI
             this.grpCtrl1.Controls.Add(this.lbPass);
             this.grpCtrl1.Controls.Add(this.txtOldPass);
             this.grpCtrl1.Controls.Add(this.lbUser);
-            this.grpCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpCtrl1.Location = new System.Drawing.Point(0, 0);
             this.grpCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpCtrl1.Name = "grpCtrl1";
@@ -69,6 +71,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -81,6 +84,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // txtReNewPass
             // 
+            this.txtReNewPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReNewPass.Location = new System.Drawing.Point(529, 399);
             this.txtReNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtReNewPass.Name = "txtReNewPass";
@@ -92,6 +96,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // btnOK
             // 
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnOK.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Appearance.Options.UseFont = true;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -104,6 +109,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // labelControl2
             // 
+            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(265, 402);
@@ -115,6 +121,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // txtNewPass
             // 
+            this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNewPass.Location = new System.Drawing.Point(529, 345);
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewPass.Name = "txtNewPass";
@@ -126,6 +133,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // lbPass
             // 
+            this.lbPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbPass.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPass.Appearance.Options.UseFont = true;
             this.lbPass.Location = new System.Drawing.Point(349, 348);
@@ -137,6 +145,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // txtOldPass
             // 
+            this.txtOldPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOldPass.Location = new System.Drawing.Point(529, 291);
             this.txtOldPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOldPass.Name = "txtOldPass";
@@ -148,6 +157,7 @@ namespace TTNhom_QLDiem.GUI
             // 
             // lbUser
             // 
+            this.lbUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbUser.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.Appearance.Options.UseFont = true;
             this.lbUser.Location = new System.Drawing.Point(349, 294);

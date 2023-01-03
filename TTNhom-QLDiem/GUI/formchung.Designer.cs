@@ -121,6 +121,7 @@ namespace TTNhom_QLDiem.GUI
             this.QuanLyGV.Id = 6;
             this.QuanLyGV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("QuanLyGV.ImageOptions.SvgImage")));
             this.QuanLyGV.Name = "QuanLyGV";
+            this.QuanLyGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.QuanLyGV_ItemClick);
             // 
             // HocPhan
             // 
