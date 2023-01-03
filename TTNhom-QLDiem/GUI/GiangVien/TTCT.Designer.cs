@@ -1,5 +1,5 @@
 ﻿
-namespace TTNhom_QLDiem.GUI.HocVien
+namespace TTNhom_QLDiem.GUI.GiangVien
 {
     partial class TTCT
     {
@@ -45,23 +45,23 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.comboBoxtinh = new System.Windows.Forms.ComboBox();
             this.comboBoxhuyen = new System.Windows.Forms.ComboBox();
             this.comboBoxxa = new System.Windows.Forms.ComboBox();
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit_Ma_BM = new DevExpress.XtraEditors.GridLookUpEdit();
             this.radioButtonnu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.dateTimePickerngaysinh = new System.Windows.Forms.DateTimePicker();
             this.buttonHuy = new System.Windows.Forms.Button();
-            this.buttonLưu = new System.Windows.Forms.Button();
+            this.buttonLuu = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.tb_lop_cn = new System.Windows.Forms.TextBox();
+            this.BoMon = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tb_hoten_hv = new System.Windows.Forms.TextBox();
+            this.TenGV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tb_mahv = new System.Windows.Forms.TextBox();
+            this.MaGV = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_Ma_BM.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridLookUpEdit1View
@@ -90,9 +90,9 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 22);
+            this.label1.Size = new System.Drawing.Size(68, 22);
             this.label1.TabIndex = 97;
-            this.label1.Text = "Mã học viên";
+            this.label1.Text = "Mã GV";
             // 
             // labelControl7
             // 
@@ -250,18 +250,18 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.comboBoxxa.Size = new System.Drawing.Size(143, 30);
             this.comboBoxxa.TabIndex = 84;
             // 
-            // gridLookUpEdit_Ma_Lop_chuyen_nganh
+            // gridLookUpEdit_Ma_BM
             // 
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Location = new System.Drawing.Point(195, 385);
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Name = "gridLookUpEdit_Ma_Lop_chuyen_nganh";
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Properties.Appearance.Options.UseFont = true;
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.gridLookUpEdit_Ma_BM.Location = new System.Drawing.Point(195, 385);
+            this.gridLookUpEdit_Ma_BM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridLookUpEdit_Ma_BM.Name = "gridLookUpEdit_Ma_BM";
+            this.gridLookUpEdit_Ma_BM.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridLookUpEdit_Ma_BM.Properties.Appearance.Options.UseFont = true;
+            this.gridLookUpEdit_Ma_BM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Properties.PopupView = this.gridLookUpEdit1View;
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Size = new System.Drawing.Size(252, 28);
-            this.gridLookUpEdit_Ma_Lop_chuyen_nganh.TabIndex = 83;
+            this.gridLookUpEdit_Ma_BM.Properties.PopupView = this.gridLookUpEdit1View;
+            this.gridLookUpEdit_Ma_BM.Size = new System.Drawing.Size(252, 28);
+            this.gridLookUpEdit_Ma_BM.TabIndex = 83;
             // 
             // radioButtonnu
             // 
@@ -311,18 +311,18 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.buttonHuy.UseVisualStyleBackColor = false;
             this.buttonHuy.Click += new System.EventHandler(this.buttonHuy_Click);
             // 
-            // buttonLưu
+            // buttonLuu
             // 
-            this.buttonLưu.BackColor = System.Drawing.SystemColors.Info;
-            this.buttonLưu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLưu.Location = new System.Drawing.Point(83, 485);
-            this.buttonLưu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonLưu.Name = "buttonLưu";
-            this.buttonLưu.Size = new System.Drawing.Size(122, 36);
-            this.buttonLưu.TabIndex = 78;
-            this.buttonLưu.Text = "Lưu";
-            this.buttonLưu.UseVisualStyleBackColor = false;
-            this.buttonLưu.Click += new System.EventHandler(this.buttonLưu_Click);
+            this.buttonLuu.BackColor = System.Drawing.SystemColors.Info;
+            this.buttonLuu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLuu.Location = new System.Drawing.Point(83, 485);
+            this.buttonLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonLuu.Name = "buttonLuu";
+            this.buttonLuu.Size = new System.Drawing.Size(122, 36);
+            this.buttonLuu.TabIndex = 78;
+            this.buttonLuu.Text = "Lưu";
+            this.buttonLuu.UseVisualStyleBackColor = false;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
             // 
             // label7
             // 
@@ -330,19 +330,19 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(41, 388);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 22);
+            this.label7.Size = new System.Drawing.Size(105, 22);
             this.label7.TabIndex = 77;
-            this.label7.Text = "Mã lóp CN";
+            this.label7.Text = "Mã Bộ Môn";
             // 
-            // tb_lop_cn
+            // BoMon
             // 
-            this.tb_lop_cn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_lop_cn.Location = new System.Drawing.Point(198, 432);
-            this.tb_lop_cn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_lop_cn.Name = "tb_lop_cn";
-            this.tb_lop_cn.ReadOnly = true;
-            this.tb_lop_cn.Size = new System.Drawing.Size(249, 30);
-            this.tb_lop_cn.TabIndex = 76;
+            this.BoMon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoMon.Location = new System.Drawing.Point(198, 432);
+            this.BoMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BoMon.Name = "BoMon";
+            this.BoMon.ReadOnly = true;
+            this.BoMon.Size = new System.Drawing.Size(249, 30);
+            this.BoMon.TabIndex = 76;
             // 
             // label10
             // 
@@ -360,18 +360,18 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(37, 100);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 22);
+            this.label5.Size = new System.Drawing.Size(101, 22);
             this.label5.TabIndex = 71;
-            this.label5.Text = "Họ tên học viên";
+            this.label5.Text = "Họ Tên GV";
             // 
-            // tb_hoten_hv
+            // TenGV
             // 
-            this.tb_hoten_hv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_hoten_hv.Location = new System.Drawing.Point(195, 96);
-            this.tb_hoten_hv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_hoten_hv.Name = "tb_hoten_hv";
-            this.tb_hoten_hv.Size = new System.Drawing.Size(252, 30);
-            this.tb_hoten_hv.TabIndex = 70;
+            this.TenGV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenGV.Location = new System.Drawing.Point(195, 96);
+            this.TenGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TenGV.Name = "TenGV";
+            this.TenGV.Size = new System.Drawing.Size(252, 30);
+            this.TenGV.TabIndex = 70;
             // 
             // label4
             // 
@@ -379,9 +379,9 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(41, 435);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 22);
+            this.label4.Size = new System.Drawing.Size(74, 22);
             this.label4.TabIndex = 69;
-            this.label4.Text = "Lớp chuyên ngành";
+            this.label4.Text = "Bộ Môn";
             // 
             // label3
             // 
@@ -403,15 +403,15 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label2.TabIndex = 67;
             this.label2.Text = "Địa chỉ";
             // 
-            // tb_mahv
+            // MaGV
             // 
-            this.tb_mahv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mahv.Location = new System.Drawing.Point(195, 48);
-            this.tb_mahv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_mahv.Name = "tb_mahv";
-            this.tb_mahv.ReadOnly = true;
-            this.tb_mahv.Size = new System.Drawing.Size(252, 30);
-            this.tb_mahv.TabIndex = 66;
+            this.MaGV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaGV.Location = new System.Drawing.Point(195, 48);
+            this.MaGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaGV.Name = "MaGV";
+            this.MaGV.ReadOnly = true;
+            this.MaGV.Size = new System.Drawing.Size(252, 30);
+            this.MaGV.TabIndex = 66;
             // 
             // TTCT
             // 
@@ -433,25 +433,25 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.Controls.Add(this.comboBoxtinh);
             this.Controls.Add(this.comboBoxhuyen);
             this.Controls.Add(this.comboBoxxa);
-            this.Controls.Add(this.gridLookUpEdit_Ma_Lop_chuyen_nganh);
+            this.Controls.Add(this.gridLookUpEdit_Ma_BM);
             this.Controls.Add(this.radioButtonnu);
             this.Controls.Add(this.radioButtonNam);
             this.Controls.Add(this.dateTimePickerngaysinh);
             this.Controls.Add(this.buttonHuy);
-            this.Controls.Add(this.buttonLưu);
+            this.Controls.Add(this.buttonLuu);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tb_lop_cn);
+            this.Controls.Add(this.BoMon);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tb_hoten_hv);
+            this.Controls.Add(this.TenGV);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_mahv);
+            this.Controls.Add(this.MaGV);
             this.Name = "TTCT";
             this.Text = "TTCT";
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_Ma_Lop_chuyen_nganh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_Ma_BM.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,20 +475,20 @@ namespace TTNhom_QLDiem.GUI.HocVien
         private System.Windows.Forms.ComboBox comboBoxtinh;
         private System.Windows.Forms.ComboBox comboBoxhuyen;
         private System.Windows.Forms.ComboBox comboBoxxa;
-        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit_Ma_Lop_chuyen_nganh;
+        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit_Ma_BM;
         private System.Windows.Forms.RadioButton radioButtonnu;
         private System.Windows.Forms.RadioButton radioButtonNam;
         private System.Windows.Forms.DateTimePicker dateTimePickerngaysinh;
         private System.Windows.Forms.Button buttonHuy;
-        private System.Windows.Forms.Button buttonLưu;
+        private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tb_lop_cn;
+        private System.Windows.Forms.TextBox BoMon;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tb_hoten_hv;
+        private System.Windows.Forms.TextBox TenGV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tb_mahv;
+        private System.Windows.Forms.TextBox MaGV;
     }
 }

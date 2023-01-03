@@ -66,11 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QuanLyGV.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QuanLyGV.Designer.cs">
-      <DependentUpon>QuanLyGV.cs</DependentUpon>
+    <Compile Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.Designer.cs">
+      <DependentUpon>QLyGV.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\QuanLyNghiepVu\QuanLyHV.cs">
       <SubType>Form</SubType>
@@ -126,12 +126,6 @@
     <Compile Include="GUI\GiangVien\DSHVien.Designer.cs">
       <DependentUpon>DSHVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiangVien\GiangVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\GiangVien.Designer.cs">
-      <DependentUpon>GiangVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GiangVien\NhapdiemHocLai.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +143,18 @@
     </Compile>
     <Compile Include="GUI\GiangVien\NhapDiemThi.Designer.cs">
       <DependentUpon>NhapDiemThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiangVien\QLyGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\QLyGV.Designer.cs">
+      <DependentUpon>QLyGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiangVien\TTCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\TTCT.Designer.cs">
+      <DependentUpon>TTCT.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HocVien\QLyHV.cs">
       <SubType>UserControl</SubType>
@@ -176,8 +182,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QuanLyGV.resx">
-      <DependentUpon>QuanLyGV.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.resx">
+      <DependentUpon>QLyGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\QuanLyHV.resx">
       <DependentUpon>QuanLyHV.cs</DependentUpon>
@@ -206,9 +212,6 @@
     <EmbeddedResource Include="GUI\GiangVien\DSHVien.resx">
       <DependentUpon>DSHVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\GiangVien.resx">
-      <DependentUpon>GiangVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\NhapdiemHocLai.resx">
       <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\NhapDiemThi.resx">
       <DependentUpon>NhapDiemThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\QLyGV.resx">
+      <DependentUpon>QLyGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\TTCT.resx">
+      <DependentUpon>TTCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\QLyHV.resx">
       <DependentUpon>QLyHV.cs</DependentUpon>

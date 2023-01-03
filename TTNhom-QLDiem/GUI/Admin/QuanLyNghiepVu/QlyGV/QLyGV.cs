@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.QlyGV
 {
-    public partial class QuanLyHV : DevExpress.XtraEditors.XtraForm
+    public partial class QLyGV : DevExpress.XtraEditors.XtraUserControl
     {
-        public QuanLyHV()
+        public QLyGV()
         {
             InitializeComponent();
         }

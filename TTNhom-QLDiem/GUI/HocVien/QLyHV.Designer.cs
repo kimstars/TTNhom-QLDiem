@@ -29,8 +29,8 @@ namespace TTNhom_QLDiem.GUI.HocVien
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLyHV));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLyHV));
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -38,9 +38,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Edit = new DevExpress.XtraEditors.SimpleButton();
-            this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tb_ten_lop_cn = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,16 +57,18 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.dataGridViewDSHocSinh = new System.Windows.Forms.DataGridView();
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.groupControlThongtinchitiet = new DevExpress.XtraEditors.GroupControl();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHocSinh)).BeginInit();
             this.sidePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThongtinchitiet)).BeginInit();
             this.groupControlThongtinchitiet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxEdit1
@@ -144,20 +144,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.btn_Edit.Size = new System.Drawing.Size(159, 32);
             this.btn_Edit.TabIndex = 51;
             this.btn_Edit.Text = "Sửa Thông Tin";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
-            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(57, 301);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(192, 24);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "      Lọc danh sách theo";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // label9
             // 
@@ -168,14 +155,6 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label9.Size = new System.Drawing.Size(123, 22);
             this.label9.TabIndex = 25;
             this.label9.Text = "Lớp Học Phần";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(30, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(249, 231);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
             // 
             // label7
             // 
@@ -319,12 +298,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AppearanceCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseBackColor = true;
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.dataGridViewDSHocSinh);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 402);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
@@ -357,6 +337,8 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // sidePanel1
             // 
+            this.sidePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sidePanel1.Controls.Add(this.groupControl1);
             this.sidePanel1.Controls.Add(this.groupControlThongtinchitiet);
             this.sidePanel1.Location = new System.Drawing.Point(3, 2);
@@ -368,6 +350,8 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // groupControlThongtinchitiet
             // 
+            this.groupControlThongtinchitiet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControlThongtinchitiet.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupControlThongtinchitiet.Appearance.Options.UseBackColor = true;
             this.groupControlThongtinchitiet.AppearanceCaption.BorderColor = System.Drawing.Color.Transparent;
@@ -398,7 +382,6 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.groupControlThongtinchitiet.Controls.Add(this.tb_quequan);
             this.groupControlThongtinchitiet.Controls.Add(this.label1);
             this.groupControlThongtinchitiet.Controls.Add(this.tb_mahv);
-            this.groupControlThongtinchitiet.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControlThongtinchitiet.Location = new System.Drawing.Point(0, 0);
             this.groupControlThongtinchitiet.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.groupControlThongtinchitiet.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -407,6 +390,28 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1367, 402);
             this.groupControlThongtinchitiet.TabIndex = 0;
             this.groupControlThongtinchitiet.Text = "Thông tin chi tiết";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Location = new System.Drawing.Point(57, 301);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(192, 24);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "      Lọc danh sách theo";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(30, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(249, 231);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // QLyHV
             // 
@@ -418,7 +423,6 @@ namespace TTNhom_QLDiem.GUI.HocVien
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHocSinh)).EndInit();
@@ -426,6 +430,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThongtinchitiet)).EndInit();
             this.groupControlThongtinchitiet.ResumeLayout(false);
             this.groupControlThongtinchitiet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

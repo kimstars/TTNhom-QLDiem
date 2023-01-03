@@ -9,18 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTNhom_QLDiem.GUI.HocVien
+namespace TTNhom_QLDiem.GUI.GiangVien
 {
-    public partial class QLyHV : DevExpress.XtraEditors.XtraUserControl
+    public partial class QLyGV : DevExpress.XtraEditors.XtraUserControl
     {
-        public QLyHV()
+        public QLyGV()
         {
             InitializeComponent();
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btn_Search_Click(object sender, EventArgs e)
         {
-            HocVien.TTCT Dmk = new HocVien.TTCT();
+            GiangVien.TTCT Dmk = new GiangVien.TTCT();
             Dmk.Show();
         }
     }

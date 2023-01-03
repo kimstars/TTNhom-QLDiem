@@ -11,11 +11,21 @@ using System.Windows.Forms;
 
 namespace TTNhom_QLDiem.GUI.GiangVien
 {
-    public partial class GiangVien : DevExpress.XtraEditors.XtraForm
+    public partial class TTCT : DevExpress.XtraEditors.XtraForm
     {
-        public GiangVien()
+        public TTCT()
         {
             InitializeComponent();
+        }
+
+        private void buttonLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

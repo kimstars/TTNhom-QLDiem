@@ -47,6 +47,9 @@ namespace TTNhom_QLDiem.GUI
             // 
             // grpCtrl1
             // 
+            this.grpCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCtrl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
             this.grpCtrl1.Appearance.Options.UseBackColor = true;
             this.grpCtrl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,20 +62,20 @@ namespace TTNhom_QLDiem.GUI
             this.grpCtrl1.Controls.Add(this.lbPass);
             this.grpCtrl1.Controls.Add(this.txtOldPass);
             this.grpCtrl1.Controls.Add(this.lbUser);
-            this.grpCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpCtrl1.Location = new System.Drawing.Point(0, 0);
             this.grpCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpCtrl1.Name = "grpCtrl1";
-            this.grpCtrl1.Size = new System.Drawing.Size(824, 621);
+            this.grpCtrl1.Size = new System.Drawing.Size(1035, 776);
             this.grpCtrl1.TabIndex = 2;
             this.grpCtrl1.Text = "Đổi mật khẩu";
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(511, 357);
+            this.btnCancel.Location = new System.Drawing.Point(652, 487);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(115, 30);
@@ -81,7 +84,8 @@ namespace TTNhom_QLDiem.GUI
             // 
             // txtReNewPass
             // 
-            this.txtReNewPass.Location = new System.Drawing.Point(388, 269);
+            this.txtReNewPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtReNewPass.Location = new System.Drawing.Point(529, 399);
             this.txtReNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtReNewPass.Name = "txtReNewPass";
             this.txtReNewPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,10 +96,11 @@ namespace TTNhom_QLDiem.GUI
             // 
             // btnOK
             // 
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnOK.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Appearance.Options.UseFont = true;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(208, 357);
+            this.btnOK.Location = new System.Drawing.Point(349, 487);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(115, 30);
@@ -104,9 +109,10 @@ namespace TTNhom_QLDiem.GUI
             // 
             // labelControl2
             // 
+            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(124, 272);
+            this.labelControl2.Location = new System.Drawing.Point(265, 402);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(231, 27);
@@ -115,7 +121,8 @@ namespace TTNhom_QLDiem.GUI
             // 
             // txtNewPass
             // 
-            this.txtNewPass.Location = new System.Drawing.Point(388, 215);
+            this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNewPass.Location = new System.Drawing.Point(529, 345);
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,9 +133,10 @@ namespace TTNhom_QLDiem.GUI
             // 
             // lbPass
             // 
+            this.lbPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbPass.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPass.Appearance.Options.UseFont = true;
-            this.lbPass.Location = new System.Drawing.Point(208, 218);
+            this.lbPass.Location = new System.Drawing.Point(349, 348);
             this.lbPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbPass.Name = "lbPass";
             this.lbPass.Size = new System.Drawing.Size(147, 27);
@@ -137,7 +145,8 @@ namespace TTNhom_QLDiem.GUI
             // 
             // txtOldPass
             // 
-            this.txtOldPass.Location = new System.Drawing.Point(388, 161);
+            this.txtOldPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtOldPass.Location = new System.Drawing.Point(529, 291);
             this.txtOldPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOldPass.Name = "txtOldPass";
             this.txtOldPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,9 +157,10 @@ namespace TTNhom_QLDiem.GUI
             // 
             // lbUser
             // 
+            this.lbUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbUser.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.Appearance.Options.UseFont = true;
-            this.lbUser.Location = new System.Drawing.Point(208, 164);
+            this.lbUser.Location = new System.Drawing.Point(349, 294);
             this.lbUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(133, 27);
@@ -163,7 +173,7 @@ namespace TTNhom_QLDiem.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grpCtrl1);
             this.Name = "DoiMK";
-            this.Size = new System.Drawing.Size(824, 621);
+            this.Size = new System.Drawing.Size(1035, 776);
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).EndInit();
             this.grpCtrl1.ResumeLayout(false);
             this.grpCtrl1.PerformLayout();
