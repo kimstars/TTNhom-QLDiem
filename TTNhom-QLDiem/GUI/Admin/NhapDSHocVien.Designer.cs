@@ -29,8 +29,16 @@ namespace TTNhom_QLDiem.GUI.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // NhapDSHocVien
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "NhapDSHocVien";
+            this.Size = new System.Drawing.Size(881, 548);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
