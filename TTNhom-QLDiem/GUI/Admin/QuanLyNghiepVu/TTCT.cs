@@ -9,18 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTNhom_QLDiem
+namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu
 {
-    public partial class MainForm : DevExpress.XtraEditors.XtraForm
+    public partial class TTCT : DevExpress.XtraEditors.XtraForm
     {
-        public MainForm()
+        public TTCT()
         {
             InitializeComponent();
-        }
-
-        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
