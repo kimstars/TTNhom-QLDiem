@@ -154,5 +154,10 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
         {
 
         }
+
+        private void groupControlThongtinchitiet_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
