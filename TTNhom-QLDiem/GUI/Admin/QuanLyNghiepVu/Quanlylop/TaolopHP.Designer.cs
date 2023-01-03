@@ -58,7 +58,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.groupControlThongtinchitiet = new DevExpress.XtraEditors.GroupControl();
             this.comboBoxEdit5 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.LopCN = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,6 +66,11 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.MaHK = new DevExpress.XtraEditors.ComboBoxEdit();
             this.PhongHoc = new DevExpress.XtraEditors.ComboBoxEdit();
             this.MaHP = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.TenLopCN = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -76,17 +81,19 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThongtinchitiet)).BeginInit();
             this.groupControlThongtinchitiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LopCN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaGV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaHK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhongHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaHP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxEdit2
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(841, 301);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(841, 427);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
@@ -98,7 +105,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(482, 301);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(482, 427);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
@@ -111,7 +118,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(482, 348);
+            this.textBox1.Location = new System.Drawing.Point(482, 474);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -138,7 +145,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.btnSearch.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Appearance.Options.UseForeColor = true;
-            this.btnSearch.Location = new System.Drawing.Point(930, 348);
+            this.btnSearch.Location = new System.Drawing.Point(930, 474);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(139, 32);
             this.btnSearch.TabIndex = 53;
@@ -179,7 +186,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(57, 301);
+            this.label12.Location = new System.Drawing.Point(57, 427);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(192, 24);
             this.label12.TabIndex = 50;
@@ -191,7 +198,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(326, 303);
+            this.label11.Location = new System.Drawing.Point(326, 429);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(86, 22);
             this.label11.TabIndex = 49;
@@ -202,7 +209,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(704, 305);
+            this.label9.Location = new System.Drawing.Point(704, 431);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 22);
             this.label9.TabIndex = 25;
@@ -342,7 +349,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.gridControl1.Location = new System.Drawing.Point(2, 28);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1363, 372);
+            this.gridControl1.Size = new System.Drawing.Size(1363, 255);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -357,10 +364,10 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.groupControl1.AppearanceCaption.Options.UseBackColor = true;
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.gridControl1);
-            this.groupControl1.Location = new System.Drawing.Point(0, 402);
+            this.groupControl1.Location = new System.Drawing.Point(0, 519);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1367, 402);
+            this.groupControl1.Size = new System.Drawing.Size(1367, 285);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Danh Sách Lớp Học Phần";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -389,9 +396,12 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.groupControlThongtinchitiet.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControlThongtinchitiet.AppearanceCaption.Options.UseBorderColor = true;
             this.groupControlThongtinchitiet.AppearanceCaption.Options.UseFont = true;
+            this.groupControlThongtinchitiet.Controls.Add(this.gridControl2);
+            this.groupControlThongtinchitiet.Controls.Add(this.simpleButton2);
+            this.groupControlThongtinchitiet.Controls.Add(this.simpleButton1);
             this.groupControlThongtinchitiet.Controls.Add(this.comboBoxEdit5);
             this.groupControlThongtinchitiet.Controls.Add(this.label13);
-            this.groupControlThongtinchitiet.Controls.Add(this.comboBoxEdit4);
+            this.groupControlThongtinchitiet.Controls.Add(this.LopCN);
             this.groupControlThongtinchitiet.Controls.Add(this.label8);
             this.groupControlThongtinchitiet.Controls.Add(this.comboBoxEdit3);
             this.groupControlThongtinchitiet.Controls.Add(this.label6);
@@ -424,13 +434,13 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.groupControlThongtinchitiet.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControlThongtinchitiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControlThongtinchitiet.Name = "groupControlThongtinchitiet";
-            this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1367, 402);
+            this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1367, 515);
             this.groupControlThongtinchitiet.TabIndex = 0;
             this.groupControlThongtinchitiet.Text = "Thông tin chi tiết";
             // 
             // comboBoxEdit5
             // 
-            this.comboBoxEdit5.Location = new System.Drawing.Point(1197, 301);
+            this.comboBoxEdit5.Location = new System.Drawing.Point(1197, 427);
             this.comboBoxEdit5.Name = "comboBoxEdit5";
             this.comboBoxEdit5.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEdit5.Properties.Appearance.Options.UseFont = true;
@@ -443,22 +453,22 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1048, 305);
+            this.label13.Location = new System.Drawing.Point(1048, 431);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(105, 22);
             this.label13.TabIndex = 67;
             this.label13.Text = "Mã Lớp CN";
             // 
-            // comboBoxEdit4
+            // LopCN
             // 
-            this.comboBoxEdit4.Location = new System.Drawing.Point(766, 198);
-            this.comboBoxEdit4.Name = "comboBoxEdit4";
-            this.comboBoxEdit4.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit4.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.LopCN.Location = new System.Drawing.Point(766, 198);
+            this.LopCN.Name = "LopCN";
+            this.LopCN.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LopCN.Properties.Appearance.Options.UseFont = true;
+            this.LopCN.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit4.Size = new System.Drawing.Size(125, 28);
-            this.comboBoxEdit4.TabIndex = 66;
+            this.LopCN.Size = new System.Drawing.Size(262, 28);
+            this.LopCN.TabIndex = 66;
             // 
             // label8
             // 
@@ -466,9 +476,9 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(627, 200);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 22);
+            this.label8.Size = new System.Drawing.Size(74, 22);
             this.label8.TabIndex = 65;
-            this.label8.Text = "Mã Lớp CN";
+            this.label8.Text = "Lớp CN";
             // 
             // comboBoxEdit3
             // 
@@ -535,6 +545,56 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.MaHP.Size = new System.Drawing.Size(238, 28);
             this.MaHP.TabIndex = 59;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.Location = new System.Drawing.Point(907, 236);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(121, 34);
+            this.simpleButton1.TabIndex = 70;
+            this.simpleButton1.Text = "Chọn";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.Location = new System.Drawing.Point(907, 289);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(121, 32);
+            this.simpleButton2.TabIndex = 71;
+            this.simpleButton2.Text = "Bỏ";
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(631, 236);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(260, 156);
+            this.gridControl2.TabIndex = 72;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.TenLopCN});
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            // 
+            // TenLopCN
+            // 
+            this.TenLopCN.Caption = "Tên Lớp CN";
+            this.TenLopCN.MinWidth = 25;
+            this.TenLopCN.Name = "TenLopCN";
+            this.TenLopCN.Visible = true;
+            this.TenLopCN.VisibleIndex = 0;
+            this.TenLopCN.Width = 94;
+            // 
             // TaolopHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -553,12 +613,14 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.groupControlThongtinchitiet.ResumeLayout(false);
             this.groupControlThongtinchitiet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LopCN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaGV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaHK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhongHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaHP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,9 +659,14 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
         private DevExpress.XtraEditors.ComboBoxEdit PhongHoc;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit5;
         private System.Windows.Forms.Label label13;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit4;
+        private DevExpress.XtraEditors.ComboBoxEdit LopCN;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
         private System.Windows.Forms.Label label6;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.Columns.GridColumn TenLopCN;
     }
 }
