@@ -248,6 +248,9 @@
     <EmbeddedResource Include="GUI\GiangVien\TTCT.resx">
       <DependentUpon>TTCT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HocVien\HV_Diem.resx">
+      <DependentUpon>HV_Diem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\QLyHV.resx">
       <DependentUpon>QLyHV.cs</DependentUpon>
     </EmbeddedResource>

@@ -17,5 +17,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
         {
             InitializeComponent();
         }
+
+   
     }
 }

@@ -31,6 +31,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -70,7 +70,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.dateEdit1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox1);
@@ -91,6 +91,21 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.panel1.Size = new System.Drawing.Size(889, 769);
             this.panel1.TabIndex = 32;
             // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Enabled = false;
+            this.dateEdit1.Location = new System.Drawing.Point(229, 203);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dateEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(238, 22);
+            this.dateEdit1.TabIndex = 46;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -103,6 +118,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(229, 349);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -123,6 +139,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(229, 155);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -143,6 +160,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(229, 107);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -163,6 +181,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(229, 298);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -193,6 +212,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(229, 251);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -213,7 +233,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(229, 59);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -221,21 +241,6 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(238, 30);
             this.textBox7.TabIndex = 32;
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Enabled = false;
-            this.dateEdit1.Location = new System.Drawing.Point(229, 203);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.dateEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(238, 22);
-            this.dateEdit1.TabIndex = 46;
             // 
             // TTHocVien
             // 
