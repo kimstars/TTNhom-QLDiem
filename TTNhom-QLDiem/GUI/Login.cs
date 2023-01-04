@@ -20,7 +20,7 @@ namespace TTNhom_QLDiem.GUI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            string state = "";
+            string state = "Admin";
             formchung frm = new formchung(state);
             this.Hide();
             frm.Show();
