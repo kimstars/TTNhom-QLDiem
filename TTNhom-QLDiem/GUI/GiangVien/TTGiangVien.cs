@@ -9,15 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTNhom_QLDiem.GUI.HocVien
+namespace TTNhom_QLDiem.GUI.GiangVien
 {
-    public partial class TTHocVien : DevExpress.XtraEditors.XtraUserControl
+    public partial class TTGiangVien : DevExpress.XtraEditors.XtraUserControl
     {
-        public TTHocVien()
+        public TTGiangVien()
         {
             InitializeComponent();
         }
-
-        
     }
 }

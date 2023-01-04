@@ -153,6 +153,12 @@
     <Compile Include="GUI\GiangVien\TTCT.Designer.cs">
       <DependentUpon>TTCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GiangVien\TTGiangVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\TTGiangVien.Designer.cs">
+      <DependentUpon>TTGiangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HocVien\HV_Diem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\TTCT.resx">
       <DependentUpon>TTCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\TTGiangVien.resx">
+      <DependentUpon>TTGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\HV_Diem.resx">
       <DependentUpon>HV_Diem.cs</DependentUpon>
