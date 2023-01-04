@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TTNhom_QLDiem.Model;
+
+
 namespace TTNhom_QLDiem.GUI
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
@@ -18,12 +21,53 @@ namespace TTNhom_QLDiem.GUI
             InitializeComponent();
         }
 
+
         private void btnOK_Click(object sender, EventArgs e)
         {
-            string state = "Admin";
-            formchung frm = new formchung(state);
-            this.Hide();
-            frm.Show();
+            using(QLDHV_model db = new QLDHV_model())
+            {
+                string hashedPass = HashPass(txtPassword.Text);
+
+                if (db.TaiKhoans.Any(s => s.TenDangNhap == txtUsername.Text && s.MatKhau == hashedPass))
+                {
+                    TaiKhoan acc = db.TaiKhoans.Where(s => s.TenDangNhap == txtUsername.Text && s.MatKhau == hashedPass).FirstOrDefault();
+
+                    Model.GiangVien gv = db.GiangViens.Where(s => s.MaTK == acc.MaTK).FirstOrDefault();
+
+                    Model.HocVien hv = db.HocViens.Where(s => s.MaTK == acc.MaTK).FirstOrDefault();
+
+                    MainForm fm;
+
+                    if (gv != null)
+                    {
+                        fm = new MainForm(gv.MaGiangVien, acc.Quyen);
+
+                    }
+                    else if (hv != null)
+                    {
+                        fm = new MainForm(hv.MaHocVien, acc.Quyen);
+
+                    }
+                    else
+                    {
+                        fm = new MainForm(acc.Quyen);
+                    }
+
+
+                    this.Hide();
+                    fm.ShowDialog();
+                    if (!fm.IsDisposed)
+                    {
+                        txtPassword.Text = "";
+                        txtUsername.Focus();
+                        this.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng");
+                }
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -31,88 +75,38 @@ namespace TTNhom_QLDiem.GUI
             this.Close();
         }
 
-        //int CheckLogin(string _name, string _pass)
-        //{
-        //    int check = 0;
-        //    List<User> list_hv = new List<User>();
-        //    List<User> list_dd = new List<User>();
-        //    List<User> list_gv = new List<User>();
-        //    List<User> list_ad = new List<User>();
-        //    string sql1 = "SELECT CONVERT(VARCHAR(10),MaHocVien) AS tendangnhap, MatKhau AS matkhau FROM dbo.HocVien";
-        //    string sql2 = "SELECT MaDaiDoi AS tendangnhap, MatKhau AS matkhau FROM dbo.DaiDoi";
-        //    string sql3 = "SELECT MaGiaoVien AS tendangnhap, MatKhau AS matkhau FROM dbo.GiaoVien";
-        //    string sql4 = "SELECT MaQuanTriVien AS tendangnhap , MatKhau AS matkhau FROM dbo.QuanTriVien";
-        //    list_hv = Program.userSql.LayDSNguoiDung(sql1);
-        //    list_dd = Program.userSql.LayDSNguoiDung(sql2);
-        //    list_gv = Program.userSql.LayDSNguoiDung(sql3);
-        //    list_ad = Program.userSql.LayDSNguoiDung(sql4);
-        //    foreach (var value in list_hv)
-        //    {
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
+        }
 
-        //        if (value.Username.ToLower() == _name.ToLower() && _pass.ToLower() == value.Password.ToLower())
-        //        {
-        //            check = 1;
-        //            Program.user = new User();
-        //            Program.user.Username = value.Username;
-        //            Program.user.Password = value.Password;
-        //            Program.user.Chucvu = "HocVien";
-        //            break;
-        //        }
-        //    }
-        //    if (check == 0)
-        //    {
-        //        foreach (var value in list_dd)
-        //        {
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
+        }
 
-        //            if (value.Username.ToLower() == _name.ToLower() && _pass.ToLower() == value.Password.ToLower())
-        //            {
-        //                check = 1;
-        //                Program.user = new User();
-        //                Program.user.Username = value.Username;
-        //                Program.user.Password = value.Password;
-        //                Program.user.Chucvu = "DaiDoi";
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    if (check == 0)
-        //    {
-        //        foreach (var value in list_gv)
-        //        {
+        public static string HashPass(string pass)
+        {
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(pass);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
 
-        //            if (value.Username.ToLower() == _name.ToLower() && _pass.ToLower() == value.Password.ToLower())
-        //            {
-        //                check = 1;
-        //                Program.user = new User();
-        //                Program.user.Username = value.Username;
-        //                Program.user.Password = value.Password;
-        //                Program.user.Chucvu = "GiaoVien";
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    if (check == 0)
-        //    {
-        //        foreach (var value in list_ad)
-        //        {
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
 
-        //            if (value.Username.ToLower() == _name.ToLower() && _pass.ToLower() == value.Password.ToLower())
-        //            {
-        //                check = 1;
-        //                Program.user = new User();
-        //                Program.user.Username = value.Username;
-        //                Program.user.Password = value.Password;
-        //                Program.user.Chucvu = "Admin";
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    if (check == 1)
-        //    {
-        //        Program.list_Q = new List<Quyen>();
-        //        Program.list_Q = Program.quyenSql.Select_Quyen_chucvu(Program.user.Chucvu);
-        //    }
-        //    return check;
-        //}
     }
 }

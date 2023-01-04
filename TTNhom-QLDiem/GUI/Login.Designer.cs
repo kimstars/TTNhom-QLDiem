@@ -29,185 +29,150 @@ namespace TTNhom_QLDiem.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpCtrl1 = new DevExpress.XtraEditors.GroupControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOK = new DevExpress.XtraEditors.SimpleButton();
-            this.checkEditNhoMatKhau = new DevExpress.XtraEditors.CheckEdit();
+            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.checkEditHienMatKhau = new DevExpress.XtraEditors.CheckEdit();
-            this.txtPass = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.lbPass = new DevExpress.XtraEditors.LabelControl();
-            this.txtUser = new DevExpress.XtraEditors.TextEdit();
+            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.lbUser = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).BeginInit();
-            this.grpCtrl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditNhoMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // grpCtrl1
+            // labelControl1
             // 
-            this.grpCtrl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.grpCtrl1.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.grpCtrl1.Appearance.Options.UseBackColor = true;
-            this.grpCtrl1.AppearanceCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.grpCtrl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpCtrl1.AppearanceCaption.Options.UseBackColor = true;
-            this.grpCtrl1.AppearanceCaption.Options.UseFont = true;
-            this.grpCtrl1.Controls.Add(this.pictureBox1);
-            this.grpCtrl1.Controls.Add(this.btnCancel);
-            this.grpCtrl1.Controls.Add(this.btnOK);
-            this.grpCtrl1.Controls.Add(this.checkEditNhoMatKhau);
-            this.grpCtrl1.Controls.Add(this.checkEditHienMatKhau);
-            this.grpCtrl1.Controls.Add(this.txtPass);
-            this.grpCtrl1.Controls.Add(this.lbPass);
-            this.grpCtrl1.Controls.Add(this.txtUser);
-            this.grpCtrl1.Controls.Add(this.lbUser);
-            this.grpCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpCtrl1.Location = new System.Drawing.Point(0, 0);
-            this.grpCtrl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.grpCtrl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.grpCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpCtrl1.Name = "grpCtrl1";
-            this.grpCtrl1.Size = new System.Drawing.Size(553, 587);
-            this.grpCtrl1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
-            this.pictureBox1.Image = global::TTNhom_QLDiem.Properties.Resources.japan_lofi;
-            this.pictureBox1.Location = new System.Drawing.Point(201, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 167);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(27, 21);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(440, 26);
+            this.labelControl1.TabIndex = 40;
+            this.labelControl1.Text = "ĐĂNG NHẬP QUẢN LÝ ĐIỂM MTA 2023";
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(301, 473);
+            this.btnCancel.Location = new System.Drawing.Point(86, 275);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(114, 30);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Hủy bỏ";
+            this.btnCancel.Size = new System.Drawing.Size(308, 37);
+            this.btnCancel.TabIndex = 36;
+            this.btnCancel.Text = "Thoát";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnOK
+            // btnDangNhap
             // 
-            this.btnOK.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Appearance.Options.UseFont = true;
-            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(128, 473);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(114, 30);
-            this.btnOK.TabIndex = 8;
-            this.btnOK.Text = "Đăng nhập";
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // checkEditNhoMatKhau
-            // 
-            this.checkEditNhoMatKhau.Location = new System.Drawing.Point(107, 428);
-            this.checkEditNhoMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkEditNhoMatKhau.Name = "checkEditNhoMatKhau";
-            this.checkEditNhoMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEditNhoMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.checkEditNhoMatKhau.Properties.Caption = "Nhớ mật khẩu";
-            this.checkEditNhoMatKhau.Size = new System.Drawing.Size(114, 23);
-            this.checkEditNhoMatKhau.TabIndex = 14;
+            this.btnDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Appearance.Options.UseFont = true;
+            this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnDangNhap.Location = new System.Drawing.Point(86, 227);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(308, 37);
+            this.btnDangNhap.TabIndex = 34;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // checkEditHienMatKhau
             // 
-            this.checkEditHienMatKhau.Location = new System.Drawing.Point(335, 400);
+            this.checkEditHienMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkEditHienMatKhau.Location = new System.Drawing.Point(86, 197);
             this.checkEditHienMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkEditHienMatKhau.Name = "checkEditHienMatKhau";
             this.checkEditHienMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkEditHienMatKhau.Properties.Appearance.Options.UseFont = true;
             this.checkEditHienMatKhau.Properties.Caption = "Hiện mật khẩu";
-            this.checkEditHienMatKhau.Size = new System.Drawing.Size(122, 23);
-            this.checkEditHienMatKhau.TabIndex = 13;
+            this.checkEditHienMatKhau.Size = new System.Drawing.Size(122, 24);
+            this.checkEditHienMatKhau.TabIndex = 39;
             // 
-            // txtPass
+            // txtPassword
             // 
-            this.txtPass.Location = new System.Drawing.Point(105, 393);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Properties.Appearance.Options.UseFont = true;
-            this.txtPass.Properties.UseSystemPasswordChar = true;
-            this.txtPass.Size = new System.Drawing.Size(207, 30);
-            this.txtPass.TabIndex = 12;
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPassword.Location = new System.Drawing.Point(86, 154);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Properties.Appearance.Options.UseFont = true;
+            this.txtPassword.Properties.UseSystemPasswordChar = true;
+            this.txtPassword.Size = new System.Drawing.Size(308, 28);
+            this.txtPassword.TabIndex = 38;
             // 
             // lbPass
             // 
+            this.lbPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbPass.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPass.Appearance.Options.UseFont = true;
-            this.lbPass.Location = new System.Drawing.Point(107, 366);
+            this.lbPass.Location = new System.Drawing.Point(86, 128);
             this.lbPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbPass.Name = "lbPass";
             this.lbPass.Size = new System.Drawing.Size(81, 23);
-            this.lbPass.TabIndex = 11;
+            this.lbPass.TabIndex = 37;
             this.lbPass.Text = "Mật khẩu";
             // 
-            // txtUser
+            // txtUsername
             // 
-            this.txtUser.Location = new System.Drawing.Point(107, 321);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Properties.Appearance.Options.UseFont = true;
-            this.txtUser.Size = new System.Drawing.Size(207, 30);
-            this.txtUser.TabIndex = 9;
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsername.Location = new System.Drawing.Point(86, 86);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Properties.Appearance.Options.UseFont = true;
+            this.txtUsername.Size = new System.Drawing.Size(308, 28);
+            this.txtUsername.TabIndex = 35;
             // 
             // lbUser
             // 
+            this.lbUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbUser.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.Appearance.Options.UseFont = true;
-            this.lbUser.Location = new System.Drawing.Point(107, 294);
+            this.lbUser.Location = new System.Drawing.Point(86, 61);
             this.lbUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(122, 23);
-            this.lbUser.TabIndex = 7;
+            this.lbUser.TabIndex = 33;
             this.lbUser.Text = "Tên đăng nhập";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 587);
-            this.Controls.Add(this.grpCtrl1);
+            this.ClientSize = new System.Drawing.Size(488, 351);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.checkEditHienMatKhau);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lbPass);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lbUser);
             this.Name = "Login";
-            this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).EndInit();
-            this.grpCtrl1.ResumeLayout(false);
-            this.grpCtrl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditNhoMatKhau.Properties)).EndInit();
+            this.Text = "Đăng nhập hệ thống";
             ((System.ComponentModel.ISupportInitialize)(this.checkEditHienMatKhau.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl grpCtrl1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
-        private DevExpress.XtraEditors.SimpleButton btnOK;
-        private DevExpress.XtraEditors.CheckEdit checkEditNhoMatKhau;
+        private DevExpress.XtraEditors.SimpleButton btnDangNhap;
         private DevExpress.XtraEditors.CheckEdit checkEditHienMatKhau;
-        public DevExpress.XtraEditors.TextEdit txtPass;
+        public DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.LabelControl lbPass;
-        public DevExpress.XtraEditors.TextEdit txtUser;
+        public DevExpress.XtraEditors.TextEdit txtUsername;
         private DevExpress.XtraEditors.LabelControl lbUser;
     }
 }

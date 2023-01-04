@@ -156,8 +156,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // btnSearch
             // 
-            this.btnSearch.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSearch.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Appearance.Options.UseForeColor = true;
             this.btnSearch.Location = new System.Drawing.Point(930, 348);

@@ -73,7 +73,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(930, 299);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(930, 281);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
@@ -86,7 +86,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(774, 301);
+            this.label6.Location = new System.Drawing.Point(774, 283);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 22);
             this.label6.TabIndex = 59;
@@ -94,7 +94,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // comboBoxEdit2
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(482, 300);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(482, 282);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
@@ -105,16 +105,16 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(30, 55);
+            this.pictureEdit1.Location = new System.Drawing.Point(30, 52);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(249, 231);
+            this.pictureEdit1.Size = new System.Drawing.Size(249, 217);
             this.pictureEdit1.TabIndex = 56;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(453, 353);
+            this.textBox1.Location = new System.Drawing.Point(453, 332);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -127,9 +127,9 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.btnSearch.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Appearance.Options.UseForeColor = true;
-            this.btnSearch.Location = new System.Drawing.Point(872, 353);
+            this.btnSearch.Location = new System.Drawing.Point(872, 332);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(139, 32);
+            this.btnSearch.Size = new System.Drawing.Size(139, 30);
             this.btnSearch.TabIndex = 53;
             this.btnSearch.Text = "Tìm Kiếm";
             // 
@@ -139,9 +139,9 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.btn_Edit.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btn_Edit.Appearance.Options.UseFont = true;
             this.btn_Edit.Appearance.Options.UseForeColor = true;
-            this.btn_Edit.Location = new System.Drawing.Point(1198, 46);
+            this.btn_Edit.Location = new System.Drawing.Point(1198, 43);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(159, 32);
+            this.btn_Edit.Size = new System.Drawing.Size(159, 30);
             this.btn_Edit.TabIndex = 51;
             this.btn_Edit.Text = "Sửa Thông Tin";
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
@@ -150,7 +150,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(326, 302);
+            this.label9.Location = new System.Drawing.Point(326, 284);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(123, 22);
             this.label9.TabIndex = 25;
@@ -160,7 +160,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(754, 102);
+            this.label7.Location = new System.Drawing.Point(754, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 22);
             this.label7.TabIndex = 17;
@@ -169,7 +169,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // tb_ten_lop_cn
             // 
             this.tb_ten_lop_cn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ten_lop_cn.Location = new System.Drawing.Point(930, 97);
+            this.tb_ten_lop_cn.Location = new System.Drawing.Point(930, 91);
             this.tb_ten_lop_cn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_ten_lop_cn.Name = "tb_ten_lop_cn";
             this.tb_ten_lop_cn.ReadOnly = true;
@@ -180,7 +180,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(326, 151);
+            this.label10.Location = new System.Drawing.Point(326, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 22);
             this.label10.TabIndex = 11;
@@ -189,7 +189,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // tb_gioitinh
             // 
             this.tb_gioitinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_gioitinh.Location = new System.Drawing.Point(482, 148);
+            this.tb_gioitinh.Location = new System.Drawing.Point(482, 139);
             this.tb_gioitinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_gioitinh.Name = "tb_gioitinh";
             this.tb_gioitinh.ReadOnly = true;
@@ -200,7 +200,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(326, 103);
+            this.label5.Location = new System.Drawing.Point(326, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 22);
             this.label5.TabIndex = 9;
@@ -209,7 +209,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // tb_hoten_hv
             // 
             this.tb_hoten_hv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_hoten_hv.Location = new System.Drawing.Point(482, 97);
+            this.tb_hoten_hv.Location = new System.Drawing.Point(482, 91);
             this.tb_hoten_hv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_hoten_hv.Name = "tb_hoten_hv";
             this.tb_hoten_hv.ReadOnly = true;
@@ -220,7 +220,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(754, 52);
+            this.label4.Location = new System.Drawing.Point(754, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 22);
             this.label4.TabIndex = 7;
@@ -229,7 +229,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // tb_malop_cn
             // 
             this.tb_malop_cn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_malop_cn.Location = new System.Drawing.Point(930, 46);
+            this.tb_malop_cn.Location = new System.Drawing.Point(930, 43);
             this.tb_malop_cn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_malop_cn.Name = "tb_malop_cn";
             this.tb_malop_cn.ReadOnly = true;
@@ -240,7 +240,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(326, 203);
+            this.label3.Location = new System.Drawing.Point(326, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 22);
             this.label3.TabIndex = 5;
@@ -249,7 +249,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // tb_ngaysinh
             // 
             this.tb_ngaysinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ngaysinh.Location = new System.Drawing.Point(482, 197);
+            this.tb_ngaysinh.Location = new System.Drawing.Point(482, 185);
             this.tb_ngaysinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_ngaysinh.Name = "tb_ngaysinh";
             this.tb_ngaysinh.ReadOnly = true;
@@ -260,7 +260,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(326, 254);
+            this.label2.Location = new System.Drawing.Point(326, 239);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 22);
             this.label2.TabIndex = 3;
@@ -269,7 +269,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // tb_quequan
             // 
             this.tb_quequan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_quequan.Location = new System.Drawing.Point(482, 250);
+            this.tb_quequan.Location = new System.Drawing.Point(482, 235);
             this.tb_quequan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_quequan.Name = "tb_quequan";
             this.tb_quequan.ReadOnly = true;
@@ -280,7 +280,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 52);
+            this.label1.Location = new System.Drawing.Point(326, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 22);
             this.label1.TabIndex = 1;
@@ -289,7 +289,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // tb_mahv
             // 
             this.tb_mahv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_mahv.Location = new System.Drawing.Point(482, 46);
+            this.tb_mahv.Location = new System.Drawing.Point(482, 43);
             this.tb_mahv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_mahv.Name = "tb_mahv";
             this.tb_mahv.ReadOnly = true;
@@ -305,10 +305,10 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.groupControl1.AppearanceCaption.Options.UseBackColor = true;
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.dataGridViewDSHocSinh);
-            this.groupControl1.Location = new System.Drawing.Point(0, 402);
+            this.groupControl1.Location = new System.Drawing.Point(0, 378);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1367, 402);
+            this.groupControl1.Size = new System.Drawing.Size(1367, 378);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Danh Sách Điểm";
             // 
@@ -319,7 +319,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.dataGridViewDSHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Aqua;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
@@ -332,7 +332,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.dataGridViewDSHocSinh.Name = "dataGridViewDSHocSinh";
             this.dataGridViewDSHocSinh.RowHeadersWidth = 51;
             this.dataGridViewDSHocSinh.RowTemplate.Height = 24;
-            this.dataGridViewDSHocSinh.Size = new System.Drawing.Size(1363, 372);
+            this.dataGridViewDSHocSinh.Size = new System.Drawing.Size(1363, 348);
             this.dataGridViewDSHocSinh.TabIndex = 0;
             // 
             // sidePanel1
@@ -344,7 +344,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.sidePanel1.Location = new System.Drawing.Point(3, 2);
             this.sidePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(1367, 804);
+            this.sidePanel1.Size = new System.Drawing.Size(1367, 757);
             this.sidePanel1.TabIndex = 3;
             this.sidePanel1.Text = "sidePanel1";
             // 
@@ -387,7 +387,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.groupControlThongtinchitiet.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControlThongtinchitiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControlThongtinchitiet.Name = "groupControlThongtinchitiet";
-            this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1367, 402);
+            this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1367, 378);
             this.groupControlThongtinchitiet.TabIndex = 0;
             this.groupControlThongtinchitiet.Text = "Thông tin chi tiết";
             // 
@@ -398,7 +398,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(57, 301);
+            this.label12.Location = new System.Drawing.Point(57, 283);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(192, 24);
             this.label12.TabIndex = 50;
@@ -407,19 +407,19 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(30, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 52);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(249, 231);
+            this.pictureBox1.Size = new System.Drawing.Size(249, 217);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
             // QLyHV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.sidePanel1);
             this.Name = "QLyHV";
-            this.Size = new System.Drawing.Size(1379, 813);
+            this.Size = new System.Drawing.Size(1379, 765);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();

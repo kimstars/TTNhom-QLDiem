@@ -86,7 +86,7 @@ namespace TTNhom_QLDiem.GUI
             }
             else if (state == "Admin") {
                 Admin.QuanLyNghiepVu.QuanLyHV Dmk = new Admin.QuanLyNghiepVu.QuanLyHV();
-                Dmk.TopLevel = false;
+                //Dmk.TopLevel = false;
                 panelchung.Controls.Clear();
                 panelchung.Dock = DockStyle.Fill;
                 panelchung.Controls.Add(Dmk);
@@ -109,7 +109,7 @@ namespace TTNhom_QLDiem.GUI
         {
             Admin.QuanLyNghiepVu.TraCuu Dmk = new Admin.QuanLyNghiepVu.TraCuu();
             panelchung.Controls.Clear();
-            Dmk.TopLevel = false;
+            //Dmk.TopLevel = false;
             panelchung.Dock = DockStyle.Fill;
             panelchung.Controls.Add(Dmk);
             Dmk.Dock = DockStyle.Fill;

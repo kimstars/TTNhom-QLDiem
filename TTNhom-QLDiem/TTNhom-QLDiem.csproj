@@ -171,6 +171,12 @@
     <Compile Include="GUI\HocVien\TTCT.Designer.cs">
       <DependentUpon>TTCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\XtraForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\TTCT.resx">
       <DependentUpon>TTCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>

@@ -56,6 +56,11 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.groupControlThongtinchitiet = new DevExpress.XtraEditors.GroupControl();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.TenLopCN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.comboBoxEdit5 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label13 = new System.Windows.Forms.Label();
             this.LopCN = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -66,11 +71,6 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.MaHK = new DevExpress.XtraEditors.ComboBoxEdit();
             this.PhongHoc = new DevExpress.XtraEditors.ComboBoxEdit();
             this.MaHP = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.TenLopCN = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -80,6 +80,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.sidePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThongtinchitiet)).BeginInit();
             this.groupControlThongtinchitiet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LopCN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
@@ -87,8 +89,6 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             ((System.ComponentModel.ISupportInitialize)(this.MaHK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhongHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaHP.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxEdit2
@@ -439,6 +439,56 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.groupControlThongtinchitiet.TabIndex = 0;
             this.groupControlThongtinchitiet.Text = "Thông tin chi tiết";
             // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(631, 238);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(260, 156);
+            this.gridControl2.TabIndex = 72;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.TenLopCN});
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            // 
+            // TenLopCN
+            // 
+            this.TenLopCN.Caption = "Tên Lớp CN";
+            this.TenLopCN.MinWidth = 25;
+            this.TenLopCN.Name = "TenLopCN";
+            this.TenLopCN.Visible = true;
+            this.TenLopCN.VisibleIndex = 0;
+            this.TenLopCN.Width = 94;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.Location = new System.Drawing.Point(907, 289);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(121, 32);
+            this.simpleButton2.TabIndex = 71;
+            this.simpleButton2.Text = "Bỏ";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.Location = new System.Drawing.Point(907, 236);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(121, 34);
+            this.simpleButton1.TabIndex = 70;
+            this.simpleButton1.Text = "Chọn";
+            // 
             // comboBoxEdit5
             // 
             this.comboBoxEdit5.Location = new System.Drawing.Point(1197, 427);
@@ -515,94 +565,12 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             // 
             // MaHK
             // 
-            this.MaHK.Location = new System.Drawing.Point(209, 249);
+            this.MaHK.Location = new System.Drawing.Point(209, 230);
             this.MaHK.Name = "MaHK";
             this.MaHK.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaHK.Properties.Appearance.Options.UseFont = true;
             this.MaHK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MaHK.Size = new System.Drawing.Size(238, 28);
-            this.MaHK.TabIndex = 61;
-            // 
-            // PhongHoc
-            // 
-            this.PhongHoc.Location = new System.Drawing.Point(209, 198);
-            this.PhongHoc.Name = "PhongHoc";
-            this.PhongHoc.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhongHoc.Properties.Appearance.Options.UseFont = true;
-            this.PhongHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PhongHoc.Size = new System.Drawing.Size(238, 28);
-            this.PhongHoc.TabIndex = 60;
-            // 
-            // MaHP
-            // 
-            this.MaHP.Location = new System.Drawing.Point(209, 94);
-            this.MaHP.Name = "MaHP";
-            this.MaHP.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHP.Properties.Appearance.Options.UseFont = true;
-            this.MaHP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MaHP.Size = new System.Drawing.Size(238, 28);
-            this.MaHP.TabIndex = 59;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.Location = new System.Drawing.Point(907, 236);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(121, 34);
-            this.simpleButton1.TabIndex = 70;
-            this.simpleButton1.Text = "Chọn";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.Location = new System.Drawing.Point(907, 289);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(121, 32);
-            this.simpleButton2.TabIndex = 71;
-            this.simpleButton2.Text = "Bỏ";
-            // 
-            // gridControl2
-            // 
-            this.gridControl2.Location = new System.Drawing.Point(631, 236);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(260, 156);
-            this.gridControl2.TabIndex = 72;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.TenLopCN});
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            // 
-            // TenLopCN
-            // 
-            this.TenLopCN.Caption = "Tên Lớp CN";
-            this.TenLopCN.MinWidth = 25;
-            this.TenLopCN.Name = "TenLopCN";
-            this.TenLopCN.Visible = true;
-            this.TenLopCN.VisibleIndex = 0;
-            this.TenLopCN.Width = 94;
-            // 
-            // MaHK
-            // 
-            this.MaHK.Location = new System.Drawing.Point(209, 234);
-            this.MaHK.Name = "MaHK";
-            this.MaHK.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHK.Properties.Appearance.Options.UseFont = true;
-            this.MaHK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.MaHK.Size = new System.Drawing.Size(238, 28);
             this.MaHK.TabIndex = 61;
@@ -614,6 +582,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.PhongHoc.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhongHoc.Properties.Appearance.Options.UseFont = true;
             this.PhongHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.PhongHoc.Size = new System.Drawing.Size(238, 28);
             this.PhongHoc.TabIndex = 60;
@@ -625,6 +594,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             this.MaHP.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaHP.Properties.Appearance.Options.UseFont = true;
             this.MaHP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.MaHP.Size = new System.Drawing.Size(238, 28);
             this.MaHP.TabIndex = 59;
@@ -646,6 +616,8 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThongtinchitiet)).EndInit();
             this.groupControlThongtinchitiet.ResumeLayout(false);
             this.groupControlThongtinchitiet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LopCN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
@@ -653,8 +625,6 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             ((System.ComponentModel.ISupportInitialize)(this.MaHK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhongHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaHP.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
