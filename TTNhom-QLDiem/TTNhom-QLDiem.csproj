@@ -153,11 +153,29 @@
     <Compile Include="GUI\GiangVien\TTCT.Designer.cs">
       <DependentUpon>TTCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GiangVien\TTGiangVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\TTGiangVien.Designer.cs">
+      <DependentUpon>TTGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HocVien\HV_Diem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HocVien\HV_Diem.Designer.cs">
+      <DependentUpon>HV_Diem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HocVien\QLyHV.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\HocVien\QLyHV.Designer.cs">
       <DependentUpon>QLyHV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HocVien\TTHocVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HocVien\TTHocVien.Designer.cs">
+      <DependentUpon>TTHocVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
@@ -242,8 +260,17 @@
     <EmbeddedResource Include="GUI\GiangVien\TTCT.resx">
       <DependentUpon>TTCT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\TTGiangVien.resx">
+      <DependentUpon>TTGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HocVien\HV_Diem.resx">
+      <DependentUpon>HV_Diem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\QLyHV.resx">
       <DependentUpon>QLyHV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HocVien\TTHocVien.resx">
+      <DependentUpon>TTHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -390,6 +390,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1367, 378);
             this.groupControlThongtinchitiet.TabIndex = 0;
             this.groupControlThongtinchitiet.Text = "Thông tin chi tiết";
+            this.groupControlThongtinchitiet.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControlThongtinchitiet_Paint);
             // 
             // label12
             // 

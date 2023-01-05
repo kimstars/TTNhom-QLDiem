@@ -23,5 +23,10 @@ namespace TTNhom_QLDiem.GUI.HocVien
             HocVien.TTCT Dmk = new HocVien.TTCT();
             Dmk.Show();
         }
+
+        private void groupControlThongtinchitiet_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
