@@ -75,11 +75,17 @@
     <Compile Include="GUI\Admin\QuanLyHocPhan.Designer.cs">
       <DependentUpon>QuanLyHocPhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.cs">
+    <Compile Include="GUI\Admin\QuanLyHocVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.Designer.cs">
-      <DependentUpon>QLyGV.cs</DependentUpon>
+    <Compile Include="GUI\Admin\QuanLyHocVien.Designer.cs">
+      <DependentUpon>QuanLyHocVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\QuanLyLopHocPhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\QuanLyLopHocPhan.Designer.cs">
+      <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\QuanLyNghiepVu\QuanLyHV.cs">
       <SubType>Form</SubType>
@@ -177,12 +183,6 @@
     <Compile Include="GUI\HocVien\HV_Diem.Designer.cs">
       <DependentUpon>HV_Diem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HocVien\QLyHV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\HocVien\QLyHV.Designer.cs">
-      <DependentUpon>QLyHV.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\HocVien\TTHocVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -233,8 +233,11 @@
     <EmbeddedResource Include="GUI\Admin\QuanLyHocPhan.resx">
       <DependentUpon>QuanLyHocPhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.resx">
-      <DependentUpon>QLyGV.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Admin\QuanLyHocVien.resx">
+      <DependentUpon>QuanLyHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\QuanLyLopHocPhan.resx">
+      <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\QuanLyHV.resx">
       <DependentUpon>QuanLyHV.cs</DependentUpon>
@@ -283,9 +286,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\HV_Diem.resx">
       <DependentUpon>HV_Diem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HocVien\QLyHV.resx">
-      <DependentUpon>QLyHV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\TTHocVien.resx">
       <DependentUpon>TTHocVien.cs</DependentUpon>

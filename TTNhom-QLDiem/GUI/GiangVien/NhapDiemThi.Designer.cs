@@ -87,16 +87,17 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // gridLookUpEdit1
             // 
-            this.gridLookUpEdit1.Location = new System.Drawing.Point(846, 668);
+            this.gridLookUpEdit1.Location = new System.Drawing.Point(846, 629);
             this.gridLookUpEdit1.Name = "gridLookUpEdit1";
             this.gridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gridLookUpEdit1.Properties.PopupView = this.gridLookUpEdit1View;
-            this.gridLookUpEdit1.Size = new System.Drawing.Size(8, 24);
+            this.gridLookUpEdit1.Size = new System.Drawing.Size(8, 22);
             this.gridLookUpEdit1.TabIndex = 0;
             // 
             // gridLookUpEdit1View
             // 
+            this.gridLookUpEdit1View.DetailHeight = 329;
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -110,9 +111,9 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Controls.Add(this.bindingNavigator_thilai);
-            this.groupControl1.Location = new System.Drawing.Point(0, 263);
+            this.groupControl1.Location = new System.Drawing.Point(0, 248);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1175, 531);
+            this.groupControl1.Size = new System.Drawing.Size(1175, 500);
             this.groupControl1.TabIndex = 67;
             this.groupControl1.Text = "Danh sách điểm";
             // 
@@ -122,13 +123,14 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridControl1.Location = new System.Drawing.Point(2, 28);
             this.gridControl1.MainView = this.gridView2;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1171, 501);
+            this.gridControl1.Size = new System.Drawing.Size(1171, 470);
             this.gridControl1.TabIndex = 61;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
+            this.gridView2.DetailHeight = 329;
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
             // 
@@ -152,7 +154,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.toolStripButton1});
-            this.bindingNavigator_thilai.Location = new System.Drawing.Point(142, 0);
+            this.bindingNavigator_thilai.Location = new System.Drawing.Point(152, 2);
             this.bindingNavigator_thilai.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator_thilai.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator_thilai.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -215,6 +217,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -265,7 +268,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.sidePanel1.Controls.Add(this.groupControlThongtinchitiet);
             this.sidePanel1.Location = new System.Drawing.Point(3, 3);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(1175, 794);
+            this.sidePanel1.Size = new System.Drawing.Size(1175, 747);
             this.sidePanel1.TabIndex = 68;
             this.sidePanel1.Text = "sidePanel1";
             // 
@@ -302,7 +305,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControlThongtinchitiet.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControlThongtinchitiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControlThongtinchitiet.Name = "groupControlThongtinchitiet";
-            this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1175, 263);
+            this.groupControlThongtinchitiet.Size = new System.Drawing.Size(1175, 248);
             this.groupControlThongtinchitiet.TabIndex = 66;
             this.groupControlThongtinchitiet.Text = "Chi tiết phiếu điểm";
             // 
@@ -310,7 +313,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 108);
+            this.label1.Location = new System.Drawing.Point(18, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 22);
             this.label1.TabIndex = 61;
@@ -319,7 +322,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tb_hotengv
             // 
             this.tb_hotengv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_hotengv.Location = new System.Drawing.Point(152, 153);
+            this.tb_hotengv.Location = new System.Drawing.Point(152, 144);
             this.tb_hotengv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_hotengv.Name = "tb_hotengv";
             this.tb_hotengv.ReadOnly = true;
@@ -330,10 +333,10 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.btn_nhapthilai.BackColor = System.Drawing.SystemColors.Info;
             this.btn_nhapthilai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhapthilai.Location = new System.Drawing.Point(750, 222);
+            this.btn_nhapthilai.Location = new System.Drawing.Point(750, 209);
             this.btn_nhapthilai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_nhapthilai.Name = "btn_nhapthilai";
-            this.btn_nhapthilai.Size = new System.Drawing.Size(201, 36);
+            this.btn_nhapthilai.Size = new System.Drawing.Size(201, 34);
             this.btn_nhapthilai.TabIndex = 59;
             this.btn_nhapthilai.Text = "Nhập điểm thi lại";
             this.btn_nhapthilai.UseVisualStyleBackColor = false;
@@ -343,7 +346,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(421, 210);
+            this.label6.Location = new System.Drawing.Point(421, 198);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 22);
             this.label6.TabIndex = 58;
@@ -353,10 +356,10 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.btn_luu.BackColor = System.Drawing.SystemColors.Info;
             this.btn_luu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.Location = new System.Drawing.Point(1037, 222);
+            this.btn_luu.Location = new System.Drawing.Point(1037, 209);
             this.btn_luu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(132, 36);
+            this.btn_luu.Size = new System.Drawing.Size(132, 34);
             this.btn_luu.TabIndex = 54;
             this.btn_luu.Text = "Lưu điểm";
             this.btn_luu.UseVisualStyleBackColor = false;
@@ -365,7 +368,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tb_hocki
             // 
             this.tb_hocki.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_hocki.Location = new System.Drawing.Point(504, 207);
+            this.tb_hocki.Location = new System.Drawing.Point(504, 195);
             this.tb_hocki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_hocki.Name = "tb_hocki";
             this.tb_hocki.ReadOnly = true;
@@ -376,7 +379,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 59);
+            this.label11.Location = new System.Drawing.Point(6, 56);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 22);
             this.label11.TabIndex = 56;
@@ -384,7 +387,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // gridLookUpEdittenhocphan
             // 
-            this.gridLookUpEdittenhocphan.Location = new System.Drawing.Point(151, 56);
+            this.gridLookUpEdittenhocphan.Location = new System.Drawing.Point(151, 53);
             this.gridLookUpEdittenhocphan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridLookUpEdittenhocphan.Name = "gridLookUpEdittenhocphan";
             this.gridLookUpEdittenhocphan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,6 +400,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 329;
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -406,7 +410,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(384, 59);
+            this.label10.Location = new System.Drawing.Point(384, 56);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 22);
             this.label10.TabIndex = 11;
@@ -415,7 +419,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tb_ngaythi
             // 
             this.tb_ngaythi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_ngaythi.Location = new System.Drawing.Point(521, 56);
+            this.tb_ngaythi.Location = new System.Drawing.Point(521, 53);
             this.tb_ngaythi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_ngaythi.Name = "tb_ngaythi";
             this.tb_ngaythi.ReadOnly = true;
@@ -426,7 +430,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(802, 109);
+            this.label4.Location = new System.Drawing.Point(802, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 22);
             this.label4.TabIndex = 7;
@@ -435,7 +439,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tb_htthi
             // 
             this.tb_htthi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_htthi.Location = new System.Drawing.Point(939, 105);
+            this.tb_htthi.Location = new System.Drawing.Point(939, 99);
             this.tb_htthi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_htthi.Name = "tb_htthi";
             this.tb_htthi.ReadOnly = true;
@@ -446,7 +450,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(382, 153);
+            this.label3.Location = new System.Drawing.Point(382, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 22);
             this.label3.TabIndex = 5;
@@ -455,7 +459,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tb_khoa
             // 
             this.tb_khoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_khoa.Location = new System.Drawing.Point(440, 150);
+            this.tb_khoa.Location = new System.Drawing.Point(440, 141);
             this.tb_khoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_khoa.Name = "tb_khoa";
             this.tb_khoa.ReadOnly = true;
@@ -466,7 +470,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 157);
+            this.label2.Location = new System.Drawing.Point(18, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 22);
             this.label2.TabIndex = 3;
@@ -475,7 +479,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tb_tenhocphan
             // 
             this.tb_tenhocphan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_tenhocphan.Location = new System.Drawing.Point(151, 105);
+            this.tb_tenhocphan.Location = new System.Drawing.Point(151, 99);
             this.tb_tenhocphan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_tenhocphan.Name = "tb_tenhocphan";
             this.tb_tenhocphan.ReadOnly = true;
@@ -486,7 +490,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(802, 156);
+            this.label9.Location = new System.Drawing.Point(802, 147);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(85, 22);
             this.label9.TabIndex = 1;
@@ -495,7 +499,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tb_sotc
             // 
             this.tb_sotc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sotc.Location = new System.Drawing.Point(939, 150);
+            this.tb_sotc.Location = new System.Drawing.Point(939, 141);
             this.tb_sotc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_sotc.Name = "tb_sotc";
             this.tb_sotc.ReadOnly = true;
@@ -504,12 +508,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // NhapDiemThi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this.gridLookUpEdit1);
             this.Name = "NhapDiemThi";
-            this.Size = new System.Drawing.Size(1192, 853);
+            this.Size = new System.Drawing.Size(1192, 803);
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

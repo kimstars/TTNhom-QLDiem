@@ -441,7 +441,7 @@ namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.Quanlylop
             // 
             // gridControl2
             // 
-            this.gridControl2.Location = new System.Drawing.Point(631, 238);
+            this.gridControl2.Location = new System.Drawing.Point(573, 256);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.Size = new System.Drawing.Size(260, 156);

@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTNhom_QLDiem.GUI.Admin.QuanLyNghiepVu.QlyGV
+namespace TTNhom_QLDiem.GUI.Admin
 {
-    public partial class QLyGV : DevExpress.XtraEditors.XtraUserControl
+    public partial class QuanLyLopHocPhan : DevExpress.XtraEditors.XtraUserControl
     {
-        public QLyGV()
+        public QuanLyLopHocPhan()
         {
             InitializeComponent();
         }
