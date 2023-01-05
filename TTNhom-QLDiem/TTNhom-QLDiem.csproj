@@ -63,6 +63,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Admin\QuanLyGiangVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\QuanLyGiangVien.Designer.cs">
+      <DependentUpon>QuanLyGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\QuanLyHocPhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\QuanLyHocPhan.Designer.cs">
+      <DependentUpon>QuanLyHocPhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +227,12 @@
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Admin\QuanLyGiangVien.resx">
+      <DependentUpon>QuanLyGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\QuanLyHocPhan.resx">
+      <DependentUpon>QuanLyHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\QlyGV\QLyGV.resx">
       <DependentUpon>QLyGV.cs</DependentUpon>
     </EmbeddedResource>
