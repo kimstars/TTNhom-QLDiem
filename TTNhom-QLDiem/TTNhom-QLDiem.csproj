@@ -87,35 +87,11 @@
     <Compile Include="GUI\Admin\QuanLyLopHocPhan.Designer.cs">
       <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\QuanLyHV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\QuanLyHV.Designer.cs">
-      <DependentUpon>QuanLyHV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\Quanlylop\TaoHP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\Quanlylop\TaoHP.Designer.cs">
-      <DependentUpon>TaoHP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\Quanlylop\TaolopHP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\Quanlylop\TaolopHP.Designer.cs">
-      <DependentUpon>TaolopHP.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Admin\QuanLyNghiepVu\TraCuu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Admin\QuanLyNghiepVu\TraCuu.Designer.cs">
       <DependentUpon>TraCuu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\TTCT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\TTCT.Designer.cs">
-      <DependentUpon>TTCT.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\QuanLyQuyen\ThemTK.cs">
       <SubType>UserControl</SubType>
@@ -239,20 +215,8 @@
     <EmbeddedResource Include="GUI\Admin\QuanLyLopHocPhan.resx">
       <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\QuanLyHV.resx">
-      <DependentUpon>QuanLyHV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\Quanlylop\TaoHP.resx">
-      <DependentUpon>TaoHP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\Quanlylop\TaolopHP.resx">
-      <DependentUpon>TaolopHP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\TraCuu.resx">
       <DependentUpon>TraCuu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\TTCT.resx">
-      <DependentUpon>TTCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyQuyen\ThemTK.resx">
       <DependentUpon>ThemTK.cs</DependentUpon>
