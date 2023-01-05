@@ -45,19 +45,19 @@ namespace TTNhom_QLDiem.GUI
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(27, 21);
+            this.labelControl1.Location = new System.Drawing.Point(60, 22);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(440, 26);
+            this.labelControl1.Size = new System.Drawing.Size(386, 24);
             this.labelControl1.TabIndex = 40;
             this.labelControl1.Text = "ĐĂNG NHẬP QUẢN LÝ ĐIỂM MTA 2023";
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(86, 275);
@@ -71,7 +71,7 @@ namespace TTNhom_QLDiem.GUI
             // btnDangNhap
             // 
             this.btnDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Appearance.Options.UseFont = true;
             this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnDangNhap.Location = new System.Drawing.Point(86, 227);
@@ -88,10 +88,10 @@ namespace TTNhom_QLDiem.GUI
             this.checkEditHienMatKhau.Location = new System.Drawing.Point(86, 197);
             this.checkEditHienMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkEditHienMatKhau.Name = "checkEditHienMatKhau";
-            this.checkEditHienMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEditHienMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkEditHienMatKhau.Properties.Appearance.Options.UseFont = true;
             this.checkEditHienMatKhau.Properties.Caption = "Hiện mật khẩu";
-            this.checkEditHienMatKhau.Size = new System.Drawing.Size(122, 24);
+            this.checkEditHienMatKhau.Size = new System.Drawing.Size(172, 27);
             this.checkEditHienMatKhau.TabIndex = 39;
             // 
             // txtPassword
@@ -100,7 +100,7 @@ namespace TTNhom_QLDiem.GUI
             this.txtPassword.Location = new System.Drawing.Point(86, 154);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.UseSystemPasswordChar = true;
             this.txtPassword.Size = new System.Drawing.Size(308, 28);
@@ -109,12 +109,12 @@ namespace TTNhom_QLDiem.GUI
             // lbPass
             // 
             this.lbPass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbPass.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPass.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPass.Appearance.Options.UseFont = true;
             this.lbPass.Location = new System.Drawing.Point(86, 128);
             this.lbPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbPass.Name = "lbPass";
-            this.lbPass.Size = new System.Drawing.Size(81, 23);
+            this.lbPass.Size = new System.Drawing.Size(78, 23);
             this.lbPass.TabIndex = 37;
             this.lbPass.Text = "Mật khẩu";
             // 
@@ -124,7 +124,7 @@ namespace TTNhom_QLDiem.GUI
             this.txtUsername.Location = new System.Drawing.Point(86, 86);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
             this.txtUsername.Size = new System.Drawing.Size(308, 28);
             this.txtUsername.TabIndex = 35;
@@ -132,12 +132,12 @@ namespace TTNhom_QLDiem.GUI
             // lbUser
             // 
             this.lbUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbUser.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.Appearance.Options.UseFont = true;
             this.lbUser.Location = new System.Drawing.Point(86, 61);
             this.lbUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(122, 23);
+            this.lbUser.Size = new System.Drawing.Size(130, 23);
             this.lbUser.TabIndex = 33;
             this.lbUser.Text = "Tên đăng nhập";
             // 

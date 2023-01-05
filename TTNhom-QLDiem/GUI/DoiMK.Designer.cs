@@ -52,8 +52,6 @@ namespace TTNhom_QLDiem.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCtrl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
             this.grpCtrl1.Appearance.Options.UseBackColor = true;
-            this.grpCtrl1.AppearanceCaption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpCtrl1.AppearanceCaption.Options.UseFont = true;
             this.grpCtrl1.Controls.Add(this.btnCancel);
             this.grpCtrl1.Controls.Add(this.txtReNewPass);
             this.grpCtrl1.Controls.Add(this.btnOK);
@@ -65,115 +63,115 @@ namespace TTNhom_QLDiem.GUI
             this.grpCtrl1.Location = new System.Drawing.Point(0, 0);
             this.grpCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpCtrl1.Name = "grpCtrl1";
-            this.grpCtrl1.Size = new System.Drawing.Size(1035, 776);
+            this.grpCtrl1.Size = new System.Drawing.Size(1035, 730);
             this.grpCtrl1.TabIndex = 2;
             this.grpCtrl1.Text = "Đổi mật khẩu";
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(652, 487);
+            this.btnCancel.Location = new System.Drawing.Point(596, 437);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 30);
+            this.btnCancel.Size = new System.Drawing.Size(115, 28);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             // 
             // txtReNewPass
             // 
             this.txtReNewPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtReNewPass.Location = new System.Drawing.Point(529, 399);
+            this.txtReNewPass.Location = new System.Drawing.Point(473, 355);
             this.txtReNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtReNewPass.Name = "txtReNewPass";
-            this.txtReNewPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReNewPass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReNewPass.Properties.Appearance.Options.UseFont = true;
             this.txtReNewPass.Properties.UseSystemPasswordChar = true;
-            this.txtReNewPass.Size = new System.Drawing.Size(238, 32);
+            this.txtReNewPass.Size = new System.Drawing.Size(238, 28);
             this.txtReNewPass.TabIndex = 8;
             // 
             // btnOK
             // 
             this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnOK.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Appearance.Options.UseFont = true;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(349, 487);
+            this.btnOK.Location = new System.Drawing.Point(473, 437);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(115, 30);
+            this.btnOK.Size = new System.Drawing.Size(115, 28);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "OK";
             // 
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(265, 402);
+            this.labelControl2.Location = new System.Drawing.Point(209, 357);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(231, 27);
+            this.labelControl2.Size = new System.Drawing.Size(177, 21);
             this.labelControl2.TabIndex = 7;
             this.labelControl2.Text = "Nhập lại mật khẩu mới: ";
             // 
             // txtNewPass
             // 
             this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNewPass.Location = new System.Drawing.Point(529, 345);
+            this.txtNewPass.Location = new System.Drawing.Point(473, 304);
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass.Properties.Appearance.Options.UseFont = true;
             this.txtNewPass.Properties.UseSystemPasswordChar = true;
-            this.txtNewPass.Size = new System.Drawing.Size(238, 32);
+            this.txtNewPass.Size = new System.Drawing.Size(238, 28);
             this.txtNewPass.TabIndex = 3;
             // 
             // lbPass
             // 
             this.lbPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbPass.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPass.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPass.Appearance.Options.UseFont = true;
-            this.lbPass.Location = new System.Drawing.Point(349, 348);
+            this.lbPass.Location = new System.Drawing.Point(275, 307);
             this.lbPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbPass.Name = "lbPass";
-            this.lbPass.Size = new System.Drawing.Size(147, 27);
+            this.lbPass.Size = new System.Drawing.Size(111, 21);
             this.lbPass.TabIndex = 2;
             this.lbPass.Text = "Mật khẩu mới: ";
             // 
             // txtOldPass
             // 
             this.txtOldPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtOldPass.Location = new System.Drawing.Point(529, 291);
+            this.txtOldPass.Location = new System.Drawing.Point(473, 253);
             this.txtOldPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOldPass.Name = "txtOldPass";
-            this.txtOldPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldPass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOldPass.Properties.Appearance.Options.UseFont = true;
             this.txtOldPass.Properties.UseSystemPasswordChar = true;
-            this.txtOldPass.Size = new System.Drawing.Size(238, 32);
+            this.txtOldPass.Size = new System.Drawing.Size(238, 28);
             this.txtOldPass.TabIndex = 1;
             // 
             // lbUser
             // 
             this.lbUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbUser.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.Appearance.Options.UseFont = true;
-            this.lbUser.Location = new System.Drawing.Point(349, 294);
+            this.lbUser.Location = new System.Drawing.Point(285, 256);
             this.lbUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(133, 27);
+            this.lbUser.Size = new System.Drawing.Size(101, 21);
             this.lbUser.TabIndex = 0;
             this.lbUser.Text = "Mật khẩu cũ: ";
             // 
             // DoiMK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grpCtrl1);
             this.Name = "DoiMK";
-            this.Size = new System.Drawing.Size(1035, 776);
+            this.Size = new System.Drawing.Size(1035, 730);
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).EndInit();
             this.grpCtrl1.ResumeLayout(false);
             this.grpCtrl1.PerformLayout();
