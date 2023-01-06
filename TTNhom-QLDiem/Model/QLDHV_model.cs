@@ -103,7 +103,7 @@ namespace TTNhom_QLDiem.Model
                 .Property(e => e.Quyen)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TTDHV>()
+            modelBuilder.Entity<TTDHV>();
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);

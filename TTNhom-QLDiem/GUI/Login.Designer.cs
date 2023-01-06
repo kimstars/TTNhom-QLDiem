@@ -64,7 +64,7 @@ namespace TTNhom_QLDiem.GUI
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(308, 37);
-            this.btnCancel.TabIndex = 36;
+            this.btnCancel.TabIndex = 38;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -78,7 +78,7 @@ namespace TTNhom_QLDiem.GUI
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(308, 37);
-            this.btnDangNhap.TabIndex = 34;
+            this.btnDangNhap.TabIndex = 37;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -104,7 +104,7 @@ namespace TTNhom_QLDiem.GUI
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.UseSystemPasswordChar = true;
             this.txtPassword.Size = new System.Drawing.Size(308, 28);
-            this.txtPassword.TabIndex = 38;
+            this.txtPassword.TabIndex = 36;
             // 
             // lbPass
             // 
