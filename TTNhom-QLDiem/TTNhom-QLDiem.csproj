@@ -123,6 +123,18 @@
     <Compile Include="GUI\GiangVien\DSHVien.Designer.cs">
       <DependentUpon>DSHVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GiangVien\GV_NhapDiemCC_TX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\GV_NhapDiemCC_TX.Designer.cs">
+      <DependentUpon>GV_NhapDiemCC_TX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiangVien\GV_NhapDiemThi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\GV_NhapDiemThi.Designer.cs">
+      <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiangVien\NhapdiemHocLai.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +238,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\DSHVien.resx">
       <DependentUpon>DSHVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemCC_TX.resx">
+      <DependentUpon>GV_NhapDiemCC_TX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemThi.resx">
+      <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\NhapdiemHocLai.resx">
       <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
