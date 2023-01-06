@@ -275,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SQL\sang.sql" />
+    <Content Include="SQL\Thuy_View1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
