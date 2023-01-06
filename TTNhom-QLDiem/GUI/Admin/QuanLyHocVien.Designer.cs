@@ -54,7 +54,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnThemHV = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPageSua = new DevExpress.XtraTab.XtraTabPage();
             this.cbSuaChucVu = new System.Windows.Forms.ComboBox();
-            this.cbSuaLopChuyenNganh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateSuaNgaySinhHV = new DevExpress.XtraEditors.DateEdit();
             this.label8 = new System.Windows.Forms.Label();
@@ -81,6 +80,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label7 = new System.Windows.Forms.Label();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new System.Windows.Forms.Label();
+            this.cbSuaLopChuyenNganh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -375,14 +375,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaChucVu.Size = new System.Drawing.Size(285, 24);
             this.cbSuaChucVu.TabIndex = 54;
             // 
-            // cbSuaLopChuyenNganh
-            // 
-            this.cbSuaLopChuyenNganh.FormattingEnabled = true;
-            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(425, 105);
-            this.cbSuaLopChuyenNganh.Name = "cbSuaLopChuyenNganh";
-            this.cbSuaLopChuyenNganh.Size = new System.Drawing.Size(285, 24);
-            this.cbSuaLopChuyenNganh.TabIndex = 53;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -417,7 +409,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // txtSuaCapBacHV
             // 
             this.txtSuaCapBacHV.EditValue = "";
-            this.txtSuaCapBacHV.Location = new System.Drawing.Point(42, 217);
+            this.txtSuaCapBacHV.Location = new System.Drawing.Point(48, 217);
             this.txtSuaCapBacHV.Name = "txtSuaCapBacHV";
             this.txtSuaCapBacHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSuaCapBacHV.Size = new System.Drawing.Size(235, 22);
@@ -426,7 +418,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 197);
+            this.label9.Location = new System.Drawing.Point(45, 197);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 17);
             this.label9.TabIndex = 43;
@@ -642,6 +634,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label12.TabIndex = 58;
             this.label12.Text = "Quê quán";
             // 
+            // cbSuaLopChuyenNganh
+            // 
+            this.cbSuaLopChuyenNganh.FormattingEnabled = true;
+            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(425, 105);
+            this.cbSuaLopChuyenNganh.Name = "cbSuaLopChuyenNganh";
+            this.cbSuaLopChuyenNganh.Size = new System.Drawing.Size(285, 24);
+            this.cbSuaLopChuyenNganh.TabIndex = 53;
+            // 
             // QuanLyHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -717,7 +717,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private System.Windows.Forms.ComboBox cbDonVi;
         private DevExpress.XtraEditors.SimpleButton btnSuaHV;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private System.Windows.Forms.ComboBox cbSuaLopChuyenNganh;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnThemTK;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
@@ -733,5 +732,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbSuaLopChuyenNganh;
     }
 }
