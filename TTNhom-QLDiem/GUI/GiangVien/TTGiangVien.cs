@@ -29,7 +29,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             txtHoTenGV.Text = gv.HoTenGV;
             txtGioiTinh.Text = gv.GioiTinh;
             txtCapBac.Text = gv.CapBac;
-            txtChucVu.Text = gv.CapBac;
+            txtChucVu.Text = gv.ChucVu;
             txtMaBM.Text = gv.MaBoMon.ToString();
             txtMaTK.Text = gv.MaTK.ToString();
             dtNgaySinh.Text = gv.NgaySinh.ToString();

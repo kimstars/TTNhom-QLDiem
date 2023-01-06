@@ -45,6 +45,7 @@ namespace TTNhom_QLDiem.GUI
 
 
         //HocVien.QLyHV uc1 = new HocVien.QLyHV();
+        HocVien.TTHocVien TTHV = new HocVien.TTHocVien();
 
         GiangVien.TTGiangVien TTGV = new GiangVien.TTGiangVien();
         public void LoadByAccessPermission(string accPer)
@@ -71,13 +72,14 @@ namespace TTNhom_QLDiem.GUI
                     it12.Click += It12_Click;
 
 
-                    
+
 
                     //uc1.Dock = DockStyle.Fill;
                     //uc2.Dock = DockStyle.Fill;
-                    
+                    TTHV.Dock = DockStyle.Fill;
 
-                    //showUsercontrol.Controls.AddRange(new Control[] { uc1 });
+
+                    showUsercontrol.Controls.AddRange(new Control[] { TTHV });
                     break;
 
 
@@ -148,7 +150,9 @@ namespace TTNhom_QLDiem.GUI
 
         private void It12_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            showUsercontrol.Controls.Clear();
+            showUsercontrol.Controls.AddRange(new Control[] { TTHV });
+            //throw new NotImplementedException();
         }
 
         private void It11_Click(object sender, EventArgs e)

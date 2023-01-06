@@ -21,8 +21,8 @@ namespace TTNhom_QLDiem.Model
         [Required]
         [StringLength(70)]
         public string HoTenGV { get; set; }
-        [Required]
-        [StringLength(70)]
+
+        [StringLength(10)]
         public string GioiTinh { get; set; }
         [Required]
         [StringLength(70)]
