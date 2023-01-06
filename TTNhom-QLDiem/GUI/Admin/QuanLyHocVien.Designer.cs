@@ -48,6 +48,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemCB = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,7 +61,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbDonVi = new System.Windows.Forms.ComboBox();
             this.btnSuaCB = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.dgvTTCB = new DevExpress.XtraGrid.GridControl();
+            this.dgvDSHocVien = new DevExpress.XtraGrid.GridControl();
             this.dgvTTCB_View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,10 +69,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnThemTK = new DevExpress.XtraEditors.SimpleButton();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -92,9 +92,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTTCB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTCB_View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView1
@@ -141,6 +140,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.btnThemTK);
             this.xtraTabPage1.Controls.Add(this.comboBox1);
             this.xtraTabPage1.Controls.Add(this.dateThemNgaySinhCB);
             this.xtraTabPage1.Controls.Add(this.label3);
@@ -155,7 +155,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1.Controls.Add(this.label16);
             this.xtraTabPage1.Controls.Add(this.btnThemCB);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1109, 313);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1109, 255);
             this.xtraTabPage1.Text = "Thêm";
             // 
             // comboBox1
@@ -206,9 +206,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(419, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 17);
+            this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 24;
-            this.label4.Text = "Tên đăng nhập";
+            this.label4.Text = "Mã tài khoản";
             // 
             // txtThemChucVuCB
             // 
@@ -293,8 +293,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             this.xtraTabPage2.Controls.Add(this.comboBox2);
             this.xtraTabPage2.Controls.Add(this.label1);
-            this.xtraTabPage2.Controls.Add(this.textEdit1);
-            this.xtraTabPage2.Controls.Add(this.label2);
             this.xtraTabPage2.Controls.Add(this.dateEdit1);
             this.xtraTabPage2.Controls.Add(this.textEdit4);
             this.xtraTabPage2.Controls.Add(this.label8);
@@ -308,6 +306,24 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1109, 255);
             this.xtraTabPage2.Text = "Sửa";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(425, 105);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(285, 24);
+            this.comboBox2.TabIndex = 53;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(420, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Lớp chuyên ngành";
             // 
             // dateEdit1
             // 
@@ -412,7 +428,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.dgvTTCB);
+            this.groupControl1.Controls.Add(this.dgvDSHocVien);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
@@ -420,15 +436,15 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "Danh sách học viên";
             // 
-            // dgvTTCB
+            // dgvDSHocVien
             // 
-            this.dgvTTCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTTCB.Location = new System.Drawing.Point(2, 28);
-            this.dgvTTCB.MainView = this.dgvTTCB_View;
-            this.dgvTTCB.Name = "dgvTTCB";
-            this.dgvTTCB.Size = new System.Drawing.Size(1111, 402);
-            this.dgvTTCB.TabIndex = 0;
-            this.dgvTTCB.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvDSHocVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSHocVien.Location = new System.Drawing.Point(2, 28);
+            this.dgvDSHocVien.MainView = this.dgvTTCB_View;
+            this.dgvDSHocVien.Name = "dgvDSHocVien";
+            this.dgvDSHocVien.Size = new System.Drawing.Size(1111, 402);
+            this.dgvDSHocVien.TabIndex = 0;
+            this.dgvDSHocVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvTTCB_View});
             // 
             // dgvTTCB_View
@@ -439,11 +455,13 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6});
-            this.dgvTTCB_View.GridControl = this.dgvTTCB;
+            this.gridColumn6,
+            this.gridColumn7});
+            this.dgvTTCB_View.GridControl = this.dgvDSHocVien;
             this.dgvTTCB_View.Name = "dgvTTCB_View";
             this.dgvTTCB_View.OptionsBehavior.Editable = false;
             this.dgvTTCB_View.OptionsView.ShowGroupPanel = false;
+            this.dgvTTCB_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvTTCB_View_RowClick);
             // 
             // gridColumn1
             // 
@@ -505,43 +523,24 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 107;
             // 
-            // comboBox2
+            // btnThemTK
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(425, 105);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(285, 24);
-            this.comboBox2.TabIndex = 53;
+            this.btnThemTK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThemTK.Location = new System.Drawing.Point(422, 204);
+            this.btnThemTK.Name = "btnThemTK";
+            this.btnThemTK.Size = new System.Drawing.Size(287, 28);
+            this.btnThemTK.TabIndex = 29;
+            this.btnThemTK.Text = "Thêm tài khoản";
+            this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
             // 
-            // label1
+            // gridColumn7
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 17);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Lớp chuyên ngành";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(423, 160);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textEdit1.Size = new System.Drawing.Size(287, 22);
-            this.textEdit1.TabIndex = 50;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(420, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 17);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Tên đăng nhập";
+            this.gridColumn7.Caption = "gridColumn7";
+            this.gridColumn7.MinWidth = 25;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 94;
             // 
             // QuanLyHocVien
             // 
@@ -550,6 +549,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "QuanLyHocVien";
             this.Size = new System.Drawing.Size(1121, 760);
+            this.Load += new System.EventHandler(this.QuanLyHocVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
@@ -573,9 +573,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTTCB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTCB_View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -585,7 +584,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.GridControl dgvTTCB;
+        private DevExpress.XtraGrid.GridControl dgvDSHocVien;
         private DevExpress.XtraGrid.Views.Grid.GridView dgvTTCB_View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
@@ -622,7 +621,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.SimpleButton btnThemTK;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

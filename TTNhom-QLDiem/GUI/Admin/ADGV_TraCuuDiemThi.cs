@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTNhom_QLDiem.GUI.Admin.QuanLyQuyen
+namespace TTNhom_QLDiem.GUI.Admin
 {
-    public partial class ThemTK : DevExpress.XtraEditors.XtraUserControl
+    public partial class ADGV_TraCuuDiemThi : DevExpress.XtraEditors.XtraUserControl
     {
-        public ThemTK()
+        public ADGV_TraCuuDiemThi()
         {
             InitializeComponent();
         }

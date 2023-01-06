@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Admin\ADGV_TraCuuDiemThi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ADGV_TraCuuDiemThi.Designer.cs">
+      <DependentUpon>ADGV_TraCuuDiemThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\QuanLyGiangVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,17 +99,17 @@
     <Compile Include="GUI\Admin\QuanLyNghiepVu\TraCuu.Designer.cs">
       <DependentUpon>TraCuu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin\QuanLyQuyen\ThemTK.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyQuyen\ThemTK.Designer.cs">
-      <DependentUpon>ThemTK.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Admin\QuanLyTaiKhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Admin\QuanLyTaiKhoan.Designer.cs">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemTaiKhoan.Designer.cs">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DoiMK.cs">
       <SubType>UserControl</SubType>
@@ -191,6 +197,9 @@
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">
+      <DependentUpon>ADGV_TraCuuDiemThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyGiangVien.resx">
       <DependentUpon>QuanLyGiangVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,11 +215,11 @@
     <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\TraCuu.resx">
       <DependentUpon>TraCuu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\QuanLyQuyen\ThemTK.resx">
-      <DependentUpon>ThemTK.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ThemTaiKhoan.resx">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
