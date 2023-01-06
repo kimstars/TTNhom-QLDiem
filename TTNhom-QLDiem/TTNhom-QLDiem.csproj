@@ -123,12 +123,6 @@
     <Compile Include="GUI\DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiangVien\DSHVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\DSHVien.Designer.cs">
-      <DependentUpon>DSHVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GiangVien\GV_NhapDiemCC_TX.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,24 +134,6 @@
     </Compile>
     <Compile Include="GUI\GiangVien\GV_NhapDiemThi.Designer.cs">
       <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapdiemHocLai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapdiemHocLai.Designer.cs">
-      <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemL1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemL1.Designer.cs">
-      <DependentUpon>NhapDiemL1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemThi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemThi.Designer.cs">
-      <DependentUpon>NhapDiemThi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GiangVien\QLyGV.cs">
       <SubType>UserControl</SubType>
@@ -246,23 +222,11 @@
     <EmbeddedResource Include="GUI\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\DSHVien.resx">
-      <DependentUpon>DSHVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemCC_TX.resx">
       <DependentUpon>GV_NhapDiemCC_TX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemThi.resx">
       <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapdiemHocLai.resx">
-      <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapDiemL1.resx">
-      <DependentUpon>NhapDiemL1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapDiemThi.resx">
-      <DependentUpon>NhapDiemThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\QLyGV.resx">
       <DependentUpon>QLyGV.cs</DependentUpon>
