@@ -46,7 +46,7 @@ namespace TTNhom_QLDiem.GUI
 
         //HocVien.QLyHV uc1 = new HocVien.QLyHV();
 
-
+        GiangVien.TTGiangVien TTGV = new GiangVien.TTGiangVien();
         public void LoadByAccessPermission(string accPer)
         {
 
@@ -69,7 +69,7 @@ namespace TTNhom_QLDiem.GUI
 
                     it11.Click += It11_Click;
                     it12.Click += It12_Click;
-                   
+
 
                     
 
@@ -96,15 +96,17 @@ namespace TTNhom_QLDiem.GUI
 
 
 
-                    //it1.Click += It1_Click;
-                    //it2.Click += It2_Click;
+                    //it21.Click += It21_Click;
+                    //it22.Click += It22_Click;
+                    //it23.Click += It23_Click;
+                    it24.Click += It24_Click;
 
 
                     //uc1.Dock = DockStyle.Fill;
                     //uc2.Dock = DockStyle.Fill;
+                    TTGV.Dock = DockStyle.Fill;
 
-
-                    //showUsercontrol.Controls.AddRange(new Control[] { uc1, uc2 });
+                    showUsercontrol.Controls.AddRange(new Control[] { TTGV});
 
                     break;
 
@@ -152,6 +154,12 @@ namespace TTNhom_QLDiem.GUI
         private void It11_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+        private void It24_Click(object sender, EventArgs e)
+        {
+            showUsercontrol.Controls.Clear();
+            showUsercontrol.Controls.AddRange(new Control[] { TTGV });
+            //throw new NotImplementedException();
         }
     }
 }

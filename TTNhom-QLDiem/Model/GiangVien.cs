@@ -21,7 +21,17 @@ namespace TTNhom_QLDiem.Model
         [Required]
         [StringLength(70)]
         public string HoTenGV { get; set; }
-
+        [Required]
+        [StringLength(70)]
+        public string GioiTinh { get; set; }
+        [Required]
+        [StringLength(70)]
+        public string CapBac { get; set; }
+        [Required]
+        [StringLength(70)]
+        public string ChucVu { get; set; }
+      
+        public DateTime NgaySinh { get; set; }
         public int MaBoMon { get; set; }
 
         public int? MaTK { get; set; }
