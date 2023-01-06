@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTNhom_QLDiem
+namespace TTNhom_QLDiem.GUI.Admin
 {
-    public partial class MainForm : DevExpress.XtraEditors.XtraForm
+    public partial class QuanLyHocPhan : DevExpress.XtraEditors.XtraUserControl
     {
-        public MainForm()
+        public QuanLyHocPhan()
         {
             InitializeComponent();
         }
