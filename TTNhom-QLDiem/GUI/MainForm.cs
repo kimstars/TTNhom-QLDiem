@@ -48,6 +48,7 @@ namespace TTNhom_QLDiem.GUI
         HocVien.TTHocVien TTHV = new HocVien.TTHocVien();
 
         GiangVien.TTGiangVien TTGV = new GiangVien.TTGiangVien();
+        Admin.ADGV_TraCuuDiemThi TraCuuDiemHV = new Admin.ADGV_TraCuuDiemThi();
         public void LoadByAccessPermission(string accPer)
         {
 
@@ -88,10 +89,11 @@ namespace TTNhom_QLDiem.GUI
                     AccordionControlElement it21 = new AccordionControlElement(ElementStyle.Item) { Text = "Xem lịch thi" };
                     AccordionControlElement it22 = new AccordionControlElement(ElementStyle.Item) { Text = "Nhập điểm" };
                     AccordionControlElement it23 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách lớp học" };
+                    AccordionControlElement it25 = new AccordionControlElement(ElementStyle.Item) { Text = "Tra Cứu Điểm HV" };
                     AccordionControlElement it24 = new AccordionControlElement(ElementStyle.Item) { Text = "Thông tin cá nhân" };
 
 
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it21, it22,it23,it24 });
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it21, it22,it23, it25, it24 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
@@ -102,13 +104,14 @@ namespace TTNhom_QLDiem.GUI
                     //it22.Click += It22_Click;
                     //it23.Click += It23_Click;
                     it24.Click += It24_Click;
+                    it25.Click += It25_Click;
 
 
                     //uc1.Dock = DockStyle.Fill;
                     //uc2.Dock = DockStyle.Fill;
                     TTGV.Dock = DockStyle.Fill;
 
-                    showUsercontrol.Controls.AddRange(new Control[] { TTGV});
+                    //showUsercontrol.Controls.AddRange(new Control[] { TTGV});
 
                     break;
 
@@ -116,19 +119,21 @@ namespace TTNhom_QLDiem.GUI
 
                     this.Text = "Quản trị viên";
                     AccordionControlElement it31 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý học viên" };
+                    AccordionControlElement it36 = new AccordionControlElement(ElementStyle.Item) { Text = "Tra Cứu Điểm HV" };
                     AccordionControlElement it32 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý giảng viên" };
                     AccordionControlElement it33 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý học phần" };
                     AccordionControlElement it34 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý lớp chuyên ngành" };
                     AccordionControlElement it35 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý lớp học phần" };
 
 
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it31, it32,it33,it35 });
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it31, it36,it32,it33,it35 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
 
                     //it1.Click += It1_Click;
                     //it2.Click += It2_Click;
+                    it36.Click += It25_Click;
 
 
                     //uc1.Dock = DockStyle.Fill;
@@ -152,6 +157,7 @@ namespace TTNhom_QLDiem.GUI
         {
             showUsercontrol.Controls.Clear();
             showUsercontrol.Controls.AddRange(new Control[] { TTHV });
+            TTHV.Dock = DockStyle.Fill;
             //throw new NotImplementedException();
         }
 
@@ -163,6 +169,14 @@ namespace TTNhom_QLDiem.GUI
         {
             showUsercontrol.Controls.Clear();
             showUsercontrol.Controls.AddRange(new Control[] { TTGV });
+            TTGV.Dock = DockStyle.Fill;
+            //throw new NotImplementedException();
+        }
+        private void It25_Click(object sender, EventArgs e)
+        {
+            showUsercontrol.Controls.Clear();
+            showUsercontrol.Controls.AddRange(new Control[] { TraCuuDiemHV });
+            TraCuuDiemHV.Dock = DockStyle.Fill;
             //throw new NotImplementedException();
         }
     }

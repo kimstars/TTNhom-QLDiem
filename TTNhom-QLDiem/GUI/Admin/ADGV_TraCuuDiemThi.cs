@@ -25,7 +25,11 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btn_search_Click(object sender, EventArgs e)
         {
             gridControl1.DataSource = db.ADV_TraCuuDiemHV.Where(s => s.MaHocVien.ToString().Contains(txtMaHV.Text) && s.HoTenHV.Contains(txtTenHV.Text) && s.TenLopChuyenNganh.Contains(cbLopCN.Text) && s.TenHocPhan.Contains(cbMonThi.Text) && s.TenHocKy.Contains(cbHocKy.Text)).ToList();
-            reload();
+            cbHocKy.Text = "";
+            cbLopCN.Text = "";
+            cbMonThi.Text = "";
+            txtMaHV.Text = "";
+            txtTenHV.Text = "";
         }
         private void reload()
         {

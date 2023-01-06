@@ -67,28 +67,26 @@ namespace TTNhom_QLDiem.GUI.Admin
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.groupControl1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupControl2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.31925F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 432F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1010, 659);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.AutoSize = true;
             this.groupControl1.Controls.Add(this.gridControl1);
-            this.groupControl1.Location = new System.Drawing.Point(3, 230);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(3, 222);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1004, 426);
+            this.groupControl1.Size = new System.Drawing.Size(1004, 434);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Điểm Thi";
             // 
@@ -100,7 +98,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridControl1.Location = new System.Drawing.Point(2, 31);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1000, 393);
+            this.gridControl1.Size = new System.Drawing.Size(1000, 401);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -203,8 +201,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.cbMonThi);
             this.groupControl2.Controls.Add(this.cbLopCN);
             this.groupControl2.Controls.Add(this.label5);
@@ -216,9 +212,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl2.Controls.Add(this.label3);
             this.groupControl2.Controls.Add(this.label2);
             this.groupControl2.Controls.Add(this.label1);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1004, 221);
+            this.groupControl2.Size = new System.Drawing.Size(1004, 213);
             this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "Tra cứu điểm thi";
             // 
@@ -303,13 +300,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btn_search
             // 
-            this.btn_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_search.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.Appearance.Options.UseFont = true;
             this.btn_search.Location = new System.Drawing.Point(853, 75);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(106, 102);
+            this.btn_search.Size = new System.Drawing.Size(106, 92);
             this.btn_search.TabIndex = 7;
             this.btn_search.Text = "Tìm Kiếm";
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
@@ -358,6 +354,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Name = "ADGV_TraCuuDiemThi";
             this.Size = new System.Drawing.Size(1010, 659);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
