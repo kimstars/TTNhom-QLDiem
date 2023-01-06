@@ -18,6 +18,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         public QuanLyHocVien()
         {
             InitializeComponent();
+            load_LopchuyenNganh();
         }
         public int mahv;
         public static int MaTaiKhoan ;
@@ -46,7 +47,18 @@ namespace TTNhom_QLDiem.GUI.Admin
 
 
         }
-       
+
+        
+        private void load_LopchuyenNganh()
+        {
+            List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+            cbLopCN.Items.Clear();
+            foreach (var item in lcn.ToList())
+            {
+                cbLopCN.Items.Add(item.TenLopChuyenNganh);
+            }
+
+        }
         private void btnThemHV_Click(object sender, EventArgs e)
         {
             Model.HocVien hv = new Model.HocVien();
@@ -57,7 +69,11 @@ namespace TTNhom_QLDiem.GUI.Admin
                 hv.GioiTinh = cbGioiTinh.Text;
                 hv.CapBac = txtThemCapBacHV.Text;
                 hv.ChucVu = cbThemChucVu.Text;
-                hv.MaLopChuyenNganh = int.Parse(cbLopCN.Text);
+
+                List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+                int maLCN = lcn.Find(s => s.TenLopChuyenNganh == cbLopCN.Text).MaLopChuyenNganh;
+                hv.MaLopChuyenNganh = maLCN;
+                
                 hv.QueQuan = txtQuequan.Text;
                 hv.MaTK = int.Parse(txtThemMaTKHV.Text);
                 
@@ -112,6 +128,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             dateSuaNgaySinhHV.EditValue = hv.NgaySinh;
 
 
+        }
+
+        private void cbThemChucVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+            //cbLopCN.Items.Clear();
+            //foreach (var item in lcn.ToList())
+            //{
+            //    cbLopCN.Items.Add(item.TenLopChuyenNganh);
+            //}
         }
     }
 }
