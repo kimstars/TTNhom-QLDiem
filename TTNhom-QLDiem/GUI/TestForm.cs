@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TTNhom_QLDiem.GUI;
+
 
 namespace TTNhom_QLDiem.GUI
 {
@@ -16,6 +18,13 @@ namespace TTNhom_QLDiem.GUI
         public TestForm()
         {
             InitializeComponent();
+        }
+
+        private void TestForm_Load(object sender, EventArgs e)
+        {
+            Admin.QuanLyGiangVien testform = new Admin.QuanLyGiangVien();
+            panelshow.Controls.Add(testform);
+            testform.Dock = DockStyle.Fill;
         }
     }
 }

@@ -20,8 +20,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            GiangVien.TTCT Dmk = new GiangVien.TTCT();
-            Dmk.Show();
+
         }
     }
 }

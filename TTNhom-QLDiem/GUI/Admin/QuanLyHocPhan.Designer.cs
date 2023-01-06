@@ -443,6 +443,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn1.FieldName = "MaTCA";
             this.gridColumn1.MinWidth = 29;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.ShowUnboundExpressionMenu = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 107;
