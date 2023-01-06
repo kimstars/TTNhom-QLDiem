@@ -105,6 +105,7 @@ namespace TTNhom_QLDiem.GUI
             this.txtPassword.Properties.UseSystemPasswordChar = true;
             this.txtPassword.Size = new System.Drawing.Size(308, 28);
             this.txtPassword.TabIndex = 36;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // lbPass
             // 
@@ -128,6 +129,7 @@ namespace TTNhom_QLDiem.GUI
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
             this.txtUsername.Size = new System.Drawing.Size(308, 28);
             this.txtUsername.TabIndex = 35;
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
             // lbUser
             // 
