@@ -23,7 +23,9 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<LopHocPhan> LopHocPhans { get; set; }
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -97,6 +99,10 @@ namespace TTNhom_QLDiem.Model
 
             modelBuilder.Entity<TaiKhoan>()
                 .Property(e => e.Quyen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TTDHV>()
+                .Property(e => e.TenHocKy)
                 .IsUnicode(false);
         }
     }

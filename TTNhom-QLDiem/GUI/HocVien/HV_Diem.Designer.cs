@@ -30,16 +30,15 @@ namespace TTNhom_QLDiem.GUI.HocVien
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.cbTK = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenGV = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiemTK = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiemThi = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiemTX = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiemCC = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenHP = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,7 +46,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvChitietDiem = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,14 +57,15 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenGV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemThi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTX.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemCC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChitietDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,16 +73,15 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // groupControl1
             // 
             this.tablePanel1.SetColumn(this.groupControl1, 0);
-            this.groupControl1.Controls.Add(this.comboBox1);
-            this.groupControl1.Controls.Add(this.radioButton2);
-            this.groupControl1.Controls.Add(this.radioButton1);
+            this.groupControl1.Controls.Add(this.radioGroup1);
+            this.groupControl1.Controls.Add(this.cbTK);
             this.groupControl1.Controls.Add(this.label7);
-            this.groupControl1.Controls.Add(this.textEdit6);
-            this.groupControl1.Controls.Add(this.textEdit5);
-            this.groupControl1.Controls.Add(this.textEdit4);
-            this.groupControl1.Controls.Add(this.textEdit3);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txtTenGV);
+            this.groupControl1.Controls.Add(this.txtDiemTK);
+            this.groupControl1.Controls.Add(this.txtDiemThi);
+            this.groupControl1.Controls.Add(this.txtDiemTX);
+            this.groupControl1.Controls.Add(this.txtDiemCC);
+            this.groupControl1.Controls.Add(this.txtTenHP);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.label5);
             this.groupControl1.Controls.Add(this.label4);
@@ -97,35 +96,29 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin phiếu điểm";
             // 
-            // comboBox1
+            // radioGroup1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(621, 148);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 15;
+            this.radioGroup1.EditValue = "Tên học kỳ";
+            this.radioGroup1.Location = new System.Drawing.Point(621, 106);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.radioGroup1.Properties.Appearance.Options.UseBackColor = true;
+            this.radioGroup1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Tên học kỳ", "Tên học kỳ", true, null, "TenHocKy"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Tên học phần", "Tên học phần", true, null, "TenHocPhan")});
+            this.radioGroup1.Size = new System.Drawing.Size(239, 37);
+            this.radioGroup1.TabIndex = 17;
+            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
-            // radioButton2
+            // cbTK
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(747, 113);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(98, 21);
-            this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Tên học kỳ";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(621, 113);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 21);
-            this.radioButton1.TabIndex = 13;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tên học phần";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.cbTK.FormattingEnabled = true;
+            this.cbTK.Location = new System.Drawing.Point(621, 150);
+            this.cbTK.Name = "cbTK";
+            this.cbTK.Size = new System.Drawing.Size(121, 24);
+            this.cbTK.TabIndex = 15;
+            this.cbTK.SelectedValueChanged += new System.EventHandler(this.cbTK_SelectedValueChanged);
             // 
             // label7
             // 
@@ -136,53 +129,53 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label7.TabIndex = 12;
             this.label7.Text = "Tìm kiếm theo:";
             // 
-            // textEdit6
+            // txtTenGV
             // 
-            this.textEdit6.Enabled = false;
-            this.textEdit6.Location = new System.Drawing.Point(443, 151);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(125, 22);
-            this.textEdit6.TabIndex = 11;
+            this.txtTenGV.Enabled = false;
+            this.txtTenGV.Location = new System.Drawing.Point(443, 151);
+            this.txtTenGV.Name = "txtTenGV";
+            this.txtTenGV.Size = new System.Drawing.Size(125, 22);
+            this.txtTenGV.TabIndex = 11;
             // 
-            // textEdit5
+            // txtDiemTK
             // 
-            this.textEdit5.Enabled = false;
-            this.textEdit5.Location = new System.Drawing.Point(443, 114);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(125, 22);
-            this.textEdit5.TabIndex = 10;
+            this.txtDiemTK.Enabled = false;
+            this.txtDiemTK.Location = new System.Drawing.Point(443, 114);
+            this.txtDiemTK.Name = "txtDiemTK";
+            this.txtDiemTK.Size = new System.Drawing.Size(125, 22);
+            this.txtDiemTK.TabIndex = 10;
             // 
-            // textEdit4
+            // txtDiemThi
             // 
-            this.textEdit4.Enabled = false;
-            this.textEdit4.Location = new System.Drawing.Point(443, 75);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(125, 22);
-            this.textEdit4.TabIndex = 9;
+            this.txtDiemThi.Enabled = false;
+            this.txtDiemThi.Location = new System.Drawing.Point(443, 75);
+            this.txtDiemThi.Name = "txtDiemThi";
+            this.txtDiemThi.Size = new System.Drawing.Size(125, 22);
+            this.txtDiemThi.TabIndex = 9;
             // 
-            // textEdit3
+            // txtDiemTX
             // 
-            this.textEdit3.Enabled = false;
-            this.textEdit3.Location = new System.Drawing.Point(179, 149);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(125, 22);
-            this.textEdit3.TabIndex = 8;
+            this.txtDiemTX.Enabled = false;
+            this.txtDiemTX.Location = new System.Drawing.Point(179, 149);
+            this.txtDiemTX.Name = "txtDiemTX";
+            this.txtDiemTX.Size = new System.Drawing.Size(125, 22);
+            this.txtDiemTX.TabIndex = 8;
             // 
-            // textEdit2
+            // txtDiemCC
             // 
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(179, 112);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(125, 22);
-            this.textEdit2.TabIndex = 7;
+            this.txtDiemCC.Enabled = false;
+            this.txtDiemCC.Location = new System.Drawing.Point(179, 112);
+            this.txtDiemCC.Name = "txtDiemCC";
+            this.txtDiemCC.Size = new System.Drawing.Size(125, 22);
+            this.txtDiemCC.TabIndex = 7;
             // 
-            // textEdit1
+            // txtTenHP
             // 
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(179, 73);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(125, 22);
-            this.textEdit1.TabIndex = 6;
+            this.txtTenHP.Enabled = false;
+            this.txtTenHP.Location = new System.Drawing.Point(179, 73);
+            this.txtTenHP.Name = "txtTenHP";
+            this.txtTenHP.Size = new System.Drawing.Size(125, 22);
+            this.txtTenHP.TabIndex = 6;
             // 
             // label6
             // 
@@ -243,17 +236,17 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.tablePanel1.SetColumn(this.gridControl1, 0);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(3, 236);
-            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MainView = this.dgvChitietDiem;
             this.gridControl1.Name = "gridControl1";
             this.tablePanel1.SetRow(this.gridControl1, 1);
             this.gridControl1.Size = new System.Drawing.Size(883, 530);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgvChitietDiem});
             // 
-            // gridView1
+            // dgvChitietDiem
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvChitietDiem.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
@@ -261,9 +254,10 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.dgvChitietDiem.GridControl = this.gridControl1;
+            this.dgvChitietDiem.Name = "dgvChitietDiem";
+            this.dgvChitietDiem.OptionsView.ShowGroupPanel = false;
+            this.dgvChitietDiem.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvChitietDiem_FocusedRowChanged);
             // 
             // gridColumn1
             // 
@@ -357,17 +351,19 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.Controls.Add(this.tablePanel1);
             this.Name = "HV_Diem";
             this.Size = new System.Drawing.Size(889, 769);
+            this.Load += new System.EventHandler(this.HV_Diem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenGV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemThi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTX.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemCC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChitietDiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -379,7 +375,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvChitietDiem;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
@@ -387,21 +383,20 @@ namespace TTNhom_QLDiem.GUI.HocVien
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox cbTK;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtTenGV;
+        private DevExpress.XtraEditors.TextEdit txtDiemTK;
+        private DevExpress.XtraEditors.TextEdit txtDiemThi;
+        private DevExpress.XtraEditors.TextEdit txtDiemTX;
+        private DevExpress.XtraEditors.TextEdit txtDiemCC;
+        private DevExpress.XtraEditors.TextEdit txtTenHP;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }
