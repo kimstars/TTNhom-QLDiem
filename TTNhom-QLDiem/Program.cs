@@ -19,7 +19,7 @@ namespace TTNhom_QLDiem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm("admin"));
+            Application.Run(new MainForm("gv"));
         }
     }
 }

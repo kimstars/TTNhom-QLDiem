@@ -104,6 +104,10 @@ namespace TTNhom_QLDiem.Model
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<timkiem>()
+                .Property(e => e.TenHocKy)
+                .IsUnicode(false);
         }
     }
 }

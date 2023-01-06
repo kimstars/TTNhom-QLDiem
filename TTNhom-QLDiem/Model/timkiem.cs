@@ -32,5 +32,8 @@ namespace TTNhom_QLDiem.Model
         public double? DiemTX { get; set; }
 
         public double? DiemThi { get; set; }
+
+        [StringLength(20)]
+        public string TenHocKy { get; set; }
     }
 }
