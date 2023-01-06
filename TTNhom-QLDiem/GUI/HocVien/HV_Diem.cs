@@ -81,6 +81,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             if (edit.SelectedIndex == 0)
             {
                 lstHocKy = db.HocKies.ToList();
+                cbTK.DataSource = lstHocKy;
                 cbTK.ValueMember = "MaHocKy";
                 cbTK.DisplayMember = "TenHocKy";
 
@@ -89,23 +90,27 @@ namespace TTNhom_QLDiem.GUI.HocVien
             else
             {
                 lstHocPhan = db.HocPhans.ToList();
+                cbTK.DataSource = lstHocPhan;
                 cbTK.ValueMember = "MaHocPhan";
                 cbTK.DisplayMember = "TenHocPhan";
             }
         }
 
-        private void cbTK_SelectedValueChanged(object sender, EventArgs e)
+        private void cbTK_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int id;
             if (radioGroup1.SelectedIndex == 0)
             {
-                int mahk = Convert.ToInt32(cbTK.ValueMember);
+                id= int.Parse(cbTK.SelectedIndex.ToString());
+                int mahk = lstHocKy[id].MaHocKy;
                 lstDiem_HV = db.TTDHVs.Where(m => m.MaHocVien == MainForm.MaID && m.MaHocKy ==mahk).ToList();
                 gridControl1.DataSource = lstDiem_HV;
                 SetDefault();
             }
             else
             {
-                int mahp = Convert.ToInt32(cbTK.ValueMember);
+                id = int.Parse(cbTK.SelectedIndex.ToString());
+                int mahp = lstHocPhan[id].MaHocPhan;
                 lstDiem_HV = db.TTDHVs.Where(m => m.MaHocVien == MainForm.MaID && m.MaHocPhan == mahp).ToList();
                 gridControl1.DataSource = lstDiem_HV;
                 SetDefault();

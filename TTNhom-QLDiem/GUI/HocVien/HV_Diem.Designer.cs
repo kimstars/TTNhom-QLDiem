@@ -118,7 +118,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.cbTK.Name = "cbTK";
             this.cbTK.Size = new System.Drawing.Size(121, 24);
             this.cbTK.TabIndex = 15;
-            this.cbTK.SelectedValueChanged += new System.EventHandler(this.cbTK_SelectedValueChanged);
+            this.cbTK.SelectedIndexChanged += new System.EventHandler(this.cbTK_SelectedIndexChanged);
             // 
             // label7
             // 
