@@ -34,6 +34,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.Thêm = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.btnThemTK = new DevExpress.XtraEditors.SimpleButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateThemNgaySinhCB = new DevExpress.XtraEditors.DateEdit();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnThemTK = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -158,6 +158,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1.Size = new System.Drawing.Size(1109, 255);
             this.xtraTabPage1.Text = "Thêm";
             // 
+            // btnThemTK
+            // 
+            this.btnThemTK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThemTK.Location = new System.Drawing.Point(574, 158);
+            this.btnThemTK.Name = "btnThemTK";
+            this.btnThemTK.Size = new System.Drawing.Size(135, 28);
+            this.btnThemTK.TabIndex = 29;
+            this.btnThemTK.Text = "Thêm tài khoản";
+            this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -197,7 +207,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtThemMaTKCB.Location = new System.Drawing.Point(422, 164);
             this.txtThemMaTKCB.Name = "txtThemMaTKCB";
             this.txtThemMaTKCB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtThemMaTKCB.Size = new System.Drawing.Size(287, 22);
+            this.txtThemMaTKCB.Size = new System.Drawing.Size(137, 22);
             this.txtThemMaTKCB.TabIndex = 23;
             // 
             // label4
@@ -522,16 +532,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 107;
-            // 
-            // btnThemTK
-            // 
-            this.btnThemTK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThemTK.Location = new System.Drawing.Point(422, 204);
-            this.btnThemTK.Name = "btnThemTK";
-            this.btnThemTK.Size = new System.Drawing.Size(287, 28);
-            this.btnThemTK.TabIndex = 29;
-            this.btnThemTK.Text = "Thêm tài khoản";
-            this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
             // 
             // gridColumn7
             // 
