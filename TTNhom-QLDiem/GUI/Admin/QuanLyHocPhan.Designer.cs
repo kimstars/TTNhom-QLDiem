@@ -543,10 +543,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.Thêm);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(3, 3);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1115, 207);
+            this.groupControl3.Size = new System.Drawing.Size(1115, 225);
             this.groupControl3.TabIndex = 7;
             this.groupControl3.Text = "Quản lý học phần";
             // 
@@ -556,7 +556,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Thêm.Location = new System.Drawing.Point(2, 28);
             this.Thêm.Name = "Thêm";
             this.Thêm.SelectedTabPage = this.xtraTabPage1;
-            this.Thêm.Size = new System.Drawing.Size(1111, 177);
+            this.Thêm.Size = new System.Drawing.Size(1111, 195);
             this.Thêm.TabIndex = 83;
             this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -580,7 +580,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1.Controls.Add(this.label3);
             this.xtraTabPage1.Controls.Add(this.SoTC);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1109, 146);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1109, 164);
             this.xtraTabPage1.Text = "Thêm";
             // 
             // TenHP

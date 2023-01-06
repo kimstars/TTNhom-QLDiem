@@ -64,13 +64,14 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtGhiChu = new DevExpress.XtraEditors.TextEdit();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtGhiChu = new DevExpress.XtraEditors.TextEdit();
+            this.btnLuu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).BeginInit();
@@ -344,6 +345,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // gridColumn1
             // 
@@ -351,6 +353,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn1.FieldName = "MaHocVien";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 94;
@@ -371,6 +374,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn3.FieldName = "TenLopChuyenNganh";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 94;
@@ -381,6 +385,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn4.FieldName = "DiemCC";
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 94;
@@ -390,6 +395,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn5.Caption = "Điểm thường xuyên";
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 94;
@@ -410,6 +416,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn7.FieldName = "DiemTK";
             this.gridColumn7.MinWidth = 25;
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
             this.gridColumn7.Width = 94;
@@ -420,6 +427,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8.FieldName = "GhiChu";
             this.gridColumn8.MinWidth = 25;
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 94;
@@ -444,6 +452,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // groupControl2
             // 
             this.tablePanel2.SetColumn(this.groupControl2, 1);
+            this.groupControl2.Controls.Add(this.btnLuu);
             this.groupControl2.Controls.Add(this.txtGhiChu);
             this.groupControl2.Controls.Add(this.label9);
             this.groupControl2.Controls.Add(this.txtDiemThi);
@@ -461,6 +470,22 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl2.Size = new System.Drawing.Size(489, 311);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Thông tin nhập";
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Location = new System.Drawing.Point(159, 233);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(125, 22);
+            this.txtGhiChu.TabIndex = 111;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(25, 236);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 17);
+            this.label9.TabIndex = 110;
+            this.label9.Text = "Ghi chú";
             // 
             // label7
             // 
@@ -504,21 +529,14 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label9
+            // btnLuu
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(25, 236);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 17);
-            this.label9.TabIndex = 110;
-            this.label9.Text = "Ghi chú";
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(159, 233);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(125, 22);
-            this.txtGhiChu.TabIndex = 111;
+            this.btnLuu.Location = new System.Drawing.Point(326, 183);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(121, 72);
+            this.btnLuu.TabIndex = 112;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // GV_NhapDiemThi
             // 
@@ -600,5 +618,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btnLuu;
     }
 }

@@ -30,35 +30,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private void InitializeComponent()
         {
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbbHocKy = new System.Windows.Forms.ComboBox();
-            this.cbbHocPhan = new System.Windows.Forms.ComboBox();
-            this.cbbLopHocPhan = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaHocVien = new DevExpress.XtraEditors.TextEdit();
-            this.txtTenHocVien = new DevExpress.XtraEditors.TextEdit();
-            this.txtLopChuyenNganh = new DevExpress.XtraEditors.TextEdit();
-            this.dateHanNhapDiem = new DevExpress.XtraEditors.DateEdit();
-            this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateNgayThi = new DevExpress.XtraEditors.DateEdit();
-            this.txtSoTinChi = new DevExpress.XtraEditors.TextEdit();
-            this.txtDiemCC = new DevExpress.XtraEditors.TextEdit();
-            this.txtDiemTX = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -69,30 +41,59 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtDiemTX = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiemCC = new DevExpress.XtraEditors.TextEdit();
+            this.txtLopChuyenNganh = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenHocVien = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaHocVien = new DevExpress.XtraEditors.TextEdit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtSoTinChi = new DevExpress.XtraEditors.TextEdit();
+            this.dateNgayThi = new DevExpress.XtraEditors.DateEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateHanNhapDiem = new DevExpress.XtraEditors.DateEdit();
+            this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbbLopHocPhan = new System.Windows.Forms.ComboBox();
+            this.cbbHocPhan = new System.Windows.Forms.ComboBox();
+            this.cbbHocKy = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.btnLuu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
-            this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaHocVien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenHocVien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLopChuyenNganh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemCC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTX.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
+            this.tablePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTX.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemCC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLopChuyenNganh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHocVien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaHocVien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             this.SuspendLayout();
             // 
             // tablePanel1
@@ -111,69 +112,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.tablePanel1.Size = new System.Drawing.Size(1121, 760);
             this.tablePanel1.TabIndex = 0;
             // 
-            // tablePanel2
-            // 
-            this.tablePanel1.SetColumn(this.tablePanel2, 0);
-            this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33.35F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26.65F)});
-            this.tablePanel2.Controls.Add(this.groupControl2);
-            this.tablePanel2.Controls.Add(this.groupControl1);
-            this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablePanel2.Location = new System.Drawing.Point(3, 3);
-            this.tablePanel2.Name = "tablePanel2";
-            this.tablePanel1.SetRow(this.tablePanel2, 0);
-            this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel2.Size = new System.Drawing.Size(1115, 317);
-            this.tablePanel2.TabIndex = 0;
-            // 
-            // groupControl1
-            // 
-            this.tablePanel2.SetColumn(this.groupControl1, 0);
-            this.groupControl1.Controls.Add(this.txtSoTinChi);
-            this.groupControl1.Controls.Add(this.dateNgayThi);
-            this.groupControl1.Controls.Add(this.label6);
-            this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.dateHanNhapDiem);
-            this.groupControl1.Controls.Add(this.radioGroup2);
-            this.groupControl1.Controls.Add(this.label10);
-            this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.cbbLopHocPhan);
-            this.groupControl1.Controls.Add(this.cbbHocPhan);
-            this.groupControl1.Controls.Add(this.cbbHocKy);
-            this.groupControl1.Controls.Add(this.label3);
-            this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
-            this.groupControl1.Name = "groupControl1";
-            this.tablePanel2.SetRow(this.groupControl1, 0);
-            this.groupControl1.Size = new System.Drawing.Size(614, 311);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "Thông tin chung";
-            // 
-            // groupControl2
-            // 
-            this.tablePanel2.SetColumn(this.groupControl2, 1);
-            this.groupControl2.Controls.Add(this.txtDiemTX);
-            this.groupControl2.Controls.Add(this.txtDiemCC);
-            this.groupControl2.Controls.Add(this.txtLopChuyenNganh);
-            this.groupControl2.Controls.Add(this.txtTenHocVien);
-            this.groupControl2.Controls.Add(this.txtMaHocVien);
-            this.groupControl2.Controls.Add(this.label8);
-            this.groupControl2.Controls.Add(this.label7);
-            this.groupControl2.Controls.Add(this.label11);
-            this.groupControl2.Controls.Add(this.label13);
-            this.groupControl2.Controls.Add(this.label12);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(623, 3);
-            this.groupControl2.Name = "groupControl2";
-            this.tablePanel2.SetRow(this.groupControl2, 0);
-            this.groupControl2.Size = new System.Drawing.Size(489, 311);
-            this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "Thông tin nhập";
-            // 
             // groupControl3
             // 
             this.tablePanel1.SetColumn(this.groupControl3, 0);
@@ -185,228 +123,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl3.Size = new System.Drawing.Size(1115, 431);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Danh sách học viên";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Học kỳ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Lớp học phần";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Học phần";
-            // 
-            // cbbHocKy
-            // 
-            this.cbbHocKy.FormattingEnabled = true;
-            this.cbbHocKy.Location = new System.Drawing.Point(122, 58);
-            this.cbbHocKy.Name = "cbbHocKy";
-            this.cbbHocKy.Size = new System.Drawing.Size(121, 24);
-            this.cbbHocKy.TabIndex = 3;
-            // 
-            // cbbHocPhan
-            // 
-            this.cbbHocPhan.FormattingEnabled = true;
-            this.cbbHocPhan.Location = new System.Drawing.Point(122, 101);
-            this.cbbHocPhan.Name = "cbbHocPhan";
-            this.cbbHocPhan.Size = new System.Drawing.Size(121, 24);
-            this.cbbHocPhan.TabIndex = 4;
-            // 
-            // cbbLopHocPhan
-            // 
-            this.cbbLopHocPhan.FormattingEnabled = true;
-            this.cbbLopHocPhan.Location = new System.Drawing.Point(122, 142);
-            this.cbbLopHocPhan.Name = "cbbLopHocPhan";
-            this.cbbLopHocPhan.Size = new System.Drawing.Size(121, 24);
-            this.cbbLopHocPhan.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 196);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 17);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Điểm chuyên cần";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 236);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 17);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Điểm thường xuyên";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(300, 148);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Hạn nhập điểm";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 149);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 17);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Lớp chuyên ngành";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 106);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 17);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Tên học viên";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(21, 57);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 17);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Mã học viên";
-            // 
-            // radioGroup2
-            // 
-            this.radioGroup2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioGroup2.Enabled = false;
-            this.radioGroup2.Location = new System.Drawing.Point(20, 226);
-            this.radioGroup2.Name = "radioGroup2";
-            this.radioGroup2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.radioGroup2.Properties.Appearance.Options.UseBackColor = true;
-            this.radioGroup2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi vấn đáp", "Thi vấn đáp", true, null, "thivandap"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi viết", "Thi viết", true, null, "thiviet"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi trực tuyến", "Thi trực tuyến", true, null, "thittructuyen")});
-            this.radioGroup2.Size = new System.Drawing.Size(380, 35);
-            this.radioGroup2.TabIndex = 101;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label4.Location = new System.Drawing.Point(20, 196);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 17);
-            this.label4.TabIndex = 100;
-            this.label4.Text = "Hình Thức Thi";
-            // 
-            // txtMaHocVien
-            // 
-            this.txtMaHocVien.Enabled = false;
-            this.txtMaHocVien.Location = new System.Drawing.Point(159, 56);
-            this.txtMaHocVien.Name = "txtMaHocVien";
-            this.txtMaHocVien.Size = new System.Drawing.Size(125, 22);
-            this.txtMaHocVien.TabIndex = 102;
-            // 
-            // txtTenHocVien
-            // 
-            this.txtTenHocVien.Enabled = false;
-            this.txtTenHocVien.Location = new System.Drawing.Point(159, 101);
-            this.txtTenHocVien.Name = "txtTenHocVien";
-            this.txtTenHocVien.Size = new System.Drawing.Size(125, 22);
-            this.txtTenHocVien.TabIndex = 103;
-            // 
-            // txtLopChuyenNganh
-            // 
-            this.txtLopChuyenNganh.Enabled = false;
-            this.txtLopChuyenNganh.Location = new System.Drawing.Point(159, 143);
-            this.txtLopChuyenNganh.Name = "txtLopChuyenNganh";
-            this.txtLopChuyenNganh.Size = new System.Drawing.Size(125, 22);
-            this.txtLopChuyenNganh.TabIndex = 104;
-            // 
-            // dateHanNhapDiem
-            // 
-            this.dateHanNhapDiem.EditValue = null;
-            this.dateHanNhapDiem.Enabled = false;
-            this.dateHanNhapDiem.Location = new System.Drawing.Point(423, 145);
-            this.dateHanNhapDiem.Name = "dateHanNhapDiem";
-            this.dateHanNhapDiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateHanNhapDiem.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateHanNhapDiem.Size = new System.Drawing.Size(125, 22);
-            this.dateHanNhapDiem.TabIndex = 102;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(300, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 17);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "Số tín chỉ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(303, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 17);
-            this.label6.TabIndex = 104;
-            this.label6.Text = "Ngày thi";
-            // 
-            // dateNgayThi
-            // 
-            this.dateNgayThi.EditValue = null;
-            this.dateNgayThi.Enabled = false;
-            this.dateNgayThi.Location = new System.Drawing.Point(423, 96);
-            this.dateNgayThi.Name = "dateNgayThi";
-            this.dateNgayThi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayThi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayThi.Size = new System.Drawing.Size(125, 22);
-            this.dateNgayThi.TabIndex = 105;
-            // 
-            // txtSoTinChi
-            // 
-            this.txtSoTinChi.Enabled = false;
-            this.txtSoTinChi.Location = new System.Drawing.Point(423, 52);
-            this.txtSoTinChi.Name = "txtSoTinChi";
-            this.txtSoTinChi.Size = new System.Drawing.Size(125, 22);
-            this.txtSoTinChi.TabIndex = 106;
-            // 
-            // txtDiemCC
-            // 
-            this.txtDiemCC.Location = new System.Drawing.Point(159, 191);
-            this.txtDiemCC.Name = "txtDiemCC";
-            this.txtDiemCC.Size = new System.Drawing.Size(125, 22);
-            this.txtDiemCC.TabIndex = 107;
-            // 
-            // txtDiemTX
-            // 
-            this.txtDiemTX.Location = new System.Drawing.Point(159, 231);
-            this.txtDiemTX.Name = "txtDiemTX";
-            this.txtDiemTX.Size = new System.Drawing.Size(125, 22);
-            this.txtDiemTX.TabIndex = 108;
             // 
             // gridControl1
             // 
@@ -432,6 +148,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // gridColumn1
             // 
@@ -439,6 +156,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn1.FieldName = "MaHocVien";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 94;
@@ -449,6 +167,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn2.FieldName = "HoTenHV";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 94;
@@ -459,6 +178,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn3.FieldName = "TenLopChuyenNganh";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 94;
@@ -488,6 +208,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn6.FieldName = "DiemThi";
             this.gridColumn6.MinWidth = 25;
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 94;
@@ -498,6 +219,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn7.FieldName = "DiemTK";
             this.gridColumn7.MinWidth = 25;
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
             this.gridColumn7.Width = 94;
@@ -512,6 +234,301 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 94;
             // 
+            // tablePanel2
+            // 
+            this.tablePanel1.SetColumn(this.tablePanel2, 0);
+            this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 33.35F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26.65F)});
+            this.tablePanel2.Controls.Add(this.groupControl2);
+            this.tablePanel2.Controls.Add(this.groupControl1);
+            this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablePanel2.Location = new System.Drawing.Point(3, 3);
+            this.tablePanel2.Name = "tablePanel2";
+            this.tablePanel1.SetRow(this.tablePanel2, 0);
+            this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
+            this.tablePanel2.Size = new System.Drawing.Size(1115, 317);
+            this.tablePanel2.TabIndex = 0;
+            // 
+            // groupControl2
+            // 
+            this.tablePanel2.SetColumn(this.groupControl2, 1);
+            this.groupControl2.Controls.Add(this.btnLuu);
+            this.groupControl2.Controls.Add(this.txtDiemTX);
+            this.groupControl2.Controls.Add(this.txtDiemCC);
+            this.groupControl2.Controls.Add(this.txtLopChuyenNganh);
+            this.groupControl2.Controls.Add(this.txtTenHocVien);
+            this.groupControl2.Controls.Add(this.txtMaHocVien);
+            this.groupControl2.Controls.Add(this.label8);
+            this.groupControl2.Controls.Add(this.label7);
+            this.groupControl2.Controls.Add(this.label11);
+            this.groupControl2.Controls.Add(this.label13);
+            this.groupControl2.Controls.Add(this.label12);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(623, 3);
+            this.groupControl2.Name = "groupControl2";
+            this.tablePanel2.SetRow(this.groupControl2, 0);
+            this.groupControl2.Size = new System.Drawing.Size(489, 311);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "Thông tin nhập";
+            // 
+            // txtDiemTX
+            // 
+            this.txtDiemTX.Location = new System.Drawing.Point(159, 231);
+            this.txtDiemTX.Name = "txtDiemTX";
+            this.txtDiemTX.Size = new System.Drawing.Size(125, 22);
+            this.txtDiemTX.TabIndex = 108;
+            // 
+            // txtDiemCC
+            // 
+            this.txtDiemCC.Location = new System.Drawing.Point(159, 191);
+            this.txtDiemCC.Name = "txtDiemCC";
+            this.txtDiemCC.Size = new System.Drawing.Size(125, 22);
+            this.txtDiemCC.TabIndex = 107;
+            // 
+            // txtLopChuyenNganh
+            // 
+            this.txtLopChuyenNganh.Enabled = false;
+            this.txtLopChuyenNganh.Location = new System.Drawing.Point(159, 143);
+            this.txtLopChuyenNganh.Name = "txtLopChuyenNganh";
+            this.txtLopChuyenNganh.Size = new System.Drawing.Size(125, 22);
+            this.txtLopChuyenNganh.TabIndex = 104;
+            // 
+            // txtTenHocVien
+            // 
+            this.txtTenHocVien.Enabled = false;
+            this.txtTenHocVien.Location = new System.Drawing.Point(159, 101);
+            this.txtTenHocVien.Name = "txtTenHocVien";
+            this.txtTenHocVien.Size = new System.Drawing.Size(125, 22);
+            this.txtTenHocVien.TabIndex = 103;
+            // 
+            // txtMaHocVien
+            // 
+            this.txtMaHocVien.Enabled = false;
+            this.txtMaHocVien.Location = new System.Drawing.Point(159, 56);
+            this.txtMaHocVien.Name = "txtMaHocVien";
+            this.txtMaHocVien.Size = new System.Drawing.Size(125, 22);
+            this.txtMaHocVien.TabIndex = 102;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(21, 236);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 17);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Điểm thường xuyên";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 196);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 17);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Điểm chuyên cần";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(21, 149);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(124, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Lớp chuyên ngành";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(21, 57);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 17);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Mã học viên";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(21, 106);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 17);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Tên học viên";
+            // 
+            // groupControl1
+            // 
+            this.tablePanel2.SetColumn(this.groupControl1, 0);
+            this.groupControl1.Controls.Add(this.txtSoTinChi);
+            this.groupControl1.Controls.Add(this.dateNgayThi);
+            this.groupControl1.Controls.Add(this.label6);
+            this.groupControl1.Controls.Add(this.label5);
+            this.groupControl1.Controls.Add(this.dateHanNhapDiem);
+            this.groupControl1.Controls.Add(this.radioGroup2);
+            this.groupControl1.Controls.Add(this.label10);
+            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.cbbLopHocPhan);
+            this.groupControl1.Controls.Add(this.cbbHocPhan);
+            this.groupControl1.Controls.Add(this.cbbHocKy);
+            this.groupControl1.Controls.Add(this.label3);
+            this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.label1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(3, 3);
+            this.groupControl1.Name = "groupControl1";
+            this.tablePanel2.SetRow(this.groupControl1, 0);
+            this.groupControl1.Size = new System.Drawing.Size(614, 311);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Thông tin chung";
+            // 
+            // txtSoTinChi
+            // 
+            this.txtSoTinChi.Enabled = false;
+            this.txtSoTinChi.Location = new System.Drawing.Point(423, 52);
+            this.txtSoTinChi.Name = "txtSoTinChi";
+            this.txtSoTinChi.Size = new System.Drawing.Size(125, 22);
+            this.txtSoTinChi.TabIndex = 106;
+            // 
+            // dateNgayThi
+            // 
+            this.dateNgayThi.EditValue = null;
+            this.dateNgayThi.Enabled = false;
+            this.dateNgayThi.Location = new System.Drawing.Point(423, 96);
+            this.dateNgayThi.Name = "dateNgayThi";
+            this.dateNgayThi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayThi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayThi.Size = new System.Drawing.Size(125, 22);
+            this.dateNgayThi.TabIndex = 105;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(303, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 17);
+            this.label6.TabIndex = 104;
+            this.label6.Text = "Ngày thi";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(300, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 17);
+            this.label5.TabIndex = 103;
+            this.label5.Text = "Số tín chỉ";
+            // 
+            // dateHanNhapDiem
+            // 
+            this.dateHanNhapDiem.EditValue = null;
+            this.dateHanNhapDiem.Enabled = false;
+            this.dateHanNhapDiem.Location = new System.Drawing.Point(423, 145);
+            this.dateHanNhapDiem.Name = "dateHanNhapDiem";
+            this.dateHanNhapDiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateHanNhapDiem.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateHanNhapDiem.Size = new System.Drawing.Size(125, 22);
+            this.dateHanNhapDiem.TabIndex = 102;
+            // 
+            // radioGroup2
+            // 
+            this.radioGroup2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioGroup2.Enabled = false;
+            this.radioGroup2.Location = new System.Drawing.Point(20, 226);
+            this.radioGroup2.Name = "radioGroup2";
+            this.radioGroup2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.radioGroup2.Properties.Appearance.Options.UseBackColor = true;
+            this.radioGroup2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi vấn đáp", "Thi vấn đáp", true, null, "thivandap"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi viết", "Thi viết", true, null, "thiviet"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi trực tuyến", "Thi trực tuyến", true, null, "thittructuyen")});
+            this.radioGroup2.Size = new System.Drawing.Size(380, 35);
+            this.radioGroup2.TabIndex = 101;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(300, 148);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 17);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Hạn nhập điểm";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label4.Location = new System.Drawing.Point(20, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 17);
+            this.label4.TabIndex = 100;
+            this.label4.Text = "Hình Thức Thi";
+            // 
+            // cbbLopHocPhan
+            // 
+            this.cbbLopHocPhan.FormattingEnabled = true;
+            this.cbbLopHocPhan.Location = new System.Drawing.Point(122, 142);
+            this.cbbLopHocPhan.Name = "cbbLopHocPhan";
+            this.cbbLopHocPhan.Size = new System.Drawing.Size(121, 24);
+            this.cbbLopHocPhan.TabIndex = 5;
+            // 
+            // cbbHocPhan
+            // 
+            this.cbbHocPhan.FormattingEnabled = true;
+            this.cbbHocPhan.Location = new System.Drawing.Point(122, 101);
+            this.cbbHocPhan.Name = "cbbHocPhan";
+            this.cbbHocPhan.Size = new System.Drawing.Size(121, 24);
+            this.cbbHocPhan.TabIndex = 4;
+            // 
+            // cbbHocKy
+            // 
+            this.cbbHocKy.FormattingEnabled = true;
+            this.cbbHocKy.Location = new System.Drawing.Point(122, 58);
+            this.cbbHocKy.Name = "cbbHocKy";
+            this.cbbHocKy.Size = new System.Drawing.Size(121, 24);
+            this.cbbHocKy.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Học phần";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Lớp học phần";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Học kỳ";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(329, 181);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(121, 72);
+            this.btnLuu.TabIndex = 110;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
             // GV_NhapDiemCC_TX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -521,30 +538,30 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.Size = new System.Drawing.Size(1121, 760);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaHocVien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenHocVien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTX.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiemCC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLopChuyenNganh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHocVien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaHocVien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemCC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiemTX.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -591,5 +608,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private System.Windows.Forms.Button btnLuu;
     }
 }

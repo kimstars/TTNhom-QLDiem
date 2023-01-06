@@ -26,6 +26,8 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TTDHV> TTDHVs { get; set; }
+        public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
+        public virtual DbSet<timkiem> timkiems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -102,6 +104,7 @@ namespace TTNhom_QLDiem.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<TTDHV>()
+            modelBuilder.Entity<ADV_TraCuuDiemHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
         }
