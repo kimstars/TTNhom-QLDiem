@@ -6,41 +6,27 @@ namespace TTNhom_QLDiem.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("GiangVien")]
-    public partial class GiangVien
+    [Table("PhongHoc")]
+    public partial class PhongHoc
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public GiangVien()
+        public PhongHoc()
         {
             LopHocPhans = new HashSet<LopHocPhan>();
         }
 
         [Key]
-        public int MaGiangVien { get; set; }
+        public int MaPhongHoc { get; set; }
 
         [Required]
-        [StringLength(70)]
-        public string HoTenGV { get; set; }
-
-        [StringLength(5)]
-        public string GioiTinh { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? NgaySinh { get; set; }
-
-        [StringLength(20)]
-        public string CapBac { get; set; }
-
         [StringLength(50)]
-        public string ChucVu { get; set; }
+        public string TenPhongHoc { get; set; }
 
-        public int MaBoMon { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string DiaDiem { get; set; }
 
-        public int? MaTK { get; set; }
-
-        public virtual BoMon BoMon { get; set; }
-
-        public virtual TaiKhoan TaiKhoan { get; set; }
+        public bool TrangThai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LopHocPhan> LopHocPhans { get; set; }

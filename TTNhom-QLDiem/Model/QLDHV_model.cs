@@ -15,14 +15,17 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<BoMon> BoMons { get; set; }
         public virtual DbSet<ChiTietPhieuDiem> ChiTietPhieuDiems { get; set; }
         public virtual DbSet<GiangVien> GiangViens { get; set; }
-        public virtual DbSet<HocKi> HocKis { get; set; }
+        public virtual DbSet<HocKy> HocKies { get; set; }
         public virtual DbSet<HocPhan> HocPhans { get; set; }
         public virtual DbSet<HocVien> HocViens { get; set; }
         public virtual DbSet<Khoa> Khoas { get; set; }
         public virtual DbSet<LopChuyenNganh> LopChuyenNganhs { get; set; }
         public virtual DbSet<LopHocPhan> LopHocPhans { get; set; }
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
+        public virtual DbSet<PhongHoc> PhongHocs { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
+        public virtual DbSet<timkiem> timkiems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -46,14 +49,13 @@ namespace TTNhom_QLDiem.Model
                 .WithRequired(e => e.GiangVien)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<HocKi>()
+            modelBuilder.Entity<HocKy>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<HocKi>()
+            modelBuilder.Entity<HocKy>()
                 .HasMany(e => e.LopHocPhans)
-                .WithRequired(e => e.HocKi)
-                .HasForeignKey(e => e.MaHocKi)
+                .WithRequired(e => e.HocKy)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<HocPhan>()
@@ -97,6 +99,10 @@ namespace TTNhom_QLDiem.Model
 
             modelBuilder.Entity<TaiKhoan>()
                 .Property(e => e.Quyen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ADV_TraCuuDiemHV>()
+                .Property(e => e.TenHocKy)
                 .IsUnicode(false);
         }
     }
