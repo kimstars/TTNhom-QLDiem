@@ -135,12 +135,6 @@
     <Compile Include="GUI\GiangVien\GV_NhapDiemThi.Designer.cs">
       <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiangVien\QLyGV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\QLyGV.Designer.cs">
-      <DependentUpon>QLyGV.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GiangVien\TTGiangVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +171,7 @@
     <Compile Include="GUI\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
@@ -192,6 +187,7 @@
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TTDHV.cs" />
+    <Compile Include="Model\timkiem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">
@@ -229,9 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemThi.resx">
       <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\QLyGV.resx">
-      <DependentUpon>QLyGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\TTGiangVien.resx">
       <DependentUpon>TTGiangVien.cs</DependentUpon>
