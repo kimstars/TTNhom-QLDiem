@@ -44,7 +44,7 @@ namespace TTNhom_QLDiem.GUI
         }
 
 
-        HocVien.QLyHV uc1 = new HocVien.QLyHV();
+        //HocVien.QLyHV uc1 = new HocVien.QLyHV();
 
 
         public void LoadByAccessPermission(string accPer)
@@ -73,11 +73,11 @@ namespace TTNhom_QLDiem.GUI
 
                     
 
-                    uc1.Dock = DockStyle.Fill;
+                    //uc1.Dock = DockStyle.Fill;
                     //uc2.Dock = DockStyle.Fill;
                     
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc1 });
+                    //showUsercontrol.Controls.AddRange(new Control[] { uc1 });
                     break;
 
 

@@ -111,12 +111,6 @@
     <Compile Include="GUI\DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\formchung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\formchung.Designer.cs">
-      <DependentUpon>formchung.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GiangVien\DSHVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,9 +232,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\formchung.resx">
-      <DependentUpon>formchung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\DSHVien.resx">
       <DependentUpon>DSHVien.cs</DependentUpon>

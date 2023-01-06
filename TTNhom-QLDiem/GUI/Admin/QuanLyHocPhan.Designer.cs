@@ -30,6 +30,21 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void InitializeComponent()
         {
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnThemCB = new DevExpress.XtraEditors.SimpleButton();
             this.MaBM = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,6 +64,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,23 +75,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Donvihoctrinh = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SoTC = new System.Windows.Forms.TextBox();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaBM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -89,8 +91,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.Thêm)).BeginInit();
             this.Thêm.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabPage2
@@ -113,337 +113,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1109, 146);
             this.xtraTabPage2.Text = "Sửa";
-            // 
-            // btnThemCB
-            // 
-            this.btnThemCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThemCB.Location = new System.Drawing.Point(819, 41);
-            this.btnThemCB.Name = "btnThemCB";
-            this.btnThemCB.Size = new System.Drawing.Size(102, 97);
-            this.btnThemCB.TabIndex = 14;
-            this.btnThemCB.Text = "Thêm";
-            // 
-            // MaBM
-            // 
-            this.MaBM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.MaBM.Location = new System.Drawing.Point(538, 41);
-            this.MaBM.Name = "MaBM";
-            this.MaBM.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaBM.Properties.Appearance.Options.UseFont = true;
-            this.MaBM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MaBM.Size = new System.Drawing.Size(238, 26);
-            this.MaBM.TabIndex = 82;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label7.Location = new System.Drawing.Point(393, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 17);
-            this.label7.TabIndex = 74;
-            this.label7.Text = "Hình Thức Thi";
-            // 
-            // MaHP
-            // 
-            this.MaHP.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.MaHP.BackColor = System.Drawing.Color.White;
-            this.MaHP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHP.Location = new System.Drawing.Point(35, 39);
-            this.MaHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaHP.Name = "MaHP";
-            this.MaHP.ReadOnly = true;
-            this.MaHP.Size = new System.Drawing.Size(169, 30);
-            this.MaHP.TabIndex = 62;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label1.Location = new System.Drawing.Point(35, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Mã HP";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label10.Location = new System.Drawing.Point(535, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 17);
-            this.label10.TabIndex = 72;
-            this.label10.Text = "Chọn Bộ Môn";
-            // 
-            // SoTiet
-            // 
-            this.SoTiet.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.SoTiet.BackColor = System.Drawing.Color.White;
-            this.SoTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoTiet.Location = new System.Drawing.Point(249, 101);
-            this.SoTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SoTiet.Name = "SoTiet";
-            this.SoTiet.ReadOnly = true;
-            this.SoTiet.Size = new System.Drawing.Size(116, 30);
-            this.SoTiet.TabIndex = 64;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label5.Location = new System.Drawing.Point(35, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 17);
-            this.label5.TabIndex = 71;
-            this.label5.Text = "Tên Học Phần";
-            // 
-            // radioGroup2
-            // 
-            this.radioGroup2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioGroup2.Location = new System.Drawing.Point(396, 102);
-            this.radioGroup2.Name = "radioGroup2";
-            this.radioGroup2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.radioGroup2.Properties.Appearance.Options.UseBackColor = true;
-            this.radioGroup2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi vấn đáp", "Thi vấn đáp", true, null, "thivandap"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi viết", "Thi viết", true, null, "thiviet"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi trên máy", "Thi trên máy", true, null, "thitrenmay")});
-            this.radioGroup2.Size = new System.Drawing.Size(380, 35);
-            this.radioGroup2.TabIndex = 99;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label2.Location = new System.Drawing.Point(246, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
-            this.label2.TabIndex = 65;
-            this.label2.Text = "Số Tiết";
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.dgvLichSuTCA);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(3, 234);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1115, 523);
-            this.groupControl2.TabIndex = 5;
-            this.groupControl2.Text = "Danh sách học phần";
-            // 
-            // dgvLichSuTCA
-            // 
-            this.dgvLichSuTCA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLichSuTCA.Location = new System.Drawing.Point(2, 28);
-            this.dgvLichSuTCA.MainView = this.dgvTCA_View;
-            this.dgvLichSuTCA.Name = "dgvLichSuTCA";
-            this.dgvLichSuTCA.Size = new System.Drawing.Size(1111, 493);
-            this.dgvLichSuTCA.TabIndex = 0;
-            this.dgvLichSuTCA.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvTCA_View});
-            // 
-            // dgvTCA_View
-            // 
-            this.dgvTCA_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
-            this.dgvTCA_View.GridControl = this.dgvLichSuTCA;
-            this.dgvTCA_View.Name = "dgvTCA_View";
-            this.dgvTCA_View.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã học phần";
-            this.gridColumn1.FieldName = "MaTCA";
-            this.gridColumn1.MinWidth = 29;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 107;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Tên học phần";
-            this.gridColumn2.FieldName = "TienAnSang";
-            this.gridColumn2.MinWidth = 29;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 107;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Số DVHT";
-            this.gridColumn3.FieldName = "TienAnTrua";
-            this.gridColumn3.MinWidth = 29;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 107;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Số tiết";
-            this.gridColumn4.FieldName = "TienAnToi";
-            this.gridColumn4.MinWidth = 29;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 107;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Số Tc";
-            this.gridColumn5.FieldName = "TienAnCoBan";
-            this.gridColumn5.MinWidth = 29;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 107;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Bộ môn";
-            this.gridColumn6.FieldName = "NgayApDung";
-            this.gridColumn6.MinWidth = 29;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 107;
-            // 
-            // gridView1
-            // 
-            this.gridView1.Name = "gridView1";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label4.Location = new System.Drawing.Point(403, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
-            this.label4.TabIndex = 69;
-            this.label4.Text = "Số TC";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.groupControl3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupControl2, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.39474F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.60526F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1121, 760);
-            this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Controls.Add(this.Thêm);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(3, 3);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1115, 207);
-            this.groupControl3.TabIndex = 7;
-            this.groupControl3.Text = "Quản lý học phần";
-            // 
-            // Thêm
-            // 
-            this.Thêm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Thêm.Location = new System.Drawing.Point(2, 28);
-            this.Thêm.Name = "Thêm";
-            this.Thêm.SelectedTabPage = this.xtraTabPage1;
-            this.Thêm.Size = new System.Drawing.Size(1111, 177);
-            this.Thêm.TabIndex = 83;
-            this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
-            // 
-            // xtraTabPage1
-            // 
-            this.xtraTabPage1.Controls.Add(this.radioGroup2);
-            this.xtraTabPage1.Controls.Add(this.btnThemCB);
-            this.xtraTabPage1.Controls.Add(this.MaBM);
-            this.xtraTabPage1.Controls.Add(this.label7);
-            this.xtraTabPage1.Controls.Add(this.MaHP);
-            this.xtraTabPage1.Controls.Add(this.label1);
-            this.xtraTabPage1.Controls.Add(this.label10);
-            this.xtraTabPage1.Controls.Add(this.SoTiet);
-            this.xtraTabPage1.Controls.Add(this.label5);
-            this.xtraTabPage1.Controls.Add(this.label2);
-            this.xtraTabPage1.Controls.Add(this.TenHP);
-            this.xtraTabPage1.Controls.Add(this.Donvihoctrinh);
-            this.xtraTabPage1.Controls.Add(this.label4);
-            this.xtraTabPage1.Controls.Add(this.label3);
-            this.xtraTabPage1.Controls.Add(this.SoTC);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1109, 146);
-            this.xtraTabPage1.Text = "Thêm";
-            // 
-            // TenHP
-            // 
-            this.TenHP.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TenHP.BackColor = System.Drawing.Color.White;
-            this.TenHP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenHP.Location = new System.Drawing.Point(35, 101);
-            this.TenHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TenHP.Name = "TenHP";
-            this.TenHP.ReadOnly = true;
-            this.TenHP.Size = new System.Drawing.Size(169, 30);
-            this.TenHP.TabIndex = 70;
-            // 
-            // Donvihoctrinh
-            // 
-            this.Donvihoctrinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Donvihoctrinh.BackColor = System.Drawing.Color.White;
-            this.Donvihoctrinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Donvihoctrinh.Location = new System.Drawing.Point(249, 39);
-            this.Donvihoctrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Donvihoctrinh.Name = "Donvihoctrinh";
-            this.Donvihoctrinh.ReadOnly = true;
-            this.Donvihoctrinh.Size = new System.Drawing.Size(116, 30);
-            this.Donvihoctrinh.TabIndex = 66;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label3.Location = new System.Drawing.Point(246, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 17);
-            this.label3.TabIndex = 67;
-            this.label3.Text = "Số Đơn vị học trình";
-            // 
-            // SoTC
-            // 
-            this.SoTC.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.SoTC.BackColor = System.Drawing.Color.White;
-            this.SoTC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoTC.Location = new System.Drawing.Point(396, 39);
-            this.SoTC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SoTC.Name = "SoTC";
-            this.SoTC.ReadOnly = true;
-            this.SoTC.Size = new System.Drawing.Size(116, 30);
-            this.SoTC.TabIndex = 68;
             // 
             // radioGroup1
             // 
@@ -618,6 +287,216 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.textBox5.Size = new System.Drawing.Size(116, 30);
             this.textBox5.TabIndex = 107;
             // 
+            // btnThemCB
+            // 
+            this.btnThemCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemCB.Location = new System.Drawing.Point(819, 41);
+            this.btnThemCB.Name = "btnThemCB";
+            this.btnThemCB.Size = new System.Drawing.Size(102, 97);
+            this.btnThemCB.TabIndex = 14;
+            this.btnThemCB.Text = "Thêm";
+            // 
+            // MaBM
+            // 
+            this.MaBM.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MaBM.Location = new System.Drawing.Point(538, 41);
+            this.MaBM.Name = "MaBM";
+            this.MaBM.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaBM.Properties.Appearance.Options.UseFont = true;
+            this.MaBM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MaBM.Size = new System.Drawing.Size(238, 26);
+            this.MaBM.TabIndex = 82;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label7.Location = new System.Drawing.Point(393, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 17);
+            this.label7.TabIndex = 74;
+            this.label7.Text = "Hình Thức Thi";
+            // 
+            // MaHP
+            // 
+            this.MaHP.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MaHP.BackColor = System.Drawing.Color.White;
+            this.MaHP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHP.Location = new System.Drawing.Point(35, 39);
+            this.MaHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaHP.Name = "MaHP";
+            this.MaHP.ReadOnly = true;
+            this.MaHP.Size = new System.Drawing.Size(169, 30);
+            this.MaHP.TabIndex = 62;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label1.Location = new System.Drawing.Point(35, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Mã HP";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label10.Location = new System.Drawing.Point(535, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 17);
+            this.label10.TabIndex = 72;
+            this.label10.Text = "Chọn Bộ Môn";
+            // 
+            // SoTiet
+            // 
+            this.SoTiet.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SoTiet.BackColor = System.Drawing.Color.White;
+            this.SoTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoTiet.Location = new System.Drawing.Point(249, 101);
+            this.SoTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SoTiet.Name = "SoTiet";
+            this.SoTiet.ReadOnly = true;
+            this.SoTiet.Size = new System.Drawing.Size(116, 30);
+            this.SoTiet.TabIndex = 64;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label5.Location = new System.Drawing.Point(35, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 17);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "Tên Học Phần";
+            // 
+            // radioGroup2
+            // 
+            this.radioGroup2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radioGroup2.Location = new System.Drawing.Point(396, 102);
+            this.radioGroup2.Name = "radioGroup2";
+            this.radioGroup2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.radioGroup2.Properties.Appearance.Options.UseBackColor = true;
+            this.radioGroup2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi vấn đáp", "Thi vấn đáp", true, null, "thivandap"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi viết", "Thi viết", true, null, "thiviet"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Thi trực tuyến", "Thi trực tuyến", true, null, "thittructuyen")});
+            this.radioGroup2.Size = new System.Drawing.Size(380, 35);
+            this.radioGroup2.TabIndex = 99;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label2.Location = new System.Drawing.Point(246, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 17);
+            this.label2.TabIndex = 65;
+            this.label2.Text = "Số Tiết";
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.dgvLichSuTCA);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(3, 234);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(1115, 523);
+            this.groupControl2.TabIndex = 5;
+            this.groupControl2.Text = "Danh sách học phần";
+            // 
+            // dgvLichSuTCA
+            // 
+            this.dgvLichSuTCA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLichSuTCA.Location = new System.Drawing.Point(2, 28);
+            this.dgvLichSuTCA.MainView = this.dgvTCA_View;
+            this.dgvLichSuTCA.Name = "dgvLichSuTCA";
+            this.dgvLichSuTCA.Size = new System.Drawing.Size(1111, 493);
+            this.dgvLichSuTCA.TabIndex = 0;
+            this.dgvLichSuTCA.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTCA_View});
+            // 
+            // dgvTCA_View
+            // 
+            this.dgvTCA_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7});
+            this.dgvTCA_View.GridControl = this.dgvLichSuTCA;
+            this.dgvTCA_View.Name = "dgvTCA_View";
+            this.dgvTCA_View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã học phần";
+            this.gridColumn1.FieldName = "MaTCA";
+            this.gridColumn1.MinWidth = 29;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 107;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên học phần";
+            this.gridColumn2.FieldName = "TienAnSang";
+            this.gridColumn2.MinWidth = 29;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 107;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Số DVHT";
+            this.gridColumn3.FieldName = "TienAnTrua";
+            this.gridColumn3.MinWidth = 29;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 107;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Số tiết";
+            this.gridColumn4.FieldName = "TienAnToi";
+            this.gridColumn4.MinWidth = 29;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 107;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Số Tc";
+            this.gridColumn5.FieldName = "TienAnCoBan";
+            this.gridColumn5.MinWidth = 29;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 107;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Bộ môn";
+            this.gridColumn6.FieldName = "NgayApDung";
+            this.gridColumn6.MinWidth = 29;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 107;
+            // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Hình thức thi";
@@ -626,6 +505,127 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
             this.gridColumn7.Width = 94;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Name = "gridView1";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label4.Location = new System.Drawing.Point(403, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 17);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "Số TC";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.groupControl3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupControl2, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.39474F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.60526F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1121, 760);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.Thêm);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Location = new System.Drawing.Point(3, 3);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(1115, 207);
+            this.groupControl3.TabIndex = 7;
+            this.groupControl3.Text = "Quản lý học phần";
+            // 
+            // Thêm
+            // 
+            this.Thêm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Thêm.Location = new System.Drawing.Point(2, 28);
+            this.Thêm.Name = "Thêm";
+            this.Thêm.SelectedTabPage = this.xtraTabPage1;
+            this.Thêm.Size = new System.Drawing.Size(1111, 177);
+            this.Thêm.TabIndex = 83;
+            this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.radioGroup2);
+            this.xtraTabPage1.Controls.Add(this.btnThemCB);
+            this.xtraTabPage1.Controls.Add(this.MaBM);
+            this.xtraTabPage1.Controls.Add(this.label7);
+            this.xtraTabPage1.Controls.Add(this.MaHP);
+            this.xtraTabPage1.Controls.Add(this.label1);
+            this.xtraTabPage1.Controls.Add(this.label10);
+            this.xtraTabPage1.Controls.Add(this.SoTiet);
+            this.xtraTabPage1.Controls.Add(this.label5);
+            this.xtraTabPage1.Controls.Add(this.label2);
+            this.xtraTabPage1.Controls.Add(this.TenHP);
+            this.xtraTabPage1.Controls.Add(this.Donvihoctrinh);
+            this.xtraTabPage1.Controls.Add(this.label4);
+            this.xtraTabPage1.Controls.Add(this.label3);
+            this.xtraTabPage1.Controls.Add(this.SoTC);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(1109, 146);
+            this.xtraTabPage1.Text = "Thêm";
+            // 
+            // TenHP
+            // 
+            this.TenHP.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TenHP.BackColor = System.Drawing.Color.White;
+            this.TenHP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenHP.Location = new System.Drawing.Point(35, 101);
+            this.TenHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TenHP.Name = "TenHP";
+            this.TenHP.ReadOnly = true;
+            this.TenHP.Size = new System.Drawing.Size(169, 30);
+            this.TenHP.TabIndex = 70;
+            // 
+            // Donvihoctrinh
+            // 
+            this.Donvihoctrinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Donvihoctrinh.BackColor = System.Drawing.Color.White;
+            this.Donvihoctrinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Donvihoctrinh.Location = new System.Drawing.Point(249, 39);
+            this.Donvihoctrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Donvihoctrinh.Name = "Donvihoctrinh";
+            this.Donvihoctrinh.ReadOnly = true;
+            this.Donvihoctrinh.Size = new System.Drawing.Size(116, 30);
+            this.Donvihoctrinh.TabIndex = 66;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label3.Location = new System.Drawing.Point(246, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 17);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "Số Đơn vị học trình";
+            // 
+            // SoTC
+            // 
+            this.SoTC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SoTC.BackColor = System.Drawing.Color.White;
+            this.SoTC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoTC.Location = new System.Drawing.Point(396, 39);
+            this.SoTC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SoTC.Name = "SoTC";
+            this.SoTC.ReadOnly = true;
+            this.SoTC.Size = new System.Drawing.Size(116, 30);
+            this.SoTC.TabIndex = 68;
             // 
             // QuanLyHocPhan
             // 
@@ -636,6 +636,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Size = new System.Drawing.Size(1121, 760);
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaBM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -650,8 +652,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Thêm.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
