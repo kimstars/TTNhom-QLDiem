@@ -238,11 +238,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dateEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.dateEdit1.Properties.AutoHeight = false;
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(238, 22);
+            this.dateEdit1.Size = new System.Drawing.Size(238, 30);
             this.dateEdit1.TabIndex = 70;
             // 
             // label8
