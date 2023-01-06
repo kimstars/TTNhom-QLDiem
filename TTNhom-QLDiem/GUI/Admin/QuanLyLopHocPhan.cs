@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TTNhom_QLDiem.Model;
+
 
 namespace TTNhom_QLDiem.GUI.Admin
 {
@@ -16,6 +18,18 @@ namespace TTNhom_QLDiem.GUI.Admin
         public QuanLyLopHocPhan()
         {
             InitializeComponent();
+        }
+
+        QLDHV_model db = new QLDHV_model();
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            int maid = MainForm.MaID;
+
+            Model.GiangVien gv = db.GiangViens.Where(m => m.MaGiangVien == maid).FirstOrDefault();
+
+
+
         }
     }
 }
