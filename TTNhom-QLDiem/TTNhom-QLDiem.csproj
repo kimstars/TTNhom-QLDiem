@@ -135,12 +135,6 @@
     <Compile Include="GUI\GiangVien\GV_NhapDiemThi.Designer.cs">
       <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiangVien\QLyGV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\QLyGV.Designer.cs">
-      <DependentUpon>QLyGV.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\GiangVien\TTGiangVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,9 +223,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemThi.resx">
       <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\QLyGV.resx">
-      <DependentUpon>QLyGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\TTGiangVien.resx">
       <DependentUpon>TTGiangVien.cs</DependentUpon>
