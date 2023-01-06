@@ -63,7 +63,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtPassword.Location = new System.Drawing.Point(83, 176);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.AutoHeight = false;
-            this.txtPassword.Size = new System.Drawing.Size(238, 26);
+            this.txtPassword.Size = new System.Drawing.Size(238, 30);
             this.txtPassword.TabIndex = 90;
             // 
             // txtUsername
@@ -72,7 +72,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtUsername.Location = new System.Drawing.Point(83, 106);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Properties.AutoHeight = false;
-            this.txtUsername.Size = new System.Drawing.Size(238, 26);
+            this.txtUsername.Size = new System.Drawing.Size(238, 30);
             this.txtUsername.TabIndex = 89;
             // 
             // btnSubmit
@@ -81,7 +81,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnSubmit.Appearance.Options.UseFont = true;
             this.btnSubmit.Location = new System.Drawing.Point(83, 305);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(238, 38);
+            this.btnSubmit.Size = new System.Drawing.Size(238, 30);
             this.btnSubmit.TabIndex = 88;
             this.btnSubmit.Text = "Thêm tài khoản";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -92,13 +92,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbQuyen.Name = "cbQuyen";
             this.cbQuyen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbQuyen.Properties.Appearance.Options.UseFont = true;
+            this.cbQuyen.Properties.AutoHeight = false;
             this.cbQuyen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbQuyen.Properties.Items.AddRange(new object[] {
             "Admin",
             "Giảng viên",
             "Học viên"});
-            this.cbQuyen.Size = new System.Drawing.Size(238, 26);
+            this.cbQuyen.Size = new System.Drawing.Size(238, 30);
             this.cbQuyen.TabIndex = 87;
             // 
             // label10

@@ -22,7 +22,7 @@ namespace TTNhom_QLDiem.GUI
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            Admin.QuanLyGiangVien testform = new Admin.QuanLyGiangVien();
+            Admin.QuanLyHocVien testform = new Admin.QuanLyHocVien();
             panelshow.Controls.Add(testform);
             testform.Dock = DockStyle.Fill;
         }

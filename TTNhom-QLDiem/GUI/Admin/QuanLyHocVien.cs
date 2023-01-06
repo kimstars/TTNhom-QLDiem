@@ -20,18 +20,26 @@ namespace TTNhom_QLDiem.GUI.Admin
             InitializeComponent();
         }
 
+        public static int MaTaiKhoan;
+
         QLDHV_model db = new QLDHV_model();
 
         private void btnThemTK_Click(object sender, EventArgs e)
         {
             ThemTaiKhoan newtk = new ThemTaiKhoan();
             newtk.Show();
-
+            newtk.FormClosed += Newtk_FormClosed;
             Model.HocVien hv = new Model.HocVien();
 
-            db.HocViens.Add(hv);
-            db.SaveChanges();
+
+            
         }
+
+        private void Newtk_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            txtThemMaTKCB.Text = MaTaiKhoan.ToString();
+        }
+
         List<Model.HocVien> dsHocVien;
         private void QuanLyHocVien_Load(object sender, EventArgs e)
         {
