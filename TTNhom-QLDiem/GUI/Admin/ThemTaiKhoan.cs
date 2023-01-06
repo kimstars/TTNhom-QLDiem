@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TTNhom_QLDiem.Model;
 
 namespace TTNhom_QLDiem.GUI.Admin
 {
@@ -18,13 +19,51 @@ namespace TTNhom_QLDiem.GUI.Admin
             InitializeComponent();
         }
 
+        QLDHV_model db = new QLDHV_model();
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string pass = txtPassword.Text;
-
+            string user = txtUsername.Text;
             string hash = HashPass(pass);
+            string quyen = cbQuyen.Text;
 
-            MessageBox.Show(hash);
+            switch (quyen)
+            {
+
+
+                case "Giảng viên":
+                    quyen = "GV";
+                    break;
+
+                case "Học viên":
+                    quyen = "HV";
+                    break;
+
+                default:
+                    break;
+
+            }
+
+           Model.TaiKhoan newtk = new Model.TaiKhoan();
+            newtk.TenDangNhap = user;
+            newtk.MatKhau = hash;
+            newtk.Quyen = quyen;
+
+            // làm thêm check thêm thông tin nội dung
+            db.TaiKhoans.Add(newtk);
+
+            db.SaveChanges();
+            MessageBox.Show(newtk.MaTK.ToString());
+            
+            if (newtk.Quyen == "HV")
+            {
+                QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
+            }
+            //if (newtk.Quyen == "HV")
+            //{
+            //    QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
+            //}
+
         }
 
 

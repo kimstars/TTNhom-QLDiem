@@ -19,18 +19,21 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             InitializeComponent();
         }
-
+        public int mahv;
+        public static int MaTaiKhoan ;
         QLDHV_model db = new QLDHV_model();
 
         private void btnThemTK_Click(object sender, EventArgs e)
         {
             ThemTaiKhoan newtk = new ThemTaiKhoan();
             newtk.Show();
+            newtk.FormClosed += Newtk_FormClosed;
+            
+        }
 
-            Model.HocVien hv = new Model.HocVien();
-
-            db.HocViens.Add(hv);
-            db.SaveChanges();
+        private void Newtk_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            txtThemMaTKHV.Text = MaTaiKhoan.ToString();
         }
         List<Model.HocVien> dsHocVien;
         private void QuanLyHocVien_Load(object sender, EventArgs e)
@@ -43,12 +46,70 @@ namespace TTNhom_QLDiem.GUI.Admin
 
 
         }
-
-        private void dgvTTCB_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+       
+        private void btnThemHV_Click(object sender, EventArgs e)
         {
-            int index = e.RowHandle;
+            Model.HocVien hv = new Model.HocVien();
+            if (Check())
+            {
+                hv.HoTenHV = txtThemTenHV.Text;
+                hv.NgaySinh = dateThemNgaySinhHV.DateTime;
+                hv.GioiTinh = cbGioiTinh.Text;
+                hv.CapBac = txtThemCapBacHV.Text;
+                hv.ChucVu = cbThemChucVu.Text;
+                hv.MaLopChuyenNganh = int.Parse(cbLopCN.Text);
+                hv.QueQuan = txtQuequan.Text;
+                hv.MaTK = int.Parse(txtThemMaTKHV.Text);
+                
+                db.HocViens.Add(hv);
+                db.SaveChanges();
+                
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                dgvDSHocVien.DataSource = null;
+                var dshv1 = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dshv1;
+                
+                txtThemTenHV.Text = "";
+                dateThemNgaySinhHV.EditValue = null;
+                cbGioiTinh.Text = "";
+                txtThemCapBacHV.Text = "";
+                cbThemChucVu.Text = "";
+                cbLopCN.Text = "";
+                txtQuequan.Text = "";
+                txtThemMaTKHV.Text = "";
 
-            Model.HocVien itemHv = dsHocVien[index];
+            }
+        }
+        public bool Check()
+        {
+            if (txtThemTenHV.Text == "" || dateThemNgaySinhHV.ToString() == "" || cbGioiTinh.Text == "" || txtThemCapBacHV.Text == "" || cbThemChucVu.Text == "" || cbLopCN.Text == "" || txtQuequan.Text == "" || txtThemMaTKHV.Text == "")
+            {
+                MessageBox.Show("Thông tin học viên được thêm không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+
+        }
+       
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtThemCapBacHV_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTTHV_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            xtraTabPageSua.Show();
+            int index = e.RowHandle;
+            Model.HocVien hv = dsHocVien[index];           
+            txtSuaTenHV.Text = hv.HoTenHV;
+            dateSuaNgaySinhHV.EditValue = hv.NgaySinh;
 
 
         }

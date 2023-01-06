@@ -27,6 +27,12 @@ namespace TTNhom_QLDiem.Model
         [StringLength(10)]
         public string GioiTinh { get; set; }
 
+        [StringLength(10)]
+        public string CapBac { get; set; }
+
+        [StringLength(10)]
+        public string ChucVu { get; set; }
+
         public int MaLopChuyenNganh { get; set; }
 
         [StringLength(200)]
