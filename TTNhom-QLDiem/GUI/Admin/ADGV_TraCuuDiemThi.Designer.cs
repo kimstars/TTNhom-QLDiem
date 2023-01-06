@@ -53,6 +53,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.gridColDiemTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -113,7 +114,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColHocPhan,
             this.gridColDiemCC,
             this.gridColDiemTX,
-            this.gridColDiemThi});
+            this.gridColDiemThi,
+            this.gridColDiemTK});
             this.gridView1.DetailHeight = 329;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -346,6 +348,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã học viên";
             // 
+            // gridColDiemTK
+            // 
+            this.gridColDiemTK.Caption = "Điểm Tổng Kết";
+            this.gridColDiemTK.FieldName = "DiemTK";
+            this.gridColDiemTK.MinWidth = 25;
+            this.gridColDiemTK.Name = "gridColDiemTK";
+            this.gridColDiemTK.Visible = true;
+            this.gridColDiemTK.VisibleIndex = 8;
+            this.gridColDiemTK.Width = 94;
+            // 
             // ADGV_TraCuuDiemThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -394,5 +406,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Columns.GridColumn gridColDiemCC;
         private DevExpress.XtraGrid.Columns.GridColumn gridColDiemTX;
         private DevExpress.XtraGrid.Columns.GridColumn gridColDiemThi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColDiemTK;
     }
 }
