@@ -87,6 +87,12 @@
     <Compile Include="GUI\Admin\QuanLyHocVien.Designer.cs">
       <DependentUpon>QuanLyHocVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\QuanLyLopChuyenNganh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\QuanLyLopChuyenNganh.Designer.cs">
+      <DependentUpon>QuanLyLopChuyenNganh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\QuanLyLopHocPhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,30 +122,6 @@
     </Compile>
     <Compile Include="GUI\DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\DSHVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\DSHVien.Designer.cs">
-      <DependentUpon>DSHVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapdiemHocLai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapdiemHocLai.Designer.cs">
-      <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemL1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemL1.Designer.cs">
-      <DependentUpon>NhapDiemL1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemThi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemThi.Designer.cs">
-      <DependentUpon>NhapDiemThi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GiangVien\QLyGV.cs">
       <SubType>UserControl</SubType>
@@ -186,13 +168,14 @@
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
-    <Compile Include="Model\HocKi.cs" />
+    <Compile Include="Model\HocKy.cs" />
     <Compile Include="Model\HocPhan.cs" />
     <Compile Include="Model\HocVien.cs" />
     <Compile Include="Model\Khoa.cs" />
     <Compile Include="Model\LopChuyenNganh.cs" />
     <Compile Include="Model\LopHocPhan.cs" />
     <Compile Include="Model\PhieuDiem.cs" />
+    <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
@@ -209,6 +192,9 @@
     <EmbeddedResource Include="GUI\Admin\QuanLyHocVien.resx">
       <DependentUpon>QuanLyHocVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\QuanLyLopChuyenNganh.resx">
+      <DependentUpon>QuanLyLopChuyenNganh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyLopHocPhan.resx">
       <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,18 +209,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\DSHVien.resx">
-      <DependentUpon>DSHVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapdiemHocLai.resx">
-      <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapDiemL1.resx">
-      <DependentUpon>NhapDiemL1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapDiemThi.resx">
-      <DependentUpon>NhapDiemThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\QLyGV.resx">
       <DependentUpon>QLyGV.cs</DependentUpon>

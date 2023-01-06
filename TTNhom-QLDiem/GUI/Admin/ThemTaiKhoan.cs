@@ -24,7 +24,9 @@ namespace TTNhom_QLDiem.GUI.Admin
 
             string hash = HashPass(pass);
 
-            MessageBox.Show(hash);
+            string cbvalue = cbQuyen.Text;
+
+            MessageBox.Show(cbvalue);
         }
 
 
