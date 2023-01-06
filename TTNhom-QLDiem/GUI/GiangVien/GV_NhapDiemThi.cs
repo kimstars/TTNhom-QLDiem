@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TTNhom_QLDiem.GUI.GiangVien
 {
-    public partial class DSHVien : DevExpress.XtraEditors.XtraUserControl
+    public partial class GV_NhapDiemThi : DevExpress.XtraEditors.XtraUserControl
     {
-        public DSHVien()
+        public GV_NhapDiemThi()
         {
             InitializeComponent();
         }

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TTNhom_QLDiem.Model;
 namespace TTNhom_QLDiem.GUI.Admin
 {
     public partial class ThemTaiKhoan : DevExpress.XtraEditors.XtraForm
@@ -17,14 +17,53 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             InitializeComponent();
         }
-
+        QLDHV_model db = new QLDHV_model();
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string pass = txtPassword.Text;
+            string user = txtUsername.Text;
 
             string hash = HashPass(pass);
 
-            MessageBox.Show(hash);
+            string quyen = cbQuyen.Text;
+
+            switch (quyen) {
+
+
+                case "Giảng viên":
+                    quyen = "GV";
+                    break;
+
+                case "Học viên":
+                    quyen = "HV";
+                    break;
+
+                default:
+                    break;
+
+            }
+
+
+
+            //MessageBox.Show(cbvalue);
+
+            Model.TaiKhoan newtk = new Model.TaiKhoan();
+            newtk.TenDangNhap = user;
+            newtk.MatKhau = hash;
+            newtk.Quyen = quyen;
+
+
+            db.TaiKhoans.Add(newtk);
+
+
+            db.SaveChanges();
+            MessageBox.Show(newtk.MaTK.ToString());
+
+            QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
+
+
+
+
         }
 
 

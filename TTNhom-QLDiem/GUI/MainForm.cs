@@ -47,8 +47,19 @@ namespace TTNhom_QLDiem.GUI
         //HocVien.QLyHV uc1 = new HocVien.QLyHV();
         HocVien.TTHocVien TTHV = new HocVien.TTHocVien();
 
-        GiangVien.TTGiangVien TTGV = new GiangVien.TTGiangVien();
-        Admin.ADGV_TraCuuDiemThi TraCuuDiemHV = new Admin.ADGV_TraCuuDiemThi();
+        HocVien.HV_Diem uc11;
+        HocVien.TTHocVien uc12;
+
+
+        Admin.QuanLyHocVien uc31;
+        Admin.QuanLyGiangVien uc32;
+        Admin.QuanLyHocPhan uc33;
+        Admin.QuanLyLopChuyenNganh uc34;
+        Admin.QuanLyLopHocPhan uc35;
+
+
+
+
         public void LoadByAccessPermission(string accPer)
         {
 
@@ -73,14 +84,14 @@ namespace TTNhom_QLDiem.GUI
                     it12.Click += It12_Click;
 
 
+                    uc11 = new HocVien.HV_Diem();
+                    uc12 = new HocVien.TTHocVien();
+
+                    uc11.Dock = DockStyle.Fill;
+                    uc12.Dock = DockStyle.Fill;
 
 
-                    //uc1.Dock = DockStyle.Fill;
-                    //uc2.Dock = DockStyle.Fill;
-                    TTHV.Dock = DockStyle.Fill;
-
-
-                    showUsercontrol.Controls.AddRange(new Control[] { TTHV });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc11,uc12 });
                     break;
 
 
@@ -131,16 +142,21 @@ namespace TTNhom_QLDiem.GUI
                     accordionControl1.ExpandAll();
 
 
-                    //it1.Click += It1_Click;
-                    //it2.Click += It2_Click;
-                    it36.Click += It25_Click;
+                    it31.Click += It31_Click;
+                    it32.Click += It32_Click;
+                    it33.Click += It33_Click;
+                    it34.Click += It34_Click;
+                    it35.Click += It35_Click;
 
 
-                    //uc1.Dock = DockStyle.Fill;
-                    //uc2.Dock = DockStyle.Fill;
+                    uc31.Dock = DockStyle.Fill;
+                    uc32.Dock = DockStyle.Fill;
+                    uc33.Dock = DockStyle.Fill;
+                    uc34.Dock = DockStyle.Fill;
+                    uc35.Dock = DockStyle.Fill;
 
 
-                    //showUsercontrol.Controls.AddRange(new Control[] { uc1, uc2 });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc31, uc32, uc33, uc34, uc35 });
 
                     break;
 
@@ -151,6 +167,31 @@ namespace TTNhom_QLDiem.GUI
 
 
 
+        }
+
+        private void It35_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void It34_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void It33_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void It32_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void It31_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void It12_Click(object sender, EventArgs e)
