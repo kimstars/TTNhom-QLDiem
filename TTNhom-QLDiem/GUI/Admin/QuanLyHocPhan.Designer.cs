@@ -290,6 +290,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // btnThemCB
             // 
             this.btnThemCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemCB.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemCB.Appearance.Options.UseFont = true;
             this.btnThemCB.Location = new System.Drawing.Point(819, 41);
             this.btnThemCB.Name = "btnThemCB";
             this.btnThemCB.Size = new System.Drawing.Size(102, 97);

@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTNhom_QLDiem.GUI.GiangVien
+namespace TTNhom_QLDiem.GUI.Admin
 {
-    public partial class NhapDiemL1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class QuanLyLopChuyenNganh : DevExpress.XtraEditors.XtraUserControl
     {
-        public NhapDiemL1()
+        public QuanLyLopChuyenNganh()
         {
             InitializeComponent();
         }
