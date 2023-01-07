@@ -24,6 +24,7 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<AD_LopChuyenNganh> AD_LopChuyenNganh { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
         public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
@@ -110,10 +111,13 @@ namespace TTNhom_QLDiem.Model
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
+<<<<<<< HEAD
 
             modelBuilder.Entity<TTDHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
+=======
+>>>>>>> QLDIEM̀̀-51 Đã thêm được lớp chuyên ngành nhưng chưa select để sửa được
         }
     }
 }
