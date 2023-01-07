@@ -80,11 +80,11 @@ namespace TTNhom_QLDiem.GUI.Admin
                 db.SaveChanges();
                 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                dgvDSHocVien.DataSource = null;
-                var dshv1 = db.HocViens.ToList();
-                dgvDSHocVien.DataSource = dshv1;
-                
+
+                dsHocVien = new List<Model.HocVien>();
+                dsHocVien = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dsHocVien;
+
                 txtThemTenHV.Text = "";
                 dateThemNgaySinhHV.EditValue = null;
                 cbGioiTinh.Text = "";
@@ -140,12 +140,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private void cbThemChucVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
-            //cbLopCN.Items.Clear();
-            //foreach (var item in lcn.ToList())
-            //{
-            //    cbLopCN.Items.Add(item.TenLopChuyenNganh);
-            //}
+            
         }
 
         private void btnSuaHV_Click(object sender, EventArgs e)
@@ -167,9 +162,10 @@ namespace TTNhom_QLDiem.GUI.Admin
                 db.SaveChanges();
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                dgvDSHocVien.DataSource = null;
-                var dshv1 = db.HocViens.ToList();
-                dgvDSHocVien.DataSource = dshv1;
+                dsHocVien = new List<Model.HocVien>();
+                dsHocVien = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dsHocVien;
+
                 txtSuaTenHV.Text = "";
                 dateSuaNgaySinhHV.EditValue = null;
                 cbSuaGT.Text = "";

@@ -511,7 +511,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnSuaHV
             // 
-            this.btnSuaHV.Location = new System.Drawing.Point(762, 24);
+            this.btnSuaHV.Location = new System.Drawing.Point(773, 46);
             this.btnSuaHV.Name = "btnSuaHV";
             this.btnSuaHV.Size = new System.Drawing.Size(144, 138);
             this.btnSuaHV.TabIndex = 21;
