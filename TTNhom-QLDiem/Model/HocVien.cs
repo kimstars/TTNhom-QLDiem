@@ -47,4 +47,8 @@ namespace TTNhom_QLDiem.Model
 
         public virtual LopChuyenNganh LopChuyenNganh { get; set; }
     }
+
+
+            
+
 }
