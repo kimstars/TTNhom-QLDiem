@@ -172,6 +172,7 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
+    <Compile Include="Model\AD_QLHP_DSHocPhan.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
@@ -184,10 +185,8 @@
     <Compile Include="Model\PhieuDiem.cs" />
     <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
-    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TTDHV.cs" />
-    <Compile Include="Model\timkiem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">

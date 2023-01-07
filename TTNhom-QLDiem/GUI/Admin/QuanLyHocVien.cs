@@ -42,6 +42,8 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             dsHocVien = new List<Model.HocVien>();
             dsHocVien = db.HocViens.ToList();
+            List<Model.HocKy> dsHocKi = new List<HocKy>();
+            dsHocKi = db.HocKies.ToList();
 
             dgvDSHocVien.DataSource = dsHocVien;
 
