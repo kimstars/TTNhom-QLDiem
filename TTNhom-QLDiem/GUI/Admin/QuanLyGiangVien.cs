@@ -26,6 +26,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             dsGiangVien = new List<Model.GiangVien>();
             dsGiangVien = db.GiangViens.ToList();
             dgvTTGV.DataSource = dsGiangVien;
+
         }
     }
 }
