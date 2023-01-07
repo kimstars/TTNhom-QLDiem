@@ -160,8 +160,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnThemTK
             // 
-            this.btnThemTK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThemTK.Location = new System.Drawing.Point(574, 158);
+            this.btnThemTK.Location = new System.Drawing.Point(615, 161);
             this.btnThemTK.Name = "btnThemTK";
             this.btnThemTK.Size = new System.Drawing.Size(135, 28);
             this.btnThemTK.TabIndex = 29;
@@ -171,14 +170,13 @@ namespace TTNhom_QLDiem.GUI.Admin
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(424, 99);
+            this.comboBox1.Location = new System.Drawing.Point(465, 102);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(285, 24);
+            this.comboBox1.Size = new System.Drawing.Size(288, 24);
             this.comboBox1.TabIndex = 28;
             // 
             // dateThemNgaySinhCB
             // 
-            this.dateThemNgaySinhCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateThemNgaySinhCB.EditValue = null;
             this.dateThemNgaySinhCB.Location = new System.Drawing.Point(40, 99);
             this.dateThemNgaySinhCB.Name = "dateThemNgaySinhCB";
@@ -192,9 +190,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(419, 78);
+            this.label3.Location = new System.Drawing.Point(460, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 17);
             this.label3.TabIndex = 26;
@@ -202,9 +199,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // txtThemMaTKCB
             // 
-            this.txtThemMaTKCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtThemMaTKCB.EditValue = "";
-            this.txtThemMaTKCB.Location = new System.Drawing.Point(422, 164);
+            this.txtThemMaTKCB.Location = new System.Drawing.Point(463, 167);
             this.txtThemMaTKCB.Name = "txtThemMaTKCB";
             this.txtThemMaTKCB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtThemMaTKCB.Size = new System.Drawing.Size(137, 22);
@@ -212,9 +208,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(419, 144);
+            this.label4.Location = new System.Drawing.Point(460, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 24;
@@ -222,9 +217,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // txtThemChucVuCB
             // 
-            this.txtThemChucVuCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtThemChucVuCB.EditValue = "";
-            this.txtThemChucVuCB.Location = new System.Drawing.Point(421, 45);
+            this.txtThemChucVuCB.Location = new System.Drawing.Point(462, 48);
             this.txtThemChucVuCB.Name = "txtThemChucVuCB";
             this.txtThemChucVuCB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtThemChucVuCB.Size = new System.Drawing.Size(288, 22);
@@ -232,9 +226,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(418, 25);
+            this.label5.Location = new System.Drawing.Point(459, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 17);
             this.label5.TabIndex = 22;
@@ -242,7 +235,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // txtThemCapBacCB
             // 
-            this.txtThemCapBacCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtThemCapBacCB.EditValue = "";
             this.txtThemCapBacCB.Location = new System.Drawing.Point(40, 164);
             this.txtThemCapBacCB.Name = "txtThemCapBacCB";
@@ -252,7 +244,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(40, 144);
             this.label14.Name = "label14";
@@ -262,7 +253,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label15
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(40, 79);
             this.label15.Name = "label15";
@@ -272,7 +262,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // txtThemTenCB
             // 
-            this.txtThemTenCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtThemTenCB.EditValue = "";
             this.txtThemTenCB.Location = new System.Drawing.Point(40, 45);
             this.txtThemTenCB.Name = "txtThemTenCB";
@@ -282,7 +271,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label16
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(40, 25);
             this.label16.Name = "label16";
@@ -292,8 +280,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnThemCB
             // 
-            this.btnThemCB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThemCB.Location = new System.Drawing.Point(763, 48);
+            this.btnThemCB.Location = new System.Drawing.Point(882, 48);
             this.btnThemCB.Name = "btnThemCB";
             this.btnThemCB.Size = new System.Drawing.Size(146, 140);
             this.btnThemCB.TabIndex = 14;
@@ -327,7 +314,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(420, 84);
             this.label1.Name = "label1";
@@ -337,7 +323,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // dateEdit1
             // 
-            this.dateEdit1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateEdit1.EditValue = null;
             this.dateEdit1.Location = new System.Drawing.Point(42, 104);
             this.dateEdit1.Name = "dateEdit1";
@@ -351,7 +336,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // textEdit4
             // 
-            this.textEdit4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textEdit4.EditValue = "";
             this.textEdit4.Location = new System.Drawing.Point(423, 50);
             this.textEdit4.Name = "textEdit4";
@@ -361,7 +345,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(420, 30);
             this.label8.Name = "label8";
@@ -371,7 +354,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // textEdit5
             // 
-            this.textEdit5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textEdit5.EditValue = "";
             this.textEdit5.Location = new System.Drawing.Point(42, 159);
             this.textEdit5.Name = "textEdit5";
@@ -381,7 +363,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(42, 139);
             this.label9.Name = "label9";
@@ -391,7 +372,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(42, 84);
             this.label10.Name = "label10";
@@ -401,7 +381,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // textEdit6
             // 
-            this.textEdit6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textEdit6.EditValue = "";
             this.textEdit6.Location = new System.Drawing.Point(42, 50);
             this.textEdit6.Name = "textEdit6";
@@ -411,7 +390,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(42, 30);
             this.label11.Name = "label11";
@@ -429,7 +407,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnSuaCB
             // 
-            this.btnSuaCB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSuaCB.Location = new System.Drawing.Point(762, 24);
             this.btnSuaCB.Name = "btnSuaCB";
             this.btnSuaCB.Size = new System.Drawing.Size(144, 138);

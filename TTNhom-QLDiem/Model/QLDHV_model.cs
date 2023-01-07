@@ -23,7 +23,9 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<LopHocPhan> LopHocPhans { get; set; }
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<TTDHV> TTDHVs { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
         public virtual DbSet<timkiem> timkiems { get; set; }
 
@@ -101,6 +103,7 @@ namespace TTNhom_QLDiem.Model
                 .Property(e => e.Quyen)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<TTDHV>();
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
