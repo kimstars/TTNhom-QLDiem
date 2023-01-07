@@ -22,6 +22,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         }
         public int mahv;
         public static int MaTaiKhoan ;
+     
         QLDHV_model db = new QLDHV_model();
 
         private void btnThemTK_Click(object sender, EventArgs e)
@@ -46,10 +47,12 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         }
 
-        
+        List<Model.LopChuyenNganh> lcn;
         private void load_LopchuyenNganh()
         {
-            List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+            lcn = new List<Model.LopChuyenNganh>();
+            //   List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+            lcn = db.LopChuyenNganhs.ToList();
             cbLopCN.Items.Clear();
             foreach (var item in lcn.ToList())
             {
