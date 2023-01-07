@@ -36,6 +36,12 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             txtThemMaTKHV.Text = MaTaiKhoan.ToString();
         }
+
+        private void Newtk_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            txtThemMaTKCB.Text = MaTaiKhoan.ToString();
+        }
+
         List<Model.HocVien> dsHocVien;
         private void QuanLyHocVien_Load(object sender, EventArgs e)
         {

@@ -25,6 +25,8 @@ namespace TTNhom_QLDiem.Model
 
         public int MaPhieuDiem { get; set; }
 
+        public double? DiemTK { get; set; }
+
         public virtual HocVien HocVien { get; set; }
 
         public virtual PhieuDiem PhieuDiem { get; set; }
