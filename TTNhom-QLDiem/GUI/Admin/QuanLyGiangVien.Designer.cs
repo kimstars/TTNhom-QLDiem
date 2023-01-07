@@ -168,6 +168,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnThemTK.Size = new System.Drawing.Size(287, 28);
             this.btnThemTK.TabIndex = 32;
             this.btnThemTK.Text = "Thêm tài khoản";
+            this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
             // 
             // txtThemMaTKGV
             // 
@@ -287,6 +288,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnThemGV.Size = new System.Drawing.Size(166, 78);
             this.btnThemGV.TabIndex = 14;
             this.btnThemGV.Text = "Thêm";
+            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
             // 
             // xtraTabPage2
             // 
