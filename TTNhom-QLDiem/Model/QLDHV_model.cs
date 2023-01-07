@@ -25,7 +25,7 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
-        public virtual DbSet<timkiem> timkiems { get; set; }
+        public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -68,9 +68,15 @@ namespace TTNhom_QLDiem.Model
                 .WithRequired(e => e.HocVien)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<HocVien>()
+                .HasMany(e => e.LopChuyenNganhs)
+                .WithOptional(e => e.HocVien)
+                .HasForeignKey(e => e.MaLopTruong);
+
             modelBuilder.Entity<LopChuyenNganh>()
                 .HasMany(e => e.HocViens)
                 .WithRequired(e => e.LopChuyenNganh)
+                .HasForeignKey(e => e.MaLopChuyenNganh)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<LopChuyenNganh>()
@@ -86,7 +92,6 @@ namespace TTNhom_QLDiem.Model
             modelBuilder.Entity<PhieuDiem>()
                 .HasMany(e => e.ChiTietPhieuDiems)
                 .WithRequired(e => e.PhieuDiem)
-                .HasForeignKey(e => e.MaHocVien)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TaiKhoan>()
@@ -102,6 +107,10 @@ namespace TTNhom_QLDiem.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
+                .Property(e => e.TenHocKy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TTDHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
         }

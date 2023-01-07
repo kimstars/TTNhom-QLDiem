@@ -186,6 +186,7 @@
     <Compile Include="Model\QLDHV_model.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\timkiem.cs" />
+    <Compile Include="Model\TTDHV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">

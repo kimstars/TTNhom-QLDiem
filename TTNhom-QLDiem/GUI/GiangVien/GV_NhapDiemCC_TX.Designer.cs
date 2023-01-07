@@ -31,8 +31,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         {
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvDSHocVien = new DevExpress.XtraGrid.GridControl();
+            this.dgvDSHocVien_View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,6 +43,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.txtDiemTX = new DevExpress.XtraEditors.TextEdit();
             this.txtDiemCC = new DevExpress.XtraEditors.TextEdit();
             this.txtLopChuyenNganh = new DevExpress.XtraEditors.TextEdit();
@@ -54,11 +55,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtHanNhapDiem = new DevExpress.XtraEditors.TextEdit();
+            this.txtNgayThi = new DevExpress.XtraEditors.TextEdit();
             this.txtSoTinChi = new DevExpress.XtraEditors.TextEdit();
-            this.dateNgayThi = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateHanNhapDiem = new DevExpress.XtraEditors.DateEdit();
             this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,13 +70,13 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.btnLuu = new System.Windows.Forms.Button();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -87,11 +88,9 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             ((System.ComponentModel.ISupportInitialize)(this.txtMaHocVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHanNhapDiem.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgayThi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +114,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // groupControl3
             // 
             this.tablePanel1.SetColumn(this.groupControl3, 0);
-            this.groupControl3.Controls.Add(this.gridControl1);
+            this.groupControl3.Controls.Add(this.dgvDSHocVien);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(3, 326);
             this.groupControl3.Name = "groupControl3";
@@ -124,20 +123,20 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Danh sách học viên";
             // 
-            // gridControl1
+            // dgvDSHocVien
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 28);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1111, 401);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgvDSHocVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSHocVien.Location = new System.Drawing.Point(2, 28);
+            this.dgvDSHocVien.MainView = this.dgvDSHocVien_View;
+            this.dgvDSHocVien.Name = "dgvDSHocVien";
+            this.dgvDSHocVien.Size = new System.Drawing.Size(1111, 401);
+            this.dgvDSHocVien.TabIndex = 0;
+            this.dgvDSHocVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvDSHocVien_View});
             // 
-            // gridView1
+            // dgvDSHocVien_View
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvDSHocVien_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
@@ -145,10 +144,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7,
-            this.gridColumn8});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridColumn8,
+            this.gridColumn9});
+            this.dgvDSHocVien_View.GridControl = this.dgvDSHocVien;
+            this.dgvDSHocVien_View.Name = "dgvDSHocVien_View";
+            this.dgvDSHocVien_View.OptionsBehavior.Editable = false;
+            this.dgvDSHocVien_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSHocVien_View_RowClick);
             // 
             // gridColumn1
             // 
@@ -273,6 +274,16 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Thông tin nhập";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(329, 181);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(121, 72);
+            this.btnLuu.TabIndex = 110;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // txtDiemTX
             // 
             this.txtDiemTX.Location = new System.Drawing.Point(159, 231);
@@ -359,11 +370,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // groupControl1
             // 
             this.tablePanel2.SetColumn(this.groupControl1, 0);
+            this.groupControl1.Controls.Add(this.txtHanNhapDiem);
+            this.groupControl1.Controls.Add(this.txtNgayThi);
             this.groupControl1.Controls.Add(this.txtSoTinChi);
-            this.groupControl1.Controls.Add(this.dateNgayThi);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.dateHanNhapDiem);
             this.groupControl1.Controls.Add(this.radioGroup2);
             this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.label4);
@@ -381,6 +392,22 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin chung";
             // 
+            // txtHanNhapDiem
+            // 
+            this.txtHanNhapDiem.Enabled = false;
+            this.txtHanNhapDiem.Location = new System.Drawing.Point(423, 144);
+            this.txtHanNhapDiem.Name = "txtHanNhapDiem";
+            this.txtHanNhapDiem.Size = new System.Drawing.Size(125, 22);
+            this.txtHanNhapDiem.TabIndex = 108;
+            // 
+            // txtNgayThi
+            // 
+            this.txtNgayThi.Enabled = false;
+            this.txtNgayThi.Location = new System.Drawing.Point(423, 98);
+            this.txtNgayThi.Name = "txtNgayThi";
+            this.txtNgayThi.Size = new System.Drawing.Size(125, 22);
+            this.txtNgayThi.TabIndex = 107;
+            // 
             // txtSoTinChi
             // 
             this.txtSoTinChi.Enabled = false;
@@ -388,19 +415,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.txtSoTinChi.Name = "txtSoTinChi";
             this.txtSoTinChi.Size = new System.Drawing.Size(125, 22);
             this.txtSoTinChi.TabIndex = 106;
-            // 
-            // dateNgayThi
-            // 
-            this.dateNgayThi.EditValue = null;
-            this.dateNgayThi.Enabled = false;
-            this.dateNgayThi.Location = new System.Drawing.Point(423, 96);
-            this.dateNgayThi.Name = "dateNgayThi";
-            this.dateNgayThi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayThi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayThi.Size = new System.Drawing.Size(125, 22);
-            this.dateNgayThi.TabIndex = 105;
             // 
             // label6
             // 
@@ -420,22 +434,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label5.TabIndex = 103;
             this.label5.Text = "Số tín chỉ";
             // 
-            // dateHanNhapDiem
-            // 
-            this.dateHanNhapDiem.EditValue = null;
-            this.dateHanNhapDiem.Enabled = false;
-            this.dateHanNhapDiem.Location = new System.Drawing.Point(423, 145);
-            this.dateHanNhapDiem.Name = "dateHanNhapDiem";
-            this.dateHanNhapDiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateHanNhapDiem.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateHanNhapDiem.Size = new System.Drawing.Size(125, 22);
-            this.dateHanNhapDiem.TabIndex = 102;
-            // 
             // radioGroup2
             // 
-            this.radioGroup2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioGroup2.Enabled = false;
             this.radioGroup2.Location = new System.Drawing.Point(20, 226);
             this.radioGroup2.Name = "radioGroup2";
@@ -460,7 +460,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.label4.Location = new System.Drawing.Point(20, 196);
@@ -520,14 +519,13 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label1.TabIndex = 0;
             this.label1.Text = "Học kỳ";
             // 
-            // btnLuu
+            // gridColumn9
             // 
-            this.btnLuu.Location = new System.Drawing.Point(329, 181);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(121, 72);
-            this.btnLuu.TabIndex = 110;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.gridColumn9.Caption = "Mã chi tiết phiếu điểm";
+            this.gridColumn9.FieldName = "MaChiTietPhieuDiem";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Width = 94;
             // 
             // GV_NhapDiemCC_TX
             // 
@@ -536,12 +534,13 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.Controls.Add(this.tablePanel1);
             this.Name = "GV_NhapDiemCC_TX";
             this.Size = new System.Drawing.Size(1121, 760);
+            this.Load += new System.EventHandler(this.GV_NhapDiemCC_TX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien_View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -555,11 +554,9 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHanNhapDiem.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgayThi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateHanNhapDiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
             this.ResumeLayout(false);
@@ -588,12 +585,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private DevExpress.XtraEditors.TextEdit txtLopChuyenNganh;
         private DevExpress.XtraEditors.TextEdit txtTenHocVien;
         private DevExpress.XtraEditors.TextEdit txtMaHocVien;
-        private DevExpress.XtraEditors.DateEdit dateHanNhapDiem;
         private DevExpress.XtraEditors.RadioGroup radioGroup2;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl dgvDSHocVien;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvDSHocVien_View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
@@ -604,10 +600,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private DevExpress.XtraEditors.TextEdit txtDiemTX;
         private DevExpress.XtraEditors.TextEdit txtDiemCC;
         private DevExpress.XtraEditors.TextEdit txtSoTinChi;
-        private DevExpress.XtraEditors.DateEdit dateNgayThi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private System.Windows.Forms.Button btnLuu;
+        private DevExpress.XtraEditors.TextEdit txtHanNhapDiem;
+        private DevExpress.XtraEditors.TextEdit txtNgayThi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
     }
 }
