@@ -205,7 +205,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 124);
+            this.label2.Location = new System.Drawing.Point(38, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 31;
@@ -218,7 +218,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             "Lớp trưởng",
             "Lớp phó",
             "Học viên"});
-            this.cbThemChucVu.Location = new System.Drawing.Point(422, 33);
+            this.cbThemChucVu.Location = new System.Drawing.Point(419, 33);
             this.cbThemChucVu.Name = "cbThemChucVu";
             this.cbThemChucVu.Size = new System.Drawing.Size(285, 24);
             this.cbThemChucVu.TabIndex = 30;
@@ -226,9 +226,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnThemTK
             // 
-            this.btnThemTK.Location = new System.Drawing.Point(418, 210);
+            this.btnThemTK.Location = new System.Drawing.Point(419, 210);
             this.btnThemTK.Name = "btnThemTK";
-            this.btnThemTK.Size = new System.Drawing.Size(287, 28);
+            this.btnThemTK.Size = new System.Drawing.Size(188, 28);
             this.btnThemTK.TabIndex = 29;
             this.btnThemTK.Text = "Thêm tài khoản";
             this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
@@ -252,7 +252,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.dateThemNgaySinhHV.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateThemNgaySinhHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateThemNgaySinhHV.Size = new System.Drawing.Size(235, 22);
+            this.dateThemNgaySinhHV.Size = new System.Drawing.Size(238, 22);
             this.dateThemNgaySinhHV.TabIndex = 27;
             // 
             // label3
@@ -267,16 +267,17 @@ namespace TTNhom_QLDiem.GUI.Admin
             // txtThemMaTKHV
             // 
             this.txtThemMaTKHV.EditValue = "";
-            this.txtThemMaTKHV.Location = new System.Drawing.Point(720, 213);
+            this.txtThemMaTKHV.Location = new System.Drawing.Point(622, 210);
             this.txtThemMaTKHV.Name = "txtThemMaTKHV";
+            this.txtThemMaTKHV.Properties.AutoHeight = false;
             this.txtThemMaTKHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtThemMaTKHV.Size = new System.Drawing.Size(82, 22);
+            this.txtThemMaTKHV.Size = new System.Drawing.Size(82, 28);
             this.txtThemMaTKHV.TabIndex = 23;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(717, 187);
+            this.label4.Location = new System.Drawing.Point(619, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 24;
@@ -297,7 +298,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtThemCapBacHV.Location = new System.Drawing.Point(38, 213);
             this.txtThemCapBacHV.Name = "txtThemCapBacHV";
             this.txtThemCapBacHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtThemCapBacHV.Size = new System.Drawing.Size(235, 22);
+            this.txtThemCapBacHV.Size = new System.Drawing.Size(238, 22);
             this.txtThemCapBacHV.TabIndex = 19;
             this.txtThemCapBacHV.EditValueChanged += new System.EventHandler(this.txtThemCapBacHV_EditValueChanged);
             // 
@@ -325,7 +326,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtThemTenHV.Location = new System.Drawing.Point(38, 35);
             this.txtThemTenHV.Name = "txtThemTenHV";
             this.txtThemTenHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtThemTenHV.Size = new System.Drawing.Size(235, 22);
+            this.txtThemTenHV.Size = new System.Drawing.Size(238, 22);
             this.txtThemTenHV.TabIndex = 15;
             // 
             // label16
@@ -339,9 +340,11 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnThemHV
             // 
-            this.btnThemHV.Location = new System.Drawing.Point(937, 7);
+            this.btnThemHV.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemHV.Appearance.Options.UseFont = true;
+            this.btnThemHV.Location = new System.Drawing.Point(786, 31);
             this.btnThemHV.Name = "btnThemHV";
-            this.btnThemHV.Size = new System.Drawing.Size(146, 134);
+            this.btnThemHV.Size = new System.Drawing.Size(137, 141);
             this.btnThemHV.TabIndex = 14;
             this.btnThemHV.Text = "Thêm";
             this.btnThemHV.Click += new System.EventHandler(this.btnThemHV_Click);
@@ -439,7 +442,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 84);
+            this.label1.Location = new System.Drawing.Point(422, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 52;
@@ -448,20 +451,20 @@ namespace TTNhom_QLDiem.GUI.Admin
             // dateSuaNgaySinhHV
             // 
             this.dateSuaNgaySinhHV.EditValue = null;
-            this.dateSuaNgaySinhHV.Location = new System.Drawing.Point(42, 104);
+            this.dateSuaNgaySinhHV.Location = new System.Drawing.Point(45, 104);
             this.dateSuaNgaySinhHV.Name = "dateSuaNgaySinhHV";
             this.dateSuaNgaySinhHV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateSuaNgaySinhHV.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateSuaNgaySinhHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateSuaNgaySinhHV.Size = new System.Drawing.Size(235, 22);
+            this.dateSuaNgaySinhHV.Size = new System.Drawing.Size(238, 22);
             this.dateSuaNgaySinhHV.TabIndex = 49;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(420, 30);
+            this.label8.Location = new System.Drawing.Point(422, 30);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 17);
             this.label8.TabIndex = 45;
@@ -470,10 +473,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             // txtSuaCapBacHV
             // 
             this.txtSuaCapBacHV.EditValue = "";
-            this.txtSuaCapBacHV.Location = new System.Drawing.Point(48, 217);
+            this.txtSuaCapBacHV.Location = new System.Drawing.Point(45, 217);
             this.txtSuaCapBacHV.Name = "txtSuaCapBacHV";
             this.txtSuaCapBacHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSuaCapBacHV.Size = new System.Drawing.Size(235, 22);
+            this.txtSuaCapBacHV.Size = new System.Drawing.Size(238, 22);
             this.txtSuaCapBacHV.TabIndex = 42;
             // 
             // label9
@@ -488,7 +491,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(42, 84);
+            this.label10.Location = new System.Drawing.Point(45, 84);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 17);
             this.label10.TabIndex = 41;
@@ -497,16 +500,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             // txtSuaTenHV
             // 
             this.txtSuaTenHV.EditValue = "";
-            this.txtSuaTenHV.Location = new System.Drawing.Point(42, 51);
+            this.txtSuaTenHV.Location = new System.Drawing.Point(45, 51);
             this.txtSuaTenHV.Name = "txtSuaTenHV";
             this.txtSuaTenHV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSuaTenHV.Size = new System.Drawing.Size(235, 22);
+            this.txtSuaTenHV.Size = new System.Drawing.Size(238, 22);
             this.txtSuaTenHV.TabIndex = 39;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(42, 30);
+            this.label11.Location = new System.Drawing.Point(45, 30);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 17);
             this.label11.TabIndex = 40;
