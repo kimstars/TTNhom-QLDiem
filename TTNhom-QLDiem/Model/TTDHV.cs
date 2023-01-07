@@ -61,9 +61,7 @@ namespace TTNhom_QLDiem.Model
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaChiTietPhieuDiem { get; set; }
 
-        [Key]
-        [Column(Order = 7)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaPhieuDiem { get; set; }
+        [StringLength(150)]
+        public string TenLopChuyenNganh { get; set; }
     }
 }

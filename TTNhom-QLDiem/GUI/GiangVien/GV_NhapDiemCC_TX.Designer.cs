@@ -41,6 +41,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -70,7 +71,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -148,8 +148,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn9});
             this.dgvDSHocVien_View.GridControl = this.dgvDSHocVien;
             this.dgvDSHocVien_View.Name = "dgvDSHocVien_View";
-            this.dgvDSHocVien_View.OptionsBehavior.Editable = false;
             this.dgvDSHocVien_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSHocVien_View_RowClick);
+            this.dgvDSHocVien_View.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.dgvDSHocVien_View_CellValueChanged);
             // 
             // gridColumn1
             // 
@@ -197,6 +197,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Điểm thường xuyên";
+            this.gridColumn5.FieldName = "DiemTX";
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -234,6 +235,14 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 94;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Mã chi tiết phiếu điểm";
+            this.gridColumn9.FieldName = "MaChiTietPhieuDiem";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Width = 94;
             // 
             // tablePanel2
             // 
@@ -518,14 +527,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label1.Size = new System.Drawing.Size(51, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Học kỳ";
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Mã chi tiết phiếu điểm";
-            this.gridColumn9.FieldName = "MaChiTietPhieuDiem";
-            this.gridColumn9.MinWidth = 25;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Width = 94;
             // 
             // GV_NhapDiemCC_TX
             // 
