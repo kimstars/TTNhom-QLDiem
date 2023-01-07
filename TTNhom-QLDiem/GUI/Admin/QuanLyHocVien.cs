@@ -82,8 +82,8 @@ namespace TTNhom_QLDiem.GUI.Admin
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 dgvDSHocVien.DataSource = null;
-                var dshv1 = db.HocViens.ToList();
-                dgvDSHocVien.DataSource = dshv1;
+                dsHocVien = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dsHocVien;
                 
                 txtThemTenHV.Text = "";
                 dateThemNgaySinhHV.EditValue = null;
