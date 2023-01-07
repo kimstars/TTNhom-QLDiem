@@ -29,12 +29,12 @@ namespace TTNhom_QLDiem.GUI.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyLopHocPhan));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -42,7 +42,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.cbThemLopCN = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.txtThemLopHocPhan = new System.Windows.Forms.TextBox();
+            this.txtThemTenLHP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbThemSiSo = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -149,8 +149,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.75561F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.24439F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.46634F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.53366F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(484, 802);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
@@ -160,7 +160,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(3, 3);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(478, 377);
+            this.groupControl3.Size = new System.Drawing.Size(478, 503);
             this.groupControl3.TabIndex = 7;
             this.groupControl3.Text = "Quản lý học phần";
             // 
@@ -170,7 +170,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Thêm.Location = new System.Drawing.Point(2, 28);
             this.Thêm.Name = "Thêm";
             this.Thêm.SelectedTabPage = this.xtraTabPage1;
-            this.Thêm.Size = new System.Drawing.Size(474, 347);
+            this.Thêm.Size = new System.Drawing.Size(474, 473);
             this.Thêm.TabIndex = 83;
             this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -180,7 +180,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             this.xtraTabPage1.Controls.Add(this.cbThemLopCN);
             this.xtraTabPage1.Controls.Add(this.label21);
-            this.xtraTabPage1.Controls.Add(this.txtThemLopHocPhan);
+            this.xtraTabPage1.Controls.Add(this.txtThemTenLHP);
             this.xtraTabPage1.Controls.Add(this.label7);
             this.xtraTabPage1.Controls.Add(this.lbThemSiSo);
             this.xtraTabPage1.Controls.Add(this.label16);
@@ -198,7 +198,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1.Controls.Add(this.label3);
             this.xtraTabPage1.Controls.Add(this.label2);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(472, 316);
+            this.xtraTabPage1.Size = new System.Drawing.Size(472, 442);
             this.xtraTabPage1.Text = "Thêm";
             // 
             // cbThemLopCN
@@ -220,17 +220,17 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label21.TabIndex = 93;
             this.label21.Text = "Thêm lớp chuyên ngành";
             // 
-            // txtThemLopHocPhan
+            // txtThemTenLHP
             // 
-            this.txtThemLopHocPhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtThemTenLHP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtThemLopHocPhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThemLopHocPhan.Location = new System.Drawing.Point(34, 194);
-            this.txtThemLopHocPhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtThemLopHocPhan.Name = "txtThemLopHocPhan";
-            this.txtThemLopHocPhan.ReadOnly = true;
-            this.txtThemLopHocPhan.Size = new System.Drawing.Size(394, 30);
-            this.txtThemLopHocPhan.TabIndex = 92;
+            this.txtThemTenLHP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThemTenLHP.Location = new System.Drawing.Point(34, 194);
+            this.txtThemTenLHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtThemTenLHP.Name = "txtThemTenLHP";
+            this.txtThemTenLHP.ReadOnly = true;
+            this.txtThemTenLHP.Size = new System.Drawing.Size(394, 30);
+            this.txtThemTenLHP.TabIndex = 92;
             // 
             // label7
             // 
@@ -281,7 +281,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThemAddLopHP.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemAddLopHP.Appearance.Options.UseFont = true;
-            this.btnThemAddLopHP.Location = new System.Drawing.Point(35, 384);
+            this.btnThemAddLopHP.Location = new System.Drawing.Point(34, 371);
             this.btnThemAddLopHP.Name = "btnThemAddLopHP";
             this.btnThemAddLopHP.Size = new System.Drawing.Size(394, 44);
             this.btnThemAddLopHP.TabIndex = 87;
@@ -308,6 +308,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbThemGV.Name = "cbThemGV";
             this.cbThemGV.Size = new System.Drawing.Size(144, 24);
             this.cbThemGV.TabIndex = 85;
+            this.cbThemGV.SelectedIndexChanged += new System.EventHandler(this.cbThemGV_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -428,7 +429,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Controls.Add(this.label18);
             this.xtraTabPage2.Controls.Add(this.label19);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(472, 316);
+            this.xtraTabPage2.Size = new System.Drawing.Size(472, 442);
             this.xtraTabPage2.Text = "Sửa";
             // 
             // cbSuaLopCN
@@ -639,9 +640,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(3, 386);
+            this.groupControl1.Location = new System.Drawing.Point(3, 512);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(478, 413);
+            this.groupControl1.Size = new System.Drawing.Size(478, 287);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Danh sách lớp chuyên ngành ";
             // 
@@ -653,7 +654,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(474, 383);
+            this.gridControl1.Size = new System.Drawing.Size(474, 257);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -716,9 +717,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -820,6 +821,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Tổng học viên";
+            this.gridColumn7.FieldName = "TongHV";
             this.gridColumn7.MinWidth = 25;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
@@ -902,7 +904,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraEditors.SimpleButton btnthemAddLopCN;
         private System.Windows.Forms.ComboBox cbThemGV;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtThemLopHocPhan;
+        private System.Windows.Forms.TextBox txtThemTenLHP;
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.SimpleButton btnLuuThayDoi;
         private System.Windows.Forms.ComboBox cbThemLopCN;

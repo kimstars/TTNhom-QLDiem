@@ -31,6 +31,9 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private void QuanLyLopHocPhan_Load(object sender, EventArgs e)
         {
+            //cbThemHKi.SelectedIndexChanged += cbThemHKi_SelectedIndexChanged;
+
+
             dsHocPhan = db.HocPhans.ToList();
             dsHocKy = db.HocKies.ToList();
             dsPhongHoc = db.PhongHocs.ToList();
@@ -81,57 +84,112 @@ namespace TTNhom_QLDiem.GUI.Admin
             cbSuaPhongHoc.DisplayMember = "TenPhongHoc";
             cbSuaPhongHoc.ValueMember = "MaPhongHoc";
 
-
-
-
-
         }
 
         private void btnThemAddLopHP_Click(object sender, EventArgs e)
         {
+            LopHocPhan newLHP = new LopHocPhan();
+            newLHP.TenLopHocPhan = txtThemTenLHP.Text;
+            newLHP.MaHocKy = maHK;
+            newLHP.NgayThi = dateThemNgayThi.DateTime;
+            newLHP.MaHocPhan = maHP;
+            newLHP.MaPhongHoc = maPH;
+            newLHP.MaGiangVien = MaGV;
+            newLHP.TongHV = TongSiSo;
+            db.LopHocPhans.Add(newLHP);
+            db.SaveChanges();
+
+
+            foreach(var item in dsLopCN)
+            {
+                db.LopChuyenNganhs.Where(m => m.MaLopChuyenNganh == item.MaLopChuyenNganh).FirstOrDefault().LopHocPhans.Add(newLHP);
+            }
+
+            db.SaveChanges();
+
+            MessageBox.Show($"Thêm Lớp học phần '{txtThemTenLHP.Text}' thành công !!", "Thông báo");
+
+
 
         }
 
 
         string TenHP, TenHocKi, TenPhongHoc;
+        int maHP, maHK, maPH;
 
         private void cbThemHocPhan_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cbThemHocPhan.SelectedIndex;
-            TenHP = dsHocPhan[index].TenHocPhan;
-            ChangeNameClass();
+            ChangeNameClass(index, true);
 
         }
 
         private void cbSuaHocPhan_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cbSuaHocPhan.SelectedIndex;
-            TenHP = dsHocPhan[index].TenHocPhan;
-            ChangeNameClass();
+            ChangeNameClass(index, false);
         }
 
-        
 
-        void ChangeNameClass()
+        void ChangeNameClass(int index,bool isAdd)
         {
-            txtThemLopHocPhan.Text = "Lớp " + TenHP + " - " + TenHocKi + " - " + TenPhongHoc;
+            maHP = dsHocPhan[index].MaHocPhan;
+            maHK = dsHocKy[index].MaHocKy;
+            maPH = dsPhongHoc[index].MaPhongHoc;
+            string tenlhp = "Lớp "
+                + dsHocPhan[index].TenHocPhan
+                + " - "
+                + dsHocKy[index].TenHocKy
+                + " - "
+                + dsPhongHoc[index].TenPhongHoc;
+            if (isAdd)
+            {
+                txtThemTenLHP.Text = tenlhp;
+            }
+            else
+            {
+                txtSuaTenLopHP.Text = tenlhp;
+
+            }
         }
 
         private void cbSuaHocKi_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cbSuaHocKi.SelectedIndex;
-            TenHocKi = dsHocKy[index].TenHocKy;
-            ChangeNameClass();
+            ChangeNameClass(index,false);
         }
 
         private void cbThemHKi_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cbThemHKi.SelectedIndex;
-            TenHocKi = dsHocKy[index].TenHocKy;
-            ChangeNameClass();
+            ChangeNameClass(index, true);
         }
 
+        private void cbThemPhongHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbThemPhongHoc.SelectedIndex;
+            ChangeNameClass(index, true);
+        }
+
+        private void cbSuaPhongHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbSuaPhongHoc.SelectedIndex;
+            ChangeNameClass(index,false);
+        }
+
+
         int TongSiSo;
+
+        void LoadTongSiSo(int sohv)
+        {
+            TongSiSo = 0;
+            foreach(var item in dsThem_LopCN)
+            {
+                TongSiSo += item.SoHocVien;
+
+            }
+            lbThemSiSo.Text = TongSiSo.ToString();
+        }
 
         List<Object_QLHP_DSLopCN> dsThem_LopCN = new List<Object_QLHP_DSLopCN>();
         private void btnthemAddLopCN_Click(object sender, EventArgs e)
@@ -161,19 +219,23 @@ namespace TTNhom_QLDiem.GUI.Admin
 
             newitem.SoHocVien = sohv;
 
-            TongSiSo += sohv;
-
-
 
             dsThem_LopCN.Add(newitem);
+
+            LoadTongSiSo(sohv);
+
             gridControl1.DataSource = null;
-
             gridControl1.DataSource = dsThem_LopCN;
-
 
         }
 
-        int MaLopCN;
+        int MaLopCN, MaGV;
+
+        private void cbThemGV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MaGV = dsGiangVien[cbThemGV.SelectedIndex].MaGiangVien;
+
+        }
 
         private void cbThemLopCN_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -204,19 +266,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         }
 
-        private void cbThemPhongHoc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = cbThemPhongHoc.SelectedIndex;
-            TenPhongHoc = dsPhongHoc[index].TenPhongHoc;
-            ChangeNameClass();
-        }
-
-        private void cbSuaPhongHoc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = cbSuaPhongHoc.SelectedIndex;
-            TenPhongHoc = dsPhongHoc[index].TenPhongHoc;
-            ChangeNameClass();
-        }
+        
 
 
 
