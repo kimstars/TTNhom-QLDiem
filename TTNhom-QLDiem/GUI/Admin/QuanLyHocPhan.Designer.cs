@@ -111,7 +111,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Controls.Add(this.label14);
             this.xtraTabPage2.Controls.Add(this.textBox5);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1109, 146);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1109, 164);
             this.xtraTabPage2.Text = "Sửa";
             // 
             // radioGroup1
@@ -301,13 +301,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             // MaBM
             // 
             this.MaBM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.MaBM.Location = new System.Drawing.Point(538, 41);
+            this.MaBM.Location = new System.Drawing.Point(538, 39);
             this.MaBM.Name = "MaBM";
             this.MaBM.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaBM.Properties.Appearance.Options.UseFont = true;
+            this.MaBM.Properties.AutoHeight = false;
             this.MaBM.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MaBM.Size = new System.Drawing.Size(238, 26);
+            this.MaBM.Size = new System.Drawing.Size(238, 30);
             this.MaBM.TabIndex = 82;
             // 
             // label7
