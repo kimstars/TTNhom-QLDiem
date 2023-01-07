@@ -188,5 +188,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             return true;
 
         }
+
+        private void btnXoaHV_Click(object sender, EventArgs e)
+        {
+            Model.HocVien hv = db.HocViens.Where(m => m.MaHocVien == mahv).First();
+            if (MessageBox.Show($"Bạn có chắc chắn xóa ? {hv.HoTenHV}", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+
+            }
+        }
     }
 }
