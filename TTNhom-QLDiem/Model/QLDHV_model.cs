@@ -69,9 +69,15 @@ namespace TTNhom_QLDiem.Model
                 .WithRequired(e => e.HocVien)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<HocVien>()
+                .HasMany(e => e.LopChuyenNganhs)
+                .WithOptional(e => e.HocVien)
+                .HasForeignKey(e => e.MaLopTruong);
+
             modelBuilder.Entity<LopChuyenNganh>()
                 .HasMany(e => e.HocViens)
                 .WithRequired(e => e.LopChuyenNganh)
+                .HasForeignKey(e => e.MaLopChuyenNganh)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<LopChuyenNganh>()
