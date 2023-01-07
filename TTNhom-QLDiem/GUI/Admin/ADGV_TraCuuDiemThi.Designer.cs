@@ -41,6 +41,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColDiemCC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColDiemTX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColDiemThi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColDiemTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.cbMonThi = new System.Windows.Forms.ComboBox();
             this.cbLopCN = new System.Windows.Forms.ComboBox();
@@ -53,7 +54,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridColDiemTK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -201,6 +201,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColDiemThi.VisibleIndex = 7;
             this.gridColDiemThi.Width = 94;
             // 
+            // gridColDiemTK
+            // 
+            this.gridColDiemTK.Caption = "Điểm Tổng Kết";
+            this.gridColDiemTK.FieldName = "DiemTK";
+            this.gridColDiemTK.MinWidth = 25;
+            this.gridColDiemTK.Name = "gridColDiemTK";
+            this.gridColDiemTK.Visible = true;
+            this.gridColDiemTK.VisibleIndex = 8;
+            this.gridColDiemTK.Width = 94;
+            // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.cbMonThi);
@@ -225,22 +235,22 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             this.cbMonThi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbMonThi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonThi.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMonThi.FormattingEnabled = true;
             this.cbMonThi.Location = new System.Drawing.Point(55, 173);
             this.cbMonThi.Name = "cbMonThi";
-            this.cbMonThi.Size = new System.Drawing.Size(188, 30);
+            this.cbMonThi.Size = new System.Drawing.Size(188, 26);
             this.cbMonThi.TabIndex = 14;
             // 
             // cbLopCN
             // 
             this.cbLopCN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbLopCN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLopCN.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLopCN.FormattingEnabled = true;
             this.cbLopCN.Location = new System.Drawing.Point(55, 115);
             this.cbLopCN.Name = "cbLopCN";
-            this.cbLopCN.Size = new System.Drawing.Size(188, 30);
+            this.cbLopCN.Size = new System.Drawing.Size(188, 26);
             this.cbLopCN.TabIndex = 13;
             // 
             // label5
@@ -248,10 +258,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(52, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 17);
+            this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 12;
             this.label5.Text = "Lớp CN";
             // 
@@ -259,11 +269,11 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             this.cbHocKy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbHocKy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHocKy.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHocKy.FormattingEnabled = true;
             this.cbHocKy.Location = new System.Drawing.Point(55, 57);
             this.cbHocKy.Name = "cbHocKy";
-            this.cbHocKy.Size = new System.Drawing.Size(188, 30);
+            this.cbHocKy.Size = new System.Drawing.Size(188, 26);
             this.cbHocKy.TabIndex = 11;
             // 
             // label4
@@ -271,10 +281,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(52, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Học kỳ";
             // 
@@ -284,9 +294,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtTenHV.Location = new System.Drawing.Point(477, 113);
             this.txtTenHV.Name = "txtTenHV";
-            this.txtTenHV.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenHV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenHV.Properties.Appearance.Options.UseFont = true;
-            this.txtTenHV.Size = new System.Drawing.Size(177, 32);
+            this.txtTenHV.Size = new System.Drawing.Size(177, 24);
             this.txtTenHV.TabIndex = 9;
             // 
             // txtMaHV
@@ -295,17 +305,17 @@ namespace TTNhom_QLDiem.GUI.Admin
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMaHV.Location = new System.Drawing.Point(477, 54);
             this.txtMaHV.Name = "txtMaHV";
-            this.txtMaHV.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHV.Properties.Appearance.Options.UseFont = true;
-            this.txtMaHV.Size = new System.Drawing.Size(177, 32);
+            this.txtMaHV.Size = new System.Drawing.Size(177, 24);
             this.txtMaHV.TabIndex = 8;
             // 
             // btn_search
             // 
             this.btn_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_search.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.Appearance.Options.UseFont = true;
-            this.btn_search.Location = new System.Drawing.Point(853, 75);
+            this.btn_search.Location = new System.Drawing.Point(831, 58);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(106, 92);
             this.btn_search.TabIndex = 7;
@@ -317,10 +327,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(51, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Môn Thi";
             // 
@@ -329,10 +339,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(474, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(93, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên học viên";
             // 
@@ -341,22 +351,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(474, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.Size = new System.Drawing.Size(87, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã học viên";
-            // 
-            // gridColDiemTK
-            // 
-            this.gridColDiemTK.Caption = "Điểm Tổng Kết";
-            this.gridColDiemTK.FieldName = "DiemTK";
-            this.gridColDiemTK.MinWidth = 25;
-            this.gridColDiemTK.Name = "gridColDiemTK";
-            this.gridColDiemTK.Visible = true;
-            this.gridColDiemTK.VisibleIndex = 8;
-            this.gridColDiemTK.Width = 94;
             // 
             // ADGV_TraCuuDiemThi
             // 
