@@ -27,11 +27,9 @@ namespace TTNhom_QLDiem.Model
         [StringLength(10)]
         public string GioiTinh { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string CapBac { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string ChucVu { get; set; }
 
