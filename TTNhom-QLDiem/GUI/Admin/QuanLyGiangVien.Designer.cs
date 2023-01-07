@@ -48,19 +48,18 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtThemTenGV = new DevExpress.XtraEditors.TextEdit();
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemGV = new DevExpress.XtraEditors.SimpleButton();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.cbSuaGioiTinh = new System.Windows.Forms.ComboBox();
+            this.xtraTabPageSua = new DevExpress.XtraTab.XtraTabPage();
+            this.cbSuaGioiTinhGV = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnXoaGV = new DevExpress.XtraEditors.SimpleButton();
             this.cbSuaBoMon = new System.Windows.Forms.ComboBox();
-            this.dateSuaNS = new DevExpress.XtraEditors.DateEdit();
+            this.dateSuaNgaySinhGV = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtSuaChucVu = new DevExpress.XtraEditors.TextEdit();
+            this.txtSuaChucVuGV = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSuaCB = new DevExpress.XtraEditors.TextEdit();
+            this.txtSuaCapBacGV = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtSuaHoTenGV = new DevExpress.XtraEditors.TextEdit();
+            this.txtSuaTenGV = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.dgvTTGV = new DevExpress.XtraGrid.GridControl();
@@ -85,12 +84,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemChucVuGV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemCapBacGV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenGV.Properties)).BeginInit();
-            this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNS.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNS.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaCB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaHoTenGV.Properties)).BeginInit();
+            this.xtraTabPageSua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhGV.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhGV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuGV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacGV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenGV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -117,7 +116,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Thêm.TabIndex = 0;
             this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.xtraTabPageSua});
             // 
             // xtraTabPage1
             // 
@@ -290,36 +289,35 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnThemGV.Text = "Thêm";
             this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
             // 
-            // xtraTabPage2
+            // xtraTabPageSua
             // 
-            this.xtraTabPage2.Controls.Add(this.cbSuaGioiTinh);
-            this.xtraTabPage2.Controls.Add(this.label1);
-            this.xtraTabPage2.Controls.Add(this.btnXoaGV);
-            this.xtraTabPage2.Controls.Add(this.cbSuaBoMon);
-            this.xtraTabPage2.Controls.Add(this.dateSuaNS);
-            this.xtraTabPage2.Controls.Add(this.label6);
-            this.xtraTabPage2.Controls.Add(this.txtSuaChucVu);
-            this.xtraTabPage2.Controls.Add(this.label8);
-            this.xtraTabPage2.Controls.Add(this.txtSuaCB);
-            this.xtraTabPage2.Controls.Add(this.label9);
-            this.xtraTabPage2.Controls.Add(this.label10);
-            this.xtraTabPage2.Controls.Add(this.txtSuaHoTenGV);
-            this.xtraTabPage2.Controls.Add(this.label11);
-            this.xtraTabPage2.Controls.Add(this.btnSua);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1115, 237);
-            this.xtraTabPage2.Text = "Sửa";
+            this.xtraTabPageSua.Controls.Add(this.cbSuaGioiTinhGV);
+            this.xtraTabPageSua.Controls.Add(this.label1);
+            this.xtraTabPageSua.Controls.Add(this.cbSuaBoMon);
+            this.xtraTabPageSua.Controls.Add(this.dateSuaNgaySinhGV);
+            this.xtraTabPageSua.Controls.Add(this.label6);
+            this.xtraTabPageSua.Controls.Add(this.txtSuaChucVuGV);
+            this.xtraTabPageSua.Controls.Add(this.label8);
+            this.xtraTabPageSua.Controls.Add(this.txtSuaCapBacGV);
+            this.xtraTabPageSua.Controls.Add(this.label9);
+            this.xtraTabPageSua.Controls.Add(this.label10);
+            this.xtraTabPageSua.Controls.Add(this.txtSuaTenGV);
+            this.xtraTabPageSua.Controls.Add(this.label11);
+            this.xtraTabPageSua.Controls.Add(this.btnSua);
+            this.xtraTabPageSua.Name = "xtraTabPageSua";
+            this.xtraTabPageSua.Size = new System.Drawing.Size(1115, 237);
+            this.xtraTabPageSua.Text = "Sửa";
             // 
-            // cbSuaGioiTinh
+            // cbSuaGioiTinhGV
             // 
-            this.cbSuaGioiTinh.FormattingEnabled = true;
-            this.cbSuaGioiTinh.Items.AddRange(new object[] {
+            this.cbSuaGioiTinhGV.FormattingEnabled = true;
+            this.cbSuaGioiTinhGV.Items.AddRange(new object[] {
             "Nam",
             "Nu"});
-            this.cbSuaGioiTinh.Location = new System.Drawing.Point(45, 157);
-            this.cbSuaGioiTinh.Name = "cbSuaGioiTinh";
-            this.cbSuaGioiTinh.Size = new System.Drawing.Size(238, 24);
-            this.cbSuaGioiTinh.TabIndex = 53;
+            this.cbSuaGioiTinhGV.Location = new System.Drawing.Point(45, 157);
+            this.cbSuaGioiTinhGV.Name = "cbSuaGioiTinhGV";
+            this.cbSuaGioiTinhGV.Size = new System.Drawing.Size(238, 24);
+            this.cbSuaGioiTinhGV.TabIndex = 53;
             // 
             // label1
             // 
@@ -330,14 +328,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label1.TabIndex = 52;
             this.label1.Text = "Giới tính";
             // 
-            // btnXoaGV
-            // 
-            this.btnXoaGV.Location = new System.Drawing.Point(776, 131);
-            this.btnXoaGV.Name = "btnXoaGV";
-            this.btnXoaGV.Size = new System.Drawing.Size(146, 50);
-            this.btnXoaGV.TabIndex = 51;
-            this.btnXoaGV.Text = "Xóa";
-            // 
             // cbSuaBoMon
             // 
             this.cbSuaBoMon.FormattingEnabled = true;
@@ -346,18 +336,18 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaBoMon.Size = new System.Drawing.Size(288, 24);
             this.cbSuaBoMon.TabIndex = 50;
             // 
-            // dateSuaNS
+            // dateSuaNgaySinhGV
             // 
-            this.dateSuaNS.EditValue = null;
-            this.dateSuaNS.Location = new System.Drawing.Point(45, 104);
-            this.dateSuaNS.Name = "dateSuaNS";
-            this.dateSuaNS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateSuaNgaySinhGV.EditValue = null;
+            this.dateSuaNgaySinhGV.Location = new System.Drawing.Point(45, 104);
+            this.dateSuaNgaySinhGV.Name = "dateSuaNgaySinhGV";
+            this.dateSuaNgaySinhGV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateSuaNS.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateSuaNgaySinhGV.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateSuaNS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateSuaNS.Size = new System.Drawing.Size(235, 22);
-            this.dateSuaNS.TabIndex = 49;
+            this.dateSuaNgaySinhGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateSuaNgaySinhGV.Size = new System.Drawing.Size(235, 22);
+            this.dateSuaNgaySinhGV.TabIndex = 49;
             // 
             // label6
             // 
@@ -368,14 +358,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label6.TabIndex = 48;
             this.label6.Text = "Bộ môn";
             // 
-            // txtSuaChucVu
+            // txtSuaChucVuGV
             // 
-            this.txtSuaChucVu.EditValue = "";
-            this.txtSuaChucVu.Location = new System.Drawing.Point(426, 104);
-            this.txtSuaChucVu.Name = "txtSuaChucVu";
-            this.txtSuaChucVu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSuaChucVu.Size = new System.Drawing.Size(288, 22);
-            this.txtSuaChucVu.TabIndex = 44;
+            this.txtSuaChucVuGV.EditValue = "";
+            this.txtSuaChucVuGV.Location = new System.Drawing.Point(426, 104);
+            this.txtSuaChucVuGV.Name = "txtSuaChucVuGV";
+            this.txtSuaChucVuGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSuaChucVuGV.Size = new System.Drawing.Size(288, 22);
+            this.txtSuaChucVuGV.TabIndex = 44;
             // 
             // label8
             // 
@@ -386,14 +376,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label8.TabIndex = 45;
             this.label8.Text = "Chức vụ";
             // 
-            // txtSuaCB
+            // txtSuaCapBacGV
             // 
-            this.txtSuaCB.EditValue = "";
-            this.txtSuaCB.Location = new System.Drawing.Point(426, 50);
-            this.txtSuaCB.Name = "txtSuaCB";
-            this.txtSuaCB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSuaCB.Size = new System.Drawing.Size(288, 22);
-            this.txtSuaCB.TabIndex = 42;
+            this.txtSuaCapBacGV.EditValue = "";
+            this.txtSuaCapBacGV.Location = new System.Drawing.Point(426, 50);
+            this.txtSuaCapBacGV.Name = "txtSuaCapBacGV";
+            this.txtSuaCapBacGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSuaCapBacGV.Size = new System.Drawing.Size(288, 22);
+            this.txtSuaCapBacGV.TabIndex = 42;
             // 
             // label9
             // 
@@ -413,14 +403,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label10.TabIndex = 41;
             this.label10.Text = "Ngày sinh";
             // 
-            // txtSuaHoTenGV
+            // txtSuaTenGV
             // 
-            this.txtSuaHoTenGV.EditValue = "";
-            this.txtSuaHoTenGV.Location = new System.Drawing.Point(45, 50);
-            this.txtSuaHoTenGV.Name = "txtSuaHoTenGV";
-            this.txtSuaHoTenGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSuaHoTenGV.Size = new System.Drawing.Size(235, 22);
-            this.txtSuaHoTenGV.TabIndex = 39;
+            this.txtSuaTenGV.EditValue = "";
+            this.txtSuaTenGV.Location = new System.Drawing.Point(45, 50);
+            this.txtSuaTenGV.Name = "txtSuaTenGV";
+            this.txtSuaTenGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSuaTenGV.Size = new System.Drawing.Size(235, 22);
+            this.txtSuaTenGV.TabIndex = 39;
             // 
             // label11
             // 
@@ -433,11 +423,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(776, 46);
+            this.btnSua.Location = new System.Drawing.Point(781, 53);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(146, 55);
+            this.btnSua.Size = new System.Drawing.Size(146, 135);
             this.btnSua.TabIndex = 38;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // dgvTTGV
             // 
@@ -465,6 +456,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.dgvTTGV_View.Name = "dgvTTGV_View";
             this.dgvTTGV_View.OptionsBehavior.Editable = false;
             this.dgvTTGV_View.OptionsView.ShowGroupPanel = false;
+            this.dgvTTGV_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvTTGV_View_RowClick);
             // 
             // gridColumn1
             // 
@@ -577,13 +569,13 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemChucVuGV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemCapBacGV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenGV.Properties)).EndInit();
-            this.xtraTabPage2.ResumeLayout(false);
-            this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNS.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNS.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaCB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaHoTenGV.Properties)).EndInit();
+            this.xtraTabPageSua.ResumeLayout(false);
+            this.xtraTabPageSua.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhGV.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhGV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuGV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacGV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenGV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV_View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -608,16 +600,16 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraEditors.TextEdit txtThemTenGV;
         private System.Windows.Forms.Label label16;
         private DevExpress.XtraEditors.SimpleButton btnThemGV;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageSua;
         private System.Windows.Forms.ComboBox cbSuaBoMon;
-        private DevExpress.XtraEditors.DateEdit dateSuaNS;
+        private DevExpress.XtraEditors.DateEdit dateSuaNgaySinhGV;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit txtSuaChucVu;
+        private DevExpress.XtraEditors.TextEdit txtSuaChucVuGV;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.TextEdit txtSuaCB;
+        private DevExpress.XtraEditors.TextEdit txtSuaCapBacGV;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.TextEdit txtSuaHoTenGV;
+        private DevExpress.XtraEditors.TextEdit txtSuaTenGV;
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraGrid.GridControl dgvTTGV;
@@ -632,10 +624,9 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraEditors.SimpleButton btnThemTK;
         private DevExpress.XtraEditors.TextEdit txtThemMaTKGV;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.SimpleButton btnXoaGV;
         private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbSuaGioiTinh;
+        private System.Windows.Forms.ComboBox cbSuaGioiTinhGV;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
