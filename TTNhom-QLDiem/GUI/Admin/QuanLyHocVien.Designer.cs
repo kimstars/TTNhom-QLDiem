@@ -53,7 +53,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemHV = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPageSua = new DevExpress.XtraTab.XtraTabPage();
+            this.txtSuaQQ = new DevExpress.XtraEditors.TextEdit();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbSuaGT = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbSuaChucVu = new System.Windows.Forms.ComboBox();
+            this.cbSuaLopChuyenNganh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateSuaNgaySinhHV = new DevExpress.XtraEditors.DateEdit();
             this.label8 = new System.Windows.Forms.Label();
@@ -76,11 +81,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cbSuaLopChuyenNganh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -95,6 +95,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemCapBacHV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenHV.Properties)).BeginInit();
             this.xtraTabPageSua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaQQ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacHV.Properties)).BeginInit();
@@ -103,7 +104,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTHV_View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView1
@@ -347,9 +347,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPageSua
             // 
-            this.xtraTabPageSua.Controls.Add(this.textEdit1);
+            this.xtraTabPageSua.Controls.Add(this.txtSuaQQ);
             this.xtraTabPageSua.Controls.Add(this.label12);
-            this.xtraTabPageSua.Controls.Add(this.comboBox1);
+            this.xtraTabPageSua.Controls.Add(this.cbSuaGT);
             this.xtraTabPageSua.Controls.Add(this.label7);
             this.xtraTabPageSua.Controls.Add(this.cbSuaChucVu);
             this.xtraTabPageSua.Controls.Add(this.cbSuaLopChuyenNganh);
@@ -367,13 +367,63 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageSua.Size = new System.Drawing.Size(1109, 255);
             this.xtraTabPageSua.Text = "Sửa";
             // 
+            // txtSuaQQ
+            // 
+            this.txtSuaQQ.EditValue = "";
+            this.txtSuaQQ.Location = new System.Drawing.Point(422, 167);
+            this.txtSuaQQ.Name = "txtSuaQQ";
+            this.txtSuaQQ.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSuaQQ.Size = new System.Drawing.Size(285, 22);
+            this.txtSuaQQ.TabIndex = 57;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(422, 141);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(68, 17);
+            this.label12.TabIndex = 58;
+            this.label12.Text = "Quê quán";
+            // 
+            // cbSuaGT
+            // 
+            this.cbSuaGT.FormattingEnabled = true;
+            this.cbSuaGT.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbSuaGT.Location = new System.Drawing.Point(45, 161);
+            this.cbSuaGT.Name = "cbSuaGT";
+            this.cbSuaGT.Size = new System.Drawing.Size(238, 24);
+            this.cbSuaGT.TabIndex = 56;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(44, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.TabIndex = 55;
+            this.label7.Text = "Giới tính";
+            // 
             // cbSuaChucVu
             // 
             this.cbSuaChucVu.FormattingEnabled = true;
+            this.cbSuaChucVu.Items.AddRange(new object[] {
+            "Lớp trưởng",
+            "Lớp phó",
+            "Học viên"});
             this.cbSuaChucVu.Location = new System.Drawing.Point(425, 57);
             this.cbSuaChucVu.Name = "cbSuaChucVu";
             this.cbSuaChucVu.Size = new System.Drawing.Size(285, 24);
             this.cbSuaChucVu.TabIndex = 54;
+            // 
+            // cbSuaLopChuyenNganh
+            // 
+            this.cbSuaLopChuyenNganh.FormattingEnabled = true;
+            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(425, 105);
+            this.cbSuaLopChuyenNganh.Name = "cbSuaLopChuyenNganh";
+            this.cbSuaLopChuyenNganh.Size = new System.Drawing.Size(285, 24);
+            this.cbSuaLopChuyenNganh.TabIndex = 53;
             // 
             // label1
             // 
@@ -466,6 +516,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnSuaHV.Size = new System.Drawing.Size(144, 138);
             this.btnSuaHV.TabIndex = 21;
             this.btnSuaHV.Text = "Sửa";
+            this.btnSuaHV.Click += new System.EventHandler(this.btnSuaHV_Click);
             // 
             // groupControl1
             // 
@@ -596,52 +647,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn9.VisibleIndex = 8;
             this.gridColumn9.Width = 94;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(45, 161);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 24);
-            this.comboBox1.TabIndex = 56;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 141);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
-            this.label7.TabIndex = 55;
-            this.label7.Text = "Giới tính";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(422, 167);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textEdit1.Size = new System.Drawing.Size(285, 22);
-            this.textEdit1.TabIndex = 57;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(422, 141);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 17);
-            this.label12.TabIndex = 58;
-            this.label12.Text = "Quê quán";
-            // 
-            // cbSuaLopChuyenNganh
-            // 
-            this.cbSuaLopChuyenNganh.FormattingEnabled = true;
-            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(425, 105);
-            this.cbSuaLopChuyenNganh.Name = "cbSuaLopChuyenNganh";
-            this.cbSuaLopChuyenNganh.Size = new System.Drawing.Size(285, 24);
-            this.cbSuaLopChuyenNganh.TabIndex = 53;
-            // 
             // QuanLyHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -666,6 +671,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenHV.Properties)).EndInit();
             this.xtraTabPageSua.ResumeLayout(false);
             this.xtraTabPageSua.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaQQ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacHV.Properties)).EndInit();
@@ -674,7 +680,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTHV_View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -728,9 +733,9 @@ namespace TTNhom_QLDiem.GUI.Admin
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtSuaQQ;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSuaGT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbSuaLopChuyenNganh;
     }

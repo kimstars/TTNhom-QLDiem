@@ -41,7 +41,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             dsHocVien = new List<Model.HocVien>();
             dsHocVien = db.HocViens.ToList();
-
             dgvDSHocVien.DataSource = dsHocVien;
 
 
@@ -56,13 +55,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             foreach (var item in lcn.ToList())
             {
                 cbLopCN.Items.Add(item.TenLopChuyenNganh);
+                cbSuaLopChuyenNganh.Items.Add(item.TenLopChuyenNganh);
             }
 
         }
         private void btnThemHV_Click(object sender, EventArgs e)
         {
             Model.HocVien hv = new Model.HocVien();
-            if (Check())
+            if (CheckThemHV())
             {
                 hv.HoTenHV = txtThemTenHV.Text;
                 hv.NgaySinh = dateThemNgaySinhHV.DateTime;
@@ -81,11 +81,12 @@ namespace TTNhom_QLDiem.GUI.Admin
                 db.SaveChanges();
                 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                dgvDSHocVien.DataSource = null;
-                var dshv1 = db.HocViens.ToList();
-                dgvDSHocVien.DataSource = dshv1;
-                
+
+                dsHocVien = new List<Model.HocVien>();
+                dsHocVien = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dsHocVien;
+
+
                 txtThemTenHV.Text = "";
                 dateThemNgaySinhHV.EditValue = null;
                 cbGioiTinh.Text = "";
@@ -97,7 +98,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
             }
         }
-        public bool Check()
+        public bool CheckThemHV()
         {
             if (txtThemTenHV.Text == "" || dateThemNgaySinhHV.ToString() == "" || cbGioiTinh.Text == "" || txtThemCapBacHV.Text == "" || cbThemChucVu.Text == "" || cbLopCN.Text == "" || txtQuequan.Text == "" || txtThemMaTKHV.Text == "")
             {
@@ -123,9 +124,18 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             xtraTabPageSua.Show();
             int index = e.RowHandle;
-            Model.HocVien hv = dsHocVien[index];           
+            Model.HocVien hv = dsHocVien[index];
+            mahv = hv.MaHocVien;
             txtSuaTenHV.Text = hv.HoTenHV;
             dateSuaNgaySinhHV.EditValue = hv.NgaySinh;
+            cbSuaGT.Text = hv.GioiTinh;
+            txtSuaCapBacHV.Text = hv.CapBac;
+            cbSuaChucVu.Text = hv.ChucVu;
+
+            List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+            string TenLCN = lcn.Find(s => s.MaLopChuyenNganh == hv.MaLopChuyenNganh).TenLopChuyenNganh;
+            cbSuaLopChuyenNganh.Text = TenLCN;
+            txtSuaQQ.Text = hv.QueQuan;
 
 
         }
@@ -138,6 +148,48 @@ namespace TTNhom_QLDiem.GUI.Admin
             //{
             //    cbLopCN.Items.Add(item.TenLopChuyenNganh);
             //}
+        }
+
+        private void btnSuaHV_Click(object sender, EventArgs e)
+        {
+            Model.HocVien hv = db.HocViens.Where(p => p.MaHocVien == mahv).FirstOrDefault();
+            if (CheckSuaHV())
+            {
+                hv.HoTenHV = txtSuaTenHV.Text;
+                hv.NgaySinh = dateSuaNgaySinhHV.DateTime;
+                hv.GioiTinh = cbSuaGT.Text;
+                hv.CapBac = txtSuaCapBacHV.Text;
+                hv.ChucVu = cbSuaChucVu.Text;
+
+                List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+                int maLCN = lcn.Find(s => s.TenLopChuyenNganh == cbSuaLopChuyenNganh.Text).MaLopChuyenNganh;
+                hv.MaLopChuyenNganh = maLCN;
+                hv.QueQuan = txtSuaQQ.Text;
+
+                db.SaveChanges();
+                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                dgvDSHocVien.DataSource = null;
+                var dshv1 = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dshv1;
+                txtSuaTenHV.Text = "";
+                dateSuaNgaySinhHV.EditValue = null;
+                cbSuaGT.Text = "";
+                txtSuaCapBacHV.Text = "";
+                cbSuaChucVu.Text = "";
+                cbSuaLopChuyenNganh.Text = "";
+                txtSuaQQ.Text = "";
+            }
+        }
+        public bool CheckSuaHV()
+        {
+            if (txtSuaTenHV.Text == "" || dateSuaNgaySinhHV.ToString() == "" || cbSuaGT.Text == "" || txtSuaCapBacHV.Text == "" || cbSuaChucVu.Text == "" || cbSuaLopChuyenNganh.Text == "" || txtSuaQQ.Text == "" )
+            {
+                MessageBox.Show("Thông tin học viên không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+
         }
     }
 }

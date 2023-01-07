@@ -32,8 +32,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.Thêm = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateThemNgaySinhCB = new DevExpress.XtraEditors.DateEdit();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,8 +46,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemCB = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,7 +74,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.Thêm)).BeginInit();
             this.Thêm.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThemNgaySinhCB.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThemNgaySinhCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemMaTKCB.Properties)).BeginInit();
@@ -86,7 +81,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemCapBacCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenCB.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
@@ -123,8 +117,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.label1);
-            this.xtraTabPage1.Controls.Add(this.textEdit1);
             this.xtraTabPage1.Controls.Add(this.comboBox1);
             this.xtraTabPage1.Controls.Add(this.dateThemNgaySinhCB);
             this.xtraTabPage1.Controls.Add(this.label3);
@@ -142,30 +134,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1.Size = new System.Drawing.Size(1115, 237);
             this.xtraTabPage1.Text = "Thêm";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(557, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 17);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Khoa";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(560, 99);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textEdit1.Size = new System.Drawing.Size(152, 22);
-            this.textEdit1.TabIndex = 29;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(424, 99);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(110, 24);
+            this.comboBox1.Size = new System.Drawing.Size(288, 24);
             this.comboBox1.TabIndex = 28;
             // 
             // dateThemNgaySinhCB
@@ -281,8 +255,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.label2);
-            this.xtraTabPage2.Controls.Add(this.textEdit2);
             this.xtraTabPage2.Controls.Add(this.comboBox2);
             this.xtraTabPage2.Controls.Add(this.dateEdit1);
             this.xtraTabPage2.Controls.Add(this.label6);
@@ -300,30 +272,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Size = new System.Drawing.Size(1115, 237);
             this.xtraTabPage2.Text = "Sửa";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(559, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 17);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Khoa";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.EditValue = "";
-            this.textEdit2.Location = new System.Drawing.Point(562, 104);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textEdit2.Size = new System.Drawing.Size(152, 22);
-            this.textEdit2.TabIndex = 51;
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(426, 104);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(110, 24);
+            this.comboBox2.Size = new System.Drawing.Size(288, 24);
             this.comboBox2.TabIndex = 50;
             // 
             // dateEdit1
@@ -557,7 +511,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Thêm.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThemNgaySinhCB.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThemNgaySinhCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemMaTKCB.Properties)).EndInit();
@@ -566,7 +519,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenCB.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
@@ -586,8 +538,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraTab.XtraTabControl Thêm;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.ComboBox comboBox1;
         private DevExpress.XtraEditors.DateEdit dateThemNgaySinhCB;
         private System.Windows.Forms.Label label3;
@@ -602,8 +552,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private System.Windows.Forms.Label label16;
         private DevExpress.XtraEditors.SimpleButton btnThemCB;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
         private System.Windows.Forms.ComboBox comboBox2;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private System.Windows.Forms.Label label6;
