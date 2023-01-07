@@ -36,14 +36,13 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             txtThemMaTKHV.Text = MaTaiKhoan.ToString();
         }
+
         List<Model.HocVien> dsHocVien;
         private void QuanLyHocVien_Load(object sender, EventArgs e)
         {
             dsHocVien = new List<Model.HocVien>();
             dsHocVien = db.HocViens.ToList();
             dgvDSHocVien.DataSource = dsHocVien;
-
-
 
         }
 
@@ -81,12 +80,11 @@ namespace TTNhom_QLDiem.GUI.Admin
                 db.SaveChanges();
                 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                dsHocVien = new List<Model.HocVien>();
-                dsHocVien = db.HocViens.ToList();
-                dgvDSHocVien.DataSource = dsHocVien;
-
-
+                
+                dgvDSHocVien.DataSource = null;
+                var dshv1 = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dshv1;
+                
                 txtThemTenHV.Text = "";
                 dateThemNgaySinhHV.EditValue = null;
                 cbGioiTinh.Text = "";

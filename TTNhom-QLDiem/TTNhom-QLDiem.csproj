@@ -87,6 +87,12 @@
     <Compile Include="GUI\Admin\QuanLyHocVien.Designer.cs">
       <DependentUpon>QuanLyHocVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\QuanLyLopChuyenNganh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\QuanLyLopChuyenNganh.Designer.cs">
+      <DependentUpon>QuanLyLopChuyenNganh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\QuanLyLopHocPhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,35 +123,17 @@
     <Compile Include="GUI\DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiangVien\DSHVien.cs">
+    <Compile Include="GUI\GiangVien\GV_NhapDiemCC_TX.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GiangVien\DSHVien.Designer.cs">
-      <DependentUpon>DSHVien.cs</DependentUpon>
+    <Compile Include="GUI\GiangVien\GV_NhapDiemCC_TX.Designer.cs">
+      <DependentUpon>GV_NhapDiemCC_TX.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiangVien\NhapdiemHocLai.cs">
+    <Compile Include="GUI\GiangVien\GV_NhapDiemThi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GiangVien\NhapdiemHocLai.Designer.cs">
-      <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemL1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemL1.Designer.cs">
-      <DependentUpon>NhapDiemL1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemThi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\NhapDiemThi.Designer.cs">
-      <DependentUpon>NhapDiemThi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GiangVien\QLyGV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GiangVien\QLyGV.Designer.cs">
-      <DependentUpon>QLyGV.cs</DependentUpon>
+    <Compile Include="GUI\GiangVien\GV_NhapDiemThi.Designer.cs">
+      <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GiangVien\TTGiangVien.cs">
       <SubType>UserControl</SubType>
@@ -183,18 +171,23 @@
     <Compile Include="GUI\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
-    <Compile Include="Model\HocKi.cs" />
+    <Compile Include="Model\HocKy.cs" />
     <Compile Include="Model\HocPhan.cs" />
     <Compile Include="Model\HocVien.cs" />
     <Compile Include="Model\Khoa.cs" />
     <Compile Include="Model\LopChuyenNganh.cs" />
     <Compile Include="Model\LopHocPhan.cs" />
     <Compile Include="Model\PhieuDiem.cs" />
+    <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Model\TTDHV.cs" />
+    <Compile Include="Model\timkiem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">
@@ -208,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyHocVien.resx">
       <DependentUpon>QuanLyHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\QuanLyLopChuyenNganh.resx">
+      <DependentUpon>QuanLyLopChuyenNganh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyLopHocPhan.resx">
       <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
@@ -224,20 +220,11 @@
     <EmbeddedResource Include="GUI\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\DSHVien.resx">
-      <DependentUpon>DSHVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemCC_TX.resx">
+      <DependentUpon>GV_NhapDiemCC_TX.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapdiemHocLai.resx">
-      <DependentUpon>NhapdiemHocLai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapDiemL1.resx">
-      <DependentUpon>NhapDiemL1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\NhapDiemThi.resx">
-      <DependentUpon>NhapDiemThi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GiangVien\QLyGV.resx">
-      <DependentUpon>QLyGV.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GiangVien\GV_NhapDiemThi.resx">
+      <DependentUpon>GV_NhapDiemThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\TTGiangVien.resx">
       <DependentUpon>TTGiangVien.cs</DependentUpon>
@@ -282,11 +269,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SQL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\duong anime.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL\sang.sql" />
+    <Content Include="SQL\Thuy_View1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

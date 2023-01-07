@@ -22,7 +22,7 @@ namespace TTNhom_QLDiem.Model
         public string HoTenHV { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgaySinh { get; set; }
+        public DateTime NgaySinh { get; set; }
 
         [StringLength(10)]
         public string GioiTinh { get; set; }
