@@ -256,7 +256,8 @@ namespace TTNhom_QLDiem.GUI
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            logout = true;
+            this.Close();
         }
     }
 }
