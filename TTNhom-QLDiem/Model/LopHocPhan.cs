@@ -30,7 +30,7 @@ namespace TTNhom_QLDiem.Model
 
         public int? MaPhongHoc { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string TenLopHocPhan { get; set; }
 
         public int? TongHV { get; set; }

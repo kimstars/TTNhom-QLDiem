@@ -41,6 +41,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             dsHocPhan = db.HocPhans.ToList();
             dsHocKy = db.HocKies.ToList();
             dsPhongHoc = db.PhongHocs.ToList();
+
             dsLopCN = db.LopChuyenNganhs.ToList();
 
 
@@ -168,6 +169,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
             }
 
+
             MessageBox.Show($"Thêm chi tiết phiếu điểm thành công !!", "Thông báo");
 
             gridControl1.DataSource = null;
@@ -262,23 +264,137 @@ namespace TTNhom_QLDiem.GUI.Admin
         void LoadTongSiSo()
         {
             TongSiSo = 0;
-            foreach (var item in dsThem_LopCN)
+            foreach (var item in ds_grid_LopCN_current)
             {
                 TongSiSo += (int)item.SoHocVien;
 
             }
             lbThemSiSo.Text = TongSiSo.ToString();
+            lbSuaSiSo.Text = TongSiSo.ToString();
         }
 
-        List<AD_QLLHP_SuaLopCN> dsThem_LopCN = new List<AD_QLLHP_SuaLopCN>();
+        List<AD_QLLHP_SuaLopCN> ds_grid_LopCN_current = new List<AD_QLLHP_SuaLopCN>();
+        List<AD_QLLHP_SuaLopCN> ds_load_LopCN_fromDB = new List<AD_QLLHP_SuaLopCN>();
         private void btnthemAddLopCN_Click(object sender, EventArgs e)
+        {
+            LopChuyenNganh templcn = dsLopCN[cbThemLopCN.SelectedIndex];
+            Add_LopCN_toGrid(templcn);
+        }
+
+        int SuaMaLopHPCurr;
+        private void dgvDSLopHocPhan_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            xtraTabPage2.Show();
+            int index = e.RowHandle;
+            AD_QLLHP_DSLopHocPhan selectedItem = dsLopHP[index];
+
+            txtSuaTenLopHP.Text = selectedItem.TenLopHocPhan;
+            cbSuaHocKi.SelectedValue = selectedItem.MaHocKy;
+            cbSuaGV.SelectedValue = selectedItem.MaGiangVien;
+            cbSuaPhongHoc.SelectedValue = selectedItem.MaPhongHoc;
+            cbSuaHocPhan.SelectedValue = selectedItem.MaHocPhan;
+
+            SuaMaLopHPCurr = selectedItem.MaLopHocPhan;
+
+            ds_load_LopCN_fromDB = db.AD_QLLHP_SuaLopCN.Where(m => m.MaLopHocPhan == selectedItem.MaLopHocPhan).ToList();
+            ds_grid_LopCN_current = ds_load_LopCN_fromDB.Select(i => new AD_QLLHP_SuaLopCN() {
+                MaLopChuyenNganh = i.MaLopChuyenNganh,
+                MaLopHocPhan = i.MaLopHocPhan,
+                SoHocVien = i.SoHocVien,
+                TenLopChuyenNganh = i.TenLopChuyenNganh
+
+            }).ToList();
+
+            //lấy ra các lớp chuyên ngành học cùng lớp học phần
+            //tempdsLopCN = db.LopHocPhans.Where(m => m.MaLopHocPhan == selectedItem.MaLopHocPhan).SelectMany(c => c.LopChuyenNganhs).ToList();
+
+
+            gridControl1.DataSource = null;
+            gridControl1.DataSource = ds_load_LopCN_fromDB;
+            LoadTongSiSo();
+
+        }
+
+        private void btnSuaDelAll_Click(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = null;
+            //if (ds_grid_LopCN_current.Count > 0) ds_grid_LopCN_current.Clear();
+            lbSuaSiSo.Text  = "0";
+        }
+        private void btnLuuThayDoi_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn lưu thay đổi?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                LopHocPhan thisLHP = new LopHocPhan();
+                
+                #region xóa trên bảng lớp cn - lớp hp
+
+                List<AD_QLLHP_SuaLopCN> dsHuyLopCN = new List<AD_QLLHP_SuaLopCN>();
+                foreach(var item in ds_load_LopCN_fromDB)
+                {
+                    var test = ds_grid_LopCN_current.Where(m => m.MaLopChuyenNganh == item.MaLopChuyenNganh).FirstOrDefault();
+
+                    if (test == null) dsHuyLopCN.Add(item);
+                }
+
+
+                using (var context = new QLDHV_model())
+                {
+                    thisLHP = context.LopHocPhans.Where(m => m.MaLopHocPhan == SuaMaLopHPCurr).FirstOrDefault();
+
+                    foreach (var item in dsHuyLopCN)
+                    {
+                        context.LopChuyenNganhs.Where(m => m.MaLopChuyenNganh == item.MaLopChuyenNganh).FirstOrDefault().LopHocPhans.Remove(thisLHP);
+                        context.SaveChanges();
+
+                    }
+                }
+                #endregion
+
+
+                #region sửa thông tin lớp học phần
+
+
+                using (var context = new QLDHV_model())
+                {
+                    thisLHP = context.LopHocPhans.Where(m => m.MaLopHocPhan == SuaMaLopHPCurr).FirstOrDefault();
+
+                    thisLHP.MaPhongHoc = (int)cbSuaPhongHoc.SelectedValue;
+                    thisLHP.MaGiangVien = (int)cbSuaGV.SelectedValue;
+                    thisLHP.NgayThi = dateSuaNgayThi.DateTime;
+                    thisLHP.MaHocKy = (int)cbSuaHocKi.SelectedValue;
+                    thisLHP.TenLopHocPhan = txtSuaTenLopHP.Text;
+                    thisLHP.TongHV = int.Parse(lbSuaSiSo.Text);
+
+                    context.SaveChanges();
+                }
+                #endregion
+
+                dsLopHP = db.AD_QLLHP_DSLopHocPhan.SqlQuery("SELECT * FROM AD_QLLHP_DSLopHocPhan").ToList();
+
+                dgvDSLopHocPhan.DataSource = dsLopHP;
+
+                MessageBox.Show("Đã lưu thay đổi", "Thông báo");
+
+
+            }
+
+
+        }
+        private void btnSuaAddLopCN_Click(object sender, EventArgs e)
+        {
+
+            LopChuyenNganh templcn = dsLopCN[cbSuaLopCN.SelectedIndex];
+
+            Add_LopCN_toGrid(templcn);
+           
+        }
+
+        void Add_LopCN_toGrid(LopChuyenNganh templcn)
         {
             AD_QLLHP_SuaLopCN newitem = new AD_QLLHP_SuaLopCN();
 
-            LopChuyenNganh templcn = dsLopCN[cbThemLopCN.SelectedIndex];
-
-
-            foreach (var item in dsThem_LopCN)
+            foreach (var item in ds_grid_LopCN_current)
             {
                 if (item.MaLopChuyenNganh == templcn.MaLopChuyenNganh)
                 {
@@ -295,55 +411,21 @@ namespace TTNhom_QLDiem.GUI.Admin
 
             //MessageBox.Show(templcn.TenLopChuyenNganh + " - " + sohv.ToString());
 
-
             newitem.SoHocVien = sohv;
 
-
-            dsThem_LopCN.Add(newitem);
+            ds_grid_LopCN_current.Add(newitem);
 
             LoadTongSiSo();
 
             gridControl1.DataSource = null;
-            gridControl1.DataSource = dsThem_LopCN;
-
+            gridControl1.DataSource = ds_grid_LopCN_current;
         }
 
-        private void dgvDSLopHocPhan_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
-            xtraTabPage2.Show();
-            int index = e.RowHandle;
-            AD_QLLHP_DSLopHocPhan selectedItem = dsLopHP[index];
-
-            txtSuaTenLopHP.Text = selectedItem.TenLopHocPhan;
-            cbSuaHocKi.SelectedValue = selectedItem.MaHocKy;
-            cbSuaGV.SelectedValue = selectedItem.MaGiangVien;
-            cbSuaPhongHoc.SelectedValue = selectedItem.MaPhongHoc;
-            cbSuaHocPhan.SelectedValue = selectedItem.MaHocPhan;
-
-            List<AD_QLLHP_SuaLopCN> tempdsLopCN = db.AD_QLLHP_SuaLopCN.Where(m => m.MaLopHocPhan == selectedItem.MaLopHocPhan).ToList();
-            //lấy ra các lớp chuyên ngành học cùng lớp học phần
-
-
-            //tempdsLopCN = db.LopHocPhans.Where(m => m.MaLopHocPhan == selectedItem.MaLopHocPhan).SelectMany(c => c.LopChuyenNganhs).ToList();
-
-
-            gridControl1.DataSource = null;
-            gridControl1.DataSource = tempdsLopCN;
-
-
-        }
-
-        private void btnSuaDelAll_Click(object sender, EventArgs e)
-        {
-            gridControl1.DataSource = null;
-            //if (dsThem_LopCN.Count > 0) dsThem_LopCN.Clear();
-            lbSuaSiSo.Text  = "0";
-        }
 
         private void btnThemDelAll_Click(object sender, EventArgs e)
         {
             gridControl1.DataSource = null;
-            if(dsThem_LopCN.Count >0) dsThem_LopCN.Clear();
+            if(ds_grid_LopCN_current.Count >0) ds_grid_LopCN_current.Clear();
             lbThemSiSo.Text = "0";
         }
 
@@ -370,12 +452,12 @@ namespace TTNhom_QLDiem.GUI.Admin
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     int index = e.RowHandle;
-                    dsThem_LopCN.RemoveAt(index);
+                    ds_grid_LopCN_current.RemoveAt(index);
 
 
                     MessageBox.Show("Xóa thành công");
                     gridControl1.DataSource = null;
-                    gridControl1.DataSource = dsThem_LopCN;
+                    gridControl1.DataSource = ds_grid_LopCN_current;
                     LoadTongSiSo();
 
                 }
