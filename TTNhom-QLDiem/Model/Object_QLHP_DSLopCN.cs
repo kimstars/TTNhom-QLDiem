@@ -13,7 +13,5 @@ namespace TTNhom_QLDiem.Model
         public string TenLopChuyenNganh { get; set; }
 
         public int SoHocVien { get; set; }
-
-
     }
 }
