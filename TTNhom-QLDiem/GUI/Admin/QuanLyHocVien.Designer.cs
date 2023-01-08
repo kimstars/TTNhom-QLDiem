@@ -370,11 +370,11 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageSua.Controls.Add(this.btnSuaHV);
             this.xtraTabPageSua.Name = "xtraTabPageSua";
             this.xtraTabPageSua.Size = new System.Drawing.Size(1109, 255);
-            this.xtraTabPageSua.Text = "Sửa";
+            this.xtraTabPageSua.Text = "Sửa / Xóa";
             // 
             // btnXoaHV
             // 
-            this.btnXoaHV.Location = new System.Drawing.Point(773, 161);
+            this.btnXoaHV.Location = new System.Drawing.Point(773, 152);
             this.btnXoaHV.Name = "btnXoaHV";
             this.btnXoaHV.Size = new System.Drawing.Size(144, 62);
             this.btnXoaHV.TabIndex = 59;
