@@ -80,8 +80,8 @@ namespace TTNhom_QLDiem.GUI.Admin
                 List<Model.BoMon> bm = db.BoMons.ToList();
                 int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
                 gv.MaBoMon = mabm;
-                gv.MaTK = int.Parse(txtThemMaTKGV.Text);
-
+                
+                gv.MaTK = int.Parse(txtThemMaTKGV.Text);                
                 db.GiangViens.Add(gv);
                 db.SaveChanges();
 
@@ -98,9 +98,22 @@ namespace TTNhom_QLDiem.GUI.Admin
                 txtThemChucVuGV.Text = "";
                 cbThemBoMon.Text = "";
                 txtThemMaTKGV.Text = "";
+
+    
             }
         }
-
+        private void checkgiangvien(int mabm, string chucvu)
+        {
+            List<Model.GiangVien> gv = db.GiangViens.Where(p => p.MaBoMon == mabm ).ToList();
+            foreach(var item in gv.ToList())
+            {
+                if (item.ChucVu == "Chủ nhiệm bộ môn" && chucvu == "Chủ nhiệm bộ môn")
+                {
+                    MessageBox.Show("Bộ môn này đã có chủ nhiệm bộ môn. Vui lòng chọn lại chức vụ hoặc bộ môn!!!");
+                }
+            }
+        }
+        
         private void dgvTTGV_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             xtraTabPageSua.Show();
@@ -184,6 +197,27 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
 
 
+        }
+
+        private void cbThemBoMon_Click(object sender, EventArgs e)
+        {
+            //List<Model.BoMon> bm = db.BoMons.ToList();
+            //int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
+            //checkgiangvien(mabm, txtThemChucVuGV.Text);
+        }
+
+        private void cbThemBoMon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Model.BoMon> bm = db.BoMons.ToList();
+            int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
+            checkgiangvien(mabm, txtThemChucVuGV.Text);
+        }
+
+        private void cbSuaBoMon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Model.BoMon> bm = db.BoMons.ToList();
+            int mabm = bm.Find(s => s.TenBoMon == cbSuaBoMon.Text).MaBoMon;
+            checkgiangvien(mabm, txtSuaChucVuGV.Text);
         }
     }
 }
