@@ -141,6 +141,12 @@
     <Compile Include="GUI\GiangVien\TTGiangVien.Designer.cs">
       <DependentUpon>TTGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GiangVien\XemDSHocVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangVien\XemDSHocVien.Designer.cs">
+      <DependentUpon>XemDSHocVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HocVien\HV_Diem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,13 +187,12 @@
     <Compile Include="Model\Khoa.cs" />
     <Compile Include="Model\LopChuyenNganh.cs" />
     <Compile Include="Model\LopHocPhan.cs" />
+    <Compile Include="Model\Object_QLHP_DSLopCN.cs" />
     <Compile Include="Model\PhieuDiem.cs" />
     <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
-    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TTDHV.cs" />
-    <Compile Include="Model\timkiem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">
@@ -228,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\TTGiangVien.resx">
       <DependentUpon>TTGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangVien\XemDSHocVien.resx">
+      <DependentUpon>XemDSHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\HV_Diem.resx">
       <DependentUpon>HV_Diem.cs</DependentUpon>

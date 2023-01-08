@@ -43,6 +43,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.txtDiemTX = new DevExpress.XtraEditors.TextEdit();
             this.txtDiemCC = new DevExpress.XtraEditors.TextEdit();
             this.txtLopChuyenNganh = new DevExpress.XtraEditors.TextEdit();
@@ -69,7 +70,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.btnLuu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -149,6 +149,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
@@ -273,6 +274,15 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Thông tin nhập";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(329, 181);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(121, 72);
+            this.btnLuu.TabIndex = 110;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
             // txtDiemTX
             // 
             this.txtDiemTX.Location = new System.Drawing.Point(159, 231);
@@ -384,7 +394,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // txtSoTinChi
             // 
             this.txtSoTinChi.Enabled = false;
-            this.txtSoTinChi.Location = new System.Drawing.Point(423, 52);
+            this.txtSoTinChi.Location = new System.Drawing.Point(423, 58);
             this.txtSoTinChi.Name = "txtSoTinChi";
             this.txtSoTinChi.Size = new System.Drawing.Size(125, 22);
             this.txtSoTinChi.TabIndex = 106;
@@ -519,15 +529,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label1.Size = new System.Drawing.Size(51, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Học kỳ";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(329, 181);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(121, 72);
-            this.btnLuu.TabIndex = 110;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // GV_NhapDiemCC_TX
             // 

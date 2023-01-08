@@ -192,9 +192,21 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btnXoaHV_Click(object sender, EventArgs e)
         {
             Model.HocVien hv = db.HocViens.Where(m => m.MaHocVien == mahv).First();
-            if (MessageBox.Show($"Bạn có chắc chắn xóa ? {hv.HoTenHV}", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show($"Xóa học viên sẽ xóa tất cả kết quả của học viên! \nBạn có chắc chắn xóa học viên {hv.HoTenHV} ?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                List<ChiTietPhieuDiem> ctpd = db.ChiTietPhieuDiems.Where(m => m.MaHocVien == hv.MaHocVien).ToList();
+                db.ChiTietPhieuDiems.RemoveRange(ctpd);
 
+                db.HocViens.Remove(hv);
+                db.SaveChanges();
+
+
+
+                dgvDSHocVien.DataSource = null;
+                dsHocVien = db.HocViens.ToList();
+                dgvDSHocVien.DataSource = dsHocVien;
+
+                MessageBox.Show($"Xóa thành công !", "Thông báo");
             }
         }
     }
