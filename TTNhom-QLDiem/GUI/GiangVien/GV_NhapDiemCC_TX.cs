@@ -213,24 +213,47 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            ChiTietPhieuDiem ttpd2 = db.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ctpd.MaChiTietPhieuDiem).FirstOrDefault();
-
             
-            if (txtDiemCC.Text != "" && txtDiemTX.Text != "")
+
+
+            using (var ctx = new Model.QLDHV_model())
             {
-                ttpd2.DiemCC = Convert.ToDouble(txtDiemCC.Text);
-               ttpd2.DiemTX = Convert.ToDouble(txtDiemTX.Text);
+
+                ChiTietPhieuDiem ttpd2 = ctx.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ctpd.MaChiTietPhieuDiem).FirstOrDefault();
+
+                if (txtDiemCC.Text != "")
+                {
+                    ttpd2.DiemCC = Convert.ToDouble(txtDiemCC.Text);
+
+                }
+                if (txtDiemTX.Text != "")
+                {
+                    ttpd2.DiemTX = Convert.ToDouble(txtDiemTX.Text);
+
+                }
+
+                ctx.SaveChanges();
+
             }
-            else
-            {
-                MessageBox.Show("Cần nhập đủ cả hai điểm chuyên cần và thường xuyên");
-            }
-            db.SaveChanges();
+
             MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //
 
+
             dgvDSHocVien.DataSource = null;
-            DSHV(maHK, maHp, maLhp);
+            List<TTDHV> dsTTDiemHV = new List<TTDHV>();
+            using (var ctx = new Model.QLDHV_model())
+            {
+                List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
+
+                dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
+
+            }
+            dgvDSHocVien.DataSource = dsTTDiemHV;
+
+            dgvDSHocVien.Refresh();
+
+            //DSHV(maHK, maHp, maLhp);
             //LoadCTPD();
             txtMaHocVien.Text = "";
             txtTenHocVien.EditValue = null;
@@ -238,7 +261,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             txtDiemCC.Text = "";
             txtDiemTX.Text = "";
 
-           
         }
 
         private void dgvDSHocVien_View_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
