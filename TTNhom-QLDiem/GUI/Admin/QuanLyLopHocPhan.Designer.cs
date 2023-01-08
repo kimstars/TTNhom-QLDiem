@@ -88,8 +88,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.dgvLichSuTCA = new DevExpress.XtraGrid.GridControl();
-            this.dgvTCA_View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvDSLopHocPhan = new DevExpress.XtraGrid.GridControl();
+            this.dgvDSLopHocPhan_View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -117,8 +117,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSuTCA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTCA_View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -725,7 +725,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.dgvLichSuTCA);
+            this.groupControl2.Controls.Add(this.dgvDSLopHocPhan);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(493, 3);
             this.groupControl2.Name = "groupControl2";
@@ -733,20 +733,20 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "Danh sách lớp học phần";
             // 
-            // dgvLichSuTCA
+            // dgvDSLopHocPhan
             // 
-            this.dgvLichSuTCA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLichSuTCA.Location = new System.Drawing.Point(2, 28);
-            this.dgvLichSuTCA.MainView = this.dgvTCA_View;
-            this.dgvLichSuTCA.Name = "dgvLichSuTCA";
-            this.dgvLichSuTCA.Size = new System.Drawing.Size(680, 772);
-            this.dgvLichSuTCA.TabIndex = 0;
-            this.dgvLichSuTCA.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvTCA_View});
+            this.dgvDSLopHocPhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSLopHocPhan.Location = new System.Drawing.Point(2, 28);
+            this.dgvDSLopHocPhan.MainView = this.dgvDSLopHocPhan_View;
+            this.dgvDSLopHocPhan.Name = "dgvDSLopHocPhan";
+            this.dgvDSLopHocPhan.Size = new System.Drawing.Size(680, 772);
+            this.dgvDSLopHocPhan.TabIndex = 0;
+            this.dgvDSLopHocPhan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvDSLopHocPhan_View});
             // 
-            // dgvTCA_View
+            // dgvDSLopHocPhan_View
             // 
-            this.dgvTCA_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvDSLopHocPhan_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
@@ -754,14 +754,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7});
-            this.dgvTCA_View.GridControl = this.dgvLichSuTCA;
-            this.dgvTCA_View.Name = "dgvTCA_View";
-            this.dgvTCA_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDSLopHocPhan_View.GridControl = this.dgvDSLopHocPhan;
+            this.dgvDSLopHocPhan_View.Name = "dgvDSLopHocPhan_View";
+            this.dgvDSLopHocPhan_View.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã lớp HP";
-            this.gridColumn1.FieldName = "MaTCA";
+            this.gridColumn1.FieldName = "MaLopHocPhan";
             this.gridColumn1.MinWidth = 29;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -770,8 +770,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Tên học phần";
-            this.gridColumn2.FieldName = "TienAnSang";
+            this.gridColumn2.Caption = "Tên Lớp HP";
+            this.gridColumn2.FieldName = "TenLopHocPhan";
             this.gridColumn2.MinWidth = 29;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -781,7 +781,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Ngày thi";
-            this.gridColumn3.FieldName = "TienAnTrua";
+            this.gridColumn3.FieldName = "NgayThi";
             this.gridColumn3.MinWidth = 29;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -791,7 +791,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Học kỳ";
-            this.gridColumn4.FieldName = "TienAnToi";
+            this.gridColumn4.FieldName = "TenHocKy";
             this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -801,7 +801,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn5
             // 
             this.gridColumn5.Caption = "PhongHoc";
-            this.gridColumn5.FieldName = "TienAnCoBan";
+            this.gridColumn5.FieldName = "TenPhongHoc";
             this.gridColumn5.MinWidth = 29;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -811,7 +811,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn6
             // 
             this.gridColumn6.Caption = "GiangVien";
-            this.gridColumn6.FieldName = "NgayApDung";
+            this.gridColumn6.FieldName = "HoTenGV";
             this.gridColumn6.MinWidth = 29;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -861,8 +861,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSuTCA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTCA_View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan_View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -872,8 +872,8 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl dgvLichSuTCA;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvTCA_View;
+        private DevExpress.XtraGrid.GridControl dgvDSLopHocPhan;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvDSLopHocPhan_View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;

@@ -33,6 +33,9 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             //cbThemHKi.SelectedIndexChanged += cbThemHKi_SelectedIndexChanged;
 
+            List<AD_QLHP_DSLopHocPhan> dsLopHP = db.AD_QLHP_DSLopHocPhan.ToList();
+
+            dgvDSLopHocPhan.DataSource = dsLopHP;
 
             dsHocPhan = db.HocPhans.ToList();
             dsHocKy = db.HocKies.ToList();
@@ -49,6 +52,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             cbThemHKi.DataSource = dsHocKy;
             cbThemHKi.DisplayMember = "TenHocKy";
             cbThemHKi.ValueMember = "MaHocKy";
+
 
             cbThemHocPhan.DataSource = dsHocPhan;
             cbThemHocPhan.DisplayMember = "TenHocPhan";
@@ -163,9 +167,19 @@ namespace TTNhom_QLDiem.GUI.Admin
 
             MessageBox.Show($"Thêm chi tiết phiếu điểm thành công !!", "Thông báo");
 
+            gridControl1.DataSource = null;
+
+            List<AD_QLHP_DSLopHocPhan> dsLopHP = db.AD_QLHP_DSLopHocPhan.SqlQuery("select * from AD_QLHP_DSLopHocPhan").ToList<AD_QLHP_DSLopHocPhan>();
+
+            dgvDSLopHocPhan.DataSource = dsLopHP;
+
+
+            lbSuaSiSo.Text = lbThemSiSo.Text = "0";
+
+
 
         }
-       
+
 
 
         string TenHP, TenHocKi, TenPhongHoc;

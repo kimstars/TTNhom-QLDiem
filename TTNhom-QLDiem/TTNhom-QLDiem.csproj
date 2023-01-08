@@ -178,6 +178,7 @@
     </Compile>
     <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
     <Compile Include="Model\AD_QLHP_DSHocPhan.cs" />
+    <Compile Include="Model\AD_QLHP_DSLopHocPhan.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
