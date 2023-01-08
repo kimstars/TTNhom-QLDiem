@@ -177,8 +177,9 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
-    <Compile Include="Model\AD_QLHP_DSHocPhan.cs" />
-    <Compile Include="Model\AD_QLHP_DSLopHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_DSHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_DSLopHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_SuaLopCN.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
@@ -280,6 +281,7 @@
     <None Include="Resources\duong anime.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SQL\kiet.sql" />
     <Content Include="SQL\sang.sql" />
     <Content Include="SQL\Thuy_View1.sql" />
     <Content Include="SQL\xuan.sql" />

@@ -6,7 +6,7 @@ namespace TTNhom_QLDiem.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class AD_QLHP_DSLopHocPhan
+    public partial class AD_QLLHP_DSLopHocPhan
     {
         [Key]
         [Column(Order = 0)]

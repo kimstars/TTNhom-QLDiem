@@ -28,12 +28,13 @@ namespace TTNhom_QLDiem.GUI.Admin
         List<Model.GiangVien> dsGiangVien;
         List<LopChuyenNganh> dsLopCN;
 
+        List<AD_QLLHP_DSLopHocPhan> dsLopHP;
 
         private void QuanLyLopHocPhan_Load(object sender, EventArgs e)
         {
             //cbThemHKi.SelectedIndexChanged += cbThemHKi_SelectedIndexChanged;
 
-            List<AD_QLHP_DSLopHocPhan> dsLopHP = db.AD_QLHP_DSLopHocPhan.ToList();
+            dsLopHP = db.AD_QLLHP_DSLopHocPhan.ToList();
 
             dgvDSLopHocPhan.DataSource = dsLopHP;
 
@@ -87,6 +88,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             cbSuaPhongHoc.DataSource = dsPhongHoc;
             cbSuaPhongHoc.DisplayMember = "TenPhongHoc";
             cbSuaPhongHoc.ValueMember = "MaPhongHoc";
+
+
 
         }
         List<Model.HocVien> dsHocVien;
@@ -168,11 +171,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             MessageBox.Show($"Thêm chi tiết phiếu điểm thành công !!", "Thông báo");
 
             gridControl1.DataSource = null;
-
-            List<AD_QLHP_DSLopHocPhan> dsLopHP = db.AD_QLHP_DSLopHocPhan.SqlQuery("select * from AD_QLHP_DSLopHocPhan").ToList<AD_QLHP_DSLopHocPhan>();
+            dsLopHP = new List<AD_QLLHP_DSLopHocPhan>();
+            dsLopHP = db.AD_QLLHP_DSLopHocPhan.SqlQuery("select * from AD_QLLHP_DSLopHocPhan").ToList();
 
             dgvDSLopHocPhan.DataSource = dsLopHP;
-
 
             lbSuaSiSo.Text = lbThemSiSo.Text = "0";
 
@@ -257,21 +259,21 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         int TongSiSo;
 
-        void LoadTongSiSo(int sohv)
+        void LoadTongSiSo()
         {
             TongSiSo = 0;
             foreach (var item in dsThem_LopCN)
             {
-                TongSiSo += item.SoHocVien;
+                TongSiSo += (int)item.SoHocVien;
 
             }
             lbThemSiSo.Text = TongSiSo.ToString();
         }
 
-        List<Object_QLHP_DSLopCN> dsThem_LopCN = new List<Object_QLHP_DSLopCN>();
+        List<AD_QLLHP_SuaLopCN> dsThem_LopCN = new List<AD_QLLHP_SuaLopCN>();
         private void btnthemAddLopCN_Click(object sender, EventArgs e)
         {
-            Object_QLHP_DSLopCN newitem = new Object_QLHP_DSLopCN();
+            AD_QLLHP_SuaLopCN newitem = new AD_QLLHP_SuaLopCN();
 
             LopChuyenNganh templcn = dsLopCN[cbThemLopCN.SelectedIndex];
 
@@ -299,11 +301,50 @@ namespace TTNhom_QLDiem.GUI.Admin
 
             dsThem_LopCN.Add(newitem);
 
-            LoadTongSiSo(sohv);
+            LoadTongSiSo();
 
             gridControl1.DataSource = null;
             gridControl1.DataSource = dsThem_LopCN;
 
+        }
+
+        private void dgvDSLopHocPhan_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            xtraTabPage2.Show();
+            int index = e.RowHandle;
+            AD_QLLHP_DSLopHocPhan selectedItem = dsLopHP[index];
+
+            txtSuaTenLopHP.Text = selectedItem.TenLopHocPhan;
+            cbSuaHocKi.SelectedValue = selectedItem.MaHocKy;
+            cbSuaGV.SelectedValue = selectedItem.MaGiangVien;
+            cbSuaPhongHoc.SelectedValue = selectedItem.MaPhongHoc;
+            cbSuaHocPhan.SelectedValue = selectedItem.MaHocPhan;
+
+            List<AD_QLLHP_SuaLopCN> tempdsLopCN = db.AD_QLLHP_SuaLopCN.Where(m => m.MaLopHocPhan == selectedItem.MaLopHocPhan).ToList();
+            //lấy ra các lớp chuyên ngành học cùng lớp học phần
+
+
+            //tempdsLopCN = db.LopHocPhans.Where(m => m.MaLopHocPhan == selectedItem.MaLopHocPhan).SelectMany(c => c.LopChuyenNganhs).ToList();
+
+
+            gridControl1.DataSource = null;
+            gridControl1.DataSource = tempdsLopCN;
+
+
+        }
+
+        private void btnSuaDelAll_Click(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = null;
+            //if (dsThem_LopCN.Count > 0) dsThem_LopCN.Clear();
+            lbSuaSiSo.Text  = "0";
+        }
+
+        private void btnThemDelAll_Click(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = null;
+            if(dsThem_LopCN.Count >0) dsThem_LopCN.Clear();
+            lbThemSiSo.Text = "0";
         }
 
         int MaLopCN, MaGV;
@@ -335,6 +376,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                     MessageBox.Show("Xóa thành công");
                     gridControl1.DataSource = null;
                     gridControl1.DataSource = dsThem_LopCN;
+                    LoadTongSiSo();
 
                 }
                 return;

@@ -21,11 +21,11 @@ namespace TTNhom_QLDiem.GUI.Admin
             InitializeComponent();
         }
         List<Model.BoMon> lbm;
-        List<AD_QLHP_DSHocPhan> dsHocPhan;
+        List<AD_QLLHP_DSHocPhan> dsHocPhan;
         private void QuanLyHocPhan_Load(object sender, EventArgs e)
         {
-            dsHocPhan = new List<AD_QLHP_DSHocPhan>();
-            dsHocPhan = db.AD_QLHP_DSHocPhan.ToList();
+            dsHocPhan = new List<AD_QLLHP_DSHocPhan>();
+            dsHocPhan = db.AD_QLLHP_DSHocPhan.ToList();
 
             dgvDSHocPhan.DataSource = dsHocPhan;
 
@@ -65,7 +65,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                 db.SaveChanges();
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvDSHocPhan.DataSource = null;
-                dsHocPhan = db.AD_QLHP_DSHocPhan.ToList();
+                dsHocPhan = db.AD_QLLHP_DSHocPhan.ToList();
                 dgvDSHocPhan.DataSource = dsHocPhan;
                 txtThemTenHP.Text = "";
                 txtThemDonvihoctrinh.Text = "";
@@ -87,7 +87,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void dgvHP_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             int index = e.RowHandle;
-            AD_QLHP_DSHocPhan hp = dsHocPhan[index];
+            AD_QLLHP_DSHocPhan hp = dsHocPhan[index];
             int mahp = hp.MaHocPhan;
             HocPhan dbHp = db.HocPhans.Where(m => m.MaHocPhan == mahp).FirstOrDefault();
             
@@ -100,7 +100,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                     db.HocPhans.Remove(dbHp);
                     db.SaveChanges();
                     MessageBox.Show("Xóa thành công");
-                    dsHocPhan = db.AD_QLHP_DSHocPhan.ToList();
+                    dsHocPhan = db.AD_QLLHP_DSHocPhan.ToList();
                     dgvDSHocPhan.DataSource = dsHocPhan;
 
                 }
@@ -147,7 +147,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             //dgvDSHocPhan.Refresh();
             //dsHocPhan = new List<AD_QLHP_DSHocPhan>();   
             dgvDSHocPhan.DataSource = null;
-            dsHocPhan = db.AD_QLHP_DSHocPhan.ToList();
+            dsHocPhan = db.AD_QLLHP_DSHocPhan.ToList();
             dgvDSHocPhan.DataSource = dsHocPhan;
         }
 
