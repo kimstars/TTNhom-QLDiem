@@ -29,12 +29,12 @@ namespace TTNhom_QLDiem.GUI.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyLopChuyenNganh));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgvDSLopCN = new DevExpress.XtraGrid.GridControl();
@@ -48,7 +48,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.them = new DevExpress.XtraTab.XtraTabControl();
+            this.Thêm = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageThem = new DevExpress.XtraTab.XtraTabPage();
             this.txtTenBM = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -87,8 +87,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.them)).BeginInit();
-            this.them.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Thêm)).BeginInit();
+            this.Thêm.SuspendLayout();
             this.xtraTabPageThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenBM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLopTruong.Properties)).BeginInit();
@@ -157,6 +157,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridView1.DetailHeight = 329;
             this.gridView1.GridControl = this.dgvDSLopCN;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvTTCB_View_RowClick);
             // 
@@ -234,16 +235,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // groupControl2
             // 
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl2.Controls.Add(this.them);
+            this.groupControl2.Controls.Add(this.Thêm);
             this.groupControl2.Controls.Add(this.txtTenHV);
             this.groupControl2.Controls.Add(this.txtMaHV);
             this.groupControl2.Controls.Add(this.label2);
@@ -255,7 +256,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "QL Lớp chuyên ngành";
             // 
-            // them
+            // Thêm
             // 
             this.Thêm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Thêm.Location = new System.Drawing.Point(2, 28);
@@ -586,6 +587,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "QuanLyLopChuyenNganh";
             this.Size = new System.Drawing.Size(911, 628);
+            this.Load += new System.EventHandler(this.QuanLyLopChuyenNganh_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -596,8 +598,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.them)).EndInit();
-            this.them.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Thêm)).EndInit();
+            this.Thêm.ResumeLayout(false);
             this.xtraTabPageThem.ResumeLayout(false);
             this.xtraTabPageThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenBM.Properties)).EndInit();
@@ -631,7 +633,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraTab.XtraTabControl them;
+        private DevExpress.XtraTab.XtraTabControl Thêm;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageThem;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.ComboBox cbMaloptruong;
