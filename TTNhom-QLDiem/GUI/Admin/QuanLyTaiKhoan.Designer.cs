@@ -314,7 +314,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtThemTenDangNhap.Properties.Appearance.Options.UseFont = true;
             this.txtThemTenDangNhap.Size = new System.Drawing.Size(181, 24);
             this.txtThemTenDangNhap.TabIndex = 80;
-            this.txtThemTenDangNhap.EditValueChanged += new System.EventHandler(this.txtThemTenDangNhap_EditValueChanged);
+         
             // 
             // txtThemMatKhau
             // 
@@ -342,7 +342,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtSuaTenDangNhap.Properties.Appearance.Options.UseFont = true;
             this.txtSuaTenDangNhap.Size = new System.Drawing.Size(181, 24);
             this.txtSuaTenDangNhap.TabIndex = 92;
-            this.txtSuaTenDangNhap.EditValueChanged += new System.EventHandler(this.txtSuaTenDangNhap_EditValueChanged);
+          
             // 
             // label1
             // 

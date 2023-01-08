@@ -102,10 +102,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
         }
 
-        private void txtThemTenDangNhap_EditValueChanged(object sender, EventArgs e)
-        {
-           // checkTenTK(txtThemTenDangNhap.Text);
-        }
+       
         private bool checkTenTK(string Tentk)
         {
             ltk = new List<Model.TaiKhoan>();
@@ -219,10 +216,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         }
 
-        private void txtSuaTenDangNhap_EditValueChanged(object sender, EventArgs e)
-        {
-           // checkTenTK(txtSuaTenDangNhap.Text);
-        }
+       
 
         private void bntXoaTaiKhoan_Click(object sender, EventArgs e)
         {
