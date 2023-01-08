@@ -100,7 +100,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private void dgvTTCB_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            xtraTabPage2.Show();
+            xtraTabPageSua.Show();
             int index = e.RowHandle;
             LopChuyenNganh lopcn = lcn[index];
             textMaLopCN.Text = lopcn.MaLopChuyenNganh.ToString();

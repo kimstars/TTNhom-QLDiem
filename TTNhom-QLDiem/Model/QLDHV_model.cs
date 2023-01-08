@@ -26,7 +26,6 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<AD_LopChuyenNganh> AD_LopChuyenNganh { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
-        public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -69,15 +68,9 @@ namespace TTNhom_QLDiem.Model
                 .WithRequired(e => e.HocVien)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<HocVien>()
-                .HasMany(e => e.LopChuyenNganhs)
-                .WithOptional(e => e.HocVien)
-                .HasForeignKey(e => e.MaLopTruong);
-
             modelBuilder.Entity<LopChuyenNganh>()
                 .HasMany(e => e.HocViens)
                 .WithRequired(e => e.LopChuyenNganh)
-                .HasForeignKey(e => e.MaLopChuyenNganh)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<LopChuyenNganh>()
@@ -111,13 +104,6 @@ namespace TTNhom_QLDiem.Model
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
-<<<<<<< HEAD
-
-            modelBuilder.Entity<TTDHV>()
-                .Property(e => e.TenHocKy)
-                .IsUnicode(false);
-=======
->>>>>>> QLDIEM̀̀-51 Đã thêm được lớp chuyên ngành nhưng chưa select để sửa được
         }
     }
 }

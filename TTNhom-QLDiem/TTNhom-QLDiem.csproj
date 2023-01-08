@@ -188,12 +188,10 @@
     <Compile Include="Model\Khoa.cs" />
     <Compile Include="Model\LopChuyenNganh.cs" />
     <Compile Include="Model\LopHocPhan.cs" />
-    <Compile Include="Model\Object_QLHP_DSLopCN.cs" />
     <Compile Include="Model\PhieuDiem.cs" />
     <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
-    <Compile Include="Model\TTDHV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">

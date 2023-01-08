@@ -28,8 +28,6 @@ namespace TTNhom_QLDiem.Model
 
         public virtual BoMon BoMon { get; set; }
 
-        public virtual HocVien HocVien { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HocVien> HocViens { get; set; }
 
