@@ -92,7 +92,6 @@ namespace TTNhom_QLDiem.Model
             modelBuilder.Entity<PhieuDiem>()
                 .HasMany(e => e.ChiTietPhieuDiems)
                 .WithRequired(e => e.PhieuDiem)
-                .HasForeignKey(e => e.MaHocVien)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TaiKhoan>()

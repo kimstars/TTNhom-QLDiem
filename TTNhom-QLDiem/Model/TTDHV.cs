@@ -50,5 +50,21 @@ namespace TTNhom_QLDiem.Model
         [Column(Order = 4)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaHocPhan { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaLopHocPhan { get; set; }
+
+        [Key]
+        [Column(Order = 6)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaChiTietPhieuDiem { get; set; }
+
+        [StringLength(150)]
+        public string TenLopChuyenNganh { get; set; }
+
+        [StringLength(100)]
+        public string GhiChu { get; set; }
     }
 }

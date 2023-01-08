@@ -26,7 +26,7 @@ namespace TTNhom_QLDiem.Model
         public int MaHocKy { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgayThi { get; set; }
+        public DateTime NgayThi { get; set; }
 
         public int? MaPhongHoc { get; set; }
 

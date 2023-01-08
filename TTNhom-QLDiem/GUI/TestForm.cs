@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTNhom_QLDiem.GUI;
+using TTNhom_QLDiem.GUI.GiangVien;
 
 
 namespace TTNhom_QLDiem.GUI
@@ -22,9 +23,11 @@ namespace TTNhom_QLDiem.GUI
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            Admin.QuanLyLopHocPhan testform = new Admin.QuanLyLopHocPhan();
+            //Admin.QuanLyLopHocPhan testform = new Admin.QuanLyLopHocPhan();
+            GV_NhapDiemThi testform = new GV_NhapDiemThi();
             panelshow.Controls.Add(testform);
             testform.Dock = DockStyle.Fill;
+
         }
     }
 }
