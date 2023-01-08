@@ -254,6 +254,9 @@ namespace TTNhom_QLDiem.GUI
             uc36.BringToFront();
         }
 
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
+        }
     }
 }

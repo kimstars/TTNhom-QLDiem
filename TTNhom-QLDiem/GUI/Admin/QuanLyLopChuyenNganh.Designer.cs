@@ -36,49 +36,49 @@ namespace TTNhom_QLDiem.GUI.Admin
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.txtTenHV = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaHV = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColMaHV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColTenHV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.Thêm = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageThem = new DevExpress.XtraTab.XtraTabPage();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtThemTenHV = new DevExpress.XtraEditors.TextEdit();
             this.label16 = new System.Windows.Forms.Label();
             this.xtraTabPageSua = new DevExpress.XtraTab.XtraTabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new System.Windows.Forms.Label();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.txtTenHV = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaHV = new DevExpress.XtraEditors.TextEdit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenHV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaHV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Thêm)).BeginInit();
             this.Thêm.SuspendLayout();
             this.xtraTabPageThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenHV.Properties)).BeginInit();
             this.xtraTabPageSua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaHV.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -96,67 +96,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(911, 628);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl2.Controls.Add(this.Thêm);
-            this.groupControl2.Controls.Add(this.txtTenHV);
-            this.groupControl2.Controls.Add(this.txtMaHV);
-            this.groupControl2.Controls.Add(this.label2);
-            this.groupControl2.Controls.Add(this.label1);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(3, 3);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(302, 622);
-            this.groupControl2.TabIndex = 5;
-            this.groupControl2.Text = "QL Lớp chuyên ngành";
-            // 
-            // txtTenHV
-            // 
-            this.txtTenHV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTenHV.Location = new System.Drawing.Point(477, 113);
-            this.txtTenHV.Name = "txtTenHV";
-            this.txtTenHV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenHV.Properties.Appearance.Options.UseFont = true;
-            this.txtTenHV.Size = new System.Drawing.Size(177, 24);
-            this.txtTenHV.TabIndex = 9;
-            // 
-            // txtMaHV
-            // 
-            this.txtMaHV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtMaHV.Location = new System.Drawing.Point(477, 54);
-            this.txtMaHV.Name = "txtMaHV";
-            this.txtMaHV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaHV.Properties.Appearance.Options.UseFont = true;
-            this.txtMaHV.Size = new System.Drawing.Size(177, 24);
-            this.txtMaHV.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(474, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tên học viên";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(474, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã học viên";
             // 
             // groupControl1
             // 
@@ -216,6 +155,50 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColTenHV.VisibleIndex = 1;
             this.gridColTenHV.Width = 227;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Bộ môn";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.Width = 198;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Xóa";
+            this.gridColumn2.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.Width = 70;
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.groupControl2.Controls.Add(this.Thêm);
+            this.groupControl2.Controls.Add(this.txtTenHV);
+            this.groupControl2.Controls.Add(this.txtMaHV);
+            this.groupControl2.Controls.Add(this.label2);
+            this.groupControl2.Controls.Add(this.label1);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(3, 3);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(302, 622);
+            this.groupControl2.TabIndex = 5;
+            this.groupControl2.Text = "QL Lớp chuyên ngành";
+            // 
             // Thêm
             // 
             this.Thêm.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -239,6 +222,22 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageThem.Name = "xtraTabPageThem";
             this.xtraTabPageThem.Size = new System.Drawing.Size(296, 561);
             this.xtraTabPageThem.Text = "Thêm";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(30, 177);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(235, 40);
+            this.btnThem.TabIndex = 24;
+            this.btnThem.Text = "Thêm lớp CN";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(30, 128);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(235, 24);
+            this.comboBox1.TabIndex = 23;
             // 
             // label7
             // 
@@ -288,13 +287,13 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageSua.Size = new System.Drawing.Size(296, 561);
             this.xtraTabPageSua.Text = "Sửa";
             // 
-            // comboBox1
+            // simpleButton2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(30, 128);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 24);
-            this.comboBox1.TabIndex = 23;
+            this.simpleButton2.Location = new System.Drawing.Point(27, 177);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(235, 40);
+            this.simpleButton2.TabIndex = 28;
+            this.simpleButton2.Text = "Lưu thay đổi";
             // 
             // comboBox2
             // 
@@ -332,50 +331,51 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label4.TabIndex = 25;
             this.label4.Text = "Tên lớp CN";
             // 
-            // gridColumn1
+            // txtTenHV
             // 
-            this.gridColumn1.Caption = "Bộ môn";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 198;
+            this.txtTenHV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTenHV.Location = new System.Drawing.Point(477, 113);
+            this.txtTenHV.Name = "txtTenHV";
+            this.txtTenHV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenHV.Properties.Appearance.Options.UseFont = true;
+            this.txtTenHV.Size = new System.Drawing.Size(177, 24);
+            this.txtTenHV.TabIndex = 9;
             // 
-            // btnThem
+            // txtMaHV
             // 
-            this.btnThem.Location = new System.Drawing.Point(30, 177);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(235, 40);
-            this.btnThem.TabIndex = 24;
-            this.btnThem.Text = "Thêm lớp CN";
+            this.txtMaHV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMaHV.Location = new System.Drawing.Point(477, 54);
+            this.txtMaHV.Name = "txtMaHV";
+            this.txtMaHV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHV.Properties.Appearance.Options.UseFont = true;
+            this.txtMaHV.Size = new System.Drawing.Size(177, 24);
+            this.txtMaHV.TabIndex = 8;
             // 
-            // simpleButton2
+            // label2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(27, 177);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(235, 40);
-            this.simpleButton2.TabIndex = 28;
-            this.simpleButton2.Text = "Lưu thay đổi";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(474, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tên học viên";
             // 
-            // gridColumn2
+            // label1
             // 
-            this.gridColumn2.Caption = "Xóa";
-            this.gridColumn2.ColumnEdit = this.repositoryItemButtonEdit1;
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 70;
-            // 
-            // repositoryItemButtonEdit1
-            // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(474, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã học viên";
             // 
             // QuanLyLopChuyenNganh
             // 
@@ -386,15 +386,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Size = new System.Drawing.Size(911, 628);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenHV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaHV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Thêm)).EndInit();
             this.Thêm.ResumeLayout(false);
             this.xtraTabPageThem.ResumeLayout(false);
@@ -403,7 +402,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageSua.ResumeLayout(false);
             this.xtraTabPageSua.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaHV.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
