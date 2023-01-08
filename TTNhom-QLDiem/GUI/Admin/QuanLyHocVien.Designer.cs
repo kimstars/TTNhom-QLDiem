@@ -348,11 +348,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPageSua
             // 
-            this.xtraTabPageSua.Controls.Add(this.btnXoaHV);
-            this.xtraTabPageSua.Controls.Add(this.txtSuaQQ);
-            this.xtraTabPageSua.Controls.Add(this.label12);
-            this.xtraTabPageSua.Controls.Add(this.cbSuaGT);
-            this.xtraTabPageSua.Controls.Add(this.label7);
             this.xtraTabPageSua.Controls.Add(this.cbSuaChucVu);
             this.xtraTabPageSua.Controls.Add(this.cbSuaLopChuyenNganh);
             this.xtraTabPageSua.Controls.Add(this.label1);
@@ -430,11 +425,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // cbSuaLopChuyenNganh
             // 
-            this.cbSuaLopChuyenNganh.FormattingEnabled = true;
-            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(425, 105);
+            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(0, 0);
             this.cbSuaLopChuyenNganh.Name = "cbSuaLopChuyenNganh";
-            this.cbSuaLopChuyenNganh.Size = new System.Drawing.Size(285, 24);
-            this.cbSuaLopChuyenNganh.TabIndex = 53;
+            this.cbSuaLopChuyenNganh.Size = new System.Drawing.Size(121, 24);
+            this.cbSuaLopChuyenNganh.TabIndex = 55;
             // 
             // label1
             // 
