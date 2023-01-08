@@ -53,16 +53,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemHV = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPageSua = new DevExpress.XtraTab.XtraTabPage();
-<<<<<<<<< Temporary merge branch 1
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-=========
             this.btnXoaHV = new DevExpress.XtraEditors.SimpleButton();
             this.txtSuaQQ = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new System.Windows.Forms.Label();
             this.cbSuaGT = new System.Windows.Forms.ComboBox();
->>>>>>>>> Temporary merge branch 2
             this.label7 = new System.Windows.Forms.Label();
             this.cbSuaChucVu = new System.Windows.Forms.ComboBox();
             this.cbSuaLopChuyenNganh = new System.Windows.Forms.ComboBox();
@@ -102,11 +96,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemCapBacHV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenHV.Properties)).BeginInit();
             this.xtraTabPageSua.SuspendLayout();
-<<<<<<<<< Temporary merge branch 1
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-=========
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaQQ.Properties)).BeginInit();
->>>>>>>>> Temporary merge branch 2
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacHV.Properties)).BeginInit();
@@ -236,7 +226,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnThemTK
             // 
-            this.btnThemTK.Location = new System.Drawing.Point(419, 210);
+            this.btnThemTK.Location = new System.Drawing.Point(516, 210);
             this.btnThemTK.Name = "btnThemTK";
             this.btnThemTK.Size = new System.Drawing.Size(188, 28);
             this.btnThemTK.TabIndex = 29;
@@ -361,6 +351,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPageSua
             // 
+            this.xtraTabPageSua.Controls.Add(this.btnXoaHV);
             this.xtraTabPageSua.Controls.Add(this.txtSuaQQ);
             this.xtraTabPageSua.Controls.Add(this.label12);
             this.xtraTabPageSua.Controls.Add(this.cbSuaGT);
@@ -381,16 +372,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageSua.Size = new System.Drawing.Size(1109, 255);
             this.xtraTabPageSua.Text = "Sửa";
             // 
-<<<<<<<<< Temporary merge branch 1
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(422, 167);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textEdit1.Size = new System.Drawing.Size(285, 22);
-            this.textEdit1.TabIndex = 57;
-=========
             // btnXoaHV
             // 
             this.btnXoaHV.Location = new System.Drawing.Point(773, 161);
@@ -403,54 +384,36 @@ namespace TTNhom_QLDiem.GUI.Admin
             // txtSuaQQ
             // 
             this.txtSuaQQ.EditValue = "";
-            this.txtSuaQQ.Location = new System.Drawing.Point(422, 167);
+            this.txtSuaQQ.Location = new System.Drawing.Point(413, 158);
             this.txtSuaQQ.Name = "txtSuaQQ";
             this.txtSuaQQ.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSuaQQ.Size = new System.Drawing.Size(285, 22);
             this.txtSuaQQ.TabIndex = 57;
->>>>>>>>> Temporary merge branch 2
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(422, 141);
+            this.label12.Location = new System.Drawing.Point(413, 132);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 17);
             this.label12.TabIndex = 58;
             this.label12.Text = "Quê quán";
             // 
-<<<<<<<<< Temporary merge branch 1
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(45, 161);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 24);
-            this.comboBox1.TabIndex = 56;
-=========
             // cbSuaGT
             // 
             this.cbSuaGT.FormattingEnabled = true;
             this.cbSuaGT.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbSuaGT.Location = new System.Drawing.Point(45, 161);
+            this.cbSuaGT.Location = new System.Drawing.Point(36, 152);
             this.cbSuaGT.Name = "cbSuaGT";
             this.cbSuaGT.Size = new System.Drawing.Size(238, 24);
             this.cbSuaGT.TabIndex = 56;
->>>>>>>>> Temporary merge branch 2
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-<<<<<<<<< Temporary merge branch 1
-            this.label7.Location = new System.Drawing.Point(45, 141);
-=========
-            this.label7.Location = new System.Drawing.Point(44, 141);
->>>>>>>>> Temporary merge branch 2
+            this.label7.Location = new System.Drawing.Point(36, 132);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 55;
@@ -459,15 +422,11 @@ namespace TTNhom_QLDiem.GUI.Admin
             // cbSuaChucVu
             // 
             this.cbSuaChucVu.FormattingEnabled = true;
-<<<<<<<<< Temporary merge branch 1
-            this.cbSuaChucVu.Location = new System.Drawing.Point(422, 57);
-=========
             this.cbSuaChucVu.Items.AddRange(new object[] {
             "Lớp trưởng",
             "Lớp phó",
             "Học viên"});
-            this.cbSuaChucVu.Location = new System.Drawing.Point(425, 57);
->>>>>>>>> Temporary merge branch 2
+            this.cbSuaChucVu.Location = new System.Drawing.Point(413, 48);
             this.cbSuaChucVu.Name = "cbSuaChucVu";
             this.cbSuaChucVu.Size = new System.Drawing.Size(285, 24);
             this.cbSuaChucVu.TabIndex = 54;
@@ -475,11 +434,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // cbSuaLopChuyenNganh
             // 
             this.cbSuaLopChuyenNganh.FormattingEnabled = true;
-<<<<<<<<< Temporary merge branch 1
-            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(422, 105);
-=========
-            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(425, 105);
->>>>>>>>> Temporary merge branch 2
+            this.cbSuaLopChuyenNganh.Location = new System.Drawing.Point(413, 96);
             this.cbSuaLopChuyenNganh.Name = "cbSuaLopChuyenNganh";
             this.cbSuaLopChuyenNganh.Size = new System.Drawing.Size(285, 24);
             this.cbSuaLopChuyenNganh.TabIndex = 53;
@@ -570,13 +525,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnSuaHV
             // 
-<<<<<<<<< Temporary merge branch 1
-            this.btnSuaHV.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaHV.Appearance.Options.UseFont = true;
-            this.btnSuaHV.Location = new System.Drawing.Point(766, 57);
-=========
             this.btnSuaHV.Location = new System.Drawing.Point(773, 54);
->>>>>>>>> Temporary merge branch 2
             this.btnSuaHV.Name = "btnSuaHV";
             this.btnSuaHV.Size = new System.Drawing.Size(144, 68);
             this.btnSuaHV.TabIndex = 21;
@@ -736,11 +685,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenHV.Properties)).EndInit();
             this.xtraTabPageSua.ResumeLayout(false);
             this.xtraTabPageSua.PerformLayout();
-<<<<<<<<< Temporary merge branch 1
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-=========
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaQQ.Properties)).EndInit();
->>>>>>>>> Temporary merge branch 2
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhHV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacHV.Properties)).EndInit();
@@ -807,5 +752,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private System.Windows.Forms.ComboBox cbSuaGT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbSuaLopChuyenNganh;
+        private DevExpress.XtraEditors.SimpleButton btnXoaHV;
     }
 }

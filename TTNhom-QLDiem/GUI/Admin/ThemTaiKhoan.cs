@@ -76,8 +76,8 @@ namespace TTNhom_QLDiem.GUI.Admin
                 }
 
                 txtUsername.Text = "" ;
-                txtPassword.Text = "" ; 
-                cbQuyen.Text == ""
+                txtPassword.Text = "" ;
+                cbQuyen.Text = "" ;
             }
             
 
