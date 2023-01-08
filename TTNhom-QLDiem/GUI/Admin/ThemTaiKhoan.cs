@@ -63,7 +63,9 @@ namespace TTNhom_QLDiem.GUI.Admin
                 db.TaiKhoans.Add(newtk);
 
                 db.SaveChanges();
+                MessageBox.Show("Thêm tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MessageBox.Show(newtk.MaTK.ToString());
+
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 cbQuyen.Text = "";
