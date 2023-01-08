@@ -134,6 +134,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             txtEditLopCN.Text = lopcn.TenLopChuyenNganh;
             cbEditMaLP.Text = lopcn.MaLopTruong.ToString();
             cbEditMaBM.Text = lopcn.MaBoMon.ToString();
+            if (cbEditMaLP.Text == "")
+            {
+                textEditLopTruong.Text = "";
+            }
+            else
+            {
+                textEditLopTruong.Text = db.HocViens.Where(s => s.MaHocVien.ToString() == cbEditMaLP.Text).FirstOrDefault().HoTenHV;
+            }
         }
 
         private void cbMaloptruong_TextChanged(object sender, EventArgs e)
@@ -147,7 +155,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         }
 
         private void cbEditMaLP_TextChanged(object sender, EventArgs e)
-        {
+        {   
             textEditLopTruong.Text = db.HocViens.Where(s => s.MaHocVien.ToString() == cbEditMaLP.Text).FirstOrDefault().HoTenHV;
         }
 
