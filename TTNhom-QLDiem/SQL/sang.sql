@@ -8,3 +8,18 @@ join LopHocPhan on PhieuDiem.MaLopHocPhan=LopHocPhan.MaLopHocPhan
 join HocPhan on  LopHocPhan.MaHocPhan=HocPhan.MaHocPhan
 join HocKy on LopHocPhan.MaHocKy=HocKy.MaHocKy
 
+
+GO
+
+CREATE TRIGGER tr_UpdateTongKetDiem
+ON dbo.ChiTietPhieuDiem
+AFTER INSERT, update
+AS
+BEGIN
+    UPDATE dbo.ChiTietPhieuDiem
+    SET ChiTietPhieuDiem.DiemTK = (ChiTietPhieuDiem.DiemCC + ChiTietPhieuDiem.DiemTX*3 + ChiTietPhieuDiem.DiemThi*6) / 10
+    FROM inserted i
+    WHERE i.MaHocVien = dbo.ChiTietPhieuDiem.MaHocVien;
+END;
+
+

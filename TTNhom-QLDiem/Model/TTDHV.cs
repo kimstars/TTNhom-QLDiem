@@ -6,7 +6,8 @@ namespace TTNhom_QLDiem.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class ADV_TraCuuDiemHV
+    [Table("TTDHV")]
+    public partial class TTDHV
     {
         [Key]
         [Column(Order = 0)]
@@ -15,13 +16,6 @@ namespace TTNhom_QLDiem.Model
 
         [StringLength(70)]
         public string HoTenHV { get; set; }
-
-        [Key]
-        [Column(Order = 1, TypeName = "date")]
-        public DateTime NgaySinh { get; set; }
-
-        [StringLength(150)]
-        public string TenLopChuyenNganh { get; set; }
 
         [StringLength(100)]
         public string TenHocPhan { get; set; }
@@ -32,7 +26,29 @@ namespace TTNhom_QLDiem.Model
 
         public double? DiemThi { get; set; }
 
+        public double? DiemTK { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(70)]
+        public string HoTenGV { get; set; }
+
         [StringLength(20)]
         public string TenHocKy { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaHocKy { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaGiangVien { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaHocPhan { get; set; }
     }
 }

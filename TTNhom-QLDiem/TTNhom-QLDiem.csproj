@@ -184,6 +184,7 @@
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
+    <Compile Include="Model\GV_TTHocVien_NhapDiem.cs" />
     <Compile Include="Model\HocKy.cs" />
     <Compile Include="Model\HocPhan.cs" />
     <Compile Include="Model\HocVien.cs" />
@@ -194,6 +195,7 @@
     <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Model\TTDHV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\ADGV_TraCuuDiemThi.resx">

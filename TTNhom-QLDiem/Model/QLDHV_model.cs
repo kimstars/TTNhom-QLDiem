@@ -29,6 +29,8 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<AD_QLLHP_DSLopHocPhan> AD_QLLHP_DSLopHocPhan { get; set; }
         public virtual DbSet<AD_QLLHP_SuaLopCN> AD_QLLHP_SuaLopCN { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
+        public virtual DbSet<GV_TTHocVien_NhapDiem> GV_TTHocVien_NhapDiem { get; set; }
+        public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -71,9 +73,15 @@ namespace TTNhom_QLDiem.Model
                 .WithRequired(e => e.HocVien)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<HocVien>()
+                .HasMany(e => e.LopChuyenNganhs)
+                .WithOptional(e => e.HocVien)
+                .HasForeignKey(e => e.MaLopTruong);
+
             modelBuilder.Entity<LopChuyenNganh>()
                 .HasMany(e => e.HocViens)
                 .WithRequired(e => e.LopChuyenNganh)
+                .HasForeignKey(e => e.MaLopChuyenNganh)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<LopChuyenNganh>()
@@ -108,6 +116,10 @@ namespace TTNhom_QLDiem.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
+                .Property(e => e.TenHocKy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TTDHV>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
         }
