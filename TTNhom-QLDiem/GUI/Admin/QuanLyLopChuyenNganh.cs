@@ -37,8 +37,11 @@ namespace TTNhom_QLDiem.GUI.Admin
             cbEditMaLP.Text = "";
             txtLopTruong.Text = "";
             textEditLopTruong.Text = "";
-            dgvDSLopCN.Refresh();
-            dgvDSLopCN.DataSource = db.AD_LopChuyenNganh.ToList();
+            textMaLopCN.Text = "";
+            QLDHV_model db1 = new QLDHV_model();
+            dgvDSLopCN.DataSource = null;
+            dsViewLopCN = db1.AD_LopChuyenNganh.ToList();
+            dgvDSLopCN.DataSource = dsViewLopCN;
         }
         private void getMaLP()
         {
@@ -61,7 +64,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btnThemCB_Click(object sender, EventArgs e)
         {
             LopChuyenNganh lopcn = new LopChuyenNganh();
-            if (CheckThemSualopCN())
+            if (CheckThemlopCN())
             {
                 lopcn.TenLopChuyenNganh = txtThemTenLopCN.Text;
                 lopcn.MaBoMon = int.Parse(cbMaBM.Text);
@@ -84,7 +87,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btnSuaLopCN_Click(object sender, EventArgs e)
         {
             LopChuyenNganh lopcn = db.LopChuyenNganhs.Where(s => s.MaLopChuyenNganh == macn).FirstOrDefault();
-            if (CheckThemSualopCN())
+            if (CheckSualopCN())
             {
                 lopcn.TenLopChuyenNganh = txtEditLopCN.Text;
                 lopcn.MaBoMon = int.Parse(cbEditMaBM.Text);
@@ -94,9 +97,19 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
             reload();
         }
-        public bool CheckThemSualopCN()
+        public bool CheckThemlopCN()
         {
             if (txtThemTenLopCN.Text == "" || cbMaBM.Text == "" )
+            {
+                MessageBox.Show("Thông tin Lớp Chuyên Ngành không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+
+        }
+        public bool CheckSualopCN()
+        {
+            if (txtEditLopCN.Text == "" || cbEditMaBM.Text == "")
             {
                 MessageBox.Show("Thông tin Lớp Chuyên Ngành không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
