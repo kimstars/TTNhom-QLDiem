@@ -65,7 +65,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             {
                 lopcn.TenLopChuyenNganh = txtThemTenLopCN.Text;
                 lopcn.MaBoMon = int.Parse(cbMaBM.Text);
-                lopcn.MaLopTruong = int.Parse(cbMaloptruong.Text);
+                if (cbMaloptruong.Text != "")
+                {
+                    lopcn.MaLopTruong = int.Parse(cbMaloptruong.Text);
+                }
+                else
+                {
+                    lopcn.MaLopTruong = null;
+                }
                 db.LopChuyenNganhs.Add(lopcn);
                 db.SaveChanges();
 
@@ -102,7 +109,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             xtraTabPageSua.Show();
             int index = e.RowHandle;
-            LopChuyenNganh lopcn = lcn[index];
+            AD_LopChuyenNganh lopcn = dsViewLopCN[index];
             textMaLopCN.Text = lopcn.MaLopChuyenNganh.ToString();
             macn = lopcn.MaLopChuyenNganh;
             txtEditLopCN.Text = lopcn.TenLopChuyenNganh;
