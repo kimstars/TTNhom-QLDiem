@@ -53,7 +53,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemHV = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPageSua = new DevExpress.XtraTab.XtraTabPage();
-            this.btnXoaHV = new DevExpress.XtraEditors.SimpleButton();
             this.txtSuaQQ = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new System.Windows.Forms.Label();
             this.cbSuaGT = new System.Windows.Forms.ComboBox();
@@ -348,7 +347,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPageSua
             // 
-            this.xtraTabPageSua.Controls.Add(this.btnXoaHV);
             this.xtraTabPageSua.Controls.Add(this.txtSuaQQ);
             this.xtraTabPageSua.Controls.Add(this.label12);
             this.xtraTabPageSua.Controls.Add(this.cbSuaGT);
@@ -368,15 +366,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageSua.Name = "xtraTabPageSua";
             this.xtraTabPageSua.Size = new System.Drawing.Size(1109, 255);
             this.xtraTabPageSua.Text = "Sửa";
-            // 
-            // btnXoaHV
-            // 
-            this.btnXoaHV.Location = new System.Drawing.Point(773, 161);
-            this.btnXoaHV.Name = "btnXoaHV";
-            this.btnXoaHV.Size = new System.Drawing.Size(144, 62);
-            this.btnXoaHV.TabIndex = 59;
-            this.btnXoaHV.Text = "Xóa học viên";
-            this.btnXoaHV.Click += new System.EventHandler(this.btnXoaHV_Click);
             // 
             // txtSuaQQ
             // 
@@ -522,7 +511,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnSuaHV
             // 
-            this.btnSuaHV.Location = new System.Drawing.Point(773, 54);
+            this.btnSuaHV.Location = new System.Drawing.Point(773, 55);
             this.btnSuaHV.Name = "btnSuaHV";
             this.btnSuaHV.Size = new System.Drawing.Size(144, 68);
             this.btnSuaHV.TabIndex = 21;
@@ -749,6 +738,5 @@ namespace TTNhom_QLDiem.GUI.Admin
         private System.Windows.Forms.ComboBox cbSuaGT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbSuaLopChuyenNganh;
-        private DevExpress.XtraEditors.SimpleButton btnXoaHV;
     }
 }
