@@ -36,11 +36,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbbHocKy.DataSource = lstHocKy;
             cbbHocKy.DisplayMember = "TenHocKy";
             cbbHocKy.ValueMember = "MaHocKy";
-            cbbHocKy.SelectedIndex = 0;
-            maHK = 0;
+            cbbHocKy.SelectedIndex = -1;
+            cbbHocKy.Text = "";
+            //maHK = 0;
 
-            LoadCBBHocPhan();
-            LoadCBBLopHocPhan();
+            //LoadCBBHocPhan(maHK);
             txtNgayThi.Text = "";
             txtSoTinChi.Text = "";
             txtHanNhapDiem.Text = "";
@@ -50,36 +50,18 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbbLopHocPhan.SelectedIndexChanged += cbbLopHocPhan_SelectedIndexChanged;
 
         }
-        private void LoadCBBHocPhan()
-        {
-            lstHocPhan = (from hp in db.HocPhans
-                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
-                          where lhp.MaGiangVien == MainForm.MaID
-                          select hp).ToList();
-            if(lstHocPhan.Count==0)
-            {
-                MessageBox.Show("Không dạy học phần nào");
-            }
-            cbbHocPhan.DataSource = lstHocPhan;
-            cbbHocPhan.ValueMember = "MaHocPhan";
-            cbbHocPhan.DisplayMember = "TenHocPhan";
-            cbbHocPhan.SelectedIndex = -1;
-        }
-        private void LoadCBBLopHocPhan()
-        {
-            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID).ToList();
-            
-            cbbLopHocPhan.DataSource = lstLopHocPhan;
-            cbbLopHocPhan.DisplayMember = "TenLopHocPhan";
-            cbbLopHocPhan.ValueMember = "MaLopHocPhan";
-            cbbLopHocPhan.SelectedIndex = -1;
-        }
+       
         private void DSHV(int maHK, int maHp, int maLhp)
         {
-            List<TTDHV> DSHV = db.TTDHVs.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp && m.MaGiangVien == MainForm.MaID).ToList();
+            List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp && m.MaGiangVien == MainForm.MaID).ToList();
 
             dgvDSHocVien.DataSource = DSHV;
+        }
+        private void DSHV( int maHK, int MaHp)
+        {
+            List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaGiangVien == MainForm.MaID).ToList();
 
+            dgvDSHocVien.DataSource = DSHV;
         }
         private void cbbHocKy_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -87,109 +69,74 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
             maHK = lstHocKy[id].MaHocKy;
-            if(cbbHocPhan.SelectedIndex ==-1 && cbbLopHocPhan.SelectedIndex == -1)
-            {
-                
-            }
             lstHocPhan = (from hp in db.HocPhans
                           join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
-                          where lhp.MaGiangVien == MainForm.MaID
+                          where lhp.MaGiangVien == MainForm.MaID && lhp.MaHocKy == maHK
                           select hp).ToList();
-            LoadCBBHocPhan();
-            maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
-            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == maHp).ToList();
-
-            maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
-            DSHV(maHK, maHp, maLhp);
-
-        }
-
-        /*private void LoadCBBHocPhan()
-        {
-            //cbbHocPhan.Items.Clear();
-            lstHocPhan = (from hp in db.HocPhans
-                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
-                          where lhp.MaGiangVien == MainForm.MaID
-                          select hp).ToList();
-            cbbHocPhan.DataSource = lstHocPhan;
-            cbbHocPhan.ValueMember = "MaHocPhan";
-            cbbHocPhan.DisplayMember = "TenHocPhan";
-            //cbbHocPhan.SelectedIndex = 0;
-            cbbHocPhan.Text = "";
-            maHp = lstHocPhan[0].MaHocPhan;
-            LoadCBBLopHocPhan(maHp);
-
-        }*/
-        private void cbbHocPhan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstHocPhan = (from hp in db.HocPhans
-                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
-                          where lhp.MaGiangVien == MainForm.MaID
-                          select hp).ToList();
-            maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
-            LoadCBBLopHocPhan(maHp);
-            lstHocKy = db.HocKies.ToList();
-            int id = cbbHocKy.SelectedIndex;
-            maHK = lstHocKy[id].MaHocKy;
-            maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
-
-            DSHV(maHK, maHp, maLhp);
-
-        }
-
-       /* private void LoadCBBLopHocPhan(int mahp)
-        {
-
-            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == mahp).ToList();
-            cbbLopHocPhan.DataSource = lstLopHocPhan;
-            cbbLopHocPhan.DisplayMember = "TenLopHocPhan";
-            cbbLopHocPhan.ValueMember = "MaLopHocPhan";
-            cbbLopHocPhan.SelectedIndex = 0;
-            cbbLopHocPhan.Text = "";
-            HocPhan hp = db.HocPhans.Where(m => m.MaHocPhan == mahp).FirstOrDefault();
-            txtSoTinChi.Text = hp.SoTC.ToString();
-            if (hp.HinhThucThi == "Vấn đáp")
+            if(lstHocPhan.Count == 0)
             {
-                radioGroup2.SelectedIndex = 0;
-            }
-            else if (hp.HinhThucThi == "Trực tuyến")
-            {
-                radioGroup2.SelectedIndex = 2;
-
+                MessageBox.Show("Không dạy học phần nào trong kỳ này!");
             }
             else
             {
-                radioGroup2.SelectedIndex = 1;
+                cbbHocPhan.DataSource = lstHocPhan;
+                cbbHocPhan.ValueMember = "MaHocPhan";
+                cbbHocPhan.DisplayMember = "TenHocPhan";
+                cbbHocPhan.SelectedIndex = -1;
+                List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaGiangVien == MainForm.MaID).ToList();
 
+                dgvDSHocVien.DataSource = DSHV;
             }
-            maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
-            LopHocPhan lhp = db.LopHocPhans.Where(m => m.MaHocPhan == mahp && m.MaLopHocPhan == maLhp).FirstOrDefault();
-            txtNgayThi.EditValue = lhp.NgayThi.ToString("dd/MM/yyyy");
-            txtHanNhapDiem.EditValue = lhp.NgayThi.AddDays(10).ToString("dd/MM/yyyy");
-            if (lhp.NgayThi.AddDays(10) < DateTime.Now)
-            {
+          
 
-                MessageBox.Show("Quá hạn nhập điểm!");
-            }
-            lstHocKy = db.HocKies.ToList();
-            int id = cbbHocKy.SelectedIndex;
-            maHK = lstHocKy[id].MaHocKy;
-            DSHV(maHK, mahp, maLhp);
+        }
 
-        }*/
-
-        private void cbbLopHocPhan_SelectedIndexChanged(object sender, EventArgs e)
+       
+        private void cbbHocPhan_SelectedIndexChanged(object sender, EventArgs e)
         {
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
             maHK = lstHocKy[id].MaHocKy;
-            // int malhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
+            lstHocPhan = (from hp in db.HocPhans
+                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
+                          where lhp.MaGiangVien == MainForm.MaID && lhp.MaHocKy ==maHK
+                          select hp).ToList();
+            maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
+            LoadCBBLopHocPhan(maHp,maHK);
+           
+            //đổ danh sách học viên ra theo học kỳ và học phần
+            DSHV(maHK, maHp);
+
+        }
+
+        private void LoadCBBLopHocPhan(int mahp,int maHk)
+        {
+
+            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == mahp && m.MaHocKy == maHk).ToList();
+            cbbLopHocPhan.DataSource = lstLopHocPhan;
+            cbbLopHocPhan.DisplayMember = "TenLopHocPhan";
+            cbbLopHocPhan.ValueMember = "MaLopHocPhan";
+            cbbLopHocPhan.SelectedIndex = -1;
+            cbbLopHocPhan.Text = "";
+
+        }
+
+        private void cbbLopHocPhan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*// lấy mã học kỳ
+            lstHocKy = db.HocKies.ToList();
+            int id = cbbHocKy.SelectedIndex;
+            maHK = lstHocKy[id].MaHocKy;  
+            // lấy mã học phần
             lstHocPhan = (from hps in db.HocPhans
                           join lhps in db.LopHocPhans on hps.MaHocPhan equals lhps.MaHocPhan
                           where lhps.MaGiangVien == MainForm.MaID
                           select hps).ToList();
             maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
-            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == maHp).ToList();
+            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == maHp).ToList();*/
+
+
+            //lấy mã lớp học phần
             maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
             HocPhan hp = db.HocPhans.Where(m => m.MaHocPhan == maHp).FirstOrDefault();
             txtSoTinChi.Text = hp.SoTC.ToString();
@@ -275,10 +222,10 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
 
             dgvDSHocVien.DataSource = null;
-            List<TTDHV> dsTTDiemHV = new List<TTDHV>();
+            List<GV_NhapDiem> dsTTDiemHV = new List<GV_NhapDiem>();
             using (var ctx = new Model.QLDHV_model())
             {
-                List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
+                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList<GV_NhapDiem>();
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
 
@@ -297,22 +244,21 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
 
         }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
-            List<TTDHV> dsTTDiemHV = new List<TTDHV>();
+            List<GV_NhapDiem> dsTTDiemHV = new List<GV_NhapDiem>();
             using (var ctx = new Model.QLDHV_model())
             {
 
                 
-                List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
+                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList<GV_NhapDiem>();
                 
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
 
-                List<TTDHV> afterEditRows = (List<TTDHV>)dgvDSHocVien.DataSource;
+                List<GV_NhapDiem> afterEditRows = (List<GV_NhapDiem>)dgvDSHocVien.DataSource;
 
-                foreach(TTDHV obj in afterEditRows)
+                foreach(GV_NhapDiem obj in afterEditRows)
                 {
                     ChiTietPhieuDiem ttpd2;
                     int ma = Convert.ToInt32(obj.MaChiTietPhieuDiem);
@@ -342,7 +288,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             
             using (var ctx = new Model.QLDHV_model())
             {
-                List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
+                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList<GV_NhapDiem>();
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
 
@@ -352,6 +298,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             dgvDSHocVien.Refresh();
 
         }
+
+
+        // Chưa sửa lưu khi sửa trực tiếp trên gridview
+
+
 
         /*private void dgvDSHocVien_View_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
