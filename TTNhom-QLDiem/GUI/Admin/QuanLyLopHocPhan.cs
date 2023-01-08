@@ -115,9 +115,10 @@ namespace TTNhom_QLDiem.GUI.Admin
                 MaLopHPCur = newLHP.MaLopHocPhan;
                 dsHocVien = new List<Model.HocVien>();
 
-                foreach (var item in dsLopCN)
+                foreach (var item in ds_grid_LopCN_current)
                 {
                     context.LopChuyenNganhs.Where(m => m.MaLopChuyenNganh == item.MaLopChuyenNganh).FirstOrDefault().LopHocPhans.Add(newLHP);
+
                     List<Model.HocVien> temp = db.HocViens.Where(m => m.MaLopChuyenNganh == item.MaLopChuyenNganh).ToList();
                     dsHocVien.AddRange(temp);
 
@@ -293,6 +294,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             cbSuaGV.SelectedValue = selectedItem.MaGiangVien;
             cbSuaPhongHoc.SelectedValue = selectedItem.MaPhongHoc;
             cbSuaHocPhan.SelectedValue = selectedItem.MaHocPhan;
+            dateSuaNgayThi.DateTime = (DateTime)selectedItem.NgayThi;
 
             SuaMaLopHPCurr = selectedItem.MaLopHocPhan;
 
@@ -370,12 +372,16 @@ namespace TTNhom_QLDiem.GUI.Admin
                 }
                 #endregion
 
-                dsLopHP = db.AD_QLLHP_DSLopHocPhan.SqlQuery("SELECT * FROM AD_QLLHP_DSLopHocPhan").ToList();
 
-                dgvDSLopHocPhan.DataSource = dsLopHP;
+                using (var context = new QLDHV_model())
+                {
+                    dsLopHP = context.AD_QLLHP_DSLopHocPhan.ToList();
+                }
 
                 MessageBox.Show("Đã lưu thay đổi", "Thông báo");
 
+                dgvDSLopHocPhan.DataSource = null;
+                dgvDSLopHocPhan.DataSource = dsLopHP;
 
             }
 
