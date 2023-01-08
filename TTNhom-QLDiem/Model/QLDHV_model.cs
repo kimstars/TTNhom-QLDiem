@@ -24,6 +24,7 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<AD_LopChuyenNganh> AD_LopChuyenNganh { get; set; }
         public virtual DbSet<AD_QLHP_DSHocPhan> AD_QLHP_DSHocPhan { get; set; }
         public virtual DbSet<AD_QLLHP_DSHocPhan> AD_QLLHP_DSHocPhan { get; set; }
         public virtual DbSet<AD_QLLHP_DSLopHocPhan> AD_QLLHP_DSLopHocPhan { get; set; }

@@ -177,6 +177,7 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
+    <Compile Include="Model\AD_LopChuyenNganh.cs" />
     <Compile Include="Model\AD_QLHP_DSHocPhan.cs" />
     <Compile Include="Model\AD_QLLHP_DSHocPhan.cs" />
     <Compile Include="Model\AD_QLLHP_DSLopHocPhan.cs" />
