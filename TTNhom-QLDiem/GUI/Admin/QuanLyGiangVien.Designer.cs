@@ -29,6 +29,12 @@ namespace TTNhom_QLDiem.GUI.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyGiangVien));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.Thêm = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -72,9 +78,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Thêm)).BeginInit();
@@ -94,9 +101,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenGV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV_View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
@@ -440,7 +448,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.dgvTTGV.MainView = this.dgvTTGV_View;
             this.dgvTTGV.Name = "dgvTTGV";
             this.dgvTTGV.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnXoa});
+            this.btnXoa,
+            this.repositoryItemButtonEdit1});
             this.dgvTTGV.Size = new System.Drawing.Size(1117, 432);
             this.dgvTTGV.TabIndex = 0;
             this.dgvTTGV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -544,6 +553,25 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 94;
             // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Xóa";
+            this.gridColumn9.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.gridColumn9.FieldName = "Xoa";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.Width = 94;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AutoHeight = false;
+            this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.btnXoa.Name = "btnXoa";
+            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.dgvTTGV);
@@ -554,22 +582,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Danh sách giảng viên";
             // 
-            // btnXoa
+            // repositoryItemButtonEdit1
             // 
-            this.btnXoa.AutoHeight = false;
-            this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.btnXoa.Name = "btnXoa";
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "gridColumn9";
-            this.gridColumn9.FieldName = "Xoa";
-            this.gridColumn9.MinWidth = 25;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
-            this.gridColumn9.Width = 94;
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // QuanLyGiangVien
             // 
@@ -601,9 +621,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenGV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTGV_View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -656,5 +677,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
     }
 }

@@ -21,7 +21,8 @@ namespace TTNhom_QLDiem.GUI.Admin
         }
         QLDHV_model db = new QLDHV_model();
         public static int MaTaiKhoan;
-        public int magv;
+        private int magv;
+        private int matk;
         List<Model.GiangVien> dsGiangVien;
         private void QuanLyGiangVien_Load(object sender, EventArgs e)
         {
@@ -106,6 +107,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             int index = e.RowHandle;
             Model.GiangVien gv = dsGiangVien[index];
             magv = gv.MaGiangVien;
+            matk = int.Parse(gv.MaTK.ToString());
+           // MessageBox.Show($"{matk}");
             txtSuaTenGV.Text = gv.HoTenGV;
             dateSuaNgaySinhGV.EditValue = gv.NgaySinh;
             cbSuaGioiTinhGV.Text = gv.GioiTinh;
@@ -115,6 +118,29 @@ namespace TTNhom_QLDiem.GUI.Admin
             List<Model.BoMon> bm = db.BoMons.ToList();
             string tenBoMon = bm.Find(s => s.MaBoMon == gv.MaBoMon).TenBoMon;
             cbSuaBoMon.Text = tenBoMon;
+            if (dgvTTGV_View.FocusedColumn == dgvTTGV_View.Columns["Xoa"])
+            {
+                if (MessageBox.Show($"Xóa giảng viên sẽ xóa tất cả thông tin liên quan của giảng viên! \nBạn có chắc chắn xóa giảng viên {gv.HoTenGV} ?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    List<LopHocPhan> lhp = db.LopHocPhans.Where(p => p.MaGiangVien == magv).ToList();
+                    foreach(var item in lhp.ToList())
+                    {
+                        item.MaGiangVien = null;
+                        db.SaveChanges();
+                    }
+                    dsGiangVien.RemoveAt(index);
+                    db.GiangViens.Remove(gv);
+                    List<TaiKhoan> tk = db.TaiKhoans.Where(p => p.MaTK == matk).ToList();
+                    db.TaiKhoans.RemoveRange(tk);
+                    MessageBox.Show("Xóa thành công");
+                    dgvTTGV.DataSource = null;
+                    dgvTTGV.DataSource = dsGiangVien;
+
+                }
+                return;
+            }
+
+
         }
         public bool CheckSuaGV()
         {
