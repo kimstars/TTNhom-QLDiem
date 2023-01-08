@@ -40,6 +40,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             maHK = 0;
 
             LoadCBBHocPhan();
+            LoadCBBLopHocPhan();
             txtNgayThi.Text = "";
             txtSoTinChi.Text = "";
             txtHanNhapDiem.Text = "";
@@ -49,7 +50,30 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbbLopHocPhan.SelectedIndexChanged += cbbLopHocPhan_SelectedIndexChanged;
 
         }
-
+        private void LoadCBBHocPhan()
+        {
+            lstHocPhan = (from hp in db.HocPhans
+                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
+                          where lhp.MaGiangVien == MainForm.MaID
+                          select hp).ToList();
+            if(lstHocPhan.Count==0)
+            {
+                MessageBox.Show("Không dạy học phần nào");
+            }
+            cbbHocPhan.DataSource = lstHocPhan;
+            cbbHocPhan.ValueMember = "MaHocPhan";
+            cbbHocPhan.DisplayMember = "TenHocPhan";
+            cbbHocPhan.SelectedIndex = -1;
+        }
+        private void LoadCBBLopHocPhan()
+        {
+            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID).ToList();
+            
+            cbbLopHocPhan.DataSource = lstLopHocPhan;
+            cbbLopHocPhan.DisplayMember = "TenLopHocPhan";
+            cbbLopHocPhan.ValueMember = "MaLopHocPhan";
+            cbbLopHocPhan.SelectedIndex = -1;
+        }
         private void DSHV(int maHK, int maHp, int maLhp)
         {
             List<TTDHV> DSHV = db.TTDHVs.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp && m.MaGiangVien == MainForm.MaID).ToList();
@@ -63,6 +87,10 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
             maHK = lstHocKy[id].MaHocKy;
+            if(cbbHocPhan.SelectedIndex ==-1 && cbbLopHocPhan.SelectedIndex == -1)
+            {
+                
+            }
             lstHocPhan = (from hp in db.HocPhans
                           join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
                           where lhp.MaGiangVien == MainForm.MaID
@@ -76,7 +104,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         }
 
-        private void LoadCBBHocPhan()
+        /*private void LoadCBBHocPhan()
         {
             //cbbHocPhan.Items.Clear();
             lstHocPhan = (from hp in db.HocPhans
@@ -91,7 +119,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             maHp = lstHocPhan[0].MaHocPhan;
             LoadCBBLopHocPhan(maHp);
 
-        }
+        }*/
         private void cbbHocPhan_SelectedIndexChanged(object sender, EventArgs e)
         {
             lstHocPhan = (from hp in db.HocPhans
@@ -109,7 +137,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         }
 
-        private void LoadCBBLopHocPhan(int mahp)
+       /* private void LoadCBBLopHocPhan(int mahp)
         {
 
             lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == mahp).ToList();
@@ -137,7 +165,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
             LopHocPhan lhp = db.LopHocPhans.Where(m => m.MaHocPhan == mahp && m.MaLopHocPhan == maLhp).FirstOrDefault();
             txtNgayThi.EditValue = lhp.NgayThi.ToString("dd/MM/yyyy");
-            txtHanNhapDiem.EditValue = lhp.NgayThi.AddDays(-7).ToString("dd/MM/yyyy");
+            txtHanNhapDiem.EditValue = lhp.NgayThi.AddDays(10).ToString("dd/MM/yyyy");
             if (lhp.NgayThi.AddDays(10) < DateTime.Now)
             {
 
@@ -148,7 +176,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             maHK = lstHocKy[id].MaHocKy;
             DSHV(maHK, mahp, maLhp);
 
-        }
+        }*/
 
         private void cbbLopHocPhan_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -276,30 +304,33 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             using (var ctx = new Model.QLDHV_model())
             {
 
-                ChiTietPhieuDiem ttpd2 ;
+                
                 List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
                 
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
-                for ( int i =0; i < dgvDSHocVien_View.RowCount; i ++)
+
+                List<TTDHV> afterEditRows = (List<TTDHV>)dgvDSHocVien.DataSource;
+
+                foreach(TTDHV obj in afterEditRows)
                 {
-                    int maCTPD = Convert.ToInt32(dgvDSHocVien_View.GetRowCellValue(i, "MaChiTietPhieuDiem").ToString());
-                    ttpd2 = ctx.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == maCTPD).FirstOrDefault();
-                    if (dgvDSHocVien_View.GetRowCellValue(i, "DiemThi").ToString() != null)
-                    {
-                        ttpd2.DiemThi = Convert.ToDouble(dgvDSHocVien_View.GetRowCellValue(i, "DiemThi").ToString());
+                    ChiTietPhieuDiem ttpd2;
+                    int ma = Convert.ToInt32(obj.MaChiTietPhieuDiem);
+                    ttpd2 = db.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ma).FirstOrDefault();
+                    
 
-                    }
-                    if (dgvDSHocVien_View.GetRowCellValue(i, "GhiChu").ToString()!="") 
+                    if (obj.DiemThi != null)
                     {
-                        ttpd2.GhiChu = dgvDSHocVien_View.GetRowCellValue(i, "GhiChu").ToString(); 
+                        ttpd2.DiemThi = Convert.ToDouble(obj.DiemThi);
                     }
-
+                    if (obj.GhiChu != null)
+                    {
+                        ttpd2.GhiChu = obj.GhiChu;
+                    }
+                    ctx.SaveChanges();
                 }
-                
-                
 
-                ctx.SaveChanges();
+                
 
             }
 
