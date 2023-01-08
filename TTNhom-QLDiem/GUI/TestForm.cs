@@ -22,7 +22,12 @@ namespace TTNhom_QLDiem.GUI
 
         private void TestForm_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             GiangVien.XemDSHocVien testform = new GiangVien.XemDSHocVien();
+=======
+            Admin.QuanLyLopChuyenNganh testform = new Admin.QuanLyLopChuyenNganh();
+            //Admin.QuanLyHocVien testform = new Admin.QuanLyHocVien();
+>>>>>>> main
             panelshow.Controls.Add(testform);
             testform.Dock = DockStyle.Fill;
         }

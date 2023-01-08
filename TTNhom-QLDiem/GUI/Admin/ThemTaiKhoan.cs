@@ -70,10 +70,10 @@ namespace TTNhom_QLDiem.GUI.Admin
                 {
                     QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
                 }
-                //if (newtk.Quyen == "HV")
-                //{
-                //    QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
-                //}
+                if (newtk.Quyen == "GV")
+                {
+                    QuanLyGiangVien.MaTaiKhoan = newtk.MaTK;
+                }
 
             }
 
