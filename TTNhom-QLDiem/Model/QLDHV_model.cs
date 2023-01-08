@@ -24,11 +24,13 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<AD_LopChuyenNganh> AD_LopChuyenNganh { get; set; }
         public virtual DbSet<AD_QLHP_DSHocPhan> AD_QLHP_DSHocPhan { get; set; }
         public virtual DbSet<AD_QLLHP_DSHocPhan> AD_QLLHP_DSHocPhan { get; set; }
         public virtual DbSet<AD_QLLHP_DSLopHocPhan> AD_QLLHP_DSLopHocPhan { get; set; }
         public virtual DbSet<AD_QLLHP_SuaLopCN> AD_QLLHP_SuaLopCN { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
+        public virtual DbSet<GV_TTHocVien_NhapDiem> GV_TTHocVien_NhapDiem { get; set; }
         public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
