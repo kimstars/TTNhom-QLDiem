@@ -22,7 +22,9 @@ namespace TTNhom_QLDiem.GUI
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            Admin.ADGV_TraCuuDiemThi testform = new Admin.ADGV_TraCuuDiemThi();
+            //Admin.ADGV_TraCuuDiemThi testform = new Admin.ADGV_TraCuuDiemThi();
+            GiangVien.GV_NhapDiemCC_TX testform = new GiangVien.GV_NhapDiemCC_TX();
+
             panelshow.Controls.Add(testform);
             testform.Dock = DockStyle.Fill;
         }
