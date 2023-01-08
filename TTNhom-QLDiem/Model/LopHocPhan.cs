@@ -19,10 +19,6 @@ namespace TTNhom_QLDiem.Model
         [Key]
         public int MaLopHocPhan { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public string TenLopHocPhan { get; set; }
-
         public int MaGiangVien { get; set; }
 
         public int MaHocPhan { get; set; }
@@ -34,12 +30,9 @@ namespace TTNhom_QLDiem.Model
 
         public int? MaPhongHoc { get; set; }
 
-<<<<<<< HEAD
-=======
         [StringLength(100)]
         public string TenLopHocPhan { get; set; }
 
->>>>>>> main
         public int? TongHV { get; set; }
 
         public virtual GiangVien GiangVien { get; set; }

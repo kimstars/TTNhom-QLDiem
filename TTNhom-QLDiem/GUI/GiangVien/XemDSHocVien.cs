@@ -13,10 +13,13 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 {
     public partial class XemDSHocVien : DevExpress.XtraEditors.XtraUserControl
     {
-        public int magv = MainForm.MaID;
+        //public int magv = MainForm.MaID;
+        public int magv = 1;
+
         public QLDHV_model db = new QLDHV_model();
-        List<GV_DSLopChuyenNganh_HV> lscn ;
+        List<GV_LopChuyenNganh> lopCN ;
         //QLDHV_model db = new QLDHV_model();
+        int mabm;
 
         public XemDSHocVien()
         {
@@ -28,7 +31,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             List<BoMon> lsbm = db.BoMons.ToList();
             foreach (var item in lsbm)
             {
-                cbBoMon.Items.Add(item.TenBoMon);
+                cbBoMon.Items.Add(item.MaBoMon);
             }
         }
         private void getHocKy()
@@ -36,7 +39,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             List<HocKy> lshk = db.HocKies.ToList();
             foreach (var item in lshk)
             {
-                cbBoMon.Items.Add(item.TenHocKy);
+                cbHocKy.Items.Add(item.TenHocKy);
             }
         }
         private void getHocPhan()
@@ -44,7 +47,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             List<HocPhan> lshp = db.HocPhans.ToList();
             foreach (var item in lshp)
             {
-                cbBoMon.Items.Add(item.TenHocPhan);
+                cbHocPhan.Items.Add(item.TenHocPhan);
             }
         }
         private void getLopHocPhanPhuTrach()
@@ -67,18 +70,17 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             getHocKy();
             getHocPhan();
             getLopHocPhanPhuTrach();
-            List<GV_DSLopChuyenNganh_HV> lscn1 = new List<GV_DSLopChuyenNganh_HV>();
-            lscn1 = db.GV_DSLopChuyenNganh_HV.ToList();
-            gridControl_DSChuyenNganh.DataSource = lscn;
+            List<GV_LopChuyenNganh> lscn1 = new List<GV_LopChuyenNganh>();
+            lscn1 = db.GV_LopChuyenNganh.ToList();
+            gridControl_DSChuyenNganh.DataSource = lscn1;
         }
 
         private void grdView_DSLopChuyenNganh_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             grid_HocVien.DataSource = null;
             int index = e.RowHandle;
-            Model.GV_DSLopChuyenNganh_HV lcn = lscn[index];
+            GV_LopChuyenNganh lcn = lopCN[index];
             int malcn = lcn.MaLopChuyenNganh;
-            //List<HocKy> lshk = db.HocKies.ToList();
             List<Model.HocVien> hv = db.HocViens.Where(s => s.MaLopChuyenNganh == malcn).ToList();
             grid_HocVien.DataSource = hv;
         }
@@ -86,6 +88,43 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private void XemDSHocVien_Load(object sender, EventArgs e)
         {
             reload();
+        }
+        void TimKiem(bool isall = false)
+        {
+            if (isall)
+            {
+                gridControl_DSChuyenNganh.DataSource = db.GV_LopChuyenNganh.ToList();
+            }
+            else
+            {
+                gridControl_DSChuyenNganh.DataSource = (db.GV_LopChuyenNganh.Where(s =>
+                                          (cbBoMon.Text == "" || s.TenBoMon == cbBoMon.Text)
+                                          && (cbHocKy.Text == "" || s.TenHocKy.Contains(cbHocKy.Text))
+                                           && (cbLopHPphutrach.Text == "" || s.TenLopHocPhan.Contains(cbLopHPphutrach.Text))
+                                           && (cbHocPhan.Text == "" || s.TenHocPhan.Contains(cbHocPhan.Text))).ToList());
+                                           
+            }
+        }
+
+        private void cbBoMon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //mabm = db.BoMons.Where(s => s.TenBoMon == cbBoMon.Text).FirstOrDefault().MaBoMon;
+            TimKiem();
+        }
+
+        private void cbHocKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+        }
+
+        private void cbHocPhan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+        }
+
+        private void cbLopHPphutrach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
         }
     }
 }

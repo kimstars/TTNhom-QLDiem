@@ -180,19 +180,14 @@
     <Compile Include="Model\AD_LopChuyenNganh.cs" />
     <Compile Include="Model\AD_QLHP_DSHocPhan.cs" />
     <Compile Include="Model\AD_QLLHP_DSHocPhan.cs" />
-<<<<<<< HEAD
-    <Compile Include="Model\BoMon.cs" />
-    <Compile Include="Model\ChiTietPhieuDiem.cs" />
-    <Compile Include="Model\GiangVien.cs" />
-    <Compile Include="Model\GV_DSLopChuyenNganh_HV.cs" />
-=======
     <Compile Include="Model\AD_QLLHP_DSLopHocPhan.cs" />
     <Compile Include="Model\AD_QLLHP_SuaLopCN.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
+    <Compile Include="Model\GV_DSLopChuyenNganh_HV.cs" />
+    <Compile Include="Model\GV_LopChuyenNganh.cs" />
     <Compile Include="Model\GV_TTHocVien_NhapDiem.cs" />
->>>>>>> main
     <Compile Include="Model\HocKy.cs" />
     <Compile Include="Model\HocPhan.cs" />
     <Compile Include="Model\HocVien.cs" />
@@ -203,6 +198,7 @@
     <Compile Include="Model\PhieuDiem.cs" />
     <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TTDHV.cs" />
     <Compile Include="Program.cs" />

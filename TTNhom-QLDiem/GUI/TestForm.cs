@@ -22,16 +22,10 @@ namespace TTNhom_QLDiem.GUI
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             GiangVien.XemDSHocVien testform = new GiangVien.XemDSHocVien();
-=======
-            Admin.QuanLyLopChuyenNganh testform = new Admin.QuanLyLopChuyenNganh();
-=======
-            Admin.ADGV_TraCuuDiemThi testform = new Admin.ADGV_TraCuuDiemThi();
->>>>>>> parent of 90aa594 (QLDIEM-51 check quan ly lop chuyen nganh)
-            //Admin.QuanLyHocVien testform = new Admin.QuanLyHocVien();
->>>>>>> main
+
+
             panelshow.Controls.Add(testform);
             testform.Dock = DockStyle.Fill;
         }

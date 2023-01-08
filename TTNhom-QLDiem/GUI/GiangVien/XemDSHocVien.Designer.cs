@@ -285,16 +285,17 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // cbHocPhan
             // 
             this.cbHocPhan.FormattingEnabled = true;
-            this.cbHocPhan.Location = new System.Drawing.Point(54, 219);
+            this.cbHocPhan.Location = new System.Drawing.Point(54, 205);
             this.cbHocPhan.Name = "cbHocPhan";
             this.cbHocPhan.Size = new System.Drawing.Size(437, 24);
             this.cbHocPhan.TabIndex = 100;
+            this.cbHocPhan.SelectedIndexChanged += new System.EventHandler(this.cbHocPhan_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 198);
+            this.label3.Location = new System.Drawing.Point(51, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 18);
             this.label3.TabIndex = 99;
@@ -303,16 +304,17 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // cbHocKy
             // 
             this.cbHocKy.FormattingEnabled = true;
-            this.cbHocKy.Location = new System.Drawing.Point(54, 153);
+            this.cbHocKy.Location = new System.Drawing.Point(54, 142);
             this.cbHocKy.Name = "cbHocKy";
             this.cbHocKy.Size = new System.Drawing.Size(437, 24);
             this.cbHocKy.TabIndex = 98;
+            this.cbHocKy.SelectedIndexChanged += new System.EventHandler(this.cbHocKy_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 132);
+            this.label2.Location = new System.Drawing.Point(51, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 97;
@@ -325,20 +327,22 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.cbBoMon.Name = "cbBoMon";
             this.cbBoMon.Size = new System.Drawing.Size(437, 24);
             this.cbBoMon.TabIndex = 96;
+            this.cbBoMon.SelectedIndexChanged += new System.EventHandler(this.cbBoMon_SelectedIndexChanged);
             // 
             // cbLopHPphutrach
             // 
             this.cbLopHPphutrach.FormattingEnabled = true;
-            this.cbLopHPphutrach.Location = new System.Drawing.Point(54, 284);
+            this.cbLopHPphutrach.Location = new System.Drawing.Point(54, 269);
             this.cbLopHPphutrach.Name = "cbLopHPphutrach";
             this.cbLopHPphutrach.Size = new System.Drawing.Size(437, 24);
             this.cbLopHPphutrach.TabIndex = 95;
+            this.cbLopHPphutrach.SelectedIndexChanged += new System.EventHandler(this.cbLopHPphutrach_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 263);
+            this.label1.Location = new System.Drawing.Point(51, 248);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 18);
             this.label1.TabIndex = 94;

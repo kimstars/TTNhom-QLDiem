@@ -257,13 +257,13 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // them
             // 
-            this.Thêm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Thêm.Location = new System.Drawing.Point(2, 28);
-            this.Thêm.Name = "Thêm";
-            this.Thêm.SelectedTabPage = this.xtraTabPageThem;
-            this.Thêm.Size = new System.Drawing.Size(302, 592);
-            this.Thêm.TabIndex = 10;
-            this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.them.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.them.Location = new System.Drawing.Point(2, 28);
+            this.them.Name = "Thêm";
+            this.them.SelectedTabPage = this.xtraTabPageThem;
+            this.them.Size = new System.Drawing.Size(302, 592);
+            this.them.TabIndex = 10;
+            this.them.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageThem,
             this.xtraTabPageSua});
             // 
