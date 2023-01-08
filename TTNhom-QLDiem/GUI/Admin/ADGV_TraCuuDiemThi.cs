@@ -47,17 +47,24 @@ namespace TTNhom_QLDiem.GUI.Admin
         List<ADV_TraCuuDiemHV> TraCuuDiemHV = new List<ADV_TraCuuDiemHV>();
         private void btn_search_Click(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (db.ADV_TraCuuDiemHV.Where(s => 
-                                        (txtMaHV.Text == "" || s.MaHocVien.ToString()==txtMaHV.Text)
-                                        && (txtTenHV.Text=="" || s.HoTenHV.Contains(txtTenHV.Text)) 
-                                        && (cbLopCN.Text == "" || s.TenLopChuyenNganh.Contains(cbLopCN.Text)) 
-                                        && (cbMonThi.Text == "" || s.TenHocPhan.Contains(cbMonThi.Text)) 
-                                        && (cbHocKy.Text == "" || s.TenHocKy.Contains(cbHocKy.Text))).ToList());
-            cbHocKy.Text = "";
-            cbLopCN.Text = "";
-            cbMonThi.Text = "";
-            txtMaHV.Text = "";
-            txtTenHV.Text = "";
+            TimKiem(true);
+        }
+
+        void TimKiem(bool isall = false)
+        {
+            if (isall)
+            {
+                gridControl1.DataSource = db.ADV_TraCuuDiemHV.ToList();
+            }
+            else
+            {
+                gridControl1.DataSource = (db.ADV_TraCuuDiemHV.Where(s =>
+                                           (txtMaHV.Text == "" || s.MaHocVien.ToString().Contains(txtMaHV.Text))
+                                           && (txtTenHV.Text == "" || s.HoTenHV.Contains(txtTenHV.Text))
+                                           && (cbLopCN.Text == "" || s.TenLopChuyenNganh.Contains(cbLopCN.Text))
+                                           && (cbMonThi.Text == "" || s.TenHocPhan.Contains(cbMonThi.Text))
+                                           && (cbHocKy.Text == "" || s.TenHocKy.Contains(cbHocKy.Text))).ToList());
+            }
         }
         private void reload()
         {
@@ -86,6 +93,24 @@ namespace TTNhom_QLDiem.GUI.Admin
                 txtTenHV.Enabled = true;
                 txtTenHV.Text = "";
             }
+        }
+
+        private void cbHocKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+
+        }
+
+        private void cbLopCN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+
+        }
+
+        private void cbMonThi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+
         }
     }
 }

@@ -48,7 +48,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.Thêm = new DevExpress.XtraTab.XtraTabControl();
+            this.them = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageThem = new DevExpress.XtraTab.XtraTabPage();
             this.txtTenBM = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -87,8 +87,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Thêm)).BeginInit();
-            this.Thêm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.them)).BeginInit();
+            this.them.SuspendLayout();
             this.xtraTabPageThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenBM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLopTruong.Properties)).BeginInit();
@@ -243,7 +243,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // groupControl2
             // 
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl2.Controls.Add(this.Thêm);
+            this.groupControl2.Controls.Add(this.them);
             this.groupControl2.Controls.Add(this.txtTenHV);
             this.groupControl2.Controls.Add(this.txtMaHV);
             this.groupControl2.Controls.Add(this.label2);
@@ -255,7 +255,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "QL Lớp chuyên ngành";
             // 
-            // Thêm
+            // them
             // 
             this.Thêm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Thêm.Location = new System.Drawing.Point(2, 28);
@@ -596,8 +596,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Thêm)).EndInit();
-            this.Thêm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.them)).EndInit();
+            this.them.ResumeLayout(false);
             this.xtraTabPageThem.ResumeLayout(false);
             this.xtraTabPageThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenBM.Properties)).EndInit();
@@ -631,7 +631,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraTab.XtraTabControl Thêm;
+        private DevExpress.XtraTab.XtraTabControl them;
         private DevExpress.XtraTab.XtraTabPage xtraTabPageThem;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.ComboBox cbMaloptruong;

@@ -226,7 +226,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnThemTK
             // 
-            this.btnThemTK.Location = new System.Drawing.Point(419, 210);
+            this.btnThemTK.Location = new System.Drawing.Point(516, 210);
             this.btnThemTK.Name = "btnThemTK";
             this.btnThemTK.Size = new System.Drawing.Size(188, 28);
             this.btnThemTK.TabIndex = 29;
