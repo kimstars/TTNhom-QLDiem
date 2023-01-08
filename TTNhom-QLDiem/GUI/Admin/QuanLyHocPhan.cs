@@ -36,6 +36,9 @@ namespace TTNhom_QLDiem.GUI.Admin
                 cbThemTenBM.Items.Add(item.TenBoMon);
                 cbSuaTenBM.Items.Add(item.TenBoMon);
             }
+
+            txtMaHP.Text = db.HocPhans.OrderBy(m => m.MaHocPhan).Last().MaHocPhan.ToString();
+
         }
         public bool Check()
         {
