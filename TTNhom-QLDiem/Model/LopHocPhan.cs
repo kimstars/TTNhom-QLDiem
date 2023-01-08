@@ -19,6 +19,10 @@ namespace TTNhom_QLDiem.Model
         [Key]
         public int MaLopHocPhan { get; set; }
 
+        [Required]
+        [StringLength(1)]
+        public string TenLopHocPhan { get; set; }
+
         public int MaGiangVien { get; set; }
 
         public int MaHocPhan { get; set; }
@@ -29,9 +33,6 @@ namespace TTNhom_QLDiem.Model
         public DateTime? NgayThi { get; set; }
 
         public int? MaPhongHoc { get; set; }
-
-        [StringLength(50)]
-        public string TenLopHocPhan { get; set; }
 
         public int? TongHV { get; set; }
 

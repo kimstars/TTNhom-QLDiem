@@ -18,14 +18,14 @@ namespace TTNhom_QLDiem.Model
 
         public double? DiemThi { get; set; }
 
+        public double? DiemTK { get; set; }
+
         [StringLength(100)]
         public string GhiChu { get; set; }
 
         public int MaHocVien { get; set; }
 
         public int MaPhieuDiem { get; set; }
-
-        public double? DiemTK { get; set; }
 
         public virtual HocVien HocVien { get; set; }
 

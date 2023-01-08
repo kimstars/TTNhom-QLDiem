@@ -24,8 +24,9 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
-        public virtual DbSet<AD_QLHP_DSHocPhan> AD_QLHP_DSHocPhan { get; set; }
+        public virtual DbSet<AD_QLLHP_DSHocPhan> AD_QLLHP_DSHocPhan { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
+        public virtual DbSet<GV_DSLopChuyenNganh_HV> GV_DSLopChuyenNganh_HV { get; set; }
         public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -69,15 +70,9 @@ namespace TTNhom_QLDiem.Model
                 .WithRequired(e => e.HocVien)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<HocVien>()
-                .HasMany(e => e.LopChuyenNganhs)
-                .WithOptional(e => e.HocVien)
-                .HasForeignKey(e => e.MaLopTruong);
-
             modelBuilder.Entity<LopChuyenNganh>()
                 .HasMany(e => e.HocViens)
                 .WithRequired(e => e.LopChuyenNganh)
-                .HasForeignKey(e => e.MaLopChuyenNganh)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<LopChuyenNganh>()
@@ -93,7 +88,6 @@ namespace TTNhom_QLDiem.Model
             modelBuilder.Entity<PhieuDiem>()
                 .HasMany(e => e.ChiTietPhieuDiems)
                 .WithRequired(e => e.PhieuDiem)
-                .HasForeignKey(e => e.MaHocVien)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TaiKhoan>()
