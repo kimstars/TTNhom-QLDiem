@@ -81,7 +81,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnSubmit.Appearance.Options.UseFont = true;
             this.btnSubmit.Location = new System.Drawing.Point(83, 305);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(238, 30);
+            this.btnSubmit.Size = new System.Drawing.Size(238, 59);
             this.btnSubmit.TabIndex = 88;
             this.btnSubmit.Text = "Thêm tài khoản";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);

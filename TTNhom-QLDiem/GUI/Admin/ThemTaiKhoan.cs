@@ -60,12 +60,13 @@ namespace TTNhom_QLDiem.GUI.Admin
                 newtk.MatKhau = hash;
                 newtk.Quyen = quyen;
 
-                // làm thêm check thêm thông tin nội dung
                 db.TaiKhoans.Add(newtk);
 
                 db.SaveChanges();
                 MessageBox.Show(newtk.MaTK.ToString());
-
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                cbQuyen.Text = "";
                 if (newtk.Quyen == "HV")
                 {
                     QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
@@ -74,6 +75,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                 {
                     QuanLyGiangVien.MaTaiKhoan = newtk.MaTK;
                 }
+                
 
             }
 
