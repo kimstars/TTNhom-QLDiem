@@ -48,7 +48,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btn_search_Click(object sender, EventArgs e)
         {
             gridControl1.DataSource = (db.ADV_TraCuuDiemHV.Where(s => 
-                                        (txtMaHV.Text == "" || s.MaHocVien.ToString().Contains(txtMaHV.Text))
+                                        (txtMaHV.Text == "" || s.MaHocVien.ToString()==txtMaHV.Text)
                                         && (txtTenHV.Text=="" || s.HoTenHV.Contains(txtTenHV.Text)) 
                                         && (cbLopCN.Text == "" || s.TenLopChuyenNganh.Contains(cbLopCN.Text)) 
                                         && (cbMonThi.Text == "" || s.TenHocPhan.Contains(cbMonThi.Text)) 
@@ -69,7 +69,23 @@ namespace TTNhom_QLDiem.GUI.Admin
             getHocKy();
             getLopCN();
             getMonThi();
-            gridControl1.DataSource = db.ADV_TraCuuDiemHV.ToList();
+            List<ADV_TraCuuDiemHV> TraCuuDiemHV1 = new List<ADV_TraCuuDiemHV>();
+            TraCuuDiemHV1 = db.ADV_TraCuuDiemHV.ToList();
+            gridControl1.DataSource = TraCuuDiemHV1; 
+        }
+
+        private void txtMaHV_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaHV.Text != "")
+            {
+                txtTenHV.Enabled = false;
+                txtTenHV.Text = db.HocViens.Where(s => s.MaHocVien.ToString() == txtMaHV.Text).FirstOrDefault().HoTenHV;
+            }
+            else
+            {
+                txtTenHV.Enabled = true;
+                txtTenHV.Text = "";
+            }
         }
     }
 }

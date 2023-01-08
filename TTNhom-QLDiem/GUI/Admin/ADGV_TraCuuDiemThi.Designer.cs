@@ -309,6 +309,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtMaHV.Properties.Appearance.Options.UseFont = true;
             this.txtMaHV.Size = new System.Drawing.Size(177, 24);
             this.txtMaHV.TabIndex = 8;
+            this.txtMaHV.TextChanged += new System.EventHandler(this.txtMaHV_TextChanged);
             // 
             // btn_search
             // 
