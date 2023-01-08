@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TTNhom_QLDiem.Model;
 
 namespace TTNhom_QLDiem.GUI.Admin
 {
@@ -17,14 +18,65 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             InitializeComponent();
         }
+        QLDHV_model db = new QLDHV_model();
+        public bool Check()
+        {
+            if (txtUsername.Text == "" || txtPassword.Text == "" || cbQuyen.Text == "")
+            {
+                MessageBox.Show("Thông tin tài khoản được thêm không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
 
+        }
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string pass = txtPassword.Text;
+            if (Check())
+            {
+                string pass = txtPassword.Text;
+                string user = txtUsername.Text;
+                string hash = HashPass(pass);
+                string quyen = cbQuyen.Text;
 
-            string hash = HashPass(pass);
+                switch (quyen)
+                {
 
-            MessageBox.Show(hash);
+
+                    case "Giảng viên":
+                        quyen = "GV";
+                        break;
+
+                    case "Học viên":
+                        quyen = "HV";
+                        break;
+
+                    default:
+                        break;
+
+                }
+
+                Model.TaiKhoan newtk = new Model.TaiKhoan();
+                newtk.TenDangNhap = user;
+                newtk.MatKhau = hash;
+                newtk.Quyen = quyen;
+
+                // làm thêm check thêm thông tin nội dung
+                db.TaiKhoans.Add(newtk);
+
+                db.SaveChanges();
+                MessageBox.Show(newtk.MaTK.ToString());
+
+                //if (newtk.Quyen == "HV")
+                //{
+                //    QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
+                //}
+                //if (newtk.Quyen == "GV")
+                //{
+                //    QuanLyGiangVien.MaTaiKhoan = newtk.MaTK;
+                //}
+
+            }
+
         }
 
 
