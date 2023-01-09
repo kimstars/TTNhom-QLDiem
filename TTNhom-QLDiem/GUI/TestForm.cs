@@ -23,7 +23,7 @@ namespace TTNhom_QLDiem.GUI
         private void TestForm_Load(object sender, EventArgs e)
         {
 
-            DoiMK testform = new DoiMK();
+            Admin.ADGV_TraCuuDiemThi testform = new Admin.ADGV_TraCuuDiemThi();
 
 
             panelshow.Controls.Add(testform);

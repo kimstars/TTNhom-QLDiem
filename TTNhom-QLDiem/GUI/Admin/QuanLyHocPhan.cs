@@ -20,6 +20,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             InitializeComponent();
         }
+
         List<Model.BoMon> lbm;
         List<AD_QLLHP_DSHocPhan> dsHocPhan;
         private void QuanLyHocPhan_Load(object sender, EventArgs e)
@@ -36,8 +37,8 @@ namespace TTNhom_QLDiem.GUI.Admin
                 cbThemTenBM.Items.Add(item.TenBoMon);
                 cbSuaTenBM.Items.Add(item.TenBoMon);
             }
-
-            txtMaHP.Text = db.HocPhans.OrderBy(m => m.MaHocPhan).Last().MaHocPhan.ToString();
+            //int mahp = db.HocPhans.OrderBy(m => m.MaHocPhan).().MaHocPhan;
+            //txtMaHP.Text = mahp.ToString();
 
         }
         public bool Check()

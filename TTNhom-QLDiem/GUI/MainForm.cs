@@ -20,11 +20,8 @@ namespace TTNhom_QLDiem.GUI
         }
 
 
-
         bool logout;
         public static int MaID;
-
-
 
 
         public MainForm(int maid, string accPer)
@@ -52,6 +49,7 @@ namespace TTNhom_QLDiem.GUI
 
         GiangVien.GV_NhapDiemCC_TX uc21;
         GiangVien.GV_NhapDiemThi uc22;
+        GiangVien.XemDSHocVien uc23;
         GiangVien.TTGiangVien uc24;
 
 
@@ -123,6 +121,7 @@ namespace TTNhom_QLDiem.GUI
 
                     uc21 = new GiangVien.GV_NhapDiemCC_TX();
                     uc22 = new GiangVien.GV_NhapDiemThi();
+                    uc23 = new GiangVien.XemDSHocVien();
                     uc24 = new GiangVien.TTGiangVien();
                     uc36 = new Admin.ADGV_TraCuuDiemThi();
 
@@ -132,7 +131,7 @@ namespace TTNhom_QLDiem.GUI
                     uc24.Dock = DockStyle.Fill;
                     uc36.Dock = DockStyle.Fill;
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc21, uc22, uc24, uc36 });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc21, uc22,uc23, uc24, uc36 });
 
                     break;
 
