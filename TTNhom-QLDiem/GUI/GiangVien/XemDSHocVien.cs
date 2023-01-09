@@ -13,8 +13,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 {
     public partial class XemDSHocVien : DevExpress.XtraEditors.XtraUserControl
     {
-        //public int magv = MainForm.MaID;
-        public int magv = 1;
+        public int magv ;
+  
 
         public QLDHV_model db = new QLDHV_model();
         List<GV_LopChuyenNganh> lopCN ;
@@ -26,16 +26,19 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             InitializeComponent();
             
         }
+        
         private void getBoMon()
         {
+            cbBoMon.Items.Clear();
             List<BoMon> lsbm = db.BoMons.ToList();
             foreach (var item in lsbm)
             {
-                cbBoMon.Items.Add(item.MaBoMon);
+                cbBoMon.Items.Add(item.TenBoMon);
             }
         }
         private void getHocKy()
         {
+            cbHocKy.Items.Clear();
             List<HocKy> lshk = db.HocKies.ToList();
             foreach (var item in lshk)
             {
@@ -44,6 +47,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         }
         private void getHocPhan()
         {
+            cbHocPhan.Items.Clear();
             List<HocPhan> lshp = db.HocPhans.ToList();
             foreach (var item in lshp)
             {
@@ -56,7 +60,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbLopHPphutrach.Items.Clear();
             foreach (var item in lhp.ToList())
             {
-                cbLopHPphutrach.Items.Add(item.MaLopHocPhan);
+                cbLopHPphutrach.Items.Add(item.TenLopHocPhan);
             }
         }
         public void reload()
@@ -70,9 +74,9 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             getHocKy();
             getHocPhan();
             getLopHocPhanPhuTrach();
-            List<GV_LopChuyenNganh> lscn1 = new List<GV_LopChuyenNganh>();
-            lscn1 = db.GV_LopChuyenNganh.ToList();
-            gridControl_DSChuyenNganh.DataSource = lscn1;
+            QLDHV_model db1 = new QLDHV_model();
+            lopCN = db1.GV_LopChuyenNganh.Where(s => s.MaGiangVien == magv).ToList();
+            gridControl_DSChuyenNganh.DataSource = lopCN;
         }
 
         private void grdView_DSLopChuyenNganh_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -87,28 +91,28 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void XemDSHocVien_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(MainForm.MaID.ToString());
+            magv = MainForm.MaID;
             reload();
         }
         void TimKiem(bool isall = false)
         {
             if (isall)
             {
-                gridControl_DSChuyenNganh.DataSource = db.GV_LopChuyenNganh.ToList();
+                gridControl_DSChuyenNganh.DataSource = db.GV_LopChuyenNganh.Where(s => s.MaGiangVien == magv).ToList();
             }
             else
             {
-                gridControl_DSChuyenNganh.DataSource = (db.GV_LopChuyenNganh.Where(s =>
+                gridControl_DSChuyenNganh.DataSource = (db.GV_LopChuyenNganh.Where(s => s.MaGiangVien == magv &&
                                           (cbBoMon.Text == "" || s.TenBoMon == cbBoMon.Text)
                                           && (cbHocKy.Text == "" || s.TenHocKy.Contains(cbHocKy.Text))
                                            && (cbLopHPphutrach.Text == "" || s.TenLopHocPhan.Contains(cbLopHPphutrach.Text))
                                            && (cbHocPhan.Text == "" || s.TenHocPhan.Contains(cbHocPhan.Text))).ToList());
-                                           
             }
         }
 
         private void cbBoMon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //mabm = db.BoMons.Where(s => s.TenBoMon == cbBoMon.Text).FirstOrDefault().MaBoMon;
             TimKiem();
         }
 

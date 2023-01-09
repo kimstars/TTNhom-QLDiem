@@ -91,7 +91,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             {
                 lopcn.TenLopChuyenNganh = txtEditLopCN.Text;
                 lopcn.MaBoMon = int.Parse(cbEditMaBM.Text);
-                lopcn.MaLopTruong = int.Parse(cbEditMaLP.Text);
+                if (cbEditMaLP.Text != "")
+                {
+                    lopcn.MaLopTruong = int.Parse(cbEditMaLP.Text);
+                }
+                else
+                {
+                    lopcn.MaLopTruong = null;
+                }
                 db.SaveChanges();
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -128,6 +135,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             txtEditLopCN.Text = lopcn.TenLopChuyenNganh;
             cbEditMaLP.Text = lopcn.MaLopTruong.ToString();
             cbEditMaBM.Text = lopcn.MaBoMon.ToString();
+            textEditTenBM.Text = db.BoMons.Where(s => s.MaBoMon.ToString() == cbEditMaBM.Text).FirstOrDefault().TenBoMon;
+            if (cbEditMaLP.Text == "")
+            {
+                textEditLopTruong.Text = "";
+            }else
+            {
+                textEditLopTruong.Text=db.HocViens.Where(s => s.MaHocVien.ToString() == cbEditMaLP.Text).FirstOrDefault().HoTenHV;
+            }
         }
 
         private void cbMaloptruong_TextChanged(object sender, EventArgs e)

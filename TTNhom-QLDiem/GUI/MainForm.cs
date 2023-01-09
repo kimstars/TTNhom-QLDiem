@@ -14,11 +14,7 @@ namespace TTNhom_QLDiem.GUI
 {
     public partial class MainForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        public MainForm()
-        {
-            InitializeComponent();
-        }
-
+        
 
         bool logout;
         public static int MaID;
@@ -139,6 +135,7 @@ namespace TTNhom_QLDiem.GUI
                     uc21.Dock = DockStyle.Fill;
                     uc23.Dock = DockStyle.Fill;
                     uc22.Dock = DockStyle.Fill;
+                    uc23.Dock = DockStyle.Fill;
                     uc24.Dock = DockStyle.Fill;
                     uc36.Dock = DockStyle.Fill;
                     ucDMK.Dock = DockStyle.Fill;
