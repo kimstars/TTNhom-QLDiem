@@ -172,6 +172,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 if(lhp.NgayThi > DateTime.Now)
                 {
                     MessageBox.Show("Chưa đến hạn nhận điểm");
+                    txtDiemThi.Enabled = false;
+                    txtGhiChu.Enabled = false;
                 }
                 DSHV(maHK, maHp, maLhp);
             }
