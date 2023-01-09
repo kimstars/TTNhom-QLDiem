@@ -63,6 +63,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
@@ -75,7 +76,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHanNhapDiem.Properties)).BeginInit();
@@ -129,6 +129,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtHanNhapDiem
             // 
+            this.txtHanNhapDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHanNhapDiem.Enabled = false;
             this.txtHanNhapDiem.Location = new System.Drawing.Point(423, 142);
             this.txtHanNhapDiem.Name = "txtHanNhapDiem";
@@ -137,6 +138,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtNgayThi
             // 
+            this.txtNgayThi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNgayThi.Enabled = false;
             this.txtNgayThi.Location = new System.Drawing.Point(423, 96);
             this.txtNgayThi.Name = "txtNgayThi";
@@ -145,6 +147,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtSoTinChi
             // 
+            this.txtSoTinChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSoTinChi.Enabled = false;
             this.txtSoTinChi.Location = new System.Drawing.Point(423, 52);
             this.txtSoTinChi.Name = "txtSoTinChi";
@@ -153,6 +156,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(303, 101);
             this.label6.Name = "label6";
@@ -162,6 +166,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(300, 61);
             this.label5.Name = "label5";
@@ -187,6 +192,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(300, 148);
             this.label10.Name = "label10";
@@ -207,6 +213,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // cbbLopHocPhan
             // 
+            this.cbbLopHocPhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbLopHocPhan.FormattingEnabled = true;
             this.cbbLopHocPhan.Location = new System.Drawing.Point(122, 142);
             this.cbbLopHocPhan.Name = "cbbLopHocPhan";
@@ -215,6 +223,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // cbbHocPhan
             // 
+            this.cbbHocPhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbHocPhan.FormattingEnabled = true;
             this.cbbHocPhan.Location = new System.Drawing.Point(122, 101);
             this.cbbHocPhan.Name = "cbbHocPhan";
@@ -223,6 +233,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // cbbHocKy
             // 
+            this.cbbHocKy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbHocKy.FormattingEnabled = true;
             this.cbbHocKy.Location = new System.Drawing.Point(122, 58);
             this.cbbHocKy.Name = "cbbHocKy";
@@ -258,6 +270,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtDiemThi
             // 
+            this.txtDiemThi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiemThi.Location = new System.Drawing.Point(159, 191);
             this.txtDiemThi.Name = "txtDiemThi";
             this.txtDiemThi.Size = new System.Drawing.Size(125, 22);
@@ -265,6 +279,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtLopChuyenNganh
             // 
+            this.txtLopChuyenNganh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLopChuyenNganh.Enabled = false;
             this.txtLopChuyenNganh.Location = new System.Drawing.Point(159, 143);
             this.txtLopChuyenNganh.Name = "txtLopChuyenNganh";
@@ -273,6 +289,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtTenHocVien
             // 
+            this.txtTenHocVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenHocVien.Enabled = false;
             this.txtTenHocVien.Location = new System.Drawing.Point(159, 101);
             this.txtTenHocVien.Name = "txtTenHocVien";
@@ -281,6 +299,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtMaHocVien
             // 
+            this.txtMaHocVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaHocVien.Enabled = false;
             this.txtMaHocVien.Location = new System.Drawing.Point(159, 56);
             this.txtMaHocVien.Name = "txtMaHocVien";
@@ -444,6 +464,14 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 94;
             // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "gridColumn9";
+            this.gridColumn9.FieldName = "MaChiTietPhieuDiem";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Width = 94;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnSua);
@@ -504,6 +532,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuu.Location = new System.Drawing.Point(326, 183);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(121, 72);
@@ -514,6 +543,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // 
             // txtGhiChu
             // 
+            this.txtGhiChu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhiChu.Location = new System.Drawing.Point(159, 233);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(125, 22);
@@ -569,14 +600,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "gridColumn9";
-            this.gridColumn9.FieldName = "MaChiTietPhieuDiem";
-            this.gridColumn9.MinWidth = 25;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Width = 94;
             // 
             // GV_NhapDiemThi
             // 

@@ -50,7 +50,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         }
        
-        private void DSHV(int maHK, int maHp, int maLhp)
+        private void DSHocVien(int maHK, int maHp, int maLhp)
         {
             using (var ctx = new Model.QLDHV_model())
             {
@@ -92,6 +92,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 //cbbLopHocPhan.SelectedIndex = -1;
                 List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaGiangVien == MainForm.MaID).ToList();
 
+                DSHocVien(maHK, 0, 0);
+
                 dgvDSHocVien.DataSource = DSHV;
                 cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
 
@@ -116,9 +118,9 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
             //MessageBox.Show(maHp.ToString());
             LoadCBBLopHocPhan(maHp,maHK);
-           
+
             //đổ danh sách học viên ra theo học kỳ và học phần
-            DSHV(maHK, maHp,0);
+            DSHocVien(maHK, maHp,0);
             cbbLopHocPhan.SelectedIndexChanged += cbbLopHocPhan_SelectedIndexChanged;
 
         }
@@ -177,7 +179,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                     txtDiemThi.Enabled = false;
                     txtGhiChu.Enabled = false;
                 }
-                DSHV(maHK, maHp, maLhp);
+                DSHocVien(maHK, maHp, maLhp);
             }
 
 
