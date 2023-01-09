@@ -91,7 +91,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             {
                 lopcn.TenLopChuyenNganh = txtEditLopCN.Text;
                 lopcn.MaBoMon = int.Parse(cbEditMaBM.Text);
-                lopcn.MaLopTruong = int.Parse(cbEditMaLP.Text);
+                if (cbEditMaLP.Text != "")
+                {
+                    lopcn.MaLopTruong = int.Parse(cbEditMaLP.Text);
+                }
+                else
+                {
+                    lopcn.MaLopTruong = null;
+                }
                 db.SaveChanges();
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
