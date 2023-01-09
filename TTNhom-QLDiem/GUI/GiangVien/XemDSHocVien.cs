@@ -17,9 +17,9 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         public int magv = 1;
 
         public QLDHV_model db = new QLDHV_model();
-        List<GV_LopChuyenNganh> lopCN ;
+        //List<GV_DSLopChuyenNganh_HV> lopCN;
         //QLDHV_model db = new QLDHV_model();
-        int mabm;
+        //int mabm;
 
         public XemDSHocVien()
         {
@@ -28,6 +28,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         }
         private void getBoMon()
         {
+            cbBoMon.Items.Clear();
             List<BoMon> lsbm = db.BoMons.ToList();
             foreach (var item in lsbm)
             {
@@ -36,6 +37,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         }
         private void getHocKy()
         {
+            cbHocKy.Items.Clear();
             List<HocKy> lshk = db.HocKies.ToList();
             foreach (var item in lshk)
             {
@@ -44,6 +46,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         }
         private void getHocPhan()
         {
+            cbHocPhan.Items.Clear();
             List<HocPhan> lshp = db.HocPhans.ToList();
             foreach (var item in lshp)
             {
@@ -56,7 +59,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbLopHPphutrach.Items.Clear();
             foreach (var item in lhp.ToList())
             {
-                cbLopHPphutrach.Items.Add(item.MaLopHocPhan);
+                cbLopHPphutrach.Items.Add(item.TenLopHocPhan);
             }
         }
         public void reload()
@@ -77,8 +80,10 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void grdView_DSLopChuyenNganh_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+
             grid_HocVien.DataSource = null;
             int index = e.RowHandle;
+            List<GV_LopChuyenNganh> lopCN=db.GV_LopChuyenNganh.ToList();
             GV_LopChuyenNganh lcn = lopCN[index];
             int malcn = lcn.MaLopChuyenNganh;
             List<Model.HocVien> hv = db.HocViens.Where(s => s.MaLopChuyenNganh == malcn).ToList();
