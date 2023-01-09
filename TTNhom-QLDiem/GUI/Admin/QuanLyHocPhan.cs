@@ -141,11 +141,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             if (selectIndex == 1) hinhthucthi = "Thi viết";
             if (selectIndex == 2) hinhthucthi = "Thi trực tuyến";
             dbHp.HinhThucThi = hinhthucthi;
-            MessageBox.Show(hinhthucthi);
             db.SaveChanges();
-            MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //dgvDSHocPhan.Refresh();
-            //dsHocPhan = new List<AD_QLHP_DSHocPhan>();   
+            MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             dgvDSHocPhan.DataSource = null;
             dsHocPhan = db.AD_QLLHP_DSHocPhan.ToList();
             dgvDSHocPhan.DataSource = dsHocPhan;
