@@ -205,8 +205,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbThemBoMon.Name = "cbThemBoMon";
             this.cbThemBoMon.Size = new System.Drawing.Size(288, 24);
             this.cbThemBoMon.TabIndex = 28;
-            this.cbThemBoMon.SelectedIndexChanged += new System.EventHandler(this.cbThemBoMon_SelectedIndexChanged);
-            this.cbThemBoMon.Click += new System.EventHandler(this.cbThemBoMon_Click);
+            
             // 
             // dateThemNgaySinhGV
             // 
@@ -348,7 +347,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaBoMon.Name = "cbSuaBoMon";
             this.cbSuaBoMon.Size = new System.Drawing.Size(288, 24);
             this.cbSuaBoMon.TabIndex = 50;
-            this.cbSuaBoMon.SelectedIndexChanged += new System.EventHandler(this.cbSuaBoMon_SelectedIndexChanged);
+           
             // 
             // dateSuaNgaySinhGV
             // 

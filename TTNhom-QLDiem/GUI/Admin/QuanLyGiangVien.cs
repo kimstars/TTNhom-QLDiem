@@ -68,19 +68,17 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private void btnThemGV_Click(object sender, EventArgs e)
         {
+            List<Model.BoMon> bm = db.BoMons.ToList();
+            int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
             Model.GiangVien gv = new Model.GiangVien();
-            if (CheckThemGV())
+            if (CheckThemGV() && checkgiangvien(mabm,  txtThemChucVuGV.Text))
             {
                 gv.HoTenGV = txtThemTenGV.Text;
                 gv.NgaySinh = dateThemNgaySinhGV.DateTime;
                 gv.GioiTinh = cbGioiTinh.Text;
                 gv.CapBac = txtThemCapBacGV.Text;
                 gv.ChucVu = txtThemChucVuGV.Text;
-
-                List<Model.BoMon> bm = db.BoMons.ToList();
-                int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
-                gv.MaBoMon = mabm;
-                
+                gv.MaBoMon = mabm;             
                 gv.MaTK = int.Parse(txtThemMaTKGV.Text);                
                 db.GiangViens.Add(gv);
                 db.SaveChanges();
@@ -102,7 +100,7 @@ namespace TTNhom_QLDiem.GUI.Admin
     
             }
         }
-        private void checkgiangvien(int mabm, string chucvu)
+        private bool checkgiangvien(int mabm, string chucvu)
         {
             List<Model.GiangVien> gv = db.GiangViens.Where(p => p.MaBoMon == mabm ).ToList();
             foreach(var item in gv.ToList())
@@ -110,8 +108,10 @@ namespace TTNhom_QLDiem.GUI.Admin
                 if (item.ChucVu == "Chủ nhiệm bộ môn" && chucvu == "Chủ nhiệm bộ môn")
                 {
                     MessageBox.Show("Bộ môn này đã có chủ nhiệm bộ môn. Vui lòng chọn lại chức vụ hoặc bộ môn!!!");
+                    return false;
                 }
             }
+            return true;
         }
         
         private void dgvTTGV_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -167,19 +167,17 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            List<Model.BoMon> bm = db.BoMons.ToList();
+            int mabm = bm.Find(s => s.TenBoMon == cbSuaBoMon.Text).MaBoMon;
             Model.GiangVien gv = db.GiangViens.Where(p => p.MaGiangVien == magv).FirstOrDefault();
-            if (CheckSuaGV())
+            if (CheckSuaGV() && checkgiangvien(mabm, txtSuaChucVuGV.Text))
             {
                 gv.HoTenGV = txtSuaTenGV.Text;
                 gv.NgaySinh = dateSuaNgaySinhGV.DateTime;
                 gv.GioiTinh = cbSuaGioiTinhGV.Text;
                 gv.CapBac = txtSuaCapBacGV.Text;
-                gv.ChucVu = txtSuaChucVuGV.Text;
-
-
-                List<Model.BoMon> bm = db.BoMons.ToList();
-                int maBM = bm.Find(s => s.TenBoMon == cbSuaBoMon.Text).MaBoMon;
-                gv.MaBoMon = maBM;
+                gv.ChucVu = txtSuaChucVuGV.Text;            
+                gv.MaBoMon = mabm;
 
                 db.SaveChanges();
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -199,25 +197,6 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         }
 
-        private void cbThemBoMon_Click(object sender, EventArgs e)
-        {
-            //List<Model.BoMon> bm = db.BoMons.ToList();
-            //int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
-            //checkgiangvien(mabm, txtThemChucVuGV.Text);
-        }
-
-        private void cbThemBoMon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<Model.BoMon> bm = db.BoMons.ToList();
-            int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
-            checkgiangvien(mabm, txtThemChucVuGV.Text);
-        }
-
-        private void cbSuaBoMon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<Model.BoMon> bm = db.BoMons.ToList();
-            int mabm = bm.Find(s => s.TenBoMon == cbSuaBoMon.Text).MaBoMon;
-            checkgiangvien(mabm, txtSuaChucVuGV.Text);
-        }
+       
     }
 }
