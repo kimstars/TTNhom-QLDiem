@@ -65,17 +65,17 @@ namespace TTNhom_QLDiem.GUI.Admin
                 string user = txtThemTenDangNhap.Text;
                 string pass = txtThemMatKhau.Text;
                 string hash = HashPass(pass);
-                string quyen = cbThemQuyen.Text;
+                string quyen = cbThemQuyen.Text.ToLower();
 
                 switch (quyen)
                 {
 
                     case "Giảng viên":
-                        quyen = "GV";
+                        quyen = "gv";
                         break;
 
                     case "Học viên":
-                        quyen = "HV";
+                        quyen = "hv";
                         break;
 
                     default:
@@ -127,24 +127,19 @@ namespace TTNhom_QLDiem.GUI.Admin
             tentk = tk.TenDangNhap;
             txtSuaTenDangNhap.Text = tk.TenDangNhap;
             txtSuaMatKhau.Text = tk.MatKhau;
-            string quyen = tk.Quyen;
+            string quyen = tk.Quyen.ToLower();
             switch (quyen)
             {
-
-                case "GV":
-                    quyen = "Giảng viên";
-                    break;
                 case "gv":
                     quyen = "Giảng viên";
                     break;
 
-                case "HV":
-                    quyen = "Học viên";
-                    break;
                 case "hv":
                     quyen = "Học viên";
                     break;
-
+                case "admin":
+                    quyen = "Admin";
+                    break;
                 default:
                     break;
 
@@ -184,16 +179,16 @@ namespace TTNhom_QLDiem.GUI.Admin
                 Model.TaiKhoan tk = db.TaiKhoans.Where(p => p.MaTK == mataikhoan).FirstOrDefault();
                 tk.TenDangNhap = txtSuaTenDangNhap.Text;
                 tk.MatKhau = HashPass(txtSuaMatKhau.Text);
-                string quyen = cbSuaQuyen.Text;
+                string quyen = cbSuaQuyen.Text.ToLower();
                 switch (quyen)
                 {
 
                     case "Giảng viên":
-                        quyen = "GV";
+                        quyen = "gv";
                         break;
 
                     case "Học viên":
-                        quyen = "HV";
+                        quyen = "hv";
                         break;
 
                     default:
