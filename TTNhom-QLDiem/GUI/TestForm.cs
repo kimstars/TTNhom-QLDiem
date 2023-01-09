@@ -23,7 +23,7 @@ namespace TTNhom_QLDiem.GUI
         private void TestForm_Load(object sender, EventArgs e)
         {
 
-            DoiMK testform = new DoiMK();
+            Admin.QuanLyHocPhan testform = new Admin.QuanLyHocPhan();
 
 
             panelshow.Controls.Add(testform);
