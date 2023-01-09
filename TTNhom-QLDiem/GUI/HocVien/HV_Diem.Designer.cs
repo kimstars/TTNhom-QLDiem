@@ -256,7 +256,9 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.gridColumn7});
             this.dgvChitietDiem.GridControl = this.gridControl1;
             this.dgvChitietDiem.Name = "dgvChitietDiem";
+            this.dgvChitietDiem.OptionsBehavior.Editable = false;
             this.dgvChitietDiem.OptionsView.ShowGroupPanel = false;
+            this.dgvChitietDiem.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvChitietDiem_RowClick);
             this.dgvChitietDiem.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvChitietDiem_FocusedRowChanged);
             // 
             // gridColumn1
@@ -292,7 +294,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Điểm thi";
-            this.gridColumn4.FieldName = "Diemthi";
+            this.gridColumn4.FieldName = "DiemThi";
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -312,7 +314,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Tên giảng viên";
-            this.gridColumn6.FieldName = "TenGiangvien";
+            this.gridColumn6.FieldName = "HoTenGV";
             this.gridColumn6.MinWidth = 25;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
