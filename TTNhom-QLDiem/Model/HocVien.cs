@@ -13,6 +13,7 @@ namespace TTNhom_QLDiem.Model
         public HocVien()
         {
             ChiTietPhieuDiems = new HashSet<ChiTietPhieuDiem>();
+            LopChuyenNganhs = new HashSet<LopChuyenNganh>();
         }
 
         [Key]
@@ -44,6 +45,9 @@ namespace TTNhom_QLDiem.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuDiem> ChiTietPhieuDiems { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LopChuyenNganh> LopChuyenNganhs { get; set; }
 
         public virtual TaiKhoan TaiKhoan { get; set; }
 
