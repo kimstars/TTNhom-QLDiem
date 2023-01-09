@@ -181,7 +181,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             if (CheckSua() && checkTenTKSua(txtSuaTenDangNhap.Text, tentk))
             {
-                Model.TaiKhoan tk = db.TaiKhoans.Where(p => p.TenDangNhap == txtSuaTenDangNhap.Text).FirstOrDefault();
+                Model.TaiKhoan tk = db.TaiKhoans.Where(p => p.MaTK == mataikhoan).FirstOrDefault();
                 tk.TenDangNhap = txtSuaTenDangNhap.Text;
                 tk.MatKhau = HashPass(txtSuaMatKhau.Text);
                 string quyen = cbSuaQuyen.Text;
