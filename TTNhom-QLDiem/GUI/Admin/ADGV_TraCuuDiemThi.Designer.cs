@@ -313,6 +313,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtTenHV.Properties.Appearance.Options.UseFont = true;
             this.txtTenHV.Size = new System.Drawing.Size(177, 24);
             this.txtTenHV.TabIndex = 9;
+            this.txtTenHV.EditValueChanged += new System.EventHandler(this.txtTenHV_EditValueChanged);
             // 
             // txtMaHV
             // 
@@ -324,6 +325,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtMaHV.Properties.Appearance.Options.UseFont = true;
             this.txtMaHV.Size = new System.Drawing.Size(177, 24);
             this.txtMaHV.TabIndex = 8;
+            this.txtMaHV.EditValueChanged += new System.EventHandler(this.txtMaHV_EditValueChanged);
             this.txtMaHV.TextChanged += new System.EventHandler(this.txtMaHV_TextChanged);
             // 
             // btnTimKiemAll

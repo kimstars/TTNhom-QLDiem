@@ -159,7 +159,7 @@ namespace TTNhom_QLDiem.GUI
                     AccordionControlElement it37 = new AccordionControlElement(ElementStyle.Item) { Text = "Đổi mật khẩu" };
 
 
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it31, it36, it32, it33, it35, it38, it37 });
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it31, it36, it32, it33,it34, it35, it38, it37 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
