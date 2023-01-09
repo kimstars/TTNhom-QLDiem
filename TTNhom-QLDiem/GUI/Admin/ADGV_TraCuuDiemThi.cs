@@ -112,5 +112,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             TimKiem();
 
         }
+
+        private void txtMaHV_EditValueChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+        }
     }
 }
