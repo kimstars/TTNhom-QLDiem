@@ -71,7 +71,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void cbbHocKy_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            cbbHocPhan.SelectedIndexChanged -= cbbHocPhan_SelectedIndexChanged;
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
             maHK = lstHocKy[id].MaHocKy;
@@ -94,6 +94,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaGiangVien == MainForm.MaID).ToList();
 
                 dgvDSHocVien.DataSource = DSHV;
+                cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
+
             }
 
 
@@ -102,7 +104,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void cbbHocPhan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
+            cbbLopHocPhan.SelectedIndexChanged -= cbbLopHocPhan_SelectedIndexChanged;
 
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
@@ -118,6 +120,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
             //đổ danh sách học viên ra theo học kỳ và học phần
             DSHV(maHK, maHp, 0);
+            cbbLopHocPhan.SelectedIndexChanged += cbbLopHocPhan_SelectedIndexChanged;
 
         }
 
