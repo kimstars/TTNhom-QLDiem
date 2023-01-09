@@ -135,7 +135,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             dbHp.SoTC = Int32.Parse(txtSuaSoTC.Text);
             dbHp.SoTiet = Int32.Parse(txtSuaSoTiet.Text);
             dbHp.MaBoMon = mabm;
-            //string hinhthucthi;
             int selectIndex = radSuaHinhThucThi.SelectedIndex;
             if (selectIndex == 0) hinhthucthi = "Thi vấn đáp";
             if (selectIndex == 1) hinhthucthi = "Thi viết";
