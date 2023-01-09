@@ -420,7 +420,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // txtSoTinChi
             // 
             this.txtSoTinChi.Enabled = false;
-            this.txtSoTinChi.Location = new System.Drawing.Point(423, 52);
+            this.txtSoTinChi.Location = new System.Drawing.Point(423, 58);
             this.txtSoTinChi.Name = "txtSoTinChi";
             this.txtSoTinChi.Size = new System.Drawing.Size(125, 22);
             this.txtSoTinChi.TabIndex = 106;

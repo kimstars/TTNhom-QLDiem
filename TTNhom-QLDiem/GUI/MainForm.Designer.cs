@@ -32,6 +32,7 @@ namespace TTNhom_QLDiem.GUI
             this.showUsercontrol = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -59,11 +60,22 @@ namespace TTNhom_QLDiem.GUI
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnDangXuat});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1093, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.btnDangXuat);
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btnDangXuat.Caption = "Đăng xuất";
+            this.btnDangXuat.Id = 0;
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // MainForm
             // 
@@ -79,7 +91,7 @@ namespace TTNhom_QLDiem.GUI
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Name = "MainForm";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "MainForm";
+            this.Text = "Quản lý điểm học viên ";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.ResumeLayout(false);
@@ -90,5 +102,6 @@ namespace TTNhom_QLDiem.GUI
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer showUsercontrol;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
+        private DevExpress.XtraBars.BarButtonItem btnDangXuat;
     }
 }
