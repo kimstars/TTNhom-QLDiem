@@ -85,7 +85,7 @@ namespace TTNhom_QLDiem.GUI
         {
             //Khoong bieet quay veef trang trc kieeru gif
             this.Hide();
-            MainForm.
+            
         }
     }
 }
