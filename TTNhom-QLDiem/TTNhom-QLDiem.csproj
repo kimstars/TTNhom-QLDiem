@@ -201,7 +201,6 @@
     <Compile Include="Model\QLDHV_model.cs" />
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
-    <Compile Include="Model\TimKiemHVTheoHKy.cs" />
     <Compile Include="Model\TTDHV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

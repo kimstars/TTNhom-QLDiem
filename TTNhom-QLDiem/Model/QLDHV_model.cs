@@ -32,7 +32,6 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<AD_QLLHP_SuaLopCN> AD_QLLHP_SuaLopCN { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
         public virtual DbSet<GV_NhapDiem> GV_NhapDiem { get; set; }
-        public virtual DbSet<TimKiemHVTheoHKy> TimKiemHVTheoHKies { get; set; }
         public virtual DbSet<GV_DSLopChuyenNganh_HV> GV_DSLopChuyenNganh_HV { get; set; }
         public virtual DbSet<GV_LopChuyenNganh> GV_LopChuyenNganh { get; set; }
         public virtual DbSet<GV_TTHocVien_NhapDiem> GV_TTHocVien_NhapDiem { get; set; }
