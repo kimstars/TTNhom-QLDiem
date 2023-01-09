@@ -11,16 +11,11 @@ using System.Windows.Forms;
 
 namespace TTNhom_QLDiem.GUI.GiangVien
 {
-    public partial class QLyGV : DevExpress.XtraEditors.XtraUserControl
+    public partial class GV_NhapDiemCC_TX : DevExpress.XtraEditors.XtraUserControl
     {
-        public QLyGV()
+        public GV_NhapDiemCC_TX()
         {
             InitializeComponent();
-        }
-
-        private void btn_Search_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

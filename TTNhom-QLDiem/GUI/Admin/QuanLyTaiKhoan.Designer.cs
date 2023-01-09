@@ -47,8 +47,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.xtraSuaXoa = new DevExpress.XtraTab.XtraTabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtSuaMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.txtSuaTenDangNhap = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
@@ -271,8 +269,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraSuaXoa
             // 
-            this.xtraSuaXoa.Controls.Add(this.label7);
-            this.xtraSuaXoa.Controls.Add(this.label4);
             this.xtraSuaXoa.Controls.Add(this.txtSuaMatKhau);
             this.xtraSuaXoa.Controls.Add(this.txtSuaTenDangNhap);
             this.xtraSuaXoa.Controls.Add(this.label1);
@@ -284,27 +280,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraSuaXoa.Name = "xtraSuaXoa";
             this.xtraSuaXoa.Size = new System.Drawing.Size(1109, 190);
             this.xtraSuaXoa.Text = "Sửa / Xóa";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(69, 142);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(683, 34);
-            this.label7.TabIndex = 95;
-            this.label7.Text = "* Mật khẩu được hiển thị ban đầu là mật khẩu đã được mã hóa. \r\nNếu muốn đổi mật k" +
-    "hẩu thì đổi mật khẩu như bình thường và Phầm mềm sẽ tự động mã hóa mật khẩu đấy!" +
-    "!!";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(790, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
-            this.label4.TabIndex = 94;
             // 
             // txtSuaMatKhau
             // 
@@ -442,7 +417,5 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraEditors.TextEdit txtSuaTenDangNhap;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
     }
 }

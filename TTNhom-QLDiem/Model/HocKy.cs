@@ -6,11 +6,11 @@ namespace TTNhom_QLDiem.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("HocKi")]
-    public partial class HocKi
+    [Table("HocKy")]
+    public partial class HocKy
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HocKi()
+        public HocKy()
         {
             LopHocPhans = new HashSet<LopHocPhan>();
         }
