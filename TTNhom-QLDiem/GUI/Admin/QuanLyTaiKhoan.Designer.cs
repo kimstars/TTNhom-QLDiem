@@ -39,24 +39,24 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.Thêm = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.txtThemMatKhau = new DevExpress.XtraEditors.TextEdit();
+            this.txtThemTenDangNhap = new DevExpress.XtraEditors.TextEdit();
             this.btnThemTaiKhoan = new DevExpress.XtraEditors.SimpleButton();
             this.cbThemQuyen = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.xtraSuaXoa = new DevExpress.XtraTab.XtraTabPage();
-            this.bntXoaTaiKhoan = new DevExpress.XtraEditors.SimpleButton();
-            this.bntSuaTaiKhoan = new DevExpress.XtraEditors.SimpleButton();
-            this.cbSuaQuyen = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtThemTenDangNhap = new DevExpress.XtraEditors.TextEdit();
-            this.txtThemMatKhau = new DevExpress.XtraEditors.TextEdit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtSuaMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.txtSuaTenDangNhap = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.bntXoaTaiKhoan = new DevExpress.XtraEditors.SimpleButton();
+            this.bntSuaTaiKhoan = new DevExpress.XtraEditors.SimpleButton();
+            this.cbSuaQuyen = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -67,13 +67,13 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.Thêm)).BeginInit();
             this.Thêm.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThemMatKhau.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThemTenDangNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThemQuyen.Properties)).BeginInit();
             this.xtraSuaXoa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbSuaQuyen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThemTenDangNhap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThemMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenDangNhap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbSuaQuyen.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -195,6 +195,24 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1.Size = new System.Drawing.Size(1109, 190);
             this.xtraTabPage1.Text = "Thêm";
             // 
+            // txtThemMatKhau
+            // 
+            this.txtThemMatKhau.Location = new System.Drawing.Point(54, 131);
+            this.txtThemMatKhau.Name = "txtThemMatKhau";
+            this.txtThemMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThemMatKhau.Properties.Appearance.Options.UseFont = true;
+            this.txtThemMatKhau.Size = new System.Drawing.Size(181, 24);
+            this.txtThemMatKhau.TabIndex = 81;
+            // 
+            // txtThemTenDangNhap
+            // 
+            this.txtThemTenDangNhap.Location = new System.Drawing.Point(54, 50);
+            this.txtThemTenDangNhap.Name = "txtThemTenDangNhap";
+            this.txtThemTenDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThemTenDangNhap.Properties.Appearance.Options.UseFont = true;
+            this.txtThemTenDangNhap.Size = new System.Drawing.Size(181, 24);
+            this.txtThemTenDangNhap.TabIndex = 80;
+            // 
             // btnThemTaiKhoan
             // 
             this.btnThemTaiKhoan.Location = new System.Drawing.Point(432, 110);
@@ -267,20 +285,79 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraSuaXoa.Size = new System.Drawing.Size(1109, 190);
             this.xtraSuaXoa.Text = "Sửa / Xóa";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(69, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(683, 34);
+            this.label7.TabIndex = 95;
+            this.label7.Text = "* Mật khẩu được hiển thị ban đầu là mật khẩu đã được mã hóa. \r\nNếu muốn đổi mật k" +
+    "hẩu thì đổi mật khẩu như bình thường và Phầm mềm sẽ tự động mã hóa mật khẩu đấy!" +
+    "!!";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(790, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 94;
+            // 
+            // txtSuaMatKhau
+            // 
+            this.txtSuaMatKhau.Location = new System.Drawing.Point(72, 107);
+            this.txtSuaMatKhau.Name = "txtSuaMatKhau";
+            this.txtSuaMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuaMatKhau.Properties.Appearance.Options.UseFont = true;
+            this.txtSuaMatKhau.Size = new System.Drawing.Size(181, 24);
+            this.txtSuaMatKhau.TabIndex = 93;
+            // 
+            // txtSuaTenDangNhap
+            // 
+            this.txtSuaTenDangNhap.Location = new System.Drawing.Point(72, 51);
+            this.txtSuaTenDangNhap.Name = "txtSuaTenDangNhap";
+            this.txtSuaTenDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuaTenDangNhap.Properties.Appearance.Options.UseFont = true;
+            this.txtSuaTenDangNhap.Size = new System.Drawing.Size(181, 24);
+            this.txtSuaTenDangNhap.TabIndex = 92;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            this.label1.Location = new System.Drawing.Point(69, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "Mật Khẩu ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            this.label2.Location = new System.Drawing.Point(69, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 17);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "Tên đăng nhập";
+            // 
             // bntXoaTaiKhoan
             // 
-            this.bntXoaTaiKhoan.Location = new System.Drawing.Point(514, 55);
+            this.bntXoaTaiKhoan.Location = new System.Drawing.Point(667, 50);
             this.bntXoaTaiKhoan.Name = "bntXoaTaiKhoan";
-            this.bntXoaTaiKhoan.Size = new System.Drawing.Size(123, 106);
+            this.bntXoaTaiKhoan.Size = new System.Drawing.Size(108, 81);
             this.bntXoaTaiKhoan.TabIndex = 89;
             this.bntXoaTaiKhoan.Text = "Xóa";
             this.bntXoaTaiKhoan.Click += new System.EventHandler(this.bntXoaTaiKhoan_Click);
             // 
             // bntSuaTaiKhoan
             // 
-            this.bntSuaTaiKhoan.Location = new System.Drawing.Point(315, 111);
+            this.bntSuaTaiKhoan.Location = new System.Drawing.Point(482, 50);
             this.bntSuaTaiKhoan.Name = "bntSuaTaiKhoan";
-            this.bntSuaTaiKhoan.Size = new System.Drawing.Size(125, 50);
+            this.bntSuaTaiKhoan.Size = new System.Drawing.Size(114, 81);
             this.bntSuaTaiKhoan.TabIndex = 88;
             this.bntSuaTaiKhoan.Text = "Lưu thay đổi";
             this.bntSuaTaiKhoan.Click += new System.EventHandler(this.bntSuaTaiKhoan_Click);
@@ -306,84 +383,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label6.TabIndex = 82;
             this.label6.Text = "Chọn Quyền";
             // 
-            // txtThemTenDangNhap
-            // 
-            this.txtThemTenDangNhap.Location = new System.Drawing.Point(54, 50);
-            this.txtThemTenDangNhap.Name = "txtThemTenDangNhap";
-            this.txtThemTenDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThemTenDangNhap.Properties.Appearance.Options.UseFont = true;
-            this.txtThemTenDangNhap.Size = new System.Drawing.Size(181, 24);
-            this.txtThemTenDangNhap.TabIndex = 80;
-         
-            // 
-            // txtThemMatKhau
-            // 
-            this.txtThemMatKhau.Location = new System.Drawing.Point(54, 131);
-            this.txtThemMatKhau.Name = "txtThemMatKhau";
-            this.txtThemMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThemMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.txtThemMatKhau.Size = new System.Drawing.Size(181, 24);
-            this.txtThemMatKhau.TabIndex = 81;
-            // 
-            // txtSuaMatKhau
-            // 
-            this.txtSuaMatKhau.Location = new System.Drawing.Point(72, 132);
-            this.txtSuaMatKhau.Name = "txtSuaMatKhau";
-            this.txtSuaMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuaMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.txtSuaMatKhau.Size = new System.Drawing.Size(181, 24);
-            this.txtSuaMatKhau.TabIndex = 93;
-            // 
-            // txtSuaTenDangNhap
-            // 
-            this.txtSuaTenDangNhap.Location = new System.Drawing.Point(72, 51);
-            this.txtSuaTenDangNhap.Name = "txtSuaTenDangNhap";
-            this.txtSuaTenDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuaTenDangNhap.Properties.Appearance.Options.UseFont = true;
-            this.txtSuaTenDangNhap.Size = new System.Drawing.Size(181, 24);
-            this.txtSuaTenDangNhap.TabIndex = 92;
-          
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            this.label1.Location = new System.Drawing.Point(69, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 91;
-            this.label1.Text = "Mật Khẩu ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            this.label2.Location = new System.Drawing.Point(69, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 17);
-            this.label2.TabIndex = 90;
-            this.label2.Text = "Tên đăng nhập";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(790, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
-            this.label4.TabIndex = 94;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(808, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(247, 85);
-            this.label7.TabIndex = 95;
-            this.label7.Text = "* Mật khẩu được hiển thị ban đầu là\r\nmật khẩu đã được mã hóa. Nếu muốn \r\nmật khẩu" +
-    " thì đổi mật khẩu như bình \r\nthường và Phầm mềm sẽ tự động \r\nmã hóa mật khẩu đấy" +
-    "!!!";
-            // 
             // QuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -403,14 +402,14 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Thêm.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThemMatKhau.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThemTenDangNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThemQuyen.Properties)).EndInit();
             this.xtraSuaXoa.ResumeLayout(false);
             this.xtraSuaXoa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbSuaQuyen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThemTenDangNhap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThemMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenDangNhap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbSuaQuyen.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
