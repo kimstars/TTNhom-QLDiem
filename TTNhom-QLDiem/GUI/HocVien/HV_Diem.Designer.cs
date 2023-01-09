@@ -259,7 +259,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.dgvChitietDiem.OptionsBehavior.Editable = false;
             this.dgvChitietDiem.OptionsView.ShowGroupPanel = false;
             this.dgvChitietDiem.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvChitietDiem_RowClick);
-            this.dgvChitietDiem.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvChitietDiem_FocusedRowChanged);
+            //this.dgvChitietDiem.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvChitietDiem_FocusedRowChanged);
             // 
             // gridColumn1
             // 
