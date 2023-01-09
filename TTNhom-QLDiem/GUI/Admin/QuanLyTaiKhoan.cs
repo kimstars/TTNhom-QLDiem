@@ -126,7 +126,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             mataikhoan = tk.MaTK;
             tentk = tk.TenDangNhap;
             txtSuaTenDangNhap.Text = tk.TenDangNhap;
-            txtSuaMatKhau.Text = tk.MatKhau;
+            //txtSuaMatKhau.Text = tk.MatKhau;
             string quyen = tk.Quyen.ToLower();
             switch (quyen)
             {
