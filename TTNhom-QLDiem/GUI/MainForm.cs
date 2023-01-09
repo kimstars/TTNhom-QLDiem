@@ -63,6 +63,8 @@ namespace TTNhom_QLDiem.GUI
         Admin.QuanLyLopHocPhan uc35;
 
         Admin.ADGV_TraCuuDiemThi uc36;
+        Admin.QuanLyTaiKhoan uc37;
+
 
         DoiMK ucDMK;
 
@@ -153,10 +155,11 @@ namespace TTNhom_QLDiem.GUI
                     AccordionControlElement it33 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý học phần" };
                     AccordionControlElement it34 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý lớp chuyên ngành" };
                     AccordionControlElement it35 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý lớp học phần" };
+                    AccordionControlElement it38 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý tài khoản" };
                     AccordionControlElement it37 = new AccordionControlElement(ElementStyle.Item) { Text = "Đổi mật khẩu" };
 
 
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it31, it36, it32, it33, it35, it37 });
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it31, it36, it32, it33, it35, it38, it37 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
@@ -168,6 +171,7 @@ namespace TTNhom_QLDiem.GUI
                     it35.Click += It35_Click;
                     it36.Click += It25_Click;
                     it37.Click += ItMK_Click;
+                    it38.Click += It38_Click;
 
                     uc36 = new Admin.ADGV_TraCuuDiemThi();
                     uc31 = new Admin.QuanLyHocVien();
@@ -175,7 +179,7 @@ namespace TTNhom_QLDiem.GUI
                     uc33 = new Admin.QuanLyHocPhan();
                     uc34 = new Admin.QuanLyLopChuyenNganh();
                     uc35 = new Admin.QuanLyLopHocPhan();
-
+                    uc37 = new Admin.QuanLyTaiKhoan();
 
                     uc31.Dock = DockStyle.Fill;
                     uc32.Dock = DockStyle.Fill;
@@ -184,9 +188,10 @@ namespace TTNhom_QLDiem.GUI
                     uc35.Dock = DockStyle.Fill;
                     uc36.Dock = DockStyle.Fill;
                     ucDMK.Dock = DockStyle.Fill;
+                    uc37.Dock = DockStyle.Fill;
+                    
 
-
-                    showUsercontrol.Controls.AddRange(new Control[] { uc31, uc32, uc33, uc34, uc35, uc36, ucDMK });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc31, uc32, uc33, uc34, uc35, uc36, uc37, ucDMK });
 
                     break;
 
@@ -197,6 +202,11 @@ namespace TTNhom_QLDiem.GUI
 
 
 
+        }
+
+        private void It38_Click(object sender, EventArgs e)
+        {
+            uc37.BringToFront();
         }
 
         private void ItMK_Click(object sender, EventArgs e)
