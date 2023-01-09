@@ -172,9 +172,15 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
+    <Compile Include="Model\AD_LopChuyenNganh.cs" />
+    <Compile Include="Model\AD_QLHP_DSHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_DSHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_DSLopHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_SuaLopCN.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
+    <Compile Include="Model\GV_NhapDiem.cs" />
     <Compile Include="Model\HocKy.cs" />
     <Compile Include="Model\HocPhan.cs" />
     <Compile Include="Model\HocVien.cs" />
@@ -185,7 +191,7 @@
     <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
-    <Compile Include="Model\timkiem.cs" />
+    <Compile Include="Model\TimKiemHVTheoHKy.cs" />
     <Compile Include="Model\TTDHV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
