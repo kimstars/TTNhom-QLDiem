@@ -75,7 +75,11 @@ namespace TTNhom_QLDiem.GUI.Admin
                     QuanLyGiangVien.MaTaiKhoan = newtk.MaTK;
                 }
 
+                txtUsername.Text = "" ;
+                txtPassword.Text = "" ;
+                cbQuyen.Text = "" ;
             }
+            
 
         }
 

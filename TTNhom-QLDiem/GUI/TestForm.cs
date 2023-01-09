@@ -23,8 +23,7 @@ namespace TTNhom_QLDiem.GUI
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            //Admin.QuanLyLopHocPhan testform = new Admin.QuanLyLopHocPhan();
-            GV_NhapDiemThi testform = new GV_NhapDiemThi();
+            Admin.QuanLyHocVien testform = new Admin.QuanLyHocVien();
             panelshow.Controls.Add(testform);
             testform.Dock = DockStyle.Fill;
 
