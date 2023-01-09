@@ -23,7 +23,7 @@ namespace TTNhom_QLDiem.GUI
         private void TestForm_Load(object sender, EventArgs e)
         {
 
-            GiangVien.XemDSHocVien testform = new GiangVien.XemDSHocVien();
+            DoiMK testform = new DoiMK();
 
 
             panelshow.Controls.Add(testform);

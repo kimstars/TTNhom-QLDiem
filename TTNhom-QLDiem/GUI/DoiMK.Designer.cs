@@ -79,6 +79,7 @@ namespace TTNhom_QLDiem.GUI
             this.btnCancel.Size = new System.Drawing.Size(115, 28);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtReNewPass
             // 
@@ -104,6 +105,7 @@ namespace TTNhom_QLDiem.GUI
             this.btnOK.Size = new System.Drawing.Size(115, 28);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // labelControl2
             // 
