@@ -30,7 +30,6 @@ namespace TTNhom_QLDiem.GUI
         private void InitializeComponent()
         {
             this.grpCtrl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.txtReNewPass = new DevExpress.XtraEditors.TextEdit();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -38,6 +37,7 @@ namespace TTNhom_QLDiem.GUI
             this.lbPass = new DevExpress.XtraEditors.LabelControl();
             this.txtOldPass = new DevExpress.XtraEditors.TextEdit();
             this.lbUser = new DevExpress.XtraEditors.LabelControl();
+            this.lbHello = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).BeginInit();
             this.grpCtrl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtReNewPass.Properties)).BeginInit();
@@ -52,7 +52,7 @@ namespace TTNhom_QLDiem.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCtrl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
             this.grpCtrl1.Appearance.Options.UseBackColor = true;
-            this.grpCtrl1.Controls.Add(this.btnCancel);
+            this.grpCtrl1.Controls.Add(this.lbHello);
             this.grpCtrl1.Controls.Add(this.txtReNewPass);
             this.grpCtrl1.Controls.Add(this.btnOK);
             this.grpCtrl1.Controls.Add(this.labelControl2);
@@ -66,19 +66,6 @@ namespace TTNhom_QLDiem.GUI
             this.grpCtrl1.Size = new System.Drawing.Size(1035, 730);
             this.grpCtrl1.TabIndex = 2;
             this.grpCtrl1.Text = "Đổi mật khẩu";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(596, 437);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 28);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel";
             // 
             // txtReNewPass
             // 
@@ -101,9 +88,10 @@ namespace TTNhom_QLDiem.GUI
             this.btnOK.Location = new System.Drawing.Point(473, 437);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(115, 28);
+            this.btnOK.Size = new System.Drawing.Size(238, 28);
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // labelControl2
             // 
@@ -165,6 +153,18 @@ namespace TTNhom_QLDiem.GUI
             this.lbUser.TabIndex = 0;
             this.lbUser.Text = "Mật khẩu cũ: ";
             // 
+            // lbHello
+            // 
+            this.lbHello.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbHello.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHello.Appearance.Options.UseFont = true;
+            this.lbHello.Location = new System.Drawing.Point(285, 187);
+            this.lbHello.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbHello.Name = "lbHello";
+            this.lbHello.Size = new System.Drawing.Size(93, 24);
+            this.lbHello.TabIndex = 9;
+            this.lbHello.Text = "Xin chào ";
+            // 
             // DoiMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -172,6 +172,7 @@ namespace TTNhom_QLDiem.GUI
             this.Controls.Add(this.grpCtrl1);
             this.Name = "DoiMK";
             this.Size = new System.Drawing.Size(1035, 730);
+            this.Load += new System.EventHandler(this.DoiMK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).EndInit();
             this.grpCtrl1.ResumeLayout(false);
             this.grpCtrl1.PerformLayout();
@@ -185,7 +186,6 @@ namespace TTNhom_QLDiem.GUI
         #endregion
 
         private DevExpress.XtraEditors.GroupControl grpCtrl1;
-        private DevExpress.XtraEditors.SimpleButton btnCancel;
         public DevExpress.XtraEditors.TextEdit txtReNewPass;
         private DevExpress.XtraEditors.SimpleButton btnOK;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -193,5 +193,6 @@ namespace TTNhom_QLDiem.GUI
         private DevExpress.XtraEditors.LabelControl lbPass;
         public DevExpress.XtraEditors.TextEdit txtOldPass;
         private DevExpress.XtraEditors.LabelControl lbUser;
+        private DevExpress.XtraEditors.LabelControl lbHello;
     }
 }

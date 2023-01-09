@@ -93,6 +93,7 @@ namespace TTNhom_QLDiem.GUI
             this.checkEditHienMatKhau.Properties.Caption = "Hiện mật khẩu";
             this.checkEditHienMatKhau.Size = new System.Drawing.Size(172, 27);
             this.checkEditHienMatKhau.TabIndex = 39;
+            this.checkEditHienMatKhau.CheckedChanged += new System.EventHandler(this.checkEditHienMatKhau_CheckedChanged);
             // 
             // txtPassword
             // 
