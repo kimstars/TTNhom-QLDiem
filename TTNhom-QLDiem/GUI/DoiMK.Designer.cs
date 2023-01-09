@@ -37,6 +37,7 @@ namespace TTNhom_QLDiem.GUI
             this.lbPass = new DevExpress.XtraEditors.LabelControl();
             this.txtOldPass = new DevExpress.XtraEditors.TextEdit();
             this.lbUser = new DevExpress.XtraEditors.LabelControl();
+            this.lbHello = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).BeginInit();
             this.grpCtrl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtReNewPass.Properties)).BeginInit();
@@ -51,6 +52,7 @@ namespace TTNhom_QLDiem.GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCtrl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
             this.grpCtrl1.Appearance.Options.UseBackColor = true;
+            this.grpCtrl1.Controls.Add(this.lbHello);
             this.grpCtrl1.Controls.Add(this.txtReNewPass);
             this.grpCtrl1.Controls.Add(this.btnOK);
             this.grpCtrl1.Controls.Add(this.labelControl2);
@@ -151,6 +153,18 @@ namespace TTNhom_QLDiem.GUI
             this.lbUser.TabIndex = 0;
             this.lbUser.Text = "Mật khẩu cũ: ";
             // 
+            // lbHello
+            // 
+            this.lbHello.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbHello.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHello.Appearance.Options.UseFont = true;
+            this.lbHello.Location = new System.Drawing.Point(285, 187);
+            this.lbHello.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbHello.Name = "lbHello";
+            this.lbHello.Size = new System.Drawing.Size(93, 24);
+            this.lbHello.TabIndex = 9;
+            this.lbHello.Text = "Xin chào ";
+            // 
             // DoiMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -158,6 +172,7 @@ namespace TTNhom_QLDiem.GUI
             this.Controls.Add(this.grpCtrl1);
             this.Name = "DoiMK";
             this.Size = new System.Drawing.Size(1035, 730);
+            this.Load += new System.EventHandler(this.DoiMK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grpCtrl1)).EndInit();
             this.grpCtrl1.ResumeLayout(false);
             this.grpCtrl1.PerformLayout();
@@ -178,5 +193,6 @@ namespace TTNhom_QLDiem.GUI
         private DevExpress.XtraEditors.LabelControl lbPass;
         public DevExpress.XtraEditors.TextEdit txtOldPass;
         private DevExpress.XtraEditors.LabelControl lbUser;
+        private DevExpress.XtraEditors.LabelControl lbHello;
     }
 }

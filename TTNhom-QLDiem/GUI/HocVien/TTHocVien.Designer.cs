@@ -109,10 +109,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(84, 353);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 22);
+            this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 66;
             this.label1.Text = "Mã tài khoản";
             // 
@@ -121,12 +122,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtMaTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaTK.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaTK.Enabled = false;
-            this.txtMaTK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTK.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtMaTK.Location = new System.Drawing.Point(88, 384);
             this.txtMaTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaTK.Name = "txtMaTK";
             this.txtMaTK.ReadOnly = true;
-            this.txtMaTK.Size = new System.Drawing.Size(238, 30);
+            this.txtMaTK.Size = new System.Drawing.Size(238, 29);
             this.txtMaTK.TabIndex = 65;
             // 
             // label16
@@ -134,10 +136,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label16.AutoSize = true;
             this.label16.Enabled = false;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label16.Location = new System.Drawing.Point(84, 133);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 22);
+            this.label16.Size = new System.Drawing.Size(66, 23);
             this.label16.TabIndex = 64;
             this.label16.Text = "Họ tên";
             // 
@@ -146,12 +149,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtHoTenHV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtHoTenHV.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtHoTenHV.Enabled = false;
-            this.txtHoTenHV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTenHV.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTenHV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtHoTenHV.Location = new System.Drawing.Point(88, 164);
             this.txtHoTenHV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHoTenHV.Name = "txtHoTenHV";
             this.txtHoTenHV.ReadOnly = true;
-            this.txtHoTenHV.Size = new System.Drawing.Size(238, 30);
+            this.txtHoTenHV.Size = new System.Drawing.Size(238, 29);
             this.txtHoTenHV.TabIndex = 63;
             // 
             // label15
@@ -159,10 +163,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label15.AutoSize = true;
             this.label15.Enabled = false;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label15.Location = new System.Drawing.Point(84, 59);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(108, 22);
+            this.label15.Size = new System.Drawing.Size(111, 23);
             this.label15.TabIndex = 62;
             this.label15.Text = "Mã học viên";
             // 
@@ -171,12 +176,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtMaHV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaHV.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaHV.Enabled = false;
-            this.txtMaHV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHV.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtMaHV.Location = new System.Drawing.Point(88, 90);
             this.txtMaHV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaHV.Name = "txtMaHV";
             this.txtMaHV.ReadOnly = true;
-            this.txtMaHV.Size = new System.Drawing.Size(238, 30);
+            this.txtMaHV.Size = new System.Drawing.Size(238, 29);
             this.txtMaHV.TabIndex = 61;
             // 
             // label10
@@ -184,10 +190,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label10.AutoSize = true;
             this.label10.Enabled = false;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label10.Location = new System.Drawing.Point(412, 353);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(151, 22);
+            this.label10.Size = new System.Drawing.Size(167, 23);
             this.label10.TabIndex = 60;
             this.label10.Text = "Lớp chuyên ngành";
             // 
@@ -196,12 +203,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtTenLopCN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtTenLopCN.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTenLopCN.Enabled = false;
-            this.txtTenLopCN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLopCN.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLopCN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtTenLopCN.Location = new System.Drawing.Point(415, 384);
             this.txtTenLopCN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenLopCN.Name = "txtTenLopCN";
             this.txtTenLopCN.ReadOnly = true;
-            this.txtTenLopCN.Size = new System.Drawing.Size(238, 30);
+            this.txtTenLopCN.Size = new System.Drawing.Size(238, 29);
             this.txtTenLopCN.TabIndex = 59;
             // 
             // label7
@@ -209,10 +217,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label7.AutoSize = true;
             this.label7.Enabled = false;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label7.Location = new System.Drawing.Point(412, 279);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 22);
+            this.label7.Size = new System.Drawing.Size(96, 23);
             this.label7.TabIndex = 58;
             this.label7.Text = "Mã lớp CN";
             // 
@@ -221,12 +230,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtMaLopCN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaLopCN.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaLopCN.Enabled = false;
-            this.txtMaLopCN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLopCN.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLopCN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtMaLopCN.Location = new System.Drawing.Point(415, 310);
             this.txtMaLopCN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaLopCN.Name = "txtMaLopCN";
             this.txtMaLopCN.ReadOnly = true;
-            this.txtMaLopCN.Size = new System.Drawing.Size(238, 30);
+            this.txtMaLopCN.Size = new System.Drawing.Size(238, 29);
             this.txtMaLopCN.TabIndex = 57;
             // 
             // label5
@@ -234,10 +244,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Enabled = false;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(412, 203);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 22);
+            this.label5.Size = new System.Drawing.Size(93, 23);
             this.label5.TabIndex = 56;
             this.label5.Text = "Quê quán";
             // 
@@ -246,12 +257,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtQueQuan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtQueQuan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtQueQuan.Enabled = false;
-            this.txtQueQuan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQueQuan.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQueQuan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtQueQuan.Location = new System.Drawing.Point(415, 234);
             this.txtQueQuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.ReadOnly = true;
-            this.txtQueQuan.Size = new System.Drawing.Size(238, 30);
+            this.txtQueQuan.Size = new System.Drawing.Size(238, 29);
             this.txtQueQuan.TabIndex = 55;
             // 
             // label4
@@ -259,10 +271,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(413, 133);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(79, 23);
             this.label4.TabIndex = 54;
             this.label4.Text = "Chức vụ";
             // 
@@ -271,12 +284,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtChucVu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtChucVu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtChucVu.Enabled = false;
-            this.txtChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChucVu.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChucVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtChucVu.Location = new System.Drawing.Point(416, 164);
             this.txtChucVu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.ReadOnly = true;
-            this.txtChucVu.Size = new System.Drawing.Size(238, 30);
+            this.txtChucVu.Size = new System.Drawing.Size(238, 29);
             this.txtChucVu.TabIndex = 53;
             // 
             // label3
@@ -284,10 +298,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Enabled = false;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(413, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 22);
+            this.label3.Size = new System.Drawing.Size(78, 23);
             this.label3.TabIndex = 52;
             this.label3.Text = "Cấp bậc";
             // 
@@ -296,12 +311,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtCapBac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtCapBac.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtCapBac.Enabled = false;
-            this.txtCapBac.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapBac.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapBac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtCapBac.Location = new System.Drawing.Point(416, 90);
             this.txtCapBac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCapBac.Name = "txtCapBac";
             this.txtCapBac.ReadOnly = true;
-            this.txtCapBac.Size = new System.Drawing.Size(238, 30);
+            this.txtCapBac.Size = new System.Drawing.Size(238, 29);
             this.txtCapBac.TabIndex = 51;
             // 
             // dtNgaySinh
@@ -312,9 +328,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.dtNgaySinh.Location = new System.Drawing.Point(88, 310);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Properties.Appearance.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySinh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dtNgaySinh.Properties.Appearance.Options.UseBackColor = true;
             this.dtNgaySinh.Properties.Appearance.Options.UseFont = true;
+            this.dtNgaySinh.Properties.Appearance.Options.UseForeColor = true;
             this.dtNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -327,10 +345,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label8.AutoSize = true;
             this.label8.Enabled = false;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label8.Location = new System.Drawing.Point(84, 203);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 22);
+            this.label8.Size = new System.Drawing.Size(79, 23);
             this.label8.TabIndex = 43;
             this.label8.Text = "Giới tính";
             // 
@@ -339,12 +358,13 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtGioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtGioiTinh.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtGioiTinh.Enabled = false;
-            this.txtGioiTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGioiTinh.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGioiTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtGioiTinh.Location = new System.Drawing.Point(88, 234);
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.ReadOnly = true;
-            this.txtGioiTinh.Size = new System.Drawing.Size(238, 30);
+            this.txtGioiTinh.Size = new System.Drawing.Size(238, 29);
             this.txtGioiTinh.TabIndex = 42;
             // 
             // label12
@@ -352,10 +372,11 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label12.AutoSize = true;
             this.label12.Enabled = false;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label12.Location = new System.Drawing.Point(84, 279);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 22);
+            this.label12.Size = new System.Drawing.Size(93, 23);
             this.label12.TabIndex = 37;
             this.label12.Text = "Ngày sinh";
             // 

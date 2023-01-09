@@ -15,9 +15,11 @@ namespace TTNhom_QLDiem.GUI
     {
         QLDHV_model db = new QLDHV_model();
         int ma_user = MainForm.MaID;
-        public DoiMK()
+        string userrole;
+        public DoiMK(string role)
         {
             InitializeComponent();
+            userrole = role;
         }
         public static string HashPass(string pass)
         {
@@ -82,10 +84,29 @@ namespace TTNhom_QLDiem.GUI
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+
+        private void DoiMK_Load(object sender, EventArgs e)
         {
-            //Khoong bieet quay veef trang trc kieeru gif
-            
+            string hellotext = "Xin chào ";
+
+            if (userrole == "hv")
+            {
+                Model.HocVien hv = db.HocViens.Where(m => m.MaHocVien == MainForm.MaID).FirstOrDefault();
+                hellotext += "học viên " + hv.HoTenHV;
+            }
+            else
+            {
+                Model.GiangVien gv = db.GiangViens.Where(m => m.MaGiangVien == MainForm.MaID).FirstOrDefault();
+
+                if (gv.GioiTinh == "Nam") hellotext += "thầy ";
+                else hellotext += "cô ";
+
+                hellotext += gv.HoTenGV;
+
+            }
+           
+
+            lbHello.Text = hellotext;
         }
     }
 }

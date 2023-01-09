@@ -63,8 +63,5 @@ namespace TTNhom_QLDiem.Model
 
         [StringLength(150)]
         public string TenLopChuyenNganh { get; set; }
-
-        [StringLength(100)]
-        public string GhiChu { get; set; }
     }
 }
