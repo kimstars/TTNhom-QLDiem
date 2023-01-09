@@ -22,7 +22,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         }
         private int mahv;
         public static int MaTaiKhoan ;
- 
+        private string chucvu;
         QLDHV_model db = new QLDHV_model();
 
         private void btnThemTK_Click(object sender, EventArgs e)
@@ -72,6 +72,24 @@ namespace TTNhom_QLDiem.GUI.Admin
                     return false;
                 }
                 if (item.ChucVu == "Lớp phó" && chucvu == "Lớp phó")
+                {
+                    MessageBox.Show("Lớp chuyên ngành này đã có lớp phó . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool ChecksuaChucVuLCN(int MaLcn, string chucvu, string chucvu2)
+        {
+            List<Model.HocVien> hv = db.HocViens.Where(p => p.MaLopChuyenNganh == MaLcn).ToList();
+            foreach (var item in hv.ToList())
+            {
+                if (item.ChucVu == "Lớp trưởng" && chucvu == "Lớp trưởng" && chucvu != chucvu2)
+                {
+                    MessageBox.Show("Lớp chuyên ngành này đã có lớp trưởng . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
+                    return false;
+                }
+                if (item.ChucVu == "Lớp phó" && chucvu == "Lớp phó" && chucvu != chucvu2)
                 {
                     MessageBox.Show("Lớp chuyên ngành này đã có lớp phó . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
                     return false;
@@ -141,6 +159,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             int index = e.RowHandle;
             Model.HocVien hv = dsHocVien[index];
             mahv = hv.MaHocVien;
+            chucvu = hv.ChucVu;
             txtSuaTenHV.Text = hv.HoTenHV;
             dateSuaNgaySinhHV.EditValue = hv.NgaySinh;
             cbSuaGT.Text = hv.GioiTinh;
@@ -165,7 +184,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             Model.HocVien hv = db.HocViens.Where(p => p.MaHocVien == mahv).FirstOrDefault();
             List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
             int Malcn = lcn.Find(s => s.TenLopChuyenNganh == cbSuaLopChuyenNganh.Text).MaLopChuyenNganh;
-            if (CheckSuaHV() && CheckChucVuLCN(Malcn, cbSuaChucVu.Text))
+            if (CheckSuaHV() && ChecksuaChucVuLCN(Malcn, cbSuaChucVu.Text,chucvu))
             {
                 hv.HoTenHV = txtSuaTenHV.Text;
                 hv.NgaySinh = dateSuaNgaySinhHV.DateTime;
