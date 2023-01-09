@@ -346,7 +346,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // bntXoaTaiKhoan
             // 
-            this.bntXoaTaiKhoan.Location = new System.Drawing.Point(667, 50);
+            this.bntXoaTaiKhoan.Location = new System.Drawing.Point(644, 50);
             this.bntXoaTaiKhoan.Name = "bntXoaTaiKhoan";
             this.bntXoaTaiKhoan.Size = new System.Drawing.Size(108, 81);
             this.bntXoaTaiKhoan.TabIndex = 89;
@@ -355,7 +355,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // bntSuaTaiKhoan
             // 
-            this.bntSuaTaiKhoan.Location = new System.Drawing.Point(482, 50);
+            this.bntSuaTaiKhoan.Location = new System.Drawing.Point(503, 50);
             this.bntSuaTaiKhoan.Name = "bntSuaTaiKhoan";
             this.bntSuaTaiKhoan.Size = new System.Drawing.Size(114, 81);
             this.bntSuaTaiKhoan.TabIndex = 88;
@@ -370,7 +370,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaQuyen.Properties.Appearance.Options.UseFont = true;
             this.cbSuaQuyen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbSuaQuyen.Size = new System.Drawing.Size(125, 26);
+            this.cbSuaQuyen.Size = new System.Drawing.Size(141, 26);
             this.cbSuaQuyen.TabIndex = 87;
             // 
             // label6
