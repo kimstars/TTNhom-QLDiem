@@ -23,8 +23,18 @@ namespace TTNhom_QLDiem.Model
         public virtual DbSet<LopHocPhan> LopHocPhans { get; set; }
         public virtual DbSet<PhieuDiem> PhieuDiems { get; set; }
         public virtual DbSet<PhongHoc> PhongHocs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<AD_LopChuyenNganh> AD_LopChuyenNganh { get; set; }
+        public virtual DbSet<AD_QLHP_DSHocPhan> AD_QLHP_DSHocPhan { get; set; }
+        public virtual DbSet<AD_QLLHP_DSHocPhan> AD_QLLHP_DSHocPhan { get; set; }
+        public virtual DbSet<AD_QLLHP_DSLopHocPhan> AD_QLLHP_DSLopHocPhan { get; set; }
+        public virtual DbSet<AD_QLLHP_SuaLopCN> AD_QLLHP_SuaLopCN { get; set; }
         public virtual DbSet<ADV_TraCuuDiemHV> ADV_TraCuuDiemHV { get; set; }
+        public virtual DbSet<GV_NhapDiem> GV_NhapDiem { get; set; }
+        public virtual DbSet<GV_DSLopChuyenNganh_HV> GV_DSLopChuyenNganh_HV { get; set; }
+        public virtual DbSet<GV_LopChuyenNganh> GV_LopChuyenNganh { get; set; }
+        public virtual DbSet<GV_TTHocVien_NhapDiem> GV_TTHocVien_NhapDiem { get; set; }
         public virtual DbSet<TTDHV> TTDHVs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -92,7 +102,6 @@ namespace TTNhom_QLDiem.Model
             modelBuilder.Entity<PhieuDiem>()
                 .HasMany(e => e.ChiTietPhieuDiems)
                 .WithRequired(e => e.PhieuDiem)
-                .HasForeignKey(e => e.MaHocVien)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TaiKhoan>()
@@ -107,7 +116,15 @@ namespace TTNhom_QLDiem.Model
                 .Property(e => e.Quyen)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<AD_QLLHP_DSLopHocPhan>()
+                .Property(e => e.TenHocKy)
+                .IsUnicode(false);
+
             modelBuilder.Entity<ADV_TraCuuDiemHV>()
+                .Property(e => e.TenHocKy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<GV_LopChuyenNganh>()
                 .Property(e => e.TenHocKy)
                 .IsUnicode(false);
 
