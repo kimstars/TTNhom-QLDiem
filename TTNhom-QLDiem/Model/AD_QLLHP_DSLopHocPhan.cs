@@ -13,7 +13,7 @@ namespace TTNhom_QLDiem.Model
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaLopHocPhan { get; set; }
 
-        [StringLength(100)]
+        [StringLength(50)]
         public string TenLopHocPhan { get; set; }
 
         [StringLength(20)]
