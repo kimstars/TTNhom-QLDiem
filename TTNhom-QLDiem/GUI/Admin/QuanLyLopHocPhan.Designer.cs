@@ -442,7 +442,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Controls.Add(this.label18);
             this.xtraTabPage2.Controls.Add(this.label19);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(472, 384);
+            this.xtraTabPage2.Size = new System.Drawing.Size(472, 428);
             this.xtraTabPage2.Text = "Sửa";
             // 
             // btnSuaDelAll
@@ -536,7 +536,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuuThayDoi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuThayDoi.Appearance.Options.UseFont = true;
-            this.btnLuuThayDoi.Location = new System.Drawing.Point(41, 385);
+            this.btnLuuThayDoi.Location = new System.Drawing.Point(40, 371);
             this.btnLuuThayDoi.Name = "btnLuuThayDoi";
             this.btnLuuThayDoi.Size = new System.Drawing.Size(394, 44);
             this.btnLuuThayDoi.TabIndex = 109;

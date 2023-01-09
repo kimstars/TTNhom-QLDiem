@@ -59,7 +59,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             else
             {
                 gridControl1.DataSource = (db.ADV_TraCuuDiemHV.Where(s =>
-                                           (txtMaHV.Text == "" || s.MaHocVien.ToString().Contains(txtMaHV.Text))
+                                           (txtMaHV.Text == "" || s.MaHocVien== int.Parse(txtMaHV.Text))
                                            && (txtTenHV.Text == "" || s.HoTenHV.Contains(txtTenHV.Text))
                                            && (cbLopCN.Text == "" || s.TenLopChuyenNganh.Contains(cbLopCN.Text))
                                            && (cbMonThi.Text == "" || s.TenHocPhan.Contains(cbMonThi.Text))
