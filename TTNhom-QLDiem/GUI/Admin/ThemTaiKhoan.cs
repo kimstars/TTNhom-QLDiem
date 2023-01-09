@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTNhom_QLDiem.Model;
-
 namespace TTNhom_QLDiem.GUI.Admin
 {
     public partial class ThemTaiKhoan : DevExpress.XtraEditors.XtraForm
