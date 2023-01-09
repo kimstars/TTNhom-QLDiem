@@ -15,14 +15,14 @@ namespace TTNhom_QLDiem.GUI.Admin
     public partial class ADGV_TraCuuDiemThi : DevExpress.XtraEditors.XtraUserControl
     {
         public ADGV_TraCuuDiemThi()
-        {  
+        {
             InitializeComponent();
             reload();
         }
         private void getHocKy()
         {
             List<HocKy> dt = db.HocKies.ToList();
-            foreach(var item in dt)
+            foreach (var item in dt)
             {
                 cbHocKy.Items.Add(item.TenHocKy);
             }
@@ -47,17 +47,25 @@ namespace TTNhom_QLDiem.GUI.Admin
         List<ADV_TraCuuDiemHV> TraCuuDiemHV = new List<ADV_TraCuuDiemHV>();
         private void btn_search_Click(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (db.ADV_TraCuuDiemHV.Where(s => 
-                                        (txtMaHV.Text == "" || s.MaHocVien.ToString()==txtMaHV.Text)
-                                        && (txtTenHV.Text=="" || s.HoTenHV.Contains(txtTenHV.Text)) 
-                                        && (cbLopCN.Text == "" || s.TenLopChuyenNganh.Contains(cbLopCN.Text)) 
-                                        && (cbMonThi.Text == "" || s.TenHocPhan.Contains(cbMonThi.Text)) 
-                                        && (cbHocKy.Text == "" || s.TenHocKy.Contains(cbHocKy.Text))).ToList());
-            cbHocKy.Text = "";
-            cbLopCN.Text = "";
-            cbMonThi.Text = "";
-            txtMaHV.Text = "";
-            txtTenHV.Text = "";
+            TimKiem(true);
+        }
+
+        void TimKiem(bool isall = false)
+        {
+            if (isall)
+            {
+                gridControl1.DataSource = db.ADV_TraCuuDiemHV.ToList();
+            }
+            else
+            {
+                gridControl1.DataSource = (db.ADV_TraCuuDiemHV.Where(s =>
+                                           (txtMaHV.Text == "" || s.MaHocVien.ToString() == (txtMaHV.Text))
+                                           && (txtTenHV.Text == "" || s.HoTenHV.Contains(txtTenHV.Text))
+                                           && (cbLopCN.Text == "" || s.TenLopChuyenNganh == (cbLopCN.Text))
+                                           && (cbMonThi.Text == "" || s.TenHocPhan == (cbMonThi.Text))
+                                           && (cbHocKy.Text == "" || s.TenHocKy == (cbHocKy.Text))
+                                           ).ToList());
+            }
         }
         private void reload()
         {
@@ -71,7 +79,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             getMonThi();
             List<ADV_TraCuuDiemHV> TraCuuDiemHV1 = new List<ADV_TraCuuDiemHV>();
             TraCuuDiemHV1 = db.ADV_TraCuuDiemHV.ToList();
-            gridControl1.DataSource = TraCuuDiemHV1; 
+            gridControl1.DataSource = TraCuuDiemHV1;
         }
 
         private void txtMaHV_TextChanged(object sender, EventArgs e)
@@ -80,12 +88,43 @@ namespace TTNhom_QLDiem.GUI.Admin
             {
                 txtTenHV.Enabled = false;
                 txtTenHV.Text = db.HocViens.Where(s => s.MaHocVien.ToString() == txtMaHV.Text).FirstOrDefault().HoTenHV;
+                TimKiem();
             }
             else
             {
                 txtTenHV.Enabled = true;
                 txtTenHV.Text = "";
+                gridControl1.DataSource = db.ADV_TraCuuDiemHV.ToList();
             }
+        }
+
+        private void cbHocKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+
+        }
+
+        private void cbLopCN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+
+        }
+
+        private void cbMonThi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+
+        }
+
+        private void txtMaHV_EditValueChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+        }
+
+        private void txtTenHV_EditValueChanged(object sender, EventArgs e)
+        {
+            TimKiem();
+
         }
     }
 }

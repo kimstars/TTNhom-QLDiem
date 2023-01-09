@@ -42,6 +42,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColDiemTX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColDiemThi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColDiemTK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.cbMonThi = new System.Windows.Forms.ComboBox();
             this.cbLopCN = new System.Windows.Forms.ComboBox();
@@ -50,7 +51,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label4 = new System.Windows.Forms.Label();
             this.txtTenHV = new DevExpress.XtraEditors.TextEdit();
             this.txtMaHV = new DevExpress.XtraEditors.TextEdit();
-            this.btn_search = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTimKiemAll = new DevExpress.XtraEditors.SimpleButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -115,7 +116,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColDiemCC,
             this.gridColDiemTX,
             this.gridColDiemThi,
-            this.gridColDiemTK});
+            this.gridColDiemTK,
+            this.gridColumn1});
             this.gridView1.DetailHeight = 329;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -211,6 +213,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColDiemTK.VisibleIndex = 8;
             this.gridColDiemTK.Width = 94;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Học kỳ";
+            this.gridColumn1.FieldName = "TenHocKy";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 9;
+            this.gridColumn1.Width = 94;
+            // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.cbMonThi);
@@ -220,7 +232,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl2.Controls.Add(this.label4);
             this.groupControl2.Controls.Add(this.txtTenHV);
             this.groupControl2.Controls.Add(this.txtMaHV);
-            this.groupControl2.Controls.Add(this.btn_search);
+            this.groupControl2.Controls.Add(this.btnTimKiemAll);
             this.groupControl2.Controls.Add(this.label3);
             this.groupControl2.Controls.Add(this.label2);
             this.groupControl2.Controls.Add(this.label1);
@@ -241,6 +253,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbMonThi.Name = "cbMonThi";
             this.cbMonThi.Size = new System.Drawing.Size(188, 26);
             this.cbMonThi.TabIndex = 14;
+            this.cbMonThi.SelectedIndexChanged += new System.EventHandler(this.cbMonThi_SelectedIndexChanged);
             // 
             // cbLopCN
             // 
@@ -252,6 +265,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbLopCN.Name = "cbLopCN";
             this.cbLopCN.Size = new System.Drawing.Size(188, 26);
             this.cbLopCN.TabIndex = 13;
+            this.cbLopCN.SelectedIndexChanged += new System.EventHandler(this.cbLopCN_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -275,6 +289,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbHocKy.Name = "cbHocKy";
             this.cbHocKy.Size = new System.Drawing.Size(188, 26);
             this.cbHocKy.TabIndex = 11;
+            this.cbHocKy.SelectedIndexChanged += new System.EventHandler(this.cbHocKy_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -298,6 +313,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtTenHV.Properties.Appearance.Options.UseFont = true;
             this.txtTenHV.Size = new System.Drawing.Size(177, 24);
             this.txtTenHV.TabIndex = 9;
+            this.txtTenHV.EditValueChanged += new System.EventHandler(this.txtTenHV_EditValueChanged);
             // 
             // txtMaHV
             // 
@@ -309,19 +325,20 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtMaHV.Properties.Appearance.Options.UseFont = true;
             this.txtMaHV.Size = new System.Drawing.Size(177, 24);
             this.txtMaHV.TabIndex = 8;
+            this.txtMaHV.EditValueChanged += new System.EventHandler(this.txtMaHV_EditValueChanged);
             this.txtMaHV.TextChanged += new System.EventHandler(this.txtMaHV_TextChanged);
             // 
-            // btn_search
+            // btnTimKiemAll
             // 
-            this.btn_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_search.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Appearance.Options.UseFont = true;
-            this.btn_search.Location = new System.Drawing.Point(831, 58);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(106, 92);
-            this.btn_search.TabIndex = 7;
-            this.btn_search.Text = "Tìm Kiếm";
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            this.btnTimKiemAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTimKiemAll.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemAll.Appearance.Options.UseFont = true;
+            this.btnTimKiemAll.Location = new System.Drawing.Point(702, 53);
+            this.btnTimKiemAll.Name = "btnTimKiemAll";
+            this.btnTimKiemAll.Size = new System.Drawing.Size(137, 84);
+            this.btnTimKiemAll.TabIndex = 7;
+            this.btnTimKiemAll.Text = "Tất cả kết quả";
+            this.btnTimKiemAll.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // label3
             // 
@@ -385,7 +402,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.SimpleButton btn_search;
+        private DevExpress.XtraEditors.SimpleButton btnTimKiemAll;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -408,5 +425,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Columns.GridColumn gridColDiemTX;
         private DevExpress.XtraGrid.Columns.GridColumn gridColDiemThi;
         private DevExpress.XtraGrid.Columns.GridColumn gridColDiemTK;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

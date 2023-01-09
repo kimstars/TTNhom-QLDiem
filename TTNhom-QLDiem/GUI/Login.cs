@@ -108,5 +108,16 @@ namespace TTNhom_QLDiem.GUI
             }
         }
 
+        private void checkEditHienMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkEditHienMatKhau.Checked == true)
+
+                txtPassword.Properties.UseSystemPasswordChar = false;
+            else
+            {
+                txtPassword.Properties.UseSystemPasswordChar = true;
+
+            }
+        }
     }
 }

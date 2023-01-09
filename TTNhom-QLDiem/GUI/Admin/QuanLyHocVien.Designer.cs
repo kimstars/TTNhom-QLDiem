@@ -226,7 +226,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnThemTK
             // 
-            this.btnThemTK.Location = new System.Drawing.Point(419, 210);
+            this.btnThemTK.Location = new System.Drawing.Point(516, 210);
             this.btnThemTK.Name = "btnThemTK";
             this.btnThemTK.Size = new System.Drawing.Size(188, 28);
             this.btnThemTK.TabIndex = 29;
@@ -240,7 +240,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbLopCN.Name = "cbLopCN";
             this.cbLopCN.Size = new System.Drawing.Size(285, 24);
             this.cbLopCN.TabIndex = 28;
-            this.cbLopCN.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dateThemNgaySinhHV
             // 
@@ -370,11 +369,11 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPageSua.Controls.Add(this.btnSuaHV);
             this.xtraTabPageSua.Name = "xtraTabPageSua";
             this.xtraTabPageSua.Size = new System.Drawing.Size(1109, 255);
-            this.xtraTabPageSua.Text = "Sửa";
+            this.xtraTabPageSua.Text = "Sửa / Xóa";
             // 
             // btnXoaHV
             // 
-            this.btnXoaHV.Location = new System.Drawing.Point(773, 161);
+            this.btnXoaHV.Location = new System.Drawing.Point(773, 152);
             this.btnXoaHV.Name = "btnXoaHV";
             this.btnXoaHV.Size = new System.Drawing.Size(144, 62);
             this.btnXoaHV.TabIndex = 59;
@@ -404,7 +403,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaGT.FormattingEnabled = true;
             this.cbSuaGT.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nu"});
             this.cbSuaGT.Location = new System.Drawing.Point(36, 152);
             this.cbSuaGT.Name = "cbSuaGT";
             this.cbSuaGT.Size = new System.Drawing.Size(238, 24);

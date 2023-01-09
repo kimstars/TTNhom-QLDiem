@@ -40,6 +40,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.Thêm = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.btnThemDelAll = new DevExpress.XtraEditors.SimpleButton();
             this.cbThemLopCN = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtThemTenLHP = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.btnSuaDelAll = new DevExpress.XtraEditors.SimpleButton();
             this.cbSuaLopCN = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSuaTenLopHP = new System.Windows.Forms.TextBox();
@@ -88,8 +90,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.dgvLichSuTCA = new DevExpress.XtraGrid.GridControl();
-            this.dgvTCA_View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvDSLopHocPhan = new DevExpress.XtraGrid.GridControl();
+            this.dgvDSLopHocPhan_View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -117,8 +119,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSuTCA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTCA_View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,8 +151,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.46634F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.53366F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.7207F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.2793F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(484, 802);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
@@ -160,7 +162,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(3, 3);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(478, 503);
+            this.groupControl3.Size = new System.Drawing.Size(478, 489);
             this.groupControl3.TabIndex = 7;
             this.groupControl3.Text = "Quản lý học phần";
             // 
@@ -170,7 +172,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.Thêm.Location = new System.Drawing.Point(2, 28);
             this.Thêm.Name = "Thêm";
             this.Thêm.SelectedTabPage = this.xtraTabPage1;
-            this.Thêm.Size = new System.Drawing.Size(474, 473);
+            this.Thêm.Size = new System.Drawing.Size(474, 459);
             this.Thêm.TabIndex = 83;
             this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -178,6 +180,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.btnThemDelAll);
             this.xtraTabPage1.Controls.Add(this.cbThemLopCN);
             this.xtraTabPage1.Controls.Add(this.label21);
             this.xtraTabPage1.Controls.Add(this.txtThemTenLHP);
@@ -198,15 +201,25 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage1.Controls.Add(this.label3);
             this.xtraTabPage1.Controls.Add(this.label2);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(472, 442);
+            this.xtraTabPage1.Size = new System.Drawing.Size(472, 428);
             this.xtraTabPage1.Text = "Thêm";
+            // 
+            // btnThemDelAll
+            // 
+            this.btnThemDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemDelAll.Location = new System.Drawing.Point(344, 264);
+            this.btnThemDelAll.Name = "btnThemDelAll";
+            this.btnThemDelAll.Size = new System.Drawing.Size(85, 26);
+            this.btnThemDelAll.TabIndex = 96;
+            this.btnThemDelAll.Text = "Xóa tất cả";
+            this.btnThemDelAll.Click += new System.EventHandler(this.btnThemDelAll_Click);
             // 
             // cbThemLopCN
             // 
             this.cbThemLopCN.FormattingEnabled = true;
             this.cbThemLopCN.Location = new System.Drawing.Point(36, 264);
             this.cbThemLopCN.Name = "cbThemLopCN";
-            this.cbThemLopCN.Size = new System.Drawing.Size(264, 24);
+            this.cbThemLopCN.Size = new System.Drawing.Size(183, 24);
             this.cbThemLopCN.TabIndex = 95;
             this.cbThemLopCN.SelectedIndexChanged += new System.EventHandler(this.cbThemLopCN_SelectedIndexChanged);
             // 
@@ -224,12 +237,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             this.txtThemTenLHP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtThemTenLHP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThemTenLHP.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThemTenLHP.Location = new System.Drawing.Point(34, 194);
             this.txtThemTenLHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtThemTenLHP.Name = "txtThemTenLHP";
             this.txtThemTenLHP.ReadOnly = true;
-            this.txtThemTenLHP.Size = new System.Drawing.Size(394, 30);
+            this.txtThemTenLHP.Size = new System.Drawing.Size(394, 29);
             this.txtThemTenLHP.TabIndex = 92;
             // 
             // label7
@@ -290,9 +303,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // btnthemAddLopCN
             // 
-            this.btnthemAddLopCN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnthemAddLopCN.Location = new System.Drawing.Point(335, 262);
+            this.btnthemAddLopCN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnthemAddLopCN.Location = new System.Drawing.Point(244, 264);
             this.btnthemAddLopCN.Name = "btnthemAddLopCN";
             this.btnthemAddLopCN.Size = new System.Drawing.Size(94, 26);
             this.btnthemAddLopCN.TabIndex = 86;
@@ -409,6 +421,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.btnSuaDelAll);
             this.xtraTabPage2.Controls.Add(this.cbSuaLopCN);
             this.xtraTabPage2.Controls.Add(this.label6);
             this.xtraTabPage2.Controls.Add(this.txtSuaTenLopHP);
@@ -429,8 +442,18 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Controls.Add(this.label18);
             this.xtraTabPage2.Controls.Add(this.label19);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(472, 442);
+            this.xtraTabPage2.Size = new System.Drawing.Size(472, 428);
             this.xtraTabPage2.Text = "Sửa";
+            // 
+            // btnSuaDelAll
+            // 
+            this.btnSuaDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuaDelAll.Location = new System.Drawing.Point(340, 263);
+            this.btnSuaDelAll.Name = "btnSuaDelAll";
+            this.btnSuaDelAll.Size = new System.Drawing.Size(94, 26);
+            this.btnSuaDelAll.TabIndex = 118;
+            this.btnSuaDelAll.Text = "Xóa tất cả";
+            this.btnSuaDelAll.Click += new System.EventHandler(this.btnSuaDelAll_Click);
             // 
             // cbSuaLopCN
             // 
@@ -439,7 +462,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaLopCN.FormattingEnabled = true;
             this.cbSuaLopCN.Location = new System.Drawing.Point(40, 265);
             this.cbSuaLopCN.Name = "cbSuaLopCN";
-            this.cbSuaLopCN.Size = new System.Drawing.Size(278, 24);
+            this.cbSuaLopCN.Size = new System.Drawing.Size(144, 24);
             this.cbSuaLopCN.TabIndex = 117;
             // 
             // label6
@@ -513,21 +536,22 @@ namespace TTNhom_QLDiem.GUI.Admin
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuuThayDoi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuThayDoi.Appearance.Options.UseFont = true;
-            this.btnLuuThayDoi.Location = new System.Drawing.Point(41, 385);
+            this.btnLuuThayDoi.Location = new System.Drawing.Point(40, 371);
             this.btnLuuThayDoi.Name = "btnLuuThayDoi";
             this.btnLuuThayDoi.Size = new System.Drawing.Size(394, 44);
             this.btnLuuThayDoi.TabIndex = 109;
             this.btnLuuThayDoi.Text = "Lưu thay đổi ";
+            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
             // 
             // btnSuaAddLopCN
             // 
-            this.btnSuaAddLopCN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSuaAddLopCN.Location = new System.Drawing.Point(341, 263);
+            this.btnSuaAddLopCN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuaAddLopCN.Location = new System.Drawing.Point(205, 263);
             this.btnSuaAddLopCN.Name = "btnSuaAddLopCN";
-            this.btnSuaAddLopCN.Size = new System.Drawing.Size(94, 26);
+            this.btnSuaAddLopCN.Size = new System.Drawing.Size(113, 26);
             this.btnSuaAddLopCN.TabIndex = 108;
             this.btnSuaAddLopCN.Text = "Thêm";
+            this.btnSuaAddLopCN.Click += new System.EventHandler(this.btnSuaAddLopCN_Click);
             // 
             // cbSuaGV
             // 
@@ -640,9 +664,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(3, 512);
+            this.groupControl1.Location = new System.Drawing.Point(3, 498);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(478, 287);
+            this.groupControl1.Size = new System.Drawing.Size(478, 301);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Danh sách lớp chuyên ngành ";
             // 
@@ -654,7 +678,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(474, 257);
+            this.gridControl1.Size = new System.Drawing.Size(474, 271);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -725,7 +749,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.dgvLichSuTCA);
+            this.groupControl2.Controls.Add(this.dgvDSLopHocPhan);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(493, 3);
             this.groupControl2.Name = "groupControl2";
@@ -733,20 +757,20 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "Danh sách lớp học phần";
             // 
-            // dgvLichSuTCA
+            // dgvDSLopHocPhan
             // 
-            this.dgvLichSuTCA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLichSuTCA.Location = new System.Drawing.Point(2, 28);
-            this.dgvLichSuTCA.MainView = this.dgvTCA_View;
-            this.dgvLichSuTCA.Name = "dgvLichSuTCA";
-            this.dgvLichSuTCA.Size = new System.Drawing.Size(680, 772);
-            this.dgvLichSuTCA.TabIndex = 0;
-            this.dgvLichSuTCA.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvTCA_View});
+            this.dgvDSLopHocPhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSLopHocPhan.Location = new System.Drawing.Point(2, 28);
+            this.dgvDSLopHocPhan.MainView = this.dgvDSLopHocPhan_View;
+            this.dgvDSLopHocPhan.Name = "dgvDSLopHocPhan";
+            this.dgvDSLopHocPhan.Size = new System.Drawing.Size(680, 772);
+            this.dgvDSLopHocPhan.TabIndex = 0;
+            this.dgvDSLopHocPhan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvDSLopHocPhan_View});
             // 
-            // dgvTCA_View
+            // dgvDSLopHocPhan_View
             // 
-            this.dgvTCA_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvDSLopHocPhan_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
@@ -754,14 +778,16 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7});
-            this.dgvTCA_View.GridControl = this.dgvLichSuTCA;
-            this.dgvTCA_View.Name = "dgvTCA_View";
-            this.dgvTCA_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDSLopHocPhan_View.GridControl = this.dgvDSLopHocPhan;
+            this.dgvDSLopHocPhan_View.Name = "dgvDSLopHocPhan_View";
+            this.dgvDSLopHocPhan_View.OptionsBehavior.Editable = false;
+            this.dgvDSLopHocPhan_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDSLopHocPhan_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSLopHocPhan_View_RowClick);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã lớp HP";
-            this.gridColumn1.FieldName = "MaTCA";
+            this.gridColumn1.FieldName = "MaLopHocPhan";
             this.gridColumn1.MinWidth = 29;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -770,8 +796,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Tên học phần";
-            this.gridColumn2.FieldName = "TienAnSang";
+            this.gridColumn2.Caption = "Tên Lớp HP";
+            this.gridColumn2.FieldName = "TenLopHocPhan";
             this.gridColumn2.MinWidth = 29;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -781,7 +807,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Ngày thi";
-            this.gridColumn3.FieldName = "TienAnTrua";
+            this.gridColumn3.FieldName = "NgayThi";
             this.gridColumn3.MinWidth = 29;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -791,7 +817,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Học kỳ";
-            this.gridColumn4.FieldName = "TienAnToi";
+            this.gridColumn4.FieldName = "TenHocKy";
             this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -801,7 +827,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn5
             // 
             this.gridColumn5.Caption = "PhongHoc";
-            this.gridColumn5.FieldName = "TienAnCoBan";
+            this.gridColumn5.FieldName = "TenPhongHoc";
             this.gridColumn5.MinWidth = 29;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -811,7 +837,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             // gridColumn6
             // 
             this.gridColumn6.Caption = "GiangVien";
-            this.gridColumn6.FieldName = "NgayApDung";
+            this.gridColumn6.FieldName = "HoTenGV";
             this.gridColumn6.MinWidth = 29;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -861,8 +887,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSuTCA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTCA_View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLopHocPhan_View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -872,8 +898,8 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl dgvLichSuTCA;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvTCA_View;
+        private DevExpress.XtraGrid.GridControl dgvDSLopHocPhan;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvDSLopHocPhan_View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
@@ -933,5 +959,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraEditors.SimpleButton btnThemDelAll;
+        private DevExpress.XtraEditors.SimpleButton btnSuaDelAll;
     }
 }

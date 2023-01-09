@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTNhom_QLDiem.GUI;
+using TTNhom_QLDiem.GUI.GiangVien;
 
 
 namespace TTNhom_QLDiem.GUI
@@ -26,6 +27,7 @@ namespace TTNhom_QLDiem.GUI
             //Admin.QuanLyHocVien testform = new Admin.QuanLyHocVien();
             panelshow.Controls.Add(testform);
             testform.Dock = DockStyle.Fill;
+
         }
     }
 }
