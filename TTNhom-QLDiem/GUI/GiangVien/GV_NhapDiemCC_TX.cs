@@ -91,9 +91,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 //cbbHocPhan.SelectedIndex = -1;
                 cbbHocPhan.Text = "";
                 //cbbLopHocPhan.SelectedIndex = -1;
-                List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaGiangVien == MainForm.MaID).ToList();
-
-                dgvDSHocVien.DataSource = DSHV;
+                DSHV(maHK, 0, 0);
                 cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
 
             }
@@ -224,7 +222,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
                 dsTTDiemHVCurr = dsTTDiemHV;
-
             }
             dgvDSHocVien.DataSource = dsTTDiemHV;
 
@@ -254,13 +251,16 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
 
+
+                #region Nhập trực tiếp lên gridview
+
                 List<GV_NhapDiem> afterEditRows = (List<GV_NhapDiem>)dgvDSHocVien.DataSource;
 
                 foreach (GV_NhapDiem obj in afterEditRows)
                 {
                     ChiTietPhieuDiem ttpd2;
                     int ma = Convert.ToInt32(obj.MaChiTietPhieuDiem);
-                    ttpd2 = db.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ma).FirstOrDefault();
+                    ttpd2 = ctx.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ma).FirstOrDefault();
 
 
                     if (obj.DiemCC != null)
@@ -274,6 +274,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                     ctx.SaveChanges();
                 }
 
+
+                #endregion
 
 
             }

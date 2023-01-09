@@ -376,6 +376,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn9});
             this.dgvDSHocVien_View.GridControl = this.dgvDSHocVien;
             this.dgvDSHocVien_View.Name = "dgvDSHocVien_View";
+            this.dgvDSHocVien_View.OptionsView.ShowGroupPanel = false;
             this.dgvDSHocVien_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSHocVien_View_RowClick);
             // 
             // gridColumn1

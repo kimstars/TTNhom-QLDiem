@@ -173,12 +173,14 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                     /*txtDiemThi.Enabled = false;
                     txtGhiChu.Enabled = false;*/
                 }
-                if(lhp.NgayThi > DateTime.Now)
-                {
-                    MessageBox.Show("Chưa đến hạn nhận điểm");
-                    txtDiemThi.Enabled = false;
-                    txtGhiChu.Enabled = false;
-                }
+
+                //if(lhp.NgayThi > DateTime.Now)
+                //{
+                //    MessageBox.Show("Chưa đến hạn nhận điểm");
+                //    txtDiemThi.Enabled = false;
+                //    txtGhiChu.Enabled = false;
+                //}
+
                 DSHocVien(maHK, maHp, maLhp);
             }
 
@@ -187,7 +189,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void dgvDSHocVien_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-
+             
             int index = e.RowHandle;
             GV_NhapDiem item = dsTTDiemHVCurr[index];
             MaCTPDcurr = item.MaChiTietPhieuDiem;
