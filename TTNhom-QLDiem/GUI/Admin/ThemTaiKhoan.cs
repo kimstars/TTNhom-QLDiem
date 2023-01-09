@@ -17,7 +17,6 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             InitializeComponent();
         }
-
         QLDHV_model db = new QLDHV_model();
         public bool Check()
         {
@@ -66,14 +65,14 @@ namespace TTNhom_QLDiem.GUI.Admin
                 db.SaveChanges();
                 MessageBox.Show(newtk.MaTK.ToString());
 
-                if (newtk.Quyen == "HV")
-                {
-                    QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
-                }
-                if (newtk.Quyen == "GV")
-                {
-                    QuanLyGiangVien.MaTaiKhoan = newtk.MaTK;
-                }
+                //if (newtk.Quyen == "HV")
+                //{
+                //    QuanLyHocVien.MaTaiKhoan = newtk.MaTK;
+                //}
+                //if (newtk.Quyen == "GV")
+                //{
+                //    QuanLyGiangVien.MaTaiKhoan = newtk.MaTK;
+                //}
 
                 txtUsername.Text = "" ;
                 txtPassword.Text = "" ;
