@@ -23,6 +23,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         public static int MaTaiKhoan;
         private int magv;
         private int matk;
+        private string chucvu;
         List<Model.GiangVien> dsGiangVien;
         private void QuanLyGiangVien_Load(object sender, EventArgs e)
         {
@@ -113,7 +114,19 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
             return true;
         }
-        
+        private bool checksuagiangvien(int mabm, string chucvu, string chucvu2)
+        {
+            List<Model.GiangVien> gv = db.GiangViens.Where(p => p.MaBoMon == mabm).ToList();
+            foreach (var item in gv.ToList())
+            {
+                if (item.ChucVu == "Chủ nhiệm bộ môn" && chucvu == "Chủ nhiệm bộ môn" && chucvu != chucvu2)
+                {
+                    MessageBox.Show("Bộ môn này đã có chủ nhiệm bộ môn. Vui lòng chọn lại chức vụ hoặc bộ môn!!!");
+                    return false;
+                }
+            }
+            return true;
+        }
         private void dgvTTGV_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             xtraTabPageSua.Show();
@@ -121,6 +134,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             Model.GiangVien gv = dsGiangVien[index];
             magv = gv.MaGiangVien;
             matk = int.Parse(gv.MaTK.ToString());
+            chucvu = gv.ChucVu;
            // MessageBox.Show($"{matk}");
             txtSuaTenGV.Text = gv.HoTenGV;
             dateSuaNgaySinhGV.EditValue = gv.NgaySinh;
@@ -170,7 +184,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             List<Model.BoMon> bm = db.BoMons.ToList();
             int mabm = bm.Find(s => s.TenBoMon == cbSuaBoMon.Text).MaBoMon;
             Model.GiangVien gv = db.GiangViens.Where(p => p.MaGiangVien == magv).FirstOrDefault();
-            if (CheckSuaGV() && checkgiangvien(mabm, txtSuaChucVuGV.Text))
+            if (CheckSuaGV() && checksuagiangvien(mabm, txtSuaChucVuGV.Text, chucvu))
             {
                 gv.HoTenGV = txtSuaTenGV.Text;
                 gv.NgaySinh = dateSuaNgaySinhGV.DateTime;
