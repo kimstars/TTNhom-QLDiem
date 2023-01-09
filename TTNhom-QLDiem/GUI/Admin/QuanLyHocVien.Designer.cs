@@ -240,7 +240,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbLopCN.Name = "cbLopCN";
             this.cbLopCN.Size = new System.Drawing.Size(285, 24);
             this.cbLopCN.TabIndex = 28;
-            this.cbLopCN.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dateThemNgaySinhHV
             // 
@@ -404,7 +403,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaGT.FormattingEnabled = true;
             this.cbSuaGT.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nu"});
             this.cbSuaGT.Location = new System.Drawing.Point(36, 152);
             this.cbSuaGT.Name = "cbSuaGT";
             this.cbSuaGT.Size = new System.Drawing.Size(238, 24);

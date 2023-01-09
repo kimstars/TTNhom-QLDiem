@@ -20,9 +20,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             InitializeComponent();
             load_LopchuyenNganh();
         }
-        public int mahv;
+        private int mahv;
         public static int MaTaiKhoan ;
-     
+ 
         QLDHV_model db = new QLDHV_model();
 
         private void btnThemTK_Click(object sender, EventArgs e)
@@ -61,20 +61,37 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
 
         }
+        private bool CheckChucVuLCN( int MaLcn, string chucvu)
+        {
+            List<Model.HocVien> hv = db.HocViens.Where(p => p.MaLopChuyenNganh == MaLcn).ToList();
+            foreach (var item in hv.ToList())
+            {
+                if(item.ChucVu == "Lớp trưởng" && chucvu == "Lớp trưởng")
+                {
+                    MessageBox.Show("Lớp chuyên ngành này đã có lớp trưởng . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
+                    return false;
+                }
+                if (item.ChucVu == "Lớp phó" && chucvu == "Lớp phó")
+                {
+                    MessageBox.Show("Lớp chuyên ngành này đã có lớp phó . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
+                    return false;
+                }
+            }
+            return true;
+        }
         private void btnThemHV_Click(object sender, EventArgs e)
         {
             Model.HocVien hv = new Model.HocVien();
-            if (CheckThemHV())
+            List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+            int Malcn = lcn.Find(s => s.TenLopChuyenNganh == cbLopCN.Text).MaLopChuyenNganh;
+            if (CheckThemHV() && CheckChucVuLCN(Malcn, cbThemChucVu.Text))
             {
                 hv.HoTenHV = txtThemTenHV.Text;
                 hv.NgaySinh = dateThemNgaySinhHV.DateTime;
                 hv.GioiTinh = cbGioiTinh.Text;
                 hv.CapBac = txtThemCapBacHV.Text;
                 hv.ChucVu = cbThemChucVu.Text;
-
-                List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
-                int maLCN = lcn.Find(s => s.TenLopChuyenNganh == cbLopCN.Text).MaLopChuyenNganh;
-                hv.MaLopChuyenNganh = maLCN;
+                hv.MaLopChuyenNganh = Malcn;
                 
                 hv.QueQuan = txtQuequan.Text;
                 hv.MaTK = int.Parse(txtThemMaTKHV.Text);
@@ -111,10 +128,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         }
        
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txtThemCapBacHV_EditValueChanged(object sender, EventArgs e)
         {
@@ -149,17 +163,17 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btnSuaHV_Click(object sender, EventArgs e)
         {
             Model.HocVien hv = db.HocViens.Where(p => p.MaHocVien == mahv).FirstOrDefault();
-            if (CheckSuaHV())
+            List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
+            int Malcn = lcn.Find(s => s.TenLopChuyenNganh == cbSuaLopChuyenNganh.Text).MaLopChuyenNganh;
+            if (CheckSuaHV() && CheckChucVuLCN(Malcn, cbSuaChucVu.Text))
             {
                 hv.HoTenHV = txtSuaTenHV.Text;
                 hv.NgaySinh = dateSuaNgaySinhHV.DateTime;
                 hv.GioiTinh = cbSuaGT.Text;
                 hv.CapBac = txtSuaCapBacHV.Text;
                 hv.ChucVu = cbSuaChucVu.Text;
-
-                List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
-                int maLCN = lcn.Find(s => s.TenLopChuyenNganh == cbSuaLopChuyenNganh.Text).MaLopChuyenNganh;
-                hv.MaLopChuyenNganh = maLCN;
+              
+                hv.MaLopChuyenNganh = Malcn;
                 hv.QueQuan = txtSuaQQ.Text;
 
                 db.SaveChanges();
@@ -209,5 +223,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                 MessageBox.Show($"Xóa thành công !", "Thông báo");
             }
         }
+
+       
     }
 }
