@@ -19,7 +19,7 @@ namespace TTNhom_QLDiem.Model
         [Key]
         public int MaLopHocPhan { get; set; }
 
-        public int MaGiangVien { get; set; }
+        public int? MaGiangVien { get; set; }
 
         public int MaHocPhan { get; set; }
 
