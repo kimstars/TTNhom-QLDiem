@@ -206,6 +206,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                 txtSuaCapBacGV.Text = "";
                 txtSuaChucVuGV.Text = "";
                 cbSuaBoMon.Text = "";
+                //
             }
 
 
