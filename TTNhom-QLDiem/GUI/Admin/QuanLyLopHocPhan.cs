@@ -320,7 +320,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btnSuaDelAll_Click(object sender, EventArgs e)
         {
             gridControl1.DataSource = null;
-            //if (ds_grid_LopCN_current.Count > 0) ds_grid_LopCN_current.Clear();
+            if (ds_grid_LopCN_current.Count > 0) ds_grid_LopCN_current.Clear();
             lbSuaSiSo.Text  = "0";
         }
         private void btnLuuThayDoi_Click(object sender, EventArgs e)

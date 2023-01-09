@@ -24,7 +24,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         int maHK;
         int maHp;
         int maLhp;
-        ChiTietPhieuDiem ctpd = new ChiTietPhieuDiem();
 
         private void GV_NhapDiemThi_Load(object sender, EventArgs e)
         {
@@ -36,10 +35,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbbHocKy.DataSource = lstHocKy;
             cbbHocKy.DisplayMember = "TenHocKy";
             cbbHocKy.ValueMember = "MaHocKy";
-            cbbHocKy.SelectedIndex = 0;
-            maHK = 0;
+            cbbHocKy.SelectedIndex = -1;
+            cbbHocKy.Text = "";
+            //maHK = 0;
 
-            LoadCBBHocPhan();
+            //LoadCBBHocPhan(maHK);
             txtNgayThi.Text = "";
             txtSoTinChi.Text = "";
             txtHanNhapDiem.Text = "";
@@ -49,119 +49,98 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbbLopHocPhan.SelectedIndexChanged += cbbLopHocPhan_SelectedIndexChanged;
 
         }
-
+       
         private void DSHV(int maHK, int maHp, int maLhp)
         {
-            List<TTDHV> DSHV = db.TTDHVs.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp && m.MaGiangVien == MainForm.MaID).ToList();
+            using (var ctx = new Model.QLDHV_model())
+            {
+                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList();
 
-            dgvDSHocVien.DataSource = DSHV;
+                List<GV_NhapDiem> DSHV = dsAll.Where(
+                    m =>(maHK==0 || m.MaHocKy == maHK )
+                && (maHp == 0 || m.MaHocPhan == maHp )
+                && (maLhp == 0||m.MaLopHocPhan == maLhp) 
+                && (m.MaGiangVien == MainForm.MaID)
+                ).ToList();
 
-        }
+                dsTTDiemHVCurr = DSHV;
+                dgvDSHocVien.DataSource = DSHV;
+            }
+        }   
+        
         private void cbbHocKy_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            cbbHocPhan.SelectedIndexChanged -= cbbHocPhan_SelectedIndexChanged;
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
             maHK = lstHocKy[id].MaHocKy;
             lstHocPhan = (from hp in db.HocPhans
                           join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
-                          where lhp.MaGiangVien == MainForm.MaID
+                          where lhp.MaGiangVien == MainForm.MaID && lhp.MaHocKy == maHK
                           select hp).ToList();
-            LoadCBBHocPhan();
-            maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
-            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == maHp).ToList();
-
-            maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
-            DSHV(maHK, maHp, maLhp);
-
-        }
-
-        private void LoadCBBHocPhan()
-        {
-            //cbbHocPhan.Items.Clear();
-            lstHocPhan = (from hp in db.HocPhans
-                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
-                          where lhp.MaGiangVien == MainForm.MaID
-                          select hp).ToList();
-            cbbHocPhan.DataSource = lstHocPhan;
-            cbbHocPhan.ValueMember = "MaHocPhan";
-            cbbHocPhan.DisplayMember = "TenHocPhan";
-            //cbbHocPhan.SelectedIndex = 0;
-            cbbHocPhan.Text = "";
-            maHp = lstHocPhan[0].MaHocPhan;
-            LoadCBBLopHocPhan(maHp);
-
-        }
-        private void cbbHocPhan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstHocPhan = (from hp in db.HocPhans
-                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
-                          where lhp.MaGiangVien == MainForm.MaID
-                          select hp).ToList();
-            maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
-            LoadCBBLopHocPhan(maHp);
-            lstHocKy = db.HocKies.ToList();
-            int id = cbbHocKy.SelectedIndex;
-            maHK = lstHocKy[id].MaHocKy;
-            maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
-
-            DSHV(maHK, maHp, maLhp);
-
-        }
-
-        private void LoadCBBLopHocPhan(int mahp)
-        {
-
-            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == mahp).ToList();
-            cbbLopHocPhan.DataSource = lstLopHocPhan;
-            cbbLopHocPhan.DisplayMember = "TenLopHocPhan";
-            cbbLopHocPhan.ValueMember = "MaLopHocPhan";
-            cbbLopHocPhan.SelectedIndex = 0;
-            cbbLopHocPhan.Text = "";
-            HocPhan hp = db.HocPhans.Where(m => m.MaHocPhan == mahp).FirstOrDefault();
-            txtSoTinChi.Text = hp.SoTC.ToString();
-            if (hp.HinhThucThi == "Vấn đáp")
+            if(lstHocPhan.Count == 0)
             {
-                radioGroup2.SelectedIndex = 0;
-            }
-            else if (hp.HinhThucThi == "Trực tuyến")
-            {
-                radioGroup2.SelectedIndex = 2;
-
+                MessageBox.Show("Không dạy học phần nào trong kỳ này!");
             }
             else
             {
-                radioGroup2.SelectedIndex = 1;
+                cbbHocPhan.DataSource = lstHocPhan;
+                cbbHocPhan.ValueMember = "MaHocPhan";
+                cbbHocPhan.DisplayMember = "TenHocPhan";
+                //cbbHocPhan.SelectedIndex = -1;
+                cbbHocPhan.Text = "";
+                //cbbLopHocPhan.SelectedIndex = -1;
+                List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaGiangVien == MainForm.MaID).ToList();
+
+                dgvDSHocVien.DataSource = DSHV;
+                cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
 
             }
-            maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
-            LopHocPhan lhp = db.LopHocPhans.Where(m => m.MaHocPhan == mahp && m.MaLopHocPhan == maLhp).FirstOrDefault();
-            txtNgayThi.EditValue = lhp.NgayThi.ToString("dd/MM/yyyy");
-            txtHanNhapDiem.EditValue = lhp.NgayThi.AddDays(-7).ToString("dd/MM/yyyy");
-            if (lhp.NgayThi.AddDays(10) < DateTime.Now)
-            {
+          
 
-                MessageBox.Show("Quá hạn nhập điểm!");
-            }
+        }
+
+       
+        private void cbbHocPhan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbbLopHocPhan.SelectedIndexChanged -= cbbLopHocPhan_SelectedIndexChanged;
+
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
             maHK = lstHocKy[id].MaHocKy;
-            DSHV(maHK, mahp, maLhp);
+            lstHocPhan = (from hp in db.HocPhans
+                          join lhp in db.LopHocPhans on hp.MaHocPhan equals lhp.MaHocPhan
+                          where lhp.MaGiangVien == MainForm.MaID && lhp.MaHocKy == maHK
+                          select hp).ToList();
+            int id1 = cbbHocPhan.SelectedIndex;
+            maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
+            //MessageBox.Show(maHp.ToString());
+            LoadCBBLopHocPhan(maHp,maHK);
+           
+            //đổ danh sách học viên ra theo học kỳ và học phần
+            DSHV(maHK, maHp,0);
+            cbbLopHocPhan.SelectedIndexChanged += cbbLopHocPhan_SelectedIndexChanged;
+
+        }
+
+        private void LoadCBBLopHocPhan(int mahp,int maHk)
+        {
+
+            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == mahp && m.MaHocKy == maHk).ToList();
+            cbbLopHocPhan.DataSource = lstLopHocPhan;
+            cbbLopHocPhan.DisplayMember = "TenLopHocPhan";
+            cbbLopHocPhan.ValueMember = "MaLopHocPhan";
+           // cbbLopHocPhan.SelectedIndex = -1;
+            cbbLopHocPhan.Text = "";
 
         }
 
         private void cbbLopHocPhan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lstHocKy = db.HocKies.ToList();
-            int id = cbbHocKy.SelectedIndex;
-            maHK = lstHocKy[id].MaHocKy;
-            // int malhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
-            lstHocPhan = (from hps in db.HocPhans
-                          join lhps in db.LopHocPhans on hps.MaHocPhan equals lhps.MaHocPhan
-                          where lhps.MaGiangVien == MainForm.MaID
-                          select hps).ToList();
-            maHp = lstHocPhan[cbbHocPhan.SelectedIndex].MaHocPhan;
-            lstLopHocPhan = db.LopHocPhans.Where(m => m.MaGiangVien == MainForm.MaID && m.MaHocPhan == maHp).ToList();
+           
+
+
+            //lấy mã lớp học phần
             maLhp = lstLopHocPhan[cbbLopHocPhan.SelectedIndex].MaLopHocPhan;
             HocPhan hp = db.HocPhans.Where(m => m.MaHocPhan == maHp).FirstOrDefault();
             txtSoTinChi.Text = hp.SoTC.ToString();
@@ -180,7 +159,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
             }
 
-
             LopHocPhan lhp = db.LopHocPhans.Where(m => m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp && m.MaHocKy == maHK).FirstOrDefault();
             if (lhp != null)
             {
@@ -190,34 +168,35 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 {
 
                     MessageBox.Show("Quá hạn nhập điểm!");
+                    /*txtDiemThi.Enabled = false;
+                    txtGhiChu.Enabled = false;*/
+                }
+                if(lhp.NgayThi > DateTime.Now)
+                {
+                    MessageBox.Show("Chưa đến hạn nhận điểm");
+                    txtDiemThi.Enabled = false;
+                    txtGhiChu.Enabled = false;
                 }
                 DSHV(maHK, maHp, maLhp);
             }
 
 
         }
-        private void LoadCTPD()
-        {
-            try
-            {
-                int mactpd = (int)dgvDSHocVien_View.GetFocusedRowCellValue("MaChiTietPhieuDiem");
-                ctpd = db.ChiTietPhieuDiems.Where(p => p.MaChiTietPhieuDiem == mactpd).FirstOrDefault();
-            }
-            catch { }
-            txtMaHocVien.EditValue = ctpd.MaHocVien;
-            txtTenHocVien.EditValue = dgvDSHocVien_View.GetFocusedRowCellValue("HoTenHV");
-            txtLopChuyenNganh.EditValue = dgvDSHocVien_View.GetFocusedRowCellValue("TenLopChuyenNganh");
-            txtDiemThi.EditValue = ctpd.DiemThi;
-            txtGhiChu.EditValue = ctpd.GhiChu;
 
-
-        }
         private void dgvDSHocVien_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
 
-            LoadCTPD();
+            int index = e.RowHandle;
+            GV_NhapDiem item = dsTTDiemHVCurr[index];
+            MaCTPDcurr = item.MaChiTietPhieuDiem;
+            txtMaHocVien.EditValue = item.MaHocVien;
+            txtTenHocVien.EditValue = item.HoTenHV;
+            txtLopChuyenNganh.EditValue = item.TenLopChuyenNganh;
+            txtDiemThi.EditValue = item.DiemThi;
+            txtGhiChu.EditValue = item.GhiChu;
 
         }
+        int MaCTPDcurr;
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -225,7 +204,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             using (var ctx = new Model.QLDHV_model())
             {
 
-                ChiTietPhieuDiem ttpd2 = ctx.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ctpd.MaChiTietPhieuDiem).FirstOrDefault();
+                ChiTietPhieuDiem ttpd2 = ctx.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == MaCTPDcurr).FirstOrDefault();
 
                 if (txtDiemThi.Text != "")
                 {
@@ -247,12 +226,14 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
 
             dgvDSHocVien.DataSource = null;
-            List<TTDHV> dsTTDiemHV = new List<TTDHV>();
+            List<GV_NhapDiem> dsTTDiemHV = new List<GV_NhapDiem>();
+
             using (var ctx = new Model.QLDHV_model())
             {
-                List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
+                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList();
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
+                dsTTDiemHVCurr = dsTTDiemHV;
 
             }
             dgvDSHocVien.DataSource = dsTTDiemHV;
@@ -269,37 +250,41 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
 
         }
-
+        
+        List<GV_NhapDiem> dsTTDiemHVCurr = new List<GV_NhapDiem>();
         private void btnSua_Click(object sender, EventArgs e)
         {
-            List<TTDHV> dsTTDiemHV = new List<TTDHV>();
+            List<GV_NhapDiem> dsTTDiemHV = new List<GV_NhapDiem>();
             using (var ctx = new Model.QLDHV_model())
             {
 
-                ChiTietPhieuDiem ttpd2 ;
-                List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
+                
+                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList<GV_NhapDiem>();
                 
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
-                for ( int i =0; i < dgvDSHocVien_View.RowCount; i ++)
+
+                List<GV_NhapDiem> afterEditRows = (List<GV_NhapDiem>)dgvDSHocVien.DataSource;
+
+                foreach(GV_NhapDiem obj in afterEditRows)
                 {
-                    int maCTPD = Convert.ToInt32(dgvDSHocVien_View.GetRowCellValue(i, "MaChiTietPhieuDiem").ToString());
-                    ttpd2 = ctx.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == maCTPD).FirstOrDefault();
-                    if (dgvDSHocVien_View.GetRowCellValue(i, "DiemThi").ToString() != null)
-                    {
-                        ttpd2.DiemThi = Convert.ToDouble(dgvDSHocVien_View.GetRowCellValue(i, "DiemThi").ToString());
+                    ChiTietPhieuDiem ttpd2;
+                    int ma = Convert.ToInt32(obj.MaChiTietPhieuDiem);
+                    ttpd2 = db.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ma).FirstOrDefault();
+                    
 
-                    }
-                    if (dgvDSHocVien_View.GetRowCellValue(i, "GhiChu").ToString()!="") 
+                    if (obj.DiemThi != null)
                     {
-                        ttpd2.GhiChu = dgvDSHocVien_View.GetRowCellValue(i, "GhiChu").ToString(); 
+                        ttpd2.DiemThi = Convert.ToDouble(obj.DiemThi);
                     }
-
+                    if (obj.GhiChu != null)
+                    {
+                        ttpd2.GhiChu = obj.GhiChu;
+                    }
+                    ctx.SaveChanges();
                 }
-                
-                
 
-                ctx.SaveChanges();
+                
 
             }
 
@@ -311,7 +296,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             
             using (var ctx = new Model.QLDHV_model())
             {
-                List<TTDHV> dsAll = ctx.TTDHVs.SqlQuery("Select * from TTDHV").ToList<TTDHV>();
+                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList<GV_NhapDiem>();
 
                 dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
 
@@ -321,6 +306,11 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             dgvDSHocVien.Refresh();
 
         }
+
+
+        // Chưa sửa lưu khi sửa trực tiếp trên gridview
+
+
 
         /*private void dgvDSHocVien_View_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {

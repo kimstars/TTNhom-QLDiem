@@ -442,7 +442,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.xtraTabPage2.Controls.Add(this.label18);
             this.xtraTabPage2.Controls.Add(this.label19);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(472, 384);
+            this.xtraTabPage2.Size = new System.Drawing.Size(472, 428);
             this.xtraTabPage2.Text = "Sửa";
             // 
             // btnSuaDelAll
