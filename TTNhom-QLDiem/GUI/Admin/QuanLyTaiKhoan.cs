@@ -65,7 +65,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                 string user = txtThemTenDangNhap.Text;
                 string pass = txtThemMatKhau.Text;
                 string hash = HashPass(pass);
-                string quyen = cbThemQuyen.Text.ToLower();
+                string quyen = cbThemQuyen.Text;
 
                 switch (quyen)
                 {
@@ -149,7 +149,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         }
         public bool CheckSua()
         {
-            if (txtSuaTenDangNhap.Text == "" || txtSuaMatKhau.Text == "" || cbSuaQuyen.Text == "")
+            if (txtSuaTenDangNhap.Text == ""  || cbSuaQuyen.Text == "")
             {
                 MessageBox.Show("Thông tin tài khoản được thêm không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -178,8 +178,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             {
                 Model.TaiKhoan tk = db.TaiKhoans.Where(p => p.MaTK == mataikhoan).FirstOrDefault();
                 tk.TenDangNhap = txtSuaTenDangNhap.Text;
-                tk.MatKhau = HashPass(txtSuaMatKhau.Text);
-                string quyen = cbSuaQuyen.Text.ToLower();
+                if(txtSuaMatKhau.Text != "") tk.MatKhau = HashPass(txtSuaMatKhau.Text);
+
+                string quyen = cbSuaQuyen.Text;
                 switch (quyen)
                 {
 

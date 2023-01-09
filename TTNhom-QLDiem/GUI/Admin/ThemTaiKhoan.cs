@@ -28,9 +28,25 @@ namespace TTNhom_QLDiem.GUI.Admin
             return true;
 
         }
+        List<Model.TaiKhoan> ltk;
+        private bool checkTenTK(string Tentk)
+        {
+            ltk = new List<Model.TaiKhoan>();
+            ltk = db.TaiKhoans.ToList();
+            foreach (var item in ltk.ToList())
+            {
+                if (item.TenDangNhap == Tentk)
+                {
+                    MessageBox.Show("Tên đăng nhập đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (Check())
+            if (Check() && checkTenTK(txtUsername.Text))
             {
                 string pass = txtPassword.Text;
                 string user = txtUsername.Text;

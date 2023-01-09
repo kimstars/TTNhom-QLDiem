@@ -36,24 +36,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             cbTK.DisplayMember = "TenHocKy";
 
         }
-       /* private void Load_dgvDiem()
-        {
-            
-            if(radioGroup1.SelectedIndex == 0)
-            {
-                int maHK = db.HocKies.ToList().FirstOrDefault().MaHocKy;
-                lstDiem_HV = db.TTDHVs.Where(m => m.MaHocVien == MainForm.MaID && m.MaHocKy == maHK).ToList();
-                gridControl1.DataSource = lstDiem_HV;
-                LoadChiTietDiemHV();
-            }
-            else
-            {
-                int mahp = db.HocPhans.ToList().FirstOrDefault().MaHocPhan;
-                lstDiem_HV = db.TTDHVs.Where(m => m.MaHocVien == MainForm.MaID && m.MaHocPhan == mahp).ToList();
-                gridControl1.DataSource = lstDiem_HV;
-                LoadChiTietDiemHV();
-            }
-        }*/
+       
        private void SetDefault()
         {
             txtTenHP.EditValue = "";
@@ -117,7 +100,8 @@ namespace TTNhom_QLDiem.GUI.HocVien
             }
         }
 
-        private void dgvChitietDiem_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+      
+        private void dgvChitietDiem_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             LoadChiTietDiemHV();
         }

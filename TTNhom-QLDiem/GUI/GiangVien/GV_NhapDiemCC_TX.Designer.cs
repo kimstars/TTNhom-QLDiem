@@ -30,18 +30,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private void InitializeComponent()
         {
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.dgvDSHocVien = new DevExpress.XtraGrid.GridControl();
-            this.dgvDSHocVien_View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -71,12 +59,23 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.dgvDSHocVien = new DevExpress.XtraGrid.GridControl();
+            this.dgvDSHocVien_View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -93,6 +92,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien_View)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tablePanel1
@@ -100,7 +105,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.tablePanel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 26.8F)});
-            this.tablePanel1.Controls.Add(this.groupControl3);
+            this.tablePanel1.Controls.Add(this.tableLayoutPanel1);
             this.tablePanel1.Controls.Add(this.tablePanel2);
             this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePanel1.Location = new System.Drawing.Point(0, 0);
@@ -110,139 +115,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
             this.tablePanel1.Size = new System.Drawing.Size(1121, 760);
             this.tablePanel1.TabIndex = 0;
-            // 
-            // groupControl3
-            // 
-            this.tablePanel1.SetColumn(this.groupControl3, 0);
-            this.groupControl3.Controls.Add(this.dgvDSHocVien);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(3, 326);
-            this.groupControl3.Name = "groupControl3";
-            this.tablePanel1.SetRow(this.groupControl3, 1);
-            this.groupControl3.Size = new System.Drawing.Size(1115, 431);
-            this.groupControl3.TabIndex = 1;
-            this.groupControl3.Text = "Danh sách học viên";
-            // 
-            // dgvDSHocVien
-            // 
-            this.dgvDSHocVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSHocVien.Location = new System.Drawing.Point(2, 28);
-            this.dgvDSHocVien.MainView = this.dgvDSHocVien_View;
-            this.dgvDSHocVien.Name = "dgvDSHocVien";
-            this.dgvDSHocVien.Size = new System.Drawing.Size(1111, 401);
-            this.dgvDSHocVien.TabIndex = 0;
-            this.dgvDSHocVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvDSHocVien_View});
-            // 
-            // dgvDSHocVien_View
-            // 
-            this.dgvDSHocVien_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn8,
-            this.gridColumn9});
-            this.dgvDSHocVien_View.GridControl = this.dgvDSHocVien;
-            this.dgvDSHocVien_View.Name = "dgvDSHocVien_View";
-            this.dgvDSHocVien_View.OptionsView.ShowGroupPanel = false;
-            this.dgvDSHocVien_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSHocVien_View_RowClick);
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã học viên";
-            this.gridColumn1.FieldName = "MaHocVien";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Tên học viên";
-            this.gridColumn2.FieldName = "HoTenHV";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowEdit = false;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 94;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Lớp chuyên ngành";
-            this.gridColumn3.FieldName = "TenLopChuyenNganh";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 94;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Điểm chuyên cần";
-            this.gridColumn4.FieldName = "DiemCC";
-            this.gridColumn4.MinWidth = 25;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 94;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Điểm thường xuyên";
-            this.gridColumn5.FieldName = "DiemTX";
-            this.gridColumn5.MinWidth = 25;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 94;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Điểm thi";
-            this.gridColumn6.FieldName = "DiemThi";
-            this.gridColumn6.MinWidth = 25;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.AllowEdit = false;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 94;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Điểm tổng kết";
-            this.gridColumn7.FieldName = "DiemTK";
-            this.gridColumn7.MinWidth = 25;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowEdit = false;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 94;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Ghi chú";
-            this.gridColumn8.FieldName = "GhiChu";
-            this.gridColumn8.MinWidth = 25;
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 94;
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Mã chi tiết phiếu điểm";
-            this.gridColumn9.FieldName = "MaChiTietPhieuDiem";
-            this.gridColumn9.MinWidth = 25;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Width = 94;
             // 
             // tablePanel2
             // 
@@ -528,6 +400,174 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label1.TabIndex = 0;
             this.label1.Text = "Học kỳ";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tablePanel1.SetColumn(this.tableLayoutPanel1, 0);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.groupControl3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 326);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tablePanel1.SetRow(this.tableLayoutPanel1, 1);
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.7587F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.2413F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 431);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.dgvDSHocVien);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl3.Location = new System.Drawing.Point(3, 3);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(1109, 354);
+            this.groupControl3.TabIndex = 2;
+            this.groupControl3.Text = "Danh sách học viên";
+            // 
+            // dgvDSHocVien
+            // 
+            this.dgvDSHocVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSHocVien.Location = new System.Drawing.Point(2, 28);
+            this.dgvDSHocVien.MainView = this.dgvDSHocVien_View;
+            this.dgvDSHocVien.Name = "dgvDSHocVien";
+            this.dgvDSHocVien.Size = new System.Drawing.Size(1105, 324);
+            this.dgvDSHocVien.TabIndex = 0;
+            this.dgvDSHocVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvDSHocVien_View});
+            // 
+            // dgvDSHocVien_View
+            // 
+            this.dgvDSHocVien_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9});
+            this.dgvDSHocVien_View.GridControl = this.dgvDSHocVien;
+            this.dgvDSHocVien_View.Name = "dgvDSHocVien_View";
+            this.dgvDSHocVien_View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã học viên";
+            this.gridColumn1.FieldName = "MaHocVien";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 94;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên học viên";
+            this.gridColumn2.FieldName = "HoTenHV";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 94;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Lớp chuyên ngành";
+            this.gridColumn3.FieldName = "TenLopChuyenNganh";
+            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 94;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Điểm chuyên cần";
+            this.gridColumn4.FieldName = "DiemCC";
+            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 94;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Điểm thường xuyên";
+            this.gridColumn5.FieldName = "DiemTX";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 94;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Điểm thi";
+            this.gridColumn6.FieldName = "DiemThi";
+            this.gridColumn6.MinWidth = 25;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 94;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Điểm tổng kết";
+            this.gridColumn7.FieldName = "DiemTK";
+            this.gridColumn7.MinWidth = 25;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 94;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Ghi chú";
+            this.gridColumn8.FieldName = "GhiChu";
+            this.gridColumn8.MinWidth = 25;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 94;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Mã chi tiết phiếu điểm";
+            this.gridColumn9.FieldName = "MaChiTietPhieuDiem";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Width = 94;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 363);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1109, 65);
+            this.panel1.TabIndex = 3;
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(390, 13);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(328, 39);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Lưu thay đổi trên DS";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // GV_NhapDiemCC_TX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -538,10 +578,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.Load += new System.EventHandler(this.GV_NhapDiemCC_TX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien_View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -560,6 +596,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTinChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien_View)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -567,7 +609,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         #endregion
 
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.Utils.Layout.TablePanel tablePanel2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.Label label10;
@@ -589,6 +630,16 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private DevExpress.XtraEditors.RadioGroup radioGroup2;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
+        private DevExpress.XtraEditors.TextEdit txtDiemTX;
+        private DevExpress.XtraEditors.TextEdit txtDiemCC;
+        private DevExpress.XtraEditors.TextEdit txtSoTinChi;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnLuu;
+        private DevExpress.XtraEditors.TextEdit txtHanNhapDiem;
+        private DevExpress.XtraEditors.TextEdit txtNgayThi;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraGrid.GridControl dgvDSHocVien;
         private DevExpress.XtraGrid.Views.Grid.GridView dgvDSHocVien_View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -598,15 +649,9 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraEditors.TextEdit txtDiemTX;
-        private DevExpress.XtraEditors.TextEdit txtDiemCC;
-        private DevExpress.XtraEditors.TextEdit txtSoTinChi;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private System.Windows.Forms.Button btnLuu;
-        private DevExpress.XtraEditors.TextEdit txtHanNhapDiem;
-        private DevExpress.XtraEditors.TextEdit txtNgayThi;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSua;
     }
 }
