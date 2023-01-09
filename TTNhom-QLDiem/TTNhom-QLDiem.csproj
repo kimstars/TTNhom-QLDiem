@@ -36,6 +36,7 @@
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -49,9 +50,13 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,12 +103,6 @@
     </Compile>
     <Compile Include="GUI\Admin\QuanLyLopHocPhan.Designer.cs">
       <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\TraCuu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\QuanLyNghiepVu\TraCuu.Designer.cs">
-      <DependentUpon>TraCuu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\QuanLyTaiKhoan.cs">
       <SubType>UserControl</SubType>
@@ -178,9 +177,18 @@
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ADV_TraCuuDiemHV.cs" />
+    <Compile Include="Model\AD_LopChuyenNganh.cs" />
+    <Compile Include="Model\AD_QLHP_DSHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_DSHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_DSLopHocPhan.cs" />
+    <Compile Include="Model\AD_QLLHP_SuaLopCN.cs" />
     <Compile Include="Model\BoMon.cs" />
     <Compile Include="Model\ChiTietPhieuDiem.cs" />
     <Compile Include="Model\GiangVien.cs" />
+    <Compile Include="Model\GV_NhapDiem.cs" />
+    <Compile Include="Model\GV_DSLopChuyenNganh_HV.cs" />
+    <Compile Include="Model\GV_LopChuyenNganh.cs" />
+    <Compile Include="Model\GV_TTHocVien_NhapDiem.cs" />
     <Compile Include="Model\HocKy.cs" />
     <Compile Include="Model\HocPhan.cs" />
     <Compile Include="Model\HocVien.cs" />
@@ -191,6 +199,7 @@
     <Compile Include="Model\PhieuDiem.cs" />
     <Compile Include="Model\PhongHoc.cs" />
     <Compile Include="Model\QLDHV_model.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TTDHV.cs" />
     <Compile Include="Program.cs" />
@@ -212,9 +221,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyLopHocPhan.resx">
       <DependentUpon>QuanLyLopHocPhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\QuanLyNghiepVu\TraCuu.resx">
-      <DependentUpon>TraCuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
@@ -282,8 +288,10 @@
     <None Include="Resources\duong anime.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SQL\kiet.sql" />
     <Content Include="SQL\sang.sql" />
     <Content Include="SQL\Thuy_View1.sql" />
+    <Content Include="SQL\xuan.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

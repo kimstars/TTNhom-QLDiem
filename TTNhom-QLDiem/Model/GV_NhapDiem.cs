@@ -6,8 +6,7 @@ namespace TTNhom_QLDiem.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("TTDHV")]
-    public partial class TTDHV
+    public partial class GV_NhapDiem
     {
         [Key]
         [Column(Order = 0)]
@@ -17,8 +16,8 @@ namespace TTNhom_QLDiem.Model
         [StringLength(70)]
         public string HoTenHV { get; set; }
 
-        [StringLength(100)]
-        public string TenHocPhan { get; set; }
+        [StringLength(150)]
+        public string TenLopChuyenNganh { get; set; }
 
         public double? DiemCC { get; set; }
 
@@ -28,43 +27,32 @@ namespace TTNhom_QLDiem.Model
 
         public double? DiemTK { get; set; }
 
+        [StringLength(100)]
+        public string GhiChu { get; set; }
+
         [Key]
         [Column(Order = 1)]
-        [StringLength(70)]
-        public string HoTenGV { get; set; }
-
-        [StringLength(20)]
-        public string TenHocKy { get; set; }
-
-        [Key]
-        [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaHocKy { get; set; }
 
         [Key]
-        [Column(Order = 3)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaGiangVien { get; set; }
-
-        [Key]
-        [Column(Order = 4)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaHocPhan { get; set; }
-
-        [Key]
-        [Column(Order = 5)]
+        [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaLopHocPhan { get; set; }
 
         [Key]
-        [Column(Order = 6)]
+        [Column(Order = 3)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaHocPhan { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaGiangVien { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaChiTietPhieuDiem { get; set; }
-
-        [StringLength(150)]
-        public string TenLopChuyenNganh { get; set; }
-
-        [StringLength(100)]
-        public string GhiChu { get; set; }
     }
 }
