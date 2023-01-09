@@ -87,11 +87,13 @@ namespace TTNhom_QLDiem.GUI.Admin
             {
                 txtTenHV.Enabled = false;
                 txtTenHV.Text = db.HocViens.Where(s => s.MaHocVien.ToString() == txtMaHV.Text).FirstOrDefault().HoTenHV;
+                TimKiem();
             }
             else
             {
                 txtTenHV.Enabled = true;
                 txtTenHV.Text = "";
+                gridControl1.DataSource = db.ADV_TraCuuDiemHV.ToList();
             }
         }
 
