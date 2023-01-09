@@ -25,7 +25,8 @@ namespace TTNhom_QLDiem.GUI.Admin
         int macn;
         private void reload()
         {
-           
+            getMaBM();
+            getMaLP();
             txtThemTenLopCN.Text = "";
             cbMaBM.Text = "";
             txtTenBM.Text = "";
@@ -42,15 +43,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             dsViewLopCN = db1.AD_LopChuyenNganh.ToList();
             dgvDSLopCN.DataSource = dsViewLopCN;
         }
-
-        private void QuanLyLopChuyenNganh_Load(object sender, EventArgs e)
-        {
-            getMaBM();
-            getMaLP();
-        }
         private void getMaLP()
         {
-          
             List<Model.HocVien> dt = db.HocViens.ToList();
             foreach (var item in dt)
             {
@@ -105,7 +99,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         }
         public bool CheckThemlopCN()
         {
-            if (txtThemTenLopCN.Text == "" || cbMaBM.Text == "")
+            if (txtThemTenLopCN.Text == "" || cbMaBM.Text == "" )
             {
                 MessageBox.Show("Thông tin Lớp Chuyên Ngành không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -138,7 +132,7 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private void cbMaloptruong_TextChanged(object sender, EventArgs e)
         {
-            txtLopTruong.Text = db.HocViens.Where(s => s.MaHocVien.ToString() == cbMaloptruong.Text).FirstOrDefault().HoTenHV;
+            txtLopTruong.Text = db.HocViens.Where(s => s.MaHocVien.ToString() == cbMaloptruong.Text).FirstOrDefault().HoTenHV; 
         }
 
         private void cbMaBM_TextChanged(object sender, EventArgs e)
@@ -155,7 +149,5 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             textEditTenBM.Text = db.BoMons.Where(s => s.MaBoMon.ToString() == cbEditMaBM.Text).FirstOrDefault().TenBoMon;
         }
-
-        
     }
 }

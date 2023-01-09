@@ -49,6 +49,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbHello = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties)).BeginInit();
@@ -59,6 +61,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.lbHello);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtMaTK);
             this.panel1.Controls.Add(this.label16);
@@ -319,6 +323,30 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin cá nhân";
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(103, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(546, 18);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "Lưu ý : Thông tin cá nhân chỉ có thể xem, sai sót báo lại với TT CNTT để sửa đổi";
+            // 
+            // lbHello
+            // 
+            this.lbHello.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbHello.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHello.Appearance.Options.UseFont = true;
+            this.lbHello.Location = new System.Drawing.Point(106, 81);
+            this.lbHello.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbHello.Name = "lbHello";
+            this.lbHello.Size = new System.Drawing.Size(93, 24);
+            this.lbHello.TabIndex = 88;
+            this.lbHello.Text = "Xin chào ";
+            // 
             // TTGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -326,6 +354,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.Controls.Add(this.groupControl1);
             this.Name = "TTGiangVien";
             this.Size = new System.Drawing.Size(889, 769);
+            this.Load += new System.EventHandler(this.TTGiangVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties.CalendarTimeProperties)).EndInit();
@@ -357,5 +386,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl lbHello;
     }
 }

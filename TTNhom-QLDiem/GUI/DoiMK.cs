@@ -8,14 +8,105 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TTNhom_QLDiem.Model;
 namespace TTNhom_QLDiem.GUI
 {
     public partial class DoiMK : DevExpress.XtraEditors.XtraUserControl
     {
-        public DoiMK()
+        QLDHV_model db = new QLDHV_model();
+        int ma_user = MainForm.MaID;
+        string userrole;
+        public DoiMK(string role)
         {
             InitializeComponent();
+            userrole = role;
+        }
+        public static string HashPass(string pass)
+        {
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(pass);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+
+            using (QLDHV_model db = new QLDHV_model())
+            {
+                string oldPass = HashPass(txtOldPass.Text);
+                string newPass = HashPass(txtNewPass.Text);
+                string renewPass = HashPass(txtReNewPass.Text);
+                if (txtOldPass.Text != "" && txtNewPass.Text != "" && txtReNewPass.Text != "")
+                {
+
+                    if (db.TaiKhoans.Any(s => s.MaTK == ma_user && s.MatKhau != oldPass))
+                    {
+                        MessageBox.Show("Mật khẩu không đúng");
+
+                    }
+                    else
+                    {
+                        TaiKhoan acc = db.TaiKhoans.Where(s => s.MaTK == ma_user && s.MatKhau == oldPass).FirstOrDefault();
+                        if (oldPass == newPass)
+                        {
+                            MessageBox.Show("Mật khẩu mới không được trùng mật khẩu cũ");
+                            txtNewPass.Text = "";
+                            txtReNewPass.Text = "";
+                        }
+                        else if (newPass != renewPass)
+                        {
+                            MessageBox.Show("Mật khẩu không khớp");
+                            txtReNewPass.Text = "";
+                        }
+                        else
+                        {
+                            acc.MatKhau = newPass;
+                            db.SaveChanges();
+                            MessageBox.Show("Chuyển mật khẩu thành công");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Yêu cầu nhập đủ thông tin");
+
+                }
+            }
+        }
+
+
+        private void DoiMK_Load(object sender, EventArgs e)
+        {
+            string hellotext = "Xin chào ";
+
+            if (userrole == "hv")
+            {
+                Model.HocVien hv = db.HocViens.Where(m => m.MaHocVien == MainForm.MaID).FirstOrDefault();
+                hellotext += "học viên " + hv.HoTenHV;
+            }
+            else
+            {
+                Model.GiangVien gv = db.GiangViens.Where(m => m.MaGiangVien == MainForm.MaID).FirstOrDefault();
+
+                if (gv.GioiTinh == "Nam") hellotext += "thầy ";
+                else hellotext += "cô ";
+
+                hellotext += gv.HoTenGV;
+
+            }
+           
+
+            lbHello.Text = hellotext;
         }
     }
 }
