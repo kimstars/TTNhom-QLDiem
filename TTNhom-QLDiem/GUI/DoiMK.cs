@@ -38,6 +38,7 @@ namespace TTNhom_QLDiem.GUI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+
             using (QLDHV_model db = new QLDHV_model())
             {
                 string oldPass = HashPass(txtOldPass.Text);
@@ -84,13 +85,6 @@ namespace TTNhom_QLDiem.GUI
 
                 }
             }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            //Khoong bieet quay veef trang trc kieeru gif
-            this.Hide();
-            
         }
     }
 }
