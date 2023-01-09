@@ -52,6 +52,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,6 +78,7 @@ namespace TTNhom_QLDiem.GUI.HocVien
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtMaTK);
             this.panel1.Controls.Add(this.label16);
@@ -380,6 +382,18 @@ namespace TTNhom_QLDiem.GUI.HocVien
             this.label12.TabIndex = 37;
             this.label12.Text = "Ngày sinh";
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(85, 436);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(546, 18);
+            this.label2.TabIndex = 88;
+            this.label2.Text = "Lưu ý : Thông tin cá nhân chỉ có thể xem, sai sót báo lại với TT CNTT để sửa đổi";
+            // 
             // TTHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -423,5 +437,6 @@ namespace TTNhom_QLDiem.GUI.HocVien
         private System.Windows.Forms.TextBox txtCapBac;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaTK;
+        private System.Windows.Forms.Label label2;
     }
 }

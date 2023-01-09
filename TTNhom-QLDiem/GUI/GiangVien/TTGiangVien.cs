@@ -35,5 +35,17 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             dtNgaySinh.Text = gv.NgaySinh.ToString();
             txtTenBM.Text = bm.TenBoMon;
         }
+
+        private void TTGiangVien_Load(object sender, EventArgs e)
+        {
+            string hellotext = "Xin chào ";
+            Model.GiangVien gv = db.GiangViens.Where(m => m.MaGiangVien == MainForm.MaID).FirstOrDefault();
+
+            if (gv.GioiTinh == "Nam") hellotext += "thầy ";
+            else hellotext += "cô ";
+
+            hellotext += gv.HoTenGV;
+            lbHello.Text = hellotext;
+        }
     }
 }
