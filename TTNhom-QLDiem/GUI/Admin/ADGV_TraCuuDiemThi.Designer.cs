@@ -313,6 +313,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.txtTenHV.Properties.Appearance.Options.UseFont = true;
             this.txtTenHV.Size = new System.Drawing.Size(177, 24);
             this.txtTenHV.TabIndex = 9;
+            this.txtTenHV.EditValueChanged += new System.EventHandler(this.txtTenHV_EditValueChanged);
             // 
             // txtMaHV
             // 
