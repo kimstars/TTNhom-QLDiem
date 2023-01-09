@@ -168,6 +168,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 {
 
                     MessageBox.Show("Quá hạn nhập điểm!");
+                    /*txtDiemThi.Enabled = false;
+                    txtGhiChu.Enabled = false;*/
                 }
                 if(lhp.NgayThi > DateTime.Now)
                 {
