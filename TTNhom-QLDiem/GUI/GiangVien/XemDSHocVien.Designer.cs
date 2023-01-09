@@ -73,16 +73,15 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.groupControl_HocVien, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1121, 760);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -290,6 +289,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.cbHocPhan.Size = new System.Drawing.Size(437, 24);
             this.cbHocPhan.TabIndex = 100;
             this.cbHocPhan.SelectedIndexChanged += new System.EventHandler(this.cbHocPhan_SelectedIndexChanged);
+            this.cbHocPhan.TextChanged += new System.EventHandler(this.cbHocPhan_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -309,6 +309,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.cbHocKy.Size = new System.Drawing.Size(437, 24);
             this.cbHocKy.TabIndex = 98;
             this.cbHocKy.SelectedIndexChanged += new System.EventHandler(this.cbHocKy_SelectedIndexChanged);
+            this.cbHocKy.TextChanged += new System.EventHandler(this.cbHocKy_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -328,6 +329,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.cbBoMon.Size = new System.Drawing.Size(437, 24);
             this.cbBoMon.TabIndex = 96;
             this.cbBoMon.SelectedIndexChanged += new System.EventHandler(this.cbBoMon_SelectedIndexChanged);
+            this.cbBoMon.TextChanged += new System.EventHandler(this.cbBoMon_SelectedIndexChanged);
             // 
             // cbLopHPphutrach
             // 
@@ -337,6 +339,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.cbLopHPphutrach.Size = new System.Drawing.Size(437, 24);
             this.cbLopHPphutrach.TabIndex = 95;
             this.cbLopHPphutrach.SelectedIndexChanged += new System.EventHandler(this.cbLopHPphutrach_SelectedIndexChanged);
+            this.cbLopHPphutrach.TextChanged += new System.EventHandler(this.cbLopHPphutrach_SelectedIndexChanged);
             // 
             // label1
             // 
