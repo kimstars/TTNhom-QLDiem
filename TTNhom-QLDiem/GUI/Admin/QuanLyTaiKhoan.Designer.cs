@@ -345,6 +345,10 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.cbSuaQuyen.Properties.Appearance.Options.UseFont = true;
             this.cbSuaQuyen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbSuaQuyen.Properties.Items.AddRange(new object[] {
+            "Giảng viên",
+            "Học viên",
+            "Admin"});
             this.cbSuaQuyen.Size = new System.Drawing.Size(141, 26);
             this.cbSuaQuyen.TabIndex = 87;
             // 
