@@ -68,8 +68,13 @@ namespace TTNhom_QLDiem.GUI
                         else
                         {
                             acc.MatKhau = newPass;
-                            db.SaveChanges();
-                            MessageBox.Show("Chuyển mật khẩu thành công");
+                            if (MessageBox.Show("Bạn có chắc chắn muốn đổi mật khẩu không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                db.SaveChanges();
+                                MessageBox.Show("Chuyển mật khẩu thành công");
+                            }
+                           
+                                                       
                         }
                     }
                 }
@@ -85,7 +90,7 @@ namespace TTNhom_QLDiem.GUI
         {
             //Khoong bieet quay veef trang trc kieeru gif
             this.Hide();
-            MainForm.
+            
         }
     }
 }
