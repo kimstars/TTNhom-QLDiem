@@ -171,7 +171,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 DSHocVien(maHK, maHp, maLhp);
             }
 
-
         }
         private void dgvDSHocVien_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {

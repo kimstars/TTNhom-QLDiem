@@ -23,6 +23,7 @@ namespace TTNhom_QLDiem.GUI.Admin
         public static int MaTaiKhoan;
         private int magv;
         private int matk;
+        private string chucvu;
         List<Model.GiangVien> dsGiangVien;
         private void QuanLyGiangVien_Load(object sender, EventArgs e)
         {
@@ -69,41 +70,47 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btnThemGV_Click(object sender, EventArgs e)
         {
             List<Model.BoMon> bm = db.BoMons.ToList();
-            int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
             Model.GiangVien gv = new Model.GiangVien();
-            if (CheckThemGV() && checkgiangvien(mabm,  txtThemChucVuGV.Text))
+            if (CheckThemGV())
             {
-                gv.HoTenGV = txtThemTenGV.Text;
-                gv.NgaySinh = dateThemNgaySinhGV.DateTime;
-                gv.GioiTinh = cbGioiTinh.Text;
-                gv.CapBac = txtThemCapBacGV.Text;
-                gv.ChucVu = txtThemChucVuGV.Text;
-                gv.MaBoMon = mabm;             
-                gv.MaTK = int.Parse(txtThemMaTKGV.Text);                
-                db.GiangViens.Add(gv);
-                db.SaveChanges();
+                int mabm = bm.Find(s => s.TenBoMon == cbThemBoMon.Text).MaBoMon;
 
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                dsGiangVien = new List<Model.GiangVien>();
-                dsGiangVien = db.GiangViens.ToList();
-                dgvTTGV.DataSource = dsGiangVien;
+                if (checkgiangvien(mabm, txtThemChucVuGV.Text))
+                {
+                    gv.HoTenGV = txtThemTenGV.Text;
+                    gv.NgaySinh = dateThemNgaySinhGV.DateTime;
+                    gv.GioiTinh = cbGioiTinh.Text;
+                    gv.CapBac = txtThemCapBacGV.Text;
+                    gv.ChucVu = txtThemChucVuGV.Text;
+                    gv.MaBoMon = mabm;
+                    gv.MaTK = int.Parse(txtThemMaTKGV.Text);
+                    db.GiangViens.Add(gv);
+                    db.SaveChanges();
 
-                txtThemTenGV.Text = "";
-                dateThemNgaySinhGV.EditValue = null;
-                cbGioiTinh.Text = "";
-                txtThemCapBacGV.Text = "";
-                txtThemChucVuGV.Text = "";
-                cbThemBoMon.Text = "";
-                txtThemMaTKGV.Text = "";
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-    
+                    dsGiangVien = new List<Model.GiangVien>();
+                    dsGiangVien = db.GiangViens.ToList();
+                    dgvTTGV.DataSource = dsGiangVien;
+
+                    txtThemTenGV.Text = "";
+                    dateThemNgaySinhGV.EditValue = null;
+                    cbGioiTinh.Text = "";
+                    txtThemCapBacGV.Text = "";
+                    txtThemChucVuGV.Text = "";
+                    cbThemBoMon.Text = "";
+                    txtThemMaTKGV.Text = "";
+
+
+                }
             }
+
         }
         private bool checkgiangvien(int mabm, string chucvu)
         {
-            List<Model.GiangVien> gv = db.GiangViens.Where(p => p.MaBoMon == mabm ).ToList();
-            foreach(var item in gv.ToList())
+            List<Model.GiangVien> gv = db.GiangViens.Where(p => p.MaBoMon == mabm).ToList();
+            foreach (var item in gv.ToList())
             {
                 if (item.ChucVu == "Chủ nhiệm bộ môn" && chucvu == "Chủ nhiệm bộ môn")
                 {
@@ -113,7 +120,19 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
             return true;
         }
-        
+        private bool checksuagiangvien(int mabm, string chucvu, string chucvu2)
+        {
+            List<Model.GiangVien> gv = db.GiangViens.Where(p => p.MaBoMon == mabm).ToList();
+            foreach (var item in gv.ToList())
+            {
+                if (item.ChucVu == "Chủ nhiệm bộ môn" && chucvu == "Chủ nhiệm bộ môn" && chucvu != chucvu2)
+                {
+                    MessageBox.Show("Bộ môn này đã có chủ nhiệm bộ môn. Vui lòng chọn lại chức vụ hoặc bộ môn!!!");
+                    return false;
+                }
+            }
+            return true;
+        }
         private void dgvTTGV_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             xtraTabPageSua.Show();
@@ -121,7 +140,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             Model.GiangVien gv = dsGiangVien[index];
             magv = gv.MaGiangVien;
             matk = int.Parse(gv.MaTK.ToString());
-           // MessageBox.Show($"{matk}");
+            chucvu = gv.ChucVu;
+            // MessageBox.Show($"{matk}");
             txtSuaTenGV.Text = gv.HoTenGV;
             dateSuaNgaySinhGV.EditValue = gv.NgaySinh;
             cbSuaGioiTinhGV.Text = gv.GioiTinh;
@@ -136,7 +156,7 @@ namespace TTNhom_QLDiem.GUI.Admin
                 if (MessageBox.Show($"Xóa giảng viên sẽ xóa tất cả thông tin liên quan của giảng viên! \nBạn có chắc chắn xóa giảng viên {gv.HoTenGV} ?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     List<LopHocPhan> lhp = db.LopHocPhans.Where(p => p.MaGiangVien == magv).ToList();
-                    foreach(var item in lhp.ToList())
+                    foreach (var item in lhp.ToList())
                     {
                         item.MaGiangVien = null;
                         db.SaveChanges();
@@ -168,35 +188,39 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void btnSua_Click(object sender, EventArgs e)
         {
             List<Model.BoMon> bm = db.BoMons.ToList();
-            int mabm = bm.Find(s => s.TenBoMon == cbSuaBoMon.Text).MaBoMon;
             Model.GiangVien gv = db.GiangViens.Where(p => p.MaGiangVien == magv).FirstOrDefault();
-            if (CheckSuaGV() && checkgiangvien(mabm, txtSuaChucVuGV.Text))
+            if (CheckSuaGV())
             {
-                gv.HoTenGV = txtSuaTenGV.Text;
-                gv.NgaySinh = dateSuaNgaySinhGV.DateTime;
-                gv.GioiTinh = cbSuaGioiTinhGV.Text;
-                gv.CapBac = txtSuaCapBacGV.Text;
-                gv.ChucVu = txtSuaChucVuGV.Text;            
-                gv.MaBoMon = mabm;
+                int mabm = bm.Find(s => s.TenBoMon == cbSuaBoMon.Text).MaBoMon;
 
-                db.SaveChanges();
-                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                dsGiangVien = new List<Model.GiangVien>();
-                dsGiangVien = db.GiangViens.ToList();
-                dgvTTGV.DataSource = dsGiangVien;
+                if (checksuagiangvien(mabm, txtSuaChucVuGV.Text, chucvu))
+                {
+                    gv.HoTenGV = txtSuaTenGV.Text;
+                    gv.NgaySinh = dateSuaNgaySinhGV.DateTime;
+                    gv.GioiTinh = cbSuaGioiTinhGV.Text;
+                    gv.CapBac = txtSuaCapBacGV.Text;
+                    gv.ChucVu = txtSuaChucVuGV.Text;
+                    gv.MaBoMon = mabm;
 
-                txtSuaTenGV.Text = "";
-                dateSuaNgaySinhGV.EditValue = null;
-                cbSuaGioiTinhGV.Text = "";
-                txtSuaCapBacGV.Text = "";
-                txtSuaChucVuGV.Text = "";
-                cbSuaBoMon.Text = "";
+                    db.SaveChanges();
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    dsGiangVien = new List<Model.GiangVien>();
+                    dsGiangVien = db.GiangViens.ToList();
+                    dgvTTGV.DataSource = dsGiangVien;
+
+                    txtSuaTenGV.Text = "";
+                    dateSuaNgaySinhGV.EditValue = null;
+                    cbSuaGioiTinhGV.Text = "";
+                    txtSuaCapBacGV.Text = "";
+                    txtSuaChucVuGV.Text = "";
+                    cbSuaBoMon.Text = "";
+                }
+
             }
-
-
         }
 
-       
+
     }
 }

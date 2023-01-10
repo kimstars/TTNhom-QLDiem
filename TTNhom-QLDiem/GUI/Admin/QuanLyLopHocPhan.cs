@@ -242,6 +242,8 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         List<AD_QLLHP_SuaLopCN> ds_grid_LopCN_current = new List<AD_QLLHP_SuaLopCN>();
         List<AD_QLLHP_SuaLopCN> ds_load_LopCN_fromDB = new List<AD_QLLHP_SuaLopCN>();
+
+
         private void btnthemAddLopCN_Click(object sender, EventArgs e)
         {
             LopChuyenNganh templcn = dsLopCN[cbThemLopCN.SelectedIndex];
