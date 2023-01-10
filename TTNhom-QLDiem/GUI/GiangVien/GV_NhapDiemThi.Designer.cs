@@ -125,7 +125,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.tablePanel2.SetRow(this.groupControl1, 0);
             this.groupControl1.Size = new System.Drawing.Size(614, 271);
             this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "Thông tin chung";
+            this.groupControl1.Text = "Nhập điểm thi";
             // 
             // txtHanNhapDiem
             // 

@@ -21,8 +21,8 @@ namespace TTNhom_QLDiem.GUI.Admin
             load_LopchuyenNganh();
         }
         private int mahv;
-        public static int MaTaiKhoan ;
- 
+        public static int MaTaiKhoan;
+        private string chucvu;
         QLDHV_model db = new QLDHV_model();
 
         private void btnThemTK_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             ThemTaiKhoan newtk = new ThemTaiKhoan();
             newtk.Show();
             newtk.FormClosed += Newtk_FormClosed;
-            
+
         }
 
         private void Newtk_FormClosed(object sender, FormClosedEventArgs e)
@@ -61,12 +61,12 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
 
         }
-        private bool CheckChucVuLCN( int MaLcn, string chucvu)
+        private bool CheckChucVuLCN(int MaLcn, string chucvu)
         {
             List<Model.HocVien> hv = db.HocViens.Where(p => p.MaLopChuyenNganh == MaLcn).ToList();
             foreach (var item in hv.ToList())
             {
-                if(item.ChucVu == "Lớp trưởng" && chucvu == "Lớp trưởng")
+                if (item.ChucVu == "Lớp trưởng" && chucvu == "Lớp trưởng")
                 {
                     MessageBox.Show("Lớp chuyên ngành này đã có lớp trưởng . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
                     return false;
@@ -83,37 +83,41 @@ namespace TTNhom_QLDiem.GUI.Admin
         {
             Model.HocVien hv = new Model.HocVien();
             List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
-            int Malcn = lcn.Find(s => s.TenLopChuyenNganh == cbLopCN.Text).MaLopChuyenNganh;
-            if (CheckThemHV() && CheckChucVuLCN(Malcn, cbThemChucVu.Text))
+            if (CheckThemHV())
             {
-                hv.HoTenHV = txtThemTenHV.Text;
-                hv.NgaySinh = dateThemNgaySinhHV.DateTime;
-                hv.GioiTinh = cbGioiTinh.Text;
-                hv.CapBac = txtThemCapBacHV.Text;
-                hv.ChucVu = cbThemChucVu.Text;
-                hv.MaLopChuyenNganh = Malcn;
-                
-                hv.QueQuan = txtQuequan.Text;
-                hv.MaTK = int.Parse(txtThemMaTKHV.Text);
-                
-                db.HocViens.Add(hv);
-                db.SaveChanges();
-                
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                dsHocVien = new List<Model.HocVien>();
-                dsHocVien = db.HocViens.ToList();
-                dgvDSHocVien.DataSource = dsHocVien;
+                int Malcn = lcn.Find(s => s.TenLopChuyenNganh == cbLopCN.Text).MaLopChuyenNganh;
+                if (CheckChucVuLCN(Malcn, cbThemChucVu.Text))
+                {
+                    hv.HoTenHV = txtThemTenHV.Text;
+                    hv.NgaySinh = dateThemNgaySinhHV.DateTime;
+                    hv.GioiTinh = cbGioiTinh.Text;
+                    hv.CapBac = txtThemCapBacHV.Text;
+                    hv.ChucVu = cbThemChucVu.Text;
+                    hv.MaLopChuyenNganh = Malcn;
 
-                txtThemTenHV.Text = "";
-                dateThemNgaySinhHV.EditValue = null;
-                cbGioiTinh.Text = "";
-                txtThemCapBacHV.Text = "";
-                cbThemChucVu.Text = "";
-                cbLopCN.Text = "";
-                txtQuequan.Text = "";
-                txtThemMaTKHV.Text = "";
+                    hv.QueQuan = txtQuequan.Text;
+                    hv.MaTK = int.Parse(txtThemMaTKHV.Text);
 
+                    db.HocViens.Add(hv);
+                    db.SaveChanges();
+
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    dsHocVien = new List<Model.HocVien>();
+                    dsHocVien = db.HocViens.ToList();
+                    dgvDSHocVien.DataSource = dsHocVien;
+
+                    txtThemTenHV.Text = "";
+                    dateThemNgaySinhHV.EditValue = null;
+                    cbGioiTinh.Text = "";
+                    txtThemCapBacHV.Text = "";
+                    cbThemChucVu.Text = "";
+                    cbLopCN.Text = "";
+                    txtQuequan.Text = "";
+                    txtThemMaTKHV.Text = "";
+
+                }
             }
         }
         public bool CheckThemHV()
@@ -126,9 +130,9 @@ namespace TTNhom_QLDiem.GUI.Admin
             return true;
 
         }
-       
 
-        
+
+
 
         private void txtThemCapBacHV_EditValueChanged(object sender, EventArgs e)
         {
@@ -141,6 +145,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             int index = e.RowHandle;
             Model.HocVien hv = dsHocVien[index];
             mahv = hv.MaHocVien;
+            chucvu = hv.ChucVu;
             txtSuaTenHV.Text = hv.HoTenHV;
             dateSuaNgaySinhHV.EditValue = hv.NgaySinh;
             cbSuaGT.Text = hv.GioiTinh;
@@ -157,44 +162,66 @@ namespace TTNhom_QLDiem.GUI.Admin
 
         private void cbThemChucVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
 
+        }
+        private bool ChecksuaChucVuLCN(int MaLcn, string chucvu, string chucvu2)
+        {
+            List<Model.HocVien> hv = db.HocViens.Where(p => p.MaLopChuyenNganh == MaLcn).ToList();
+            foreach (var item in hv.ToList())
+            {
+                if (item.ChucVu == "Lớp trưởng" && chucvu == "Lớp trưởng" && chucvu != chucvu2)
+                {
+                    MessageBox.Show("Lớp chuyên ngành này đã có lớp trưởng . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
+                    return false;
+                }
+                if (item.ChucVu == "Lớp phó" && chucvu == "Lớp phó" && chucvu != chucvu2)
+                {
+                    MessageBox.Show("Lớp chuyên ngành này đã có lớp phó . Vui lòng chọn lại lớp chuyên ngành hoặc chức vụ học viên!!!");
+                    return false;
+                }
+            }
+            return true;
+        }
         private void btnSuaHV_Click(object sender, EventArgs e)
         {
             Model.HocVien hv = db.HocViens.Where(p => p.MaHocVien == mahv).FirstOrDefault();
             List<Model.LopChuyenNganh> lcn = db.LopChuyenNganhs.ToList();
-            int Malcn = lcn.Find(s => s.TenLopChuyenNganh == cbSuaLopChuyenNganh.Text).MaLopChuyenNganh;
-            if (CheckSuaHV() && CheckChucVuLCN(Malcn, cbSuaChucVu.Text))
+            if (CheckSuaHV())
             {
-                hv.HoTenHV = txtSuaTenHV.Text;
-                hv.NgaySinh = dateSuaNgaySinhHV.DateTime;
-                hv.GioiTinh = cbSuaGT.Text;
-                hv.CapBac = txtSuaCapBacHV.Text;
-                hv.ChucVu = cbSuaChucVu.Text;
-              
-                hv.MaLopChuyenNganh = Malcn;
-                hv.QueQuan = txtSuaQQ.Text;
+                int Malcn = lcn.Find(s => s.TenLopChuyenNganh == cbSuaLopChuyenNganh.Text).MaLopChuyenNganh;
 
-                db.SaveChanges();
-                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (ChecksuaChucVuLCN(Malcn, cbSuaChucVu.Text, chucvu))
+                {
+                    hv.HoTenHV = txtSuaTenHV.Text;
+                    hv.NgaySinh = dateSuaNgaySinhHV.DateTime;
+                    hv.GioiTinh = cbSuaGT.Text;
+                    hv.CapBac = txtSuaCapBacHV.Text;
+                    hv.ChucVu = cbSuaChucVu.Text;
 
-                dsHocVien = new List<Model.HocVien>();
-                dsHocVien = db.HocViens.ToList();
-                dgvDSHocVien.DataSource = dsHocVien;
+                    hv.MaLopChuyenNganh = Malcn;
+                    hv.QueQuan = txtSuaQQ.Text;
 
-                txtSuaTenHV.Text = "";
-                dateSuaNgaySinhHV.EditValue = null;
-                cbSuaGT.Text = "";
-                txtSuaCapBacHV.Text = "";
-                cbSuaChucVu.Text = "";
-                cbSuaLopChuyenNganh.Text = "";
-                txtSuaQQ.Text = "";
+                    db.SaveChanges();
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    dsHocVien = new List<Model.HocVien>();
+                    dsHocVien = db.HocViens.ToList();
+                    dgvDSHocVien.DataSource = dsHocVien;
+
+                    txtSuaTenHV.Text = "";
+                    dateSuaNgaySinhHV.EditValue = null;
+                    cbSuaGT.Text = "";
+                    txtSuaCapBacHV.Text = "";
+                    cbSuaChucVu.Text = "";
+                    cbSuaLopChuyenNganh.Text = "";
+                    txtSuaQQ.Text = "";
+                }
             }
+
         }
         public bool CheckSuaHV()
         {
-            if (txtSuaTenHV.Text == "" || dateSuaNgaySinhHV.ToString() == "" || cbSuaGT.Text == "" || txtSuaCapBacHV.Text == "" || cbSuaChucVu.Text == "" || cbSuaLopChuyenNganh.Text == "" || txtSuaQQ.Text == "" )
+            if (txtSuaTenHV.Text == "" || dateSuaNgaySinhHV.ToString() == "" || cbSuaGT.Text == "" || txtSuaCapBacHV.Text == "" || cbSuaChucVu.Text == "" || cbSuaLopChuyenNganh.Text == "" || txtSuaQQ.Text == "")
             {
                 MessageBox.Show("Thông tin học viên không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -224,6 +251,6 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
         }
 
-       
+
     }
 }

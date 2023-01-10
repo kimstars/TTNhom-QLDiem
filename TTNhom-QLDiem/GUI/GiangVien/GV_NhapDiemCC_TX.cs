@@ -51,7 +51,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         }
 
-        private void DSHV(int maHK, int maHp, int maLhp)
+        private void DSHocVien(int maHK, int maHp, int maLhp)
         {
             using (var ctx = new Model.QLDHV_model())
             {
@@ -88,10 +88,10 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 cbbHocPhan.DataSource = lstHocPhan;
                 cbbHocPhan.ValueMember = "MaHocPhan";
                 cbbHocPhan.DisplayMember = "TenHocPhan";
-                //cbbHocPhan.SelectedIndex = -1;
+              
                 cbbHocPhan.Text = "";
-                //cbbLopHocPhan.SelectedIndex = -1;
-                DSHV(maHK, 0, 0);
+              
+                DSHocVien(maHK, 0, 0);
                 cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
 
             }
@@ -117,7 +117,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             LoadCBBLopHocPhan(maHp, maHK);
 
             //đổ danh sách học viên ra theo học kỳ và học phần
-            DSHV(maHK, maHp, 0);
+            DSHocVien(maHK, maHp, 0);
             cbbLopHocPhan.SelectedIndexChanged += cbbLopHocPhan_SelectedIndexChanged;
 
         }
@@ -161,14 +161,15 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             {
                 txtNgayThi.EditValue = lhp.NgayThi.ToString("dd/MM/yyyy");
                 txtHanNhapDiem.EditValue = lhp.NgayThi.AddDays(-7).ToString("dd/MM/yyyy");
+
                 if (lhp.NgayThi.AddDays(-7) < DateTime.Now)
                 {
-
                     MessageBox.Show("Quá hạn nhập điểm!");
                 }
-                DSHV(maHK, maHp, maLhp);
-            }
 
+
+                DSHocVien(maHK, maHp, maLhp);
+            }
 
         }
         private void dgvDSHocVien_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -209,26 +210,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
             }
 
+
+            DSHocVien(maHK, maHp, maLhp);
+
             MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //
 
 
-            dgvDSHocVien.DataSource = null;
-            List<GV_NhapDiem> dsTTDiemHV = new List<GV_NhapDiem>();
-
-            using (var ctx = new Model.QLDHV_model())
-            {
-                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList();
-
-                dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
-                dsTTDiemHVCurr = dsTTDiemHV;
-            }
-            dgvDSHocVien.DataSource = dsTTDiemHV;
-
-            dgvDSHocVien.Refresh();
-
-            //DSHV(maHK, maHp, maLhp);
-            //LoadCTPD();
             txtMaHocVien.Text = "";
             txtTenHocVien.EditValue = null;
             txtLopChuyenNganh.Text = "";
@@ -254,33 +241,26 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                     ttpd2 = ctx.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ma).FirstOrDefault();
 
 
-                    if (obj.DiemThi != null)
+                    if (obj.DiemCC != null)
                     {
-                        ttpd2.DiemThi = Convert.ToDouble(obj.DiemThi);
+                        ttpd2.DiemCC = Convert.ToDouble(obj.DiemCC);
                     }
-                    if (obj.GhiChu != null)
+
+                  
+                    if (obj.DiemTX != null)
                     {
-                        ttpd2.GhiChu = obj.GhiChu;
+                        ttpd2.DiemTX = obj.DiemTX;
                     }
                     ctx.SaveChanges();
                 }
             }
 
+            DSHocVien(maHK, maHp, maLhp);
+
             MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //
 
 
-            dgvDSHocVien.DataSource = null;
-
-            using (var ctx = new Model.QLDHV_model())
-            {
-                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList<GV_NhapDiem>();
-
-                dgvDSHocVien.DataSource = dsAll;
-
-                dgvDSHocVien.Refresh();
-
-            }
+            
 
         }
     }
