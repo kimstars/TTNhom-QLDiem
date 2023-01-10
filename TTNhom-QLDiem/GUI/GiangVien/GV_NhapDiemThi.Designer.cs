@@ -76,6 +76,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lbThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtHanNhapDiem.Properties)).BeginInit();
@@ -105,6 +106,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // groupControl1
             // 
             this.tablePanel2.SetColumn(this.groupControl1, 0);
+            this.groupControl1.Controls.Add(this.lbThongBao);
             this.groupControl1.Controls.Add(this.txtHanNhapDiem);
             this.groupControl1.Controls.Add(this.txtNgayThi);
             this.groupControl1.Controls.Add(this.txtSoTinChi);
@@ -602,6 +604,15 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // lbThongBao
+            // 
+            this.lbThongBao.AutoSize = true;
+            this.lbThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbThongBao.Location = new System.Drawing.Point(17, 33);
+            this.lbThongBao.Name = "lbThongBao";
+            this.lbThongBao.Size = new System.Drawing.Size(0, 17);
+            this.lbThongBao.TabIndex = 109;
+            // 
             // GV_NhapDiemThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -688,5 +699,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSua;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private System.Windows.Forms.Label lbThongBao;
     }
 }

@@ -81,7 +81,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                           select hp).ToList();
             if (lstHocPhan.Count == 0)
             {
-                MessageBox.Show("Không dạy học phần nào trong kỳ này!");
+                lbThongBao.Text = "Không dạy học phần nào trong kỳ này!";
             }
             else
             {
@@ -93,7 +93,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
               
                 DSHocVien(maHK, 0, 0);
                 cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
-
+                lbThongBao.Text = "";
             }
 
 

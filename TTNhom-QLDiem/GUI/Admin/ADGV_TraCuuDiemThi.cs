@@ -58,13 +58,15 @@ namespace TTNhom_QLDiem.GUI.Admin
             }
             else
             {
-                gridControl1.DataSource = (db.ADV_TraCuuDiemHV.Where(s =>
+                List<ADV_TraCuuDiemHV> dsout = (db.ADV_TraCuuDiemHV.Where(s =>
                                            (txtMaHV.Text == "" || s.MaHocVien.ToString() == (txtMaHV.Text))
                                            && (txtTenHV.Text == "" || s.HoTenHV.Contains(txtTenHV.Text))
                                            && (cbLopCN.Text == "" || s.TenLopChuyenNganh == (cbLopCN.Text))
                                            && (cbMonThi.Text == "" || s.TenHocPhan == (cbMonThi.Text))
                                            && (cbHocKy.Text == "" || s.TenHocKy == (cbHocKy.Text))
                                            ).ToList());
+                gridControl1.DataSource = null;
+                gridControl1.DataSource = dsout;
             }
         }
         private void reload()

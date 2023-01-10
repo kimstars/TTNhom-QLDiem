@@ -74,6 +74,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.lbThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -420,6 +421,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             // groupControl1
             // 
             this.tablePanel2.SetColumn(this.groupControl1, 0);
+            this.groupControl1.Controls.Add(this.lbThongBao);
             this.groupControl1.Controls.Add(this.txtHanNhapDiem);
             this.groupControl1.Controls.Add(this.txtNgayThi);
             this.groupControl1.Controls.Add(this.txtSoTinChi);
@@ -569,6 +571,16 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.label1.TabIndex = 0;
             this.label1.Text = "Học kỳ";
             // 
+            // lbThongBao
+            // 
+            this.lbThongBao.AutoSize = true;
+            this.lbThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbThongBao.Location = new System.Drawing.Point(17, 275);
+            this.lbThongBao.Name = "lbThongBao";
+            this.lbThongBao.Size = new System.Drawing.Size(12, 17);
+            this.lbThongBao.TabIndex = 109;
+            this.lbThongBao.Text = ".";
+            // 
             // GV_NhapDiemCC_TX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -654,5 +666,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Label lbThongBao;
     }
 }
