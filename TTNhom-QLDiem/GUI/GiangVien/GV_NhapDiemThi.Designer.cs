@@ -376,6 +376,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.gridColumn9});
             this.dgvDSHocVien_View.GridControl = this.dgvDSHocVien;
             this.dgvDSHocVien_View.Name = "dgvDSHocVien_View";
+            this.dgvDSHocVien_View.OptionsView.ShowGroupPanel = false;
             this.dgvDSHocVien_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSHocVien_View_RowClick);
             // 
             // gridColumn1
@@ -487,7 +488,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(328, 39);
             this.btnSua.TabIndex = 0;
-            this.btnSua.Text = "Sửa";
+            this.btnSua.Text = "Lưu thay đổi trên DS";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 

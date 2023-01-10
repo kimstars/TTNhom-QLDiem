@@ -133,6 +133,7 @@ namespace TTNhom_QLDiem.GUI
 
 
                     uc21.Dock = DockStyle.Fill;
+                    uc23.Dock = DockStyle.Fill;
                     uc22.Dock = DockStyle.Fill;
                     uc23.Dock = DockStyle.Fill;
                     uc24.Dock = DockStyle.Fill;
