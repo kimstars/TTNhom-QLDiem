@@ -61,6 +61,7 @@ namespace TTNhom_QLDiem.GUI
         Admin.ADGV_TraCuuDiemThi uc36;
         Admin.QuanLyTaiKhoan uc37;
 
+        
 
         DoiMK ucDMK;
 
@@ -77,6 +78,7 @@ namespace TTNhom_QLDiem.GUI
                     AccordionControlElement it11 = new AccordionControlElement(ElementStyle.Item) { Text = "Xem điểm quá trình" };
                     AccordionControlElement it12 = new AccordionControlElement(ElementStyle.Item) { Text = "Xem thông tin cá nhân" };
                     AccordionControlElement it13 = new AccordionControlElement(ElementStyle.Item) { Text = "Đổi mật khẩu" };
+                    
 
 
                     accordionControl1.Elements.AddRange(new AccordionControlElement[] { it11, it12, it13 });
@@ -202,6 +204,14 @@ namespace TTNhom_QLDiem.GUI
 
         }
 
+        private void btnHDSD_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            HDSDv1 ucHD = new HDSDv1();
+            ucHD.Dock = DockStyle.Fill;
+            showUsercontrol.Controls.Add(ucHD);
+            ucHD.BringToFront();
+
+        }
         private void It38_Click(object sender, EventArgs e)
         {
             uc37.BringToFront();
@@ -283,5 +293,7 @@ namespace TTNhom_QLDiem.GUI
             logout = true;
             this.Close();
         }
+
+      
     }
 }

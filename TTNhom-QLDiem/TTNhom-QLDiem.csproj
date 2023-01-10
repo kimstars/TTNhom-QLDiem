@@ -34,6 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.2.Drawing, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -41,7 +43,9 @@
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -146,6 +150,18 @@
     <Compile Include="GUI\GiangVien\XemDSHocVien.Designer.cs">
       <DependentUpon>XemDSHocVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HDSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HDSD.Designer.cs">
+      <DependentUpon>HDSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HDSDv1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HDSDv1.Designer.cs">
+      <DependentUpon>HDSDv1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HocVien\HV_Diem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,6 +256,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVien\XemDSHocVien.resx">
       <DependentUpon>XemDSHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HDSD.resx">
+      <DependentUpon>HDSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HDSDv1.resx">
+      <DependentUpon>HDSDv1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HocVien\HV_Diem.resx">
       <DependentUpon>HV_Diem.cs</DependentUpon>

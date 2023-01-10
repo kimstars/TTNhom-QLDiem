@@ -29,10 +29,12 @@ namespace TTNhom_QLDiem.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.showUsercontrol = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHDSD = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -61,13 +63,15 @@ namespace TTNhom_QLDiem.GUI
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnDangXuat});
+            this.btnDangXuat,
+            this.btnHDSD});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1093, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.btnDangXuat);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.btnHDSD);
             // 
             // btnDangXuat
             // 
@@ -76,6 +80,16 @@ namespace TTNhom_QLDiem.GUI
             this.btnDangXuat.Id = 0;
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // btnHDSD
+            // 
+            this.btnHDSD.Caption = "Hướng dẫn sử dụng";
+            this.btnHDSD.Id = 0;
+            this.btnHDSD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHDSD.ImageOptions.Image")));
+            this.btnHDSD.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHDSD.ImageOptions.LargeImage")));
+            this.btnHDSD.Name = "btnHDSD";
+            this.btnHDSD.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnHDSD.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHDSD_ItemClick);
             // 
             // MainForm
             // 
@@ -103,5 +117,6 @@ namespace TTNhom_QLDiem.GUI
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
+        private DevExpress.XtraBars.BarButtonItem btnHDSD;
     }
 }
