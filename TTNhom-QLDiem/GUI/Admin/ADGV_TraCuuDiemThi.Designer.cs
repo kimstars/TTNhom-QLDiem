@@ -333,7 +333,7 @@ namespace TTNhom_QLDiem.GUI.Admin
             this.btnTimKiemAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiemAll.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemAll.Appearance.Options.UseFont = true;
-            this.btnTimKiemAll.Location = new System.Drawing.Point(702, 53);
+            this.btnTimKiemAll.Location = new System.Drawing.Point(792, 53);
             this.btnTimKiemAll.Name = "btnTimKiemAll";
             this.btnTimKiemAll.Size = new System.Drawing.Size(137, 84);
             this.btnTimKiemAll.TabIndex = 7;

@@ -70,16 +70,26 @@ namespace TTNhom_QLDiem.GUI.Admin
                 lopcn.MaBoMon = int.Parse(cbMaBM.Text);
                 if (cbMaloptruong.Text != "")
                 {
-                    lopcn.MaLopTruong = int.Parse(cbMaloptruong.Text);
+                    if (checkloptruong())
+                    {
+                        lopcn.MaLopTruong = int.Parse(cbMaloptruong.Text);
+                        db.LopChuyenNganhs.Add(lopcn);
+                        db.SaveChanges();
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        
+                    }
                 }
                 else
                 {
                     lopcn.MaLopTruong = null;
+                    db.LopChuyenNganhs.Add(lopcn);
+                    db.SaveChanges();
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                db.LopChuyenNganhs.Add(lopcn);
-                db.SaveChanges();
-
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
             }
             reload();
         }
@@ -93,14 +103,22 @@ namespace TTNhom_QLDiem.GUI.Admin
                 lopcn.MaBoMon = int.Parse(cbEditMaBM.Text);
                 if (cbEditMaLP.Text != "")
                 {
-                    lopcn.MaLopTruong = int.Parse(cbEditMaLP.Text);
+                    if (checkloptruongEdit())
+                    {
+                        lopcn.MaLopTruong = int.Parse(cbEditMaLP.Text);
+                        db.SaveChanges();
+                        MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else 
+                    {
+                    }
                 }
                 else
                 {
                     lopcn.MaLopTruong = null;
+                    db.SaveChanges();
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                db.SaveChanges();
-                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             reload();
         }
@@ -163,6 +181,38 @@ namespace TTNhom_QLDiem.GUI.Admin
         private void cbEditMaBM_TextChanged(object sender, EventArgs e)
         {
             textEditTenBM.Text = db.BoMons.Where(s => s.MaBoMon.ToString() == cbEditMaBM.Text).FirstOrDefault().TenBoMon;
+        }
+        public bool checkloptruong()
+        {
+            QLDHV_model db1 = new QLDHV_model();
+            List<AD_LopChuyenNganh> dt = db1.AD_LopChuyenNganh.ToList();
+            foreach(var item in dt)
+            {
+                if (cbMaloptruong.Text==item.MaLopTruong.ToString()) 
+                {
+                    MessageBox.Show("Lớp trưởng đã tồn tại, hãy chọn người khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                    break;
+                }
+                
+            }
+            return true;
+        }
+        public bool checkloptruongEdit()
+        {
+            QLDHV_model db1 = new QLDHV_model();
+            List<AD_LopChuyenNganh> dt = db1.AD_LopChuyenNganh.ToList();
+            foreach (var item in dt)
+            {
+                if (cbEditMaLP.Text == item.MaLopTruong.ToString())
+                {
+                    MessageBox.Show("Lớp trưởng đã tồn tại, hãy chọn người khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                    break;
+                }
+
+            }
+            return true;
         }
     }
 }
