@@ -21,6 +21,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
         List<HocKy> lstHocKy;
         List<HocPhan> lstHocPhan;
         List<LopHocPhan> lstLopHocPhan;
+
         int maHK;
         int maHp;
         int maLhp;
@@ -37,9 +38,8 @@ namespace TTNhom_QLDiem.GUI.GiangVien
             cbbHocKy.ValueMember = "MaHocKy";
             cbbHocKy.SelectedIndex = -1;
             cbbHocKy.Text = "";
-            //maHK = 0;
 
-            //LoadCBBHocPhan(maHK);
+
             txtNgayThi.Text = "";
             txtSoTinChi.Text = "";
             txtHanNhapDiem.Text = "";
@@ -70,7 +70,6 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void cbbHocKy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbbHocPhan.SelectedIndexChanged -= cbbHocPhan_SelectedIndexChanged;
             lstHocKy = db.HocKies.ToList();
             int id = cbbHocKy.SelectedIndex;
             maHK = lstHocKy[id].MaHocKy;
@@ -87,19 +86,12 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 cbbHocPhan.DataSource = lstHocPhan;
                 cbbHocPhan.ValueMember = "MaHocPhan";
                 cbbHocPhan.DisplayMember = "TenHocPhan";
-                //cbbHocPhan.SelectedIndex = -1;
+               
                 cbbHocPhan.Text = "";
-                //cbbLopHocPhan.SelectedIndex = -1;
-                List<GV_NhapDiem> DSHV = db.GV_NhapDiem.Where(m => m.MaHocKy == maHK && m.MaGiangVien == MainForm.MaID).ToList();
-
+                
                 DSHocVien(maHK, 0, 0);
 
-                dgvDSHocVien.DataSource = DSHV;
-                cbbHocPhan.SelectedIndexChanged += cbbHocPhan_SelectedIndexChanged;
-
             }
-
-
         }
 
 
@@ -225,27 +217,17 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
             }
 
-            MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //
-
 
             dgvDSHocVien.DataSource = null;
-            List<GV_NhapDiem> dsTTDiemHV = new List<GV_NhapDiem>();
 
-            using (var ctx = new Model.QLDHV_model())
-            {
-                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList();
+            
+            DSHocVien(maHK, maHp, maLhp);
+          
 
-                dsTTDiemHV = dsAll.Where(m => m.MaHocKy == maHK && m.MaHocPhan == maHp && m.MaLopHocPhan == maLhp).ToList();
-                dsTTDiemHVCurr = dsTTDiemHV;
 
-            }
-            dgvDSHocVien.DataSource = dsTTDiemHV;
+            MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            dgvDSHocVien.Refresh();
-
-            //DSHV(maHK, maHp, maLhp);
-            //LoadCTPD();
+           
             txtMaHocVien.Text = "";
             txtTenHocVien.EditValue = null;
             txtLopChuyenNganh.Text = "";
@@ -282,42 +264,16 @@ namespace TTNhom_QLDiem.GUI.GiangVien
                 }
             }
 
-            MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //
 
 
-            dgvDSHocVien.DataSource = null;
+            DSHocVien(maHK, maHp, maLhp);
 
-            using (var ctx = new Model.QLDHV_model())
-            {
-                List<GV_NhapDiem> dsAll = ctx.GV_NhapDiem.SqlQuery("Select * from GV_NhapDiem").ToList<GV_NhapDiem>();
+            MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                dgvDSHocVien.DataSource = dsAll;
-
-                dgvDSHocVien.Refresh();
-
-            }
 
         }
 
 
-        // Chưa sửa lưu khi sửa trực tiếp trên gridview
-
-
-
-        /*private void dgvDSHocVien_View_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-            ChiTietPhieuDiem ttpd2 = db.ChiTietPhieuDiems.Where(m => m.MaChiTietPhieuDiem == ctpd.MaChiTietPhieuDiem).FirstOrDefault();
-
-            ttpd2.DiemThi = Convert.ToDouble(dgvDSHocVien_View.GetRowCellValue(e.RowHandle, "DiemThi").ToString());
-            ttpd2.GhiChu = dgvDSHocVien_View.GetRowCellValue(e.RowHandle, "GhiChu").ToString();
-
-            db.SaveChanges();
-            MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //
-
-            dgvDSHocVien.DataSource = null;
-            DSHV(maHK, maHp, maLhp);
-        }*/
     }
 }

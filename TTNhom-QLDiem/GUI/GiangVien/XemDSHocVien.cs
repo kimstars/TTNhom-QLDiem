@@ -91,7 +91,7 @@ namespace TTNhom_QLDiem.GUI.GiangVien
 
         private void XemDSHocVien_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(MainForm.MaID.ToString());
+            //MessageBox.Show(MainForm.MaID.ToString());
             magv = MainForm.MaID;
             reload();
         }
